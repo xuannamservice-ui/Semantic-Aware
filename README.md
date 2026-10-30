@@ -1,84 +1,76 @@
 # Semantic-Aware Generative Error Concealment for Resilient Real-Time 3DGS Streaming over Turbulent FSO Backhaul
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![IEEE Access](https://img.shields.io/badge/Target-IEEE%20Access-orange.svg)](https://ieeeaccess.ieee.org/)
-[![Reproducibility](https://img.shields.io/badge/Reproducibility-10%5E6%20Slots-success.svg)](#reproducibility-pipeline)
-
-This repository contains the official simulation source code, experimental datasets, and plotting routines supporting the paper:
+This repository contains reproducible numerical verification code supporting the paper:
 
 > **Semantic-Aware Generative Error Concealment for Resilient Real-Time 3D Gaussian Splatting Streaming over Turbulent FSO Backhaul**  
 > *Pham Vu Minh Tu, Nguyen Xuan Nam, Vu Van Thuong, Tien Vu Huu*  
-> Creative Technologies and Simulation Lab, Posts and Telecommunications Institute of Technology, Hanoi, Vietnam.
+> Creative Technologies and Simulation Lab, Posts and Telecommunications Institute of Technology, Hanoi, Vietnam.  
+> Target: *IEEE Access*
 
 ---
 
-## 🔬 Key Scientific Modules & Limitations Addressed
+## Scope and Contents
 
-This release provides comprehensive numerical evidence addressing the boundary conditions and operational limitations:
+This release provides the following standalone verification modules:
 
-1. **Temporal Correlated Fading & Burst Erasures (`src/temporal_correlated_fading.py`)**
-   - Simulates $1{,}000{,}000$ consecutive transmission slots under Taylor's frozen-flow atmospheric turbulence hypothesis ($\tau_c = 2.5\text{ ms}$, $\rho = 0.8048$).
-   - Quantifies the burst erasure length distribution $L_{burst}$ and confirms that Semantic Anchor replication on the uncorrelated mode pair $(-2, +1)$ suppresses burst loss events of length $L \ge 4$ to **0%**, stabilizing the Lyapunov virtual queue ($Z(t) \le 35.4 \ll 100$).
+1. **Temporal Correlated Fading Surrogate Model (`src/surrogate_recalibrated.py`)**
+   - Implements the bivariate Gauss-Markov temporal correlation model described in Section VII-A of the manuscript.
+   - Simulates $10^7$ consecutive transmission slots with channel coherence time $\tau_c = 2.5\text{ ms}$, slot duration $T_f = 1.0\text{ ms}$, and one-slot correlation $\rho = \exp(-(T_f/\tau_c)^{5/3}) \approx 0.8048$.
+   - Accurately recalibrated to the physical-layer Monte Carlo loss statistics under strong turbulence ($\sigma_R^2 = 2.5$, square sorter $M = N_r = 8$): single-mode outage $P(+1) = 0.018$, joint anchor-pair loss $P((-2, +1)) = 1.75 \times 10^{-3}$, cross-correlation $r_{cross} = 0.36$.
+   - Computes burst erasure distributions and evaluates Lyapunov virtual queue drift rates.
 
-2. **Hardware Constraints & Laser RIN Sensitivity (`src/hardware_rin_insertion_loss_sweep.py`)**
-   - Performs a 210-point parameter sweep across laser Relative Intensity Noise (RIN $\in [-165, -135]\text{ dB/Hz}$) and mode-sorter excess insertion loss ($\Delta\eta \in [0, 4.5]\text{ dB}$).
-   - Identifies the operating boundary where mode throttling ($M=6, N_r=11$) sustains the $10^{-4}$ URLLC target, and proves that generative error concealment is indispensable when using square mode sorters.
-
-3. **Dual-Regime Dynamic Precision Adaptation (`src/dynamic_precision_relaxation.py`)**
-   - Evaluates the Block Coordinate Descent (BCD) Lyapunov scheduler across 10 latency deadline horizons ($D_{max} \in [0.75, 3.50]\text{ ms}$).
-   - Demonstrates dual-regime operation: static 1.58-bit ternary quantization ($Q=1.0$) under extreme sub-millisecond URLLC ($0.78\text{ ms}$), and dynamic precision modulation under standard interactive XR budgets ($1.5 - 3.0\text{ ms}$), achieving up to $+3.4\text{ dB}$ PSNR gain.
+2. **Data-Driven Publication Plotting Routines (`src/plot_from_simulation_data.py`)**
+   - Clean plotting script that generates publication figures directly from raw Monte Carlo and GPU measurement CSV files (`data/`).
+   - Automatically skips curves when raw measurement files are empty, ensuring no artificial or ungrounded curves are rendered.
 
 ---
 
-## 📁 Repository Structure
+## Implementation & Reproduction Note
+
+As stated in the manuscript:
+- The physical-layer Monte Carlo simulations ($10^7$ independent Zernike phase-screen realizations, aperture scintillation integration, and linear MMSE equalization) and the 24-layer 605M-parameter BitLinear 1.58-bit neural network training were profiled on NVIDIA L40S 48GB GPU hardware.
+- Tabulated channel statistics, rate-distortion envelopes, and hardware latencies are reported in the manuscript tables. The surrogate script in this repository reproduces the temporal fading dynamics and burst statistics derived from those operating points.
+
+---
+
+## Directory Structure
 
 ```
 .
-├── LICENSE                                # MIT Open-Source License
-├── README.md                              # This documentation
-├── requirements.txt                       # Python dependencies
-├── src/                                   # Source code
-│   ├── temporal_correlated_fading.py      # Exp 1: 1M-slot temporal fading simulation
-│   ├── hardware_rin_insertion_loss_sweep.py# Exp 2: 2D hardware sensitivity sweep
-│   ├── dynamic_precision_relaxation.py    # Exp 3: Precision adaptation trade-off
-│   ├── plot_results.py                    # 300-DPI publication figure generator
-│   └── run_all_experiments.sh             # Master execution script
-├── data/                                  # Raw JSON and CSV results
-│   ├── exp1_temporal_correlated_1m_results.json
-│   ├── exp2_hardware_rin_sensitivity.json
-│   ├── exp2_hardware_rin_sensitivity.csv
-│   ├── exp3_dynamic_precision_pareto.json
-│   └── exp3_dynamic_precision_pareto.csv
-└── figures/                               # Generated 300 DPI publication plots
-    ├── fig_exp1_burst_erasures_and_stability.png
-    ├── fig_exp2_hardware_rin_envelope.png
-    └── fig_exp3_dynamic_precision_pareto.png
+├── LICENSE                          # MIT Open-Source License
+├── README.md                        # Documentation
+├── requirements.txt                 # Python dependencies
+├── src/
+│   ├── surrogate_recalibrated.py    # 10^7 slot Gauss-Markov burst simulation
+│   └── plot_from_simulation_data.py # Data-driven plotting script
+└── data/                            # Measurement templates
+    ├── mc_outage_vs_snr.csv
+    ├── gpu_latency_vs_Q.csv
+    └── zernike_truncation.csv
 ```
 
 ---
 
-## 🚀 Quickstart & Reproduction
+## Quickstart
 
 ### Prerequisites
-* Python 3.9+ (tested up to Python 3.14 on Ubuntu 24.04 LTS / macOS Sonoma)
-* Standard libraries: `numpy`, `scipy`, `matplotlib`
+* Python 3.9+
+* Required libraries: `numpy`, `scipy`, `matplotlib`
 
 ```bash
 # 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Run the complete pipeline (executes simulations & generates figures)
-bash src/run_all_experiments.sh
+# 2. Run the temporal correlated surrogate simulation (10^7 slots)
+python src/surrogate_recalibrated.py
 ```
-
-All figures will be populated in `figures/` and raw datasets in `data/`.
 
 ---
 
-## 📜 Citation & License
+## Citation & License
 
-This project is licensed under the [MIT License](LICENSE).
-If you use this codebase or data in your research, please cite our IEEE Access paper:
+This project is open-source under the [MIT License](LICENSE).  
+If you reference this work, please cite:
 
 ```bibtex
 @article{tu2026semantic3dgs,

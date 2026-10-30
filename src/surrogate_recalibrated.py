@@ -13,7 +13,8 @@ t1, t2 = Phi_inv(p1), Phi_inv(p2)
 x = np.linspace(-12, t1, 40001); phi = np.exp(-x**2 / 2) / math.sqrt(2 * math.pi)
 def joint(r):
     s = math.sqrt(1 - r * r); v = np.array([Phi((t2 - r * xi) / s) for xi in x[::40]])
-    return np.trapz(phi[::40] * v, x[::40])
+    trapz_fn = getattr(np, 'trapezoid', getattr(np, 'trapz', None))
+    return trapz_fn(phi[::40] * v, x[::40])
 lo, hi = 0.0, 0.99
 for _ in range(60):
     m = (lo + hi) / 2; lo, hi = (m, hi) if joint(m) < pj else (lo, m)
