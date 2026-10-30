@@ -1,0 +1,59 @@
+{
+  "status": "STOPPED",
+  "timestamp": "2026-10-29 05:59:33 UTC",
+  "elapsed_seconds": 76727.99,
+  "total_batches": 57173,
+  "total_accumulated_slots": 57173000000,
+  "throughput_slots_per_sec": 745138.8,
+  "single_anchor": {
+    "mode": "+1",
+    "outage_count": 1419165612,
+    "outage_rate": 0.024822304444405575,
+    "confidence_interval_95": [
+      0.024821029143592167,
+      0.024823579809075798
+    ],
+    "max_consecutive_burst_lost": 33,
+    "virtual_queue_max_backlog": 1413449245.3,
+    "burst_histogram_sample": {
+      "1": 475757169,
+      "2": 162286111,
+      "3": 72960356,
+      "4": 36316731,
+      "5": 18949758,
+      "6": 10127982,
+      "7": 5479538,
+      "8": 2984043,
+      "9": 1632944,
+      "10": 893107,
+      "11": 491222,
+      "12": 269503
+    }
+  },
+  "dual_anchor_proposed": {
+    "mode_pair": "(-2, +1)",
+    "outage_count": 99914589,
+    "outage_rate": 0.001747583457226313,
+    "confidence_interval_95": [
+      0.0017472411175300895,
+      0.0017479258638802434
+    ],
+    "max_consecutive_burst_lost": 19,
+    "virtual_queue_max_backlog": 94197211.03,
+    "burst_histogram_sample": {
+      "1": 57589126,
+      "2": 12095880,
+      "3": 3473781,
+      "4": 1118775,
+      "5": 379588,
+      "6": 132027,
+      "7": 46449,
+      "8": 16577,
+      "9": 6086,
+      "10": 2065,
+      "11": 789,
+      "12": 263
+    }
+  },
+  "empirical_reliability_gain": 14.204
+}

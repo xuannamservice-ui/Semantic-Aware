@@ -1,0 +1,2130 @@
+{
+    "metadata": {
+        "configurations": 3,
+        "rin_values_tested": 7,
+        "loss_values_tested": 10,
+        "total_points": 210
+    },
+    "operating_boundaries": {
+        "Square (M=8, Nr=8)": {
+            "urllc_achievable": false,
+            "max_tolerable_rin_db_hz": null,
+            "max_tolerable_loss_db": null,
+            "status": "Requires generative semantic error concealment to conceal outages."
+        },
+        "Oversampled (M=8, Nr=11)": {
+            "urllc_achievable": false,
+            "max_tolerable_rin_db_hz": null,
+            "max_tolerable_loss_db": null,
+            "status": "Requires generative semantic error concealment to conceal outages."
+        },
+        "Throttled (M=6, Nr=11)": {
+            "urllc_achievable": true,
+            "max_tolerable_rin_db_hz": -155.0,
+            "max_tolerable_loss_db": 0.0,
+            "status": "Meets 10^-4 target up to 0.0 dB insertion loss and RIN <= -155.0 dB/Hz"
+        }
+    },
+    "grid_data": [
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": -2.5,
+            "system_outage": 0.10948,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": -1.5,
+            "system_outage": 0.12284,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": -0.5,
+            "system_outage": 0.13783,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 0.5,
+            "system_outage": 0.15465,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 1.5,
+            "system_outage": 0.17352,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 2.5,
+            "system_outage": 0.19469,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 3.5,
+            "system_outage": 0.21845,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 4.5,
+            "system_outage": 0.24511,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 5.5,
+            "system_outage": 0.27501,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 6.5,
+            "system_outage": 0.30857,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": -1.25,
+            "system_outage": 0.12643,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": -0.25,
+            "system_outage": 0.14186,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 0.75,
+            "system_outage": 0.15917,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 1.75,
+            "system_outage": 0.17859,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 2.75,
+            "system_outage": 0.20038,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 3.75,
+            "system_outage": 0.22483,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 4.75,
+            "system_outage": 0.25226,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 5.75,
+            "system_outage": 0.28304,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 6.75,
+            "system_outage": 0.31758,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 7.75,
+            "system_outage": 0.35633,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 0.0,
+            "system_outage": 0.146,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 1.0,
+            "system_outage": 0.16381,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 2.0,
+            "system_outage": 0.1838,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 3.0,
+            "system_outage": 0.20623,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 4.0,
+            "system_outage": 0.23139,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 5.0,
+            "system_outage": 0.25963,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 6.0,
+            "system_outage": 0.29131,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 7.0,
+            "system_outage": 0.32685,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 8.0,
+            "system_outage": 0.36674,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 9.0,
+            "system_outage": 0.41148,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 4.25,
+            "system_outage": 0.23815,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 5.25,
+            "system_outage": 0.26721,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 6.25,
+            "system_outage": 0.29981,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 7.25,
+            "system_outage": 0.3364,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 8.25,
+            "system_outage": 0.37744,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 9.25,
+            "system_outage": 0.4235,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 10.25,
+            "system_outage": 0.47517,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 11.25,
+            "system_outage": 0.53315,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 12.25,
+            "system_outage": 0.59821,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 13.25,
+            "system_outage": 0.6712,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 8.5,
+            "system_outage": 0.38847,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 9.5,
+            "system_outage": 0.43587,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 10.5,
+            "system_outage": 0.48905,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 11.5,
+            "system_outage": 0.54872,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 12.5,
+            "system_outage": 0.61568,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 13.5,
+            "system_outage": 0.6908,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 14.5,
+            "system_outage": 0.77509,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 15.5,
+            "system_outage": 0.86967,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 16.5,
+            "system_outage": 0.97578,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 17.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 12.75,
+            "system_outage": 0.63365,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 13.75,
+            "system_outage": 0.71097,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 14.75,
+            "system_outage": 0.79772,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 15.75,
+            "system_outage": 0.89506,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 16.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 17.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 18.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 19.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 20.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 21.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 17.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 18.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 19.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 20.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 21.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 22.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 23.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 24.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 25.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Square (M=8, Nr=8)",
+            "short_name": "M8_Nr8",
+            "diversity_order": 0.5,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 26.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": -2.5,
+            "system_outage": 0.00072732,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": -1.5,
+            "system_outage": 0.0011527,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": -0.5,
+            "system_outage": 0.001827,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 0.5,
+            "system_outage": 0.0028955,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 1.5,
+            "system_outage": 0.0045891,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 2.5,
+            "system_outage": 0.0072732,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 3.5,
+            "system_outage": 0.011527,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 4.5,
+            "system_outage": 0.01827,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 5.5,
+            "system_outage": 0.028955,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 6.5,
+            "system_outage": 0.045891,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": -1.25,
+            "system_outage": 0.0012934,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": -0.25,
+            "system_outage": 0.0020499,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 0.75,
+            "system_outage": 0.0032488,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 1.75,
+            "system_outage": 0.0051491,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 2.75,
+            "system_outage": 0.0081607,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 3.75,
+            "system_outage": 0.012934,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 4.75,
+            "system_outage": 0.020499,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 5.75,
+            "system_outage": 0.032488,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 6.75,
+            "system_outage": 0.051491,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 7.75,
+            "system_outage": 0.081607,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 0.0,
+            "system_outage": 0.0023,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 1.0,
+            "system_outage": 0.0036453,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 2.0,
+            "system_outage": 0.0057773,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 3.0,
+            "system_outage": 0.0091565,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 4.0,
+            "system_outage": 0.014512,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 5.0,
+            "system_outage": 0.023,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 6.0,
+            "system_outage": 0.036453,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 7.0,
+            "system_outage": 0.057773,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 8.0,
+            "system_outage": 0.091565,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 9.0,
+            "system_outage": 0.14512,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 4.25,
+            "system_outage": 0.016283,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 5.25,
+            "system_outage": 0.025806,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 6.25,
+            "system_outage": 0.0409,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 7.25,
+            "system_outage": 0.064823,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 8.25,
+            "system_outage": 0.10274,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 9.25,
+            "system_outage": 0.16283,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 10.25,
+            "system_outage": 0.25806,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 11.25,
+            "system_outage": 0.409,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 12.25,
+            "system_outage": 0.64823,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 13.25,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 8.5,
+            "system_outage": 0.11527,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 9.5,
+            "system_outage": 0.1827,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 10.5,
+            "system_outage": 0.28955,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 11.5,
+            "system_outage": 0.45891,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 12.5,
+            "system_outage": 0.72732,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 13.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 14.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 15.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 16.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 17.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 12.75,
+            "system_outage": 0.81607,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 13.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 14.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 15.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 16.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 17.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 18.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 19.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 20.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 21.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 17.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 18.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 19.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 20.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 21.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 22.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 23.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 24.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 25.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Oversampled (M=8, Nr=11)",
+            "short_name": "M8_Nr11",
+            "diversity_order": 2.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 26.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": -2.5,
+            "system_outage": 1.636e-05,
+            "meets_urllc_1e4": true
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": -1.5,
+            "system_outage": 3.2643e-05,
+            "meets_urllc_1e4": true
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": -0.5,
+            "system_outage": 6.5131e-05,
+            "meets_urllc_1e4": true
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 0.5,
+            "system_outage": 0.00012995,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 1.5,
+            "system_outage": 0.00025929,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 2.5,
+            "system_outage": 0.00051735,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 3.5,
+            "system_outage": 0.0010323,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 4.5,
+            "system_outage": 0.0020596,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 5.5,
+            "system_outage": 0.0041095,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -165.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 6.5,
+            "system_outage": 0.0081995,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": -1.25,
+            "system_outage": 3.8796e-05,
+            "meets_urllc_1e4": true
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": -0.25,
+            "system_outage": 7.7408e-05,
+            "meets_urllc_1e4": true
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 0.75,
+            "system_outage": 0.00015445,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 1.75,
+            "system_outage": 0.00030817,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 2.75,
+            "system_outage": 0.00061488,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 3.75,
+            "system_outage": 0.0012268,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 4.75,
+            "system_outage": 0.0024479,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 5.75,
+            "system_outage": 0.0048841,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 6.75,
+            "system_outage": 0.0097451,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -160.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 7.75,
+            "system_outage": 0.019444,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 0.0,
+            "system_outage": 9.2e-05,
+            "meets_urllc_1e4": true
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 1.0,
+            "system_outage": 0.00018356,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 2.0,
+            "system_outage": 0.00036626,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 3.0,
+            "system_outage": 0.00073078,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 4.0,
+            "system_outage": 0.0014581,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 5.0,
+            "system_outage": 0.0029093,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 6.0,
+            "system_outage": 0.0058048,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 7.0,
+            "system_outage": 0.011582,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 8.0,
+            "system_outage": 0.023109,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -155.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 9.0,
+            "system_outage": 0.046109,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 4.25,
+            "system_outage": 0.001733,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 5.25,
+            "system_outage": 0.0034577,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 6.25,
+            "system_outage": 0.006899,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 7.25,
+            "system_outage": 0.013765,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 8.25,
+            "system_outage": 0.027466,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 9.25,
+            "system_outage": 0.054801,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 10.25,
+            "system_outage": 0.10934,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 11.25,
+            "system_outage": 0.21817,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 12.25,
+            "system_outage": 0.4353,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -150.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 13.25,
+            "system_outage": 0.86854,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 8.5,
+            "system_outage": 0.032643,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 9.5,
+            "system_outage": 0.065131,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 10.5,
+            "system_outage": 0.12995,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 11.5,
+            "system_outage": 0.25929,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 12.5,
+            "system_outage": 0.51735,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 13.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 14.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 15.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 16.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -145.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 17.5,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 12.75,
+            "system_outage": 0.61488,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 13.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 14.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 15.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 16.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 17.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 18.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 19.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 20.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -140.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 21.75,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 0.0,
+            "total_snr_penalty_db": 17.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 0.5,
+            "total_snr_penalty_db": 18.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 1.0,
+            "total_snr_penalty_db": 19.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 1.5,
+            "total_snr_penalty_db": 20.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 2.0,
+            "total_snr_penalty_db": 21.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 2.5,
+            "total_snr_penalty_db": 22.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 3.0,
+            "total_snr_penalty_db": 23.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 3.5,
+            "total_snr_penalty_db": 24.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 4.0,
+            "total_snr_penalty_db": 25.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        },
+        {
+            "config": "Throttled (M=6, Nr=11)",
+            "short_name": "M6_Nr11",
+            "diversity_order": 3.0,
+            "laser_rin_db_hz": -135.0,
+            "excess_loss_db": 4.5,
+            "total_snr_penalty_db": 26.0,
+            "system_outage": 1.0,
+            "meets_urllc_1e4": false
+        }
+    ]
+}

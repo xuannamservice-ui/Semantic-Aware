@@ -1,0 +1,32 @@
+{
+    "n_slots": 50000,
+    "tau_c_ms": 2.5,
+    "rho": 0.8048064950109477,
+    "P_out_single_anchor": 0.02402,
+    "P_out_dual_anchor": 0.00168,
+    "gain_dual_vs_single": 14.29761903910856,
+    "burst_counts_single": {
+        "burst_len_ge_1": 705,
+        "burst_len_ge_2": 244,
+        "burst_len_ge_3": 124,
+        "burst_len_ge_4": 58,
+        "burst_len_ge_5": 26
+    },
+    "burst_counts_dual": {
+        "burst_len_ge_1": 67,
+        "burst_len_ge_2": 16,
+        "burst_len_ge_3": 1,
+        "burst_len_ge_4": 0,
+        "burst_len_ge_5": 0
+    },
+    "mean_burst_len_single": 1.70354609929078,
+    "mean_burst_len_dual": 1.2537313432835822,
+    "max_burst_len_single": 12,
+    "max_burst_len_dual": 3,
+    "mean_distortion_single": 0.12234516000000004,
+    "mean_distortion_dual": 0.12011016000000004,
+    "distortion_reduction_pct": 1.8267988696896553,
+    "mean_Z_backlog_single": 604.5855610943555,
+    "mean_Z_backlog_dual": 35.37241783997034,
+    "virtual_queue_stabilized_dual": true
+}
