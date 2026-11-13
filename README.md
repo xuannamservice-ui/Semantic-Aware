@@ -86,8 +86,8 @@ python wdm_reference.py
 ```
 All generators are NumPy `default_rng` (PCG64) with fixed seeds (listed in [`phy_sim/README.md`](phy_sim/README.md)).
 The physical-layer results were computed twice, on macOS (Apple silicon) and on Ubuntu (Intel Xeon E5-2680 v4,
-Python 3.14.4, NumPy 2.3.5, SciPy 1.16.3); all failure traces and event counts are bit-identical, floating-point
-summaries agree to about 1e-11 (the weak-turbulence Gamma-Gamma tail fit, an ill-conditioned optimisation, is the
+Python 3.14.4, NumPy 2.3.5, SciPy 1.16.3); all failure traces and event counts are bit-identical (SHA-256 per array in
+`phy_sim/results/reproducibility.json`), floating-point summaries agree to about 1e-11 (the weak-turbulence Gamma-Gamma tail fit, an ill-conditioned optimisation, is the
 only exception).
 
 ### 3.2 Codec (`codec/`)
@@ -118,6 +118,7 @@ python bench_latency.py --out results/bench.json --lost 1000,5000,10000,20000,30
 | `wdm_reference.json` | WDM reference outage (all channels fail together) |
 | `correlated/traces_corr_*` | Model B: temporally correlated slots (tau_c = 2.5, 10 ms); `*_pat*.npz` store per-slot failure patterns |
 | `oper_*`, `analytics`, `alloc_*`, `sens_*`, `jsweep_*`, `power_*` | operating point, effective-capacity reference, power allocation, sensitivity, truncation |
+| `reproducibility.json` | SHA-256 of every trace array from the two machines and the identity check |
 | `logs/` | run logs; `env.txt` software versions |
 
 ### Codec (`codec/results/<scene>/`)
