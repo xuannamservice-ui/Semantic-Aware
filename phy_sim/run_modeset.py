@@ -87,9 +87,9 @@ class LSE:
         return (-(self.mx + np.log(self.sm / self.n)) / self.s).tolist()
 
 
-def run(s2, N, batch, point, store_dir, tag, extra_db=(), suffix="", rin=None):
+def run(s2, N, batch, point, store_dir, tag, extra_db=(), suffix="", rin=None, jmax=of.J_MAX):
     t0 = time.time()
-    base = of.OAMChannel(point_receiver=point)
+    base = of.OAMChannel(point_receiver=point, j_max=jmax)
     gr = base.grid
     U = {m: of.lg_mode(m, gr["r"], gr["phi"], base.w) for m in RX_ALL}
     Ur = np.stack([U[m] for m in RX_ALL]); Ut = np.stack([U[m] for m in TX8])
@@ -246,6 +246,7 @@ if __name__ == "__main__":
     ap.add_argument("--extra-db", default="", help="comma-separated additional reference SNR values (dB)")
     ap.add_argument("--suffix", default="", help="suffix of the result file name")
     ap.add_argument("--rin", type=float, default=None, help="add the operating point with laser RIN (dB/Hz)")
+    ap.add_argument("--jmax", type=int, default=of.J_MAX, help="highest Noll index of the phase screen (default 435)")
     a = ap.parse_args()
     extra = tuple(float(x) for x in a.extra_db.split(",") if x)
-    run(a.s2, a.N, a.batch, a.point, a.store, a.tag, extra, a.suffix, a.rin)
+    run(a.s2, a.N, a.batch, a.point, a.store, a.tag, extra, a.suffix, a.rin, a.jmax)

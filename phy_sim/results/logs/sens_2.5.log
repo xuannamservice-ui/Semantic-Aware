@@ -1,0 +1,16 @@
+START 2026-11-12T23:02:17+07:00 run_phy_results.py --stages sens --s2 2.5
+link budget: SNR0 = 60.06 dB (thermal only 65.20 dB, shot only 61.64 dB), gamma_th = 8.53 dB, J = 435
+sens s2=2.5 baseline: outage 0.1449 (diff +0 +- 0)
+sens s2=2.5 signal_dependent_shot_noise: outage 0.09294 (diff -0.05199 +- 0.00097)
+sens s2=2.5 rin_-155dB: outage 0.2777 (diff +0.1328 +- 0.0015)
+sens s2=2.5 ian_receiver: outage 0.9858 (diff +0.8408 +- 0.0016)
+sens s2=2.5 independent_coeffs: outage 0.08135 (diff -0.06358 +- 0.0018)
+sens s2=2.5 point_receiver: outage 0.4218 (diff +0.2768 +- 0.0021)
+sens s2=2.5 aperture_0.2m: outage 0.1241 (diff -0.02079 +- 0.001)
+sens s2=2.5 shared_pm: outage 0.1444 (diff -0.0005 +- 0.00058)
+sens s2=2.5 displacement_0.05w: outage 0.1633 (diff +0.01834 +- 0.0015)
+sens s2=2.5 displacement_0.1w: outage 0.1795 (diff +0.03461 +- 0.0018)
+sens s2=2.5 displacement_0.2w: outage 0.2047 (diff +0.05974 +- 0.0021)
+sens s2=2.5 done in 3233s
+stage sens finished in 3236s
+EXIT 0 2026-11-12T23:56:14+07:00

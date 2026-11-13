@@ -1,0 +1,6 @@
+START 2026-11-13T00:07:42+07:00
+T8R8 s2=2.5 uniform: P_mW [12.5 12.5 12.5 12.5 12.5 12.5 12.5 12.5] outage 0.14574 sum per-mode 0.23536 mean SE 79.05 diff +0
+T8R8 s2=2.5 closed_form: P_mW [17.8  12.31  9.74 10.14 10.13  9.75 12.33 17.78] outage 0.13615 sum per-mode 0.23433 mean SE 78.31 diff -0.00959
+T8R8 s2=2.5 surrogate_numerical: P_mW [16.19 12.46 10.84 10.59 10.69 10.74 12.39 16.09] outage 0.13574 sum per-mode 0.23072 mean SE 78.64 diff -0.01
+T8R8 s2=2.5: model union-bound gain 1.0660; done in 461s
+EXIT 0 2026-11-13T00:15:24+07:00

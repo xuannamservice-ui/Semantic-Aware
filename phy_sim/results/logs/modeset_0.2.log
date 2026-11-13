@@ -1,0 +1,23 @@
+START 2026-11-12T21:29:02+07:00 run_modeset.py --s2 0.2 --N 10000000
+modeset s2=0.2: 500000/10000000 samples, 676s, T8R8 op outage 2e-06
+modeset s2=0.2: 1000000/10000000 samples, 953s, T8R8 op outage 3e-06
+modeset s2=0.2: 1500000/10000000 samples, 1224s, T8R8 op outage 3.333e-06
+modeset s2=0.2: 2000000/10000000 samples, 1493s, T8R8 op outage 2.5e-06
+modeset s2=0.2: 2500000/10000000 samples, 1736s, T8R8 op outage 2e-06
+modeset s2=0.2: 3000000/10000000 samples, 1971s, T8R8 op outage 2e-06
+modeset s2=0.2: 3500000/10000000 samples, 2206s, T8R8 op outage 2.286e-06
+modeset s2=0.2: 4000000/10000000 samples, 2442s, T8R8 op outage 2e-06
+modeset s2=0.2: 4500000/10000000 samples, 2680s, T8R8 op outage 2e-06
+modeset s2=0.2: 5000000/10000000 samples, 2915s, T8R8 op outage 1.8e-06
+modeset s2=0.2: 5500000/10000000 samples, 3151s, T8R8 op outage 1.818e-06
+modeset s2=0.2: 6000000/10000000 samples, 3387s, T8R8 op outage 1.833e-06
+modeset s2=0.2: 6500000/10000000 samples, 3629s, T8R8 op outage 1.692e-06
+modeset s2=0.2: 7000000/10000000 samples, 3871s, T8R8 op outage 1.571e-06
+modeset s2=0.2: 7500000/10000000 samples, 4134s, T8R8 op outage 1.867e-06
+modeset s2=0.2: 8000000/10000000 samples, 4388s, T8R8 op outage 1.875e-06
+modeset s2=0.2: 8500000/10000000 samples, 4627s, T8R8 op outage 1.765e-06
+modeset s2=0.2: 9000000/10000000 samples, 4866s, T8R8 op outage 2.111e-06
+modeset s2=0.2: 9500000/10000000 samples, 5105s, T8R8 op outage 2e-06
+modeset s2=0.2: 10000000/10000000 samples, 5344s, T8R8 op outage 1.9e-06
+modeset s2=0.2 done in 5344s
+EXIT 0 2026-11-12T22:58:08+07:00

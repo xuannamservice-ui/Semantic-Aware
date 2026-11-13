@@ -1,0 +1,7 @@
+START 2026-11-12T21:29:02+07:00 run_modeset.py --s2 2.5 --N 2000000 --point --tag point
+point s2=2.5: 500000/2000000 samples, 695s, T8R8 op outage 0.4194
+point s2=2.5: 1000000/2000000 samples, 980s, T8R8 op outage 0.4191
+point s2=2.5: 1500000/2000000 samples, 1259s, T8R8 op outage 0.4194
+point s2=2.5: 2000000/2000000 samples, 1538s, T8R8 op outage 0.4196
+point s2=2.5 done in 1539s
+EXIT 0 2026-11-12T21:54:42+07:00

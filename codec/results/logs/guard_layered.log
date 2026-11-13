@@ -1,0 +1,6 @@
+2026-11-12T19:58:46+00:00 start garden _a150 1 gpu_free=19G mem_avail=17G
+2026-11-12T20:01:46+00:00 start garden _s150 0 gpu_free=19G mem_avail=17G
+2026-11-12T22:07:49+00:00 start stump _a150 1 gpu_free=17G mem_avail=18G
+2026-11-13T00:11:51+00:00 start stump _s150 0 gpu_free=19G mem_avail=18G
+2026-11-13T02:05:52+00:00 start room _a150 1 gpu_free=17G mem_avail=19G
+2026-11-13T03:56:45+00:00 start room _s150 0 gpu_free=18G mem_avail=14G

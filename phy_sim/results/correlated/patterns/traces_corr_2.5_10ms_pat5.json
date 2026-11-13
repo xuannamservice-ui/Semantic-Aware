@@ -1,0 +1,143 @@
+{
+ "s2": 2.5,
+ "tau_c_ms": 10.0,
+ "T_f_ms": 1.0,
+ "rho": 0.9786860748129649,
+ "rho_model": "kolmogorov",
+ "seed": 9705,
+ "n_chains": 2000,
+ "n_slots": 250,
+ "configs": {
+  "T8R8": {
+   "outage": 0.144082,
+   "n_runs": 49895,
+   "mean_run_slots": 1.4438520893877143,
+   "p_run_ge": {
+    "2": 0.26112836957610985,
+    "5": 0.020382803888165147,
+    "10": 0.0018839563082473194,
+    "20": 0.0001002104419280489
+   },
+   "max_run_slots": 33,
+   "p_next_slot_outage_given_outage": 0.30863354470071774,
+   "anchor_-1_1": {
+    "loss": 0.00295,
+    "mean_run_slots": 1.0498220640569396,
+    "n_runs": 1405
+   },
+   "anchor_-2_2": {
+    "loss": 0.002244,
+    "mean_run_slots": 1.0476190476190477,
+    "n_runs": 1071
+   },
+   "outage_slots": 72041,
+   "adjacent_outage_pairs": 22146,
+   "rho_out_lag1": 0.1922543491717092
+  },
+  "T6R8": {
+   "outage": 0.00257,
+   "n_runs": 1122,
+   "mean_run_slots": 1.1452762923351159,
+   "p_run_ge": {
+    "2": 0.0873440285204991,
+    "5": 0.0071301247771836,
+    "10": 0.00089126559714795,
+    "20": 0.0
+   },
+   "max_run_slots": 10,
+   "p_next_slot_outage_given_outage": 0.12714508580343215,
+   "anchor_-1_1": {
+    "loss": 5.2e-05,
+    "mean_run_slots": 1.2380952380952381,
+    "n_runs": 21
+   },
+   "anchor_-2_2": {
+    "loss": 4e-05,
+    "mean_run_slots": 1.25,
+    "n_runs": 16
+   },
+   "outage_slots": 1285,
+   "adjacent_outage_pairs": 163,
+   "rho_out_lag1": 0.12489229850762723
+  },
+  "T4R8": {
+   "outage": 5.2e-05,
+   "n_runs": 25,
+   "mean_run_slots": 1.04,
+   "p_run_ge": {
+    "2": 0.04,
+    "5": 0.0,
+    "10": 0.0,
+    "20": 0.0
+   },
+   "max_run_slots": 2,
+   "p_next_slot_outage_given_outage": 0.038461538461538464,
+   "anchor_-1_1": {
+    "loss": 2e-06,
+    "mean_run_slots": 1.0,
+    "n_runs": 1
+   },
+   "anchor_-2_2": {
+    "loss": 2e-06,
+    "mean_run_slots": 1.0,
+    "n_runs": 1
+   },
+   "outage_slots": 26,
+   "adjacent_outage_pairs": 1,
+   "rho_out_lag1": 0.038411335037261865
+  },
+  "T8R11": {
+   "outage": 0.002228,
+   "n_runs": 857,
+   "mean_run_slots": 1.2998833138856476,
+   "p_run_ge": {
+    "2": 0.16569428238039674,
+    "5": 0.01633605600933489,
+    "10": 0.002333722287047841,
+    "20": 0.0
+   },
+   "max_run_slots": 19,
+   "p_next_slot_outage_given_outage": 0.23132313231323132,
+   "anchor_-1_1": {
+    "loss": 8e-06,
+    "mean_run_slots": 1.0,
+    "n_runs": 4
+   },
+   "anchor_-2_2": {
+    "loss": 8e-06,
+    "mean_run_slots": 1.0,
+    "n_runs": 4
+   },
+   "outage_slots": 1114,
+   "adjacent_outage_pairs": 257,
+   "rho_out_lag1": 0.2296044386009455
+  },
+  "T6R11": {
+   "outage": 9.6e-05,
+   "n_runs": 37,
+   "mean_run_slots": 1.2972972972972974,
+   "p_run_ge": {
+    "2": 0.1891891891891892,
+    "5": 0.0,
+    "10": 0.0,
+    "20": 0.0
+   },
+   "max_run_slots": 4,
+   "p_next_slot_outage_given_outage": 0.22916666666666666,
+   "anchor_-1_1": {
+    "loss": 4e-06,
+    "mean_run_slots": 1.0,
+    "n_runs": 2
+   },
+   "anchor_-2_2": {
+    "loss": 0.0,
+    "mean_run_slots": null,
+    "n_runs": 0
+   },
+   "outage_slots": 48,
+   "adjacent_outage_pairs": 11,
+   "rho_out_lag1": 0.22909236231604804
+  }
+ },
+ "runtime_s": 140.89526081085205
+}

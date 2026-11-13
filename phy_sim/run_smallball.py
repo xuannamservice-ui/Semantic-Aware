@@ -47,7 +47,9 @@ def work(args):
             ri = [rm.RX_ALL.index(m) for m in rx]
             ti = [rm.TX8.index(m) for m in tx]
             Cs = C[:, ri][:, :, ti]
-            inv = np.linalg.inv(np.einsum("brm,brn->bmn", Cs, Cs))
+            CtC = np.einsum("brm,brn->bmn", Cs, Cs)
+            CtC = CtC + 1e-14 * np.trace(CtC, axis1=1, axis2=2)[:, None, None] * np.eye(CtC.shape[1])   # guards exactly singular draws
+            inv = np.linalg.inv(CtC)
             d = np.sqrt(1.0 / np.clip(np.diagonal(inv, axis1=1, axis2=2), 1e-300, None))   # (b, M)
             cnt[k] += (d[None, :, :] <= EPS[:, None, None]).sum(1)
             if len(q[k]) < 50:

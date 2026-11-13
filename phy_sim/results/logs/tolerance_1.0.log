@@ -1,0 +1,8 @@
+START 2026-11-12T23:02:17+07:00 run_tolerance.py --s2 1.0 --N 4000000 --workers 4 --seed 8802
+T8R8: nominal outage 2.844e-02 (113752 events), best pair [-2, 1] loss 3.76e-04
+T8R11: nominal outage 9.375e-05 (375 events), best pair [-4, -1] loss 0.00e+00
+T6R8: nominal outage 1.207e-04 (483 events), best pair [-3, 2] loss 0.00e+00
+T6R11: nominal outage 2.500e-07 (1 events), best pair [-3, -2] loss 0.00e+00
+T4R8: nominal outage 2.500e-07 (1 events), best pair [-2, -1] loss 0.00e+00
+done in 1244s
+EXIT 0 2026-11-12T23:23:03+07:00

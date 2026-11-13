@@ -1,0 +1,8 @@
+START 2026-11-12T23:56:14+07:00 run_phy_results.py --stages power --s2 2.5
+link budget: SNR0 = 60.06 dB (thermal only 65.20 dB, shot only 61.64 dB), gamma_th = 8.53 dB, J = 435
+power s2=2.5 uniform: outage 0.1454 (signal-dep. noise 0.09344; model bound 0.2471), mean SE 79.08, P_mW = [12.5 12.5 12.5 12.5 12.5 12.5 12.5 12.5]
+power s2=2.5 outage_min: outage 0.1352 (signal-dep. noise 0.08654; model bound 0.2225), mean SE 78.67, P_mW = [16.19 12.46 10.84 10.59 10.69 10.74 12.39 16.09]
+power s2=2.5 capacity_max: outage 0.1465 (signal-dep. noise 0.09423; model bound 0.2503), mean SE 79.09, P_mW = [12.28 12.52 12.59 12.6  12.6  12.6  12.52 12.29]
+power s2=2.5 done in 608s
+stage power finished in 608s
+EXIT 0 2026-11-13T00:06:23+07:00

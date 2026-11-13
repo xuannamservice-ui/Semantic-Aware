@@ -1,0 +1,17 @@
+2026-11-13T04:38:57+00:00 start garden _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 gpu_free=20G mem_avail=17G
+2026-11-13T04:39:04+00:00 FAILED garden _v2a_r1
+2026-11-13T05:24:09+00:00 start garden _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 gpu_free=14G mem_avail=16G
+2026-11-13T05:28:09+00:00 start garden _v2s_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 0 --rate-lambda 5e-5 gpu_free=15G mem_avail=17G
+2026-11-13T05:32:09+00:00 start garden _v2a_r0 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 0 gpu_free=15G mem_avail=11G
+2026-11-13T09:45:10+00:00 start stump _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 gpu_free=29G mem_avail=17G
+2026-11-13T09:49:10+00:00 start room _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 gpu_free=25G mem_avail=16G
+2026-11-13T09:53:10+00:00 start counter _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 gpu_free=22G mem_avail=14G
+2026-11-13T10:21:33+00:00 finished garden _v2a_r1
+2026-11-13T10:22:10+00:00 start garden _v2a_r2 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 2e-4 gpu_free=15G mem_avail=12G
+2026-11-13T10:22:47+00:00 finished garden _v2s_r1
+2026-11-13T10:26:10+00:00 start garden _v2a_r1_l03 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 --lam 0.3 gpu_free=14G mem_avail=9G
+2026-11-13T10:29:44+00:00 finished garden _v2a_r0
+2026-11-13T11:05:49+00:00 start truck _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 gpu_free=12G mem_avail=10G
+2026-11-13T11:08:36+00:00 FAILED truck _v2a_r1
+2026-11-13T11:16:34+00:00 FAILED garden _v2a_r1_l03
+2026-11-13T12:08:53+00:00 start train _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 gpu_free=9G mem_avail=12G

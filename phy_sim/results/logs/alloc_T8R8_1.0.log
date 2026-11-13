@@ -1,0 +1,13 @@
+START 2026-11-13T00:05:42+07:00
+Traceback (most recent call last):
+  File "/home/stt/acc24041_rerun/sim/run_alloc.py", line 92, in <module>
+    main(a.cfg, a.s2, a.N, a.batch, a.seed)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stt/acc24041_rerun/sim/run_alloc.py", line 49, in main
+    allocs["surrogate_numerical"] = np.array(load(f"power_{s2}")["allocations"]["outage_min"]["kappa"])
+                                             ~~~~^^^^^^^^^^^^^^^
+  File "/home/stt/acc24041_rerun/sim/run_alloc.py", line 28, in load
+    with open(os.path.join(OUT, name + ".json")) as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/stt/acc24041_rerun/sim/results/power_1.0.json'
+EXIT 1 2026-11-13T00:05:43+07:00

@@ -1,7 +1,7 @@
 # Physical-layer simulator (OAM-FSO link, Sections III and VII of the paper)
 
 Monte Carlo simulator of the IM/DD OAM link: correlated Noll-Zernike phase screens (tip/tilt removed,
-J = 435, 64 x 128 polar quadrature), aperture-averaged Gamma-Gamma scintillation, thermal and shot noise,
+J = 435, 64 x 64 Cartesian midpoint grid over the receive aperture), aperture-averaged Gamma-Gamma scintillation, thermal and shot noise,
 mode sorter with N_r ports, linear MMSE and ZF equalization, 7% hard-decision FEC threshold
 (BER 3.8e-3, gamma_th = 8.53 dB). CPU only (NumPy/SciPy); no GPU is used.
 
@@ -18,14 +18,19 @@ mode sorter with N_r ports, linear MMSE and ZF equalization, 7% hard-decision FE
 | `run_smallball.py` | Small-ball test of assumption (D2): Pr(delta_m(C) <= eps) and fitted exponents (`results/smallball_<s2>.json`) |
 | `run_tolerance.py` | Outage and anchor loss over laser RIN x extra sorter loss (`results/tolerance_<s2>.json`) |
 | `run_traces.py`, `run_traces_corr.py` | Temporally correlated slot traces (Gauss-Markov on the Zernike and scintillation variables); `run_traces_corr.py` adds the Kolmogorov temporal correlation rho = exp(-(T_f/tau_c)^(5/3)), the lag-1 correlation of the outage indicator, and packed per-slot outage indicators |
-| `launch_all.sh`, `launch_traces.sh` | The exact command lines used for the published results |
+| `run_jconv.py` | Outage versus the number of Zernike terms (J = 435, 595, 780) and the aperture grid (64, 96) on paired samples (`results/jconv_<s2>.json`) |
+| `wdm_reference.py` | WDM reference: M wavelengths on one Gaussian beam with the same link budget, no crosstalk, common Gamma-Gamma fading (`results/wdm_reference.json`) |
+| `launch_all.sh`, `launch_traces_corr.sh`, `launch_patterns.sh` | The exact command lines used for the published results (the last two ran on a second host with a virtual environment in `~/venv`) |
 
 ## Random number generators and seeds
 
 NumPy `default_rng` (PCG64). `run_modeset.py`: 3301, 3302, 3303 for sigma_R^2 = 0.2, 1.0, 2.5
 (+1000 for the point-receiver run). `run_alloc.py`: 4404. `run_phy_results.py`: sens 505, power 404 (other
 stages: see the source). `run_smallball.py`: 7701 (sigma_R^2 = 2.5), 7702 (1.0). `run_tolerance.py`: 8801, 8802.
-`run_traces_corr.py`: 9100-9119 (tau_c = 2.5 ms), 9200-9209 (tau_c = 10 ms). Multi-process scripts derive
+`run_traces_corr.py`: 9100-9119 (tau_c = 2.5 ms), 9200-9209 (tau_c = 10 ms), 9520-9539 and 10320-10339 (additional
+chains), 9600-9619 and 9700-9719 (runs with stored per-mode patterns, `results/correlated/patterns/`).
+`run_smallball.py` with 2e7 realisations: 7711. `run_jconv.py`: 9901 (sigma_R^2 = 2.5), 9902 (1.0).
+`run_modeset.py --jmax 780`: same seeds as J = 435 (the leading normals are shared). `wdm_reference.py`: 9911. Multi-process scripts derive
 worker seeds with `SeedSequence(seed).spawn(n)`.
 
 ## Reproducibility

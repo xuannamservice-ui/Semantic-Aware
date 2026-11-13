@@ -1,0 +1,7 @@
+START 2026-11-12T21:29:02+07:00 run_modeset.py --s2 2.5 --N 2000000 --rin -155 --tag rin --suffix _rin
+rin s2=2.5: 500000/2000000 samples, 709s, T8R8 op outage 0.146
+rin s2=2.5: 1000000/2000000 samples, 995s, T8R8 op outage 0.1457
+rin s2=2.5: 1500000/2000000 samples, 1281s, T8R8 op outage 0.1456
+rin s2=2.5: 2000000/2000000 samples, 1564s, T8R8 op outage 0.1456
+rin s2=2.5 done in 1565s
+EXIT 0 2026-11-12T21:55:08+07:00

@@ -1,0 +1,5 @@
+START 2026-11-12T23:02:17+07:00 run_phy_results.py --stages oper --s2 0.2
+link budget: SNR0 = 60.06 dB (thermal only 65.20 dB, shot only 61.64 dB), gamma_th = 8.53 dB, J = 435
+oper s2=0.2 done in 3921s: MMSE outage 3.1e-06, IaN outage 0.01848, tail UB 8.389e-13
+stage oper finished in 3921s
+EXIT 0 2026-11-13T00:07:39+07:00

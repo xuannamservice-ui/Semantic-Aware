@@ -1,0 +1,23 @@
+START 2026-11-13T15:38:29+07:00
+modesetJ780 s2=1.0: 500000/10000000 samples, 259s, T8R8 op outage 0.0286
+modesetJ780 s2=1.0: 1000000/10000000 samples, 516s, T8R8 op outage 0.02878
+modesetJ780 s2=1.0: 1500000/10000000 samples, 775s, T8R8 op outage 0.02881
+modesetJ780 s2=1.0: 2000000/10000000 samples, 1033s, T8R8 op outage 0.02875
+modesetJ780 s2=1.0: 2500000/10000000 samples, 1291s, T8R8 op outage 0.02864
+modesetJ780 s2=1.0: 3000000/10000000 samples, 1548s, T8R8 op outage 0.02868
+modesetJ780 s2=1.0: 3500000/10000000 samples, 1806s, T8R8 op outage 0.02865
+modesetJ780 s2=1.0: 4000000/10000000 samples, 2064s, T8R8 op outage 0.02865
+modesetJ780 s2=1.0: 4500000/10000000 samples, 2321s, T8R8 op outage 0.02865
+modesetJ780 s2=1.0: 5000000/10000000 samples, 2579s, T8R8 op outage 0.02862
+modesetJ780 s2=1.0: 5500000/10000000 samples, 2836s, T8R8 op outage 0.0286
+modesetJ780 s2=1.0: 6000000/10000000 samples, 3094s, T8R8 op outage 0.02856
+modesetJ780 s2=1.0: 6500000/10000000 samples, 3352s, T8R8 op outage 0.02859
+modesetJ780 s2=1.0: 7000000/10000000 samples, 3610s, T8R8 op outage 0.02857
+modesetJ780 s2=1.0: 7500000/10000000 samples, 3867s, T8R8 op outage 0.02858
+modesetJ780 s2=1.0: 8000000/10000000 samples, 4125s, T8R8 op outage 0.02854
+modesetJ780 s2=1.0: 8500000/10000000 samples, 4384s, T8R8 op outage 0.02857
+modesetJ780 s2=1.0: 9000000/10000000 samples, 4642s, T8R8 op outage 0.02857
+modesetJ780 s2=1.0: 9500000/10000000 samples, 4900s, T8R8 op outage 0.02859
+modesetJ780 s2=1.0: 10000000/10000000 samples, 5158s, T8R8 op outage 0.0286
+modesetJ780 s2=1.0 done in 5158s
+EXIT 0 2026-11-13T17:04:28+07:00

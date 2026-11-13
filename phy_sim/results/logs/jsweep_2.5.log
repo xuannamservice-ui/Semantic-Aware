@@ -1,0 +1,18 @@
+START 2026-11-12T23:18:15+07:00 run_phy_results.py --stages jsweep --s2 2.5
+link budget: SNR0 = 60.06 dB (thermal only 65.20 dB, shot only 61.64 dB), gamma_th = 8.53 dB, J = 435
+jsweep s2=2.5 J=6: outage 0.0083, diff vs J=435 -0.1381 +- 0.0022, Pc diag [0.772 0.642 0.522 0.419]
+jsweep s2=2.5 J=10: outage 0.04463, diff vs J=435 -0.1017 +- 0.0025, Pc diag [0.463 0.356 0.282 0.228]
+jsweep s2=2.5 J=15: outage 0.07851, diff vs J=435 -0.06785 +- 0.0026, Pc diag [0.349 0.241 0.182 0.147]
+jsweep s2=2.5 J=21: outage 0.1119, diff vs J=435 -0.03446 +- 0.0028, Pc diag [0.252 0.178 0.138 0.113]
+jsweep s2=2.5 J=28: outage 0.1141, diff vs J=435 -0.03223 +- 0.0028, Pc diag [0.212 0.149 0.117 0.098]
+jsweep s2=2.5 J=45: outage 0.126, diff vs J=435 -0.02033 +- 0.0027, Pc diag [0.168 0.12  0.095 0.08 ]
+jsweep s2=2.5 J=66: outage 0.13, diff vs J=435 -0.01638 +- 0.0027, Pc diag [0.146 0.105 0.084 0.071]
+jsweep s2=2.5 J=91: outage 0.1316, diff vs J=435 -0.01478 +- 0.0026, Pc diag [0.134 0.097 0.078 0.066]
+jsweep s2=2.5 J=120: outage 0.1328, diff vs J=435 -0.01361 +- 0.0025, Pc diag [0.126 0.091 0.073 0.063]
+jsweep s2=2.5 J=153: outage 0.1359, diff vs J=435 -0.01043 +- 0.0023, Pc diag [0.12  0.087 0.071 0.06 ]
+jsweep s2=2.5 J=231: outage 0.1404, diff vs J=435 -0.006 +- 0.002, Pc diag [0.113 0.082 0.067 0.057]
+jsweep s2=2.5 J=325: outage 0.1435, diff vs J=435 -0.00289 +- 0.0015, Pc diag [0.109 0.08  0.065 0.055]
+jsweep s2=2.5 J=435: outage 0.1464, diff vs J=435 +0 +- 0, Pc diag [0.107 0.078 0.063 0.054]
+jsweep s2=2.5 done in 611s
+stage jsweep finished in 612s
+EXIT 0 2026-11-12T23:28:32+07:00

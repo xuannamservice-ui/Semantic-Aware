@@ -1,0 +1,4 @@
+START 2026-11-12T23:02:17+07:00 run_phy_results.py --stages analytics --s2 1.0
+link budget: SNR0 = 60.06 dB (thermal only 65.20 dB, shot only 61.64 dB), gamma_th = 8.53 dB, J = 435
+stage analytics finished in 3s
+EXIT 0 2026-11-12T23:02:24+07:00

@@ -6,7 +6,7 @@ the normalized Zernike vector z, and the Gaussian copulas of the scintillation f
 u_{t+1} = rho u_t + sqrt(1 - rho^2) w_t. The marginal distribution of every slot is exactly that of
 run_modeset.py, so the outage probability per slot is unchanged; only the temporal structure differs.
 Chains of n_slots slots are simulated in parallel. --rho-model kolmogorov uses rho = exp(-(T_f/tau_c)^(5/3)).
-Result: sim/results/traces_corr_<s2>_<tau>ms<tag>.json and the per-slot outage indicators (npz, packed bits).
+Result: sim/results/traces_corr_<s2>_<tau>ms<tag>.json and the per-slot failure patterns (npz, uint8, bit i = i-th transmitted mode).
 """
 import argparse
 import json
@@ -95,8 +95,11 @@ def main(s2, tau_ms, n_chains, n_slots, tf_ms, seed, rho_model="exp", tag=""):
         print(f"s2={s2} tau={tau_ms} ms {k}: outage {row['outage']:.4g}, mean run {row['mean_run_slots']}, "
               f"P(next|out) {row['p_next_slot_outage_given_outage']:.3f}", flush=True)
     res["runtime_s"] = time.time() - t0
+    # per-slot failure pattern (bit i = i-th transmitted mode of the configuration failed), uint8 (M <= 8)
+    w = {k: (1 << np.arange(fails[k].shape[2], dtype=np.uint16)) for k in CFGS}
     np.savez_compressed(os.path.join(OUT, f"traces_corr_{s2}_{tau_ms:g}ms{tag}.npz"),
-                        **{k: np.packbits(fails[k].any(2), axis=1) for k in CFGS}, n_slots=n_slots)
+                        **{k: (fails[k].astype(np.uint16) @ w[k]).astype(np.uint8) for k in CFGS},
+                        **{f"{k}_tx": np.array(CFG[k][0]) for k in CFGS}, n_slots=n_slots)
     with open(os.path.join(OUT, f"traces_corr_{s2}_{tau_ms:g}ms{tag}.json"), "w") as fh:
         json.dump(res, fh, indent=1)
     print(f"done in {time.time() - t0:.0f}s", flush=True)
