@@ -3,7 +3,7 @@
 Path: all views of the scene in capture order, one frame per view, frame period = F slots (F = 11, 11.1 ms at
 90 frames/s with 1 ms slots). The edge caches received enhancement layers; for frame f the anchors visible in view f
 and not cached are packetised (importance mapping, stream m on the m-th most reliable mode) and sent in the first slot
-of the frame. Losses: per-slot failure patterns of the temporally correlated simulation (run_traces_corr.py with stored
+of the frame (token-to-stream mapping: --policy, interleaved by default). Losses: per-slot failure patterns of the temporally correlated simulation (run_traces_corr.py with stored
 patterns; chains joined end to end). The base layer and positions travel on n_A replicated modes; if all of them fail in
 the first slot the new anchors of the frame are not delivered at all.
 Schemes, all with the same redundancy eps (fraction of the frame payload spent on protection):
@@ -19,7 +19,7 @@ Schemes, all with the same redundancy eps (fraction of the frame payload spent o
 Anchors not delivered in a frame are sent again in the next frame (they are still not cached).
 Quality at the held-out test views: PSNR/SSIM/LPIPS against ground truth and Psi = PSNR against the loss-free rendering.
 Output: <out>/<scene>/frames<tag>_<cfg>_tau<tau>_eps<eps>.json
-usage: python eval_frames.py --scene garden --tag _v2a_r1 --cfg T8R8 --tau 10 --eps 0.167 --chains 10
+usage: python eval_frames.py --scene garden --tag _v2a_r1 --cfg T8R8 --tau 10 --eps 0.167 --chains 10 [--stride 4]
 """
 import argparse
 import glob
@@ -67,7 +67,11 @@ def main(a):
                key=lambda sub: int(np.count_nonzero((stream & sum(1 << i for i in sub)) == sum(1 << i for i in sub))))
     anchor_modes = [rel.index(int(tx[i])) for i in best]       # as stream indices
     r = int(round(a.eps * M))
-    order = np.argsort(scene.names); T = len(order); F = a.slots_per_frame
+    order = np.argsort(scene.names)
+    # faster camera: every stride-th view of the capture path (test views always kept, so they are evaluated)
+    test_set = set(int(i) for i in scene.test_idx)
+    order = np.array([v for j, v in enumerate(order) if j % a.stride == 0 or int(v) in test_set])
+    T = len(order); F = a.slots_per_frame
     test = set(int(i) for i in scene.test_idx)
     schemes = ["none", "conceal", "arq", "arq+conceal", "mds", "mds+conceal"]
     rows, t0 = [], time.time()
@@ -99,7 +103,7 @@ def main(a):
                         else:
                             if sch.startswith("mds") and len(S0) <= r:
                                 S0 = set()
-                            lm = pk.lost_mask(new, M, "importance", sorted(S0), prng) if S0 else \
+                            lm = pk.lost_mask(new, M, a.policy, sorted(S0), prng) if S0 else \
                                 torch.zeros(new.numel(), dtype=torch.bool, device="cuda")
                             lost = new[lm]
                             if sch.startswith("arq") and lost.numel():
@@ -109,7 +113,7 @@ def main(a):
                                         break
                                     send = lost[:budget]; budget -= send.numel()
                                     Ss = failed_streams(pats[f, s])
-                                    lm2 = pk.lost_mask(send, M, "importance", sorted(Ss), prng) if Ss else \
+                                    lm2 = pk.lost_mask(send, M, a.policy, sorted(Ss), prng) if Ss else \
                                         torch.zeros(send.numel(), dtype=torch.bool, device="cuda")
                                     lost = torch.cat([send[lm2], lost[send.numel():]])
                         delivered = new[~torch.isin(new, lost)] if lost.numel() else new
@@ -138,10 +142,10 @@ def main(a):
                      **{f"p_fail_psi{t}": float((psi < t).mean()) for t in a.psi_th},
                      "psi_min": float(psi.min()), "psi_p01": float(np.percentile(psi, 1))}
     res = {"scene": a.scene, "tag": a.tag, "cfg": a.cfg, "tau_c_ms": a.tau, "eps": a.eps, "r_mds": r,
-           "anchor_modes": [int(tx[i]) for i in best],
-           "slots_per_frame": F, "n_anchor_copies": a.n_anchor, "net": a.net, "chains": a.chains, "frames": T,
+           "anchor_modes": [int(tx[i]) for i in best], "policy": a.policy,
+           "slots_per_frame": F, "stride": a.stride, "n_anchor_copies": a.n_anchor, "net": a.net, "chains": a.chains, "frames": T,
            "summary": summ, "rows": rows}
-    with open(os.path.join(a.out, a.scene, f"frames{a.tag}_{a.cfg}_tau{a.tau:g}_eps{a.eps:g}.json"), "w") as fh:
+    with open(os.path.join(a.out, a.scene, f"frames{a.tag}_{a.cfg}_tau{a.tau:g}_eps{a.eps:g}" + (f"_stride{a.stride}" if a.stride > 1 else "") + ".json"), "w") as fh:
         json.dump(res, fh)
     for k, v in summ.items():
         print(k, json.dumps(v), flush=True)
@@ -158,7 +162,9 @@ if __name__ == "__main__":
     ap.add_argument("--n-anchor", type=int, default=2, help="number of modes carrying the base layer")
     ap.add_argument("--slots-per-frame", type=int, default=11)
     ap.add_argument("--chains", type=int, default=10)
+    ap.add_argument("--stride", type=int, default=1, help="use every stride-th view of the path (faster camera)")
     ap.add_argument("--net", default="gen_fp")
+    ap.add_argument("--policy", default="interleaved", choices=("random", "contiguous", "interleaved", "importance"))
     ap.add_argument("--psi-th", type=float, nargs="*", default=[30.0, 35.0])
     ap.add_argument("--data", default="data/360_v2")
     ap.add_argument("--out", default="results")

@@ -1,0 +1,61 @@
+sigma_R^2 = 2.5: Cn2 = 5.971e-14 m^-2/3, r0 = 2.11 cm, D/r0 = 9.50, gamma_th = 8.53 dB
+split/ss/tt            N=  20000  self -11.91 dB  xt(TX8 ports)  -8.01 dB  xt(13)  -6.32 dB  Pap SI 0.004  P13 mean  -5.39 dB SI 0.091  self SI 1.067
+                       T8R8: P_out = 0.2284 [0.223, 0.234]  K hist [15431, 2543, 1441, 497, 78, 9, 1, 0, 0]
+                       T6R8: P_out = 0.0033 [0.00259, 0.0042]  K hist [19934, 59, 7, 0, 0, 0, 0]
+                       T6R11: P_out = 5e-05 [8.83e-06, 0.000283]  K hist [19999, 1, 0, 0, 0, 0, 0]
+split/ss/raw           N=  20000  self -14.78 dB  xt(TX8 ports)  -8.65 dB  xt(13)  -6.93 dB  Pap SI 0.004  P13 mean  -6.32 dB SI 0.178  self SI 1.449
+                       T8R8: P_out = 0.3604 [0.354, 0.367]  K hist [12793, 3030, 2238, 1183, 444, 167, 79, 44, 22]
+                       T6R8: P_out = 0.03855 [0.036, 0.0413]  K hist [19229, 432, 206, 68, 40, 19, 6]
+                       T6R11: P_out = 0.01025 [0.00895, 0.0117]  K hist [19795, 112, 50, 27, 12, 4, 0]
+split/ss/ttc           N=  20000  self  -8.69 dB  xt(TX8 ports)  -8.76 dB  xt(13)  -7.21 dB  Pap SI 0.004  P13 mean  -5.00 dB SI 0.072  self SI 0.516
+                       T8R8: P_out = 0.1231 [0.119, 0.128]  K hist [17537, 1382, 812, 229, 36, 4, 0, 0, 0]
+                       T6R8: P_out = 0.00045 [0.000237, 0.000855]  K hist [19991, 8, 1, 0, 0, 0, 0]
+                       T6R11: P_out = 0 [0, 0.000192]  K hist [20000, 0, 0, 0, 0, 0, 0]
+                       beacon wander rms 2.85 cm (theory 4.03 cm), tilt rms 23.2 urad, runtime 4686 s
+split/ss20/tt          N=   2000  self -11.85 dB  xt(TX8 ports)  -8.01 dB  xt(13)  -6.32 dB  Pap SI 0.004  P13 mean  -5.37 dB SI 0.090  self SI 1.043
+                       T8R8: P_out = 0.2295 [0.212, 0.248]  K hist [1541, 234, 165, 55, 5, 0, 0, 0, 0]
+                       T6R8: P_out = 0.002 [0.000778, 0.00513]  K hist [1996, 3, 1, 0, 0, 0, 0]
+                       T6R11: P_out = 0 [0, 0.00192]  K hist [2000, 0, 0, 0, 0, 0, 0]
+split/ss20/raw         N=   2000  self -14.79 dB  xt(TX8 ports)  -8.69 dB  xt(13)  -6.95 dB  Pap SI 0.004  P13 mean  -6.34 dB SI 0.180  self SI 1.450
+                       T8R8: P_out = 0.3695 [0.349, 0.391]  K hist [1261, 305, 220, 117, 54, 21, 13, 4, 5]
+                       T6R8: P_out = 0.044 [0.0359, 0.0539]  K hist [1912, 49, 21, 10, 1, 3, 4]
+                       T6R11: P_out = 0.014 [0.0097, 0.0202]  K hist [1972, 16, 4, 1, 4, 3, 0]
+split/ss20/ttc         N=   2000  self  -8.63 dB  xt(TX8 ports)  -8.75 dB  xt(13)  -7.20 dB  Pap SI 0.004  P13 mean  -4.96 dB SI 0.070  self SI 0.502
+                       T8R8: P_out = 0.1205 [0.107, 0.135]  K hist [1759, 130, 87, 20, 4, 0, 0, 0, 0]
+                       T6R8: P_out = 0.0015 [0.00051, 0.0044]  K hist [1997, 3, 0, 0, 0, 0, 0]
+                       T6R11: P_out = 0 [0, 0.00192]  K hist [2000, 0, 0, 0, 0, 0, 0]
+                       beacon wander rms 2.84 cm (theory 4.03 cm), tilt rms 23.6 urad, runtime 867 s
+split/gridfine/tt      N=    800  self -11.78 dB  xt(TX8 ports)  -7.99 dB  xt(13)  -6.31 dB  Pap SI 0.005  P13 mean  -5.35 dB SI 0.092  self SI 1.038
+                       T8R8: P_out = 0.2188 [0.191, 0.249]  K hist [625, 96, 57, 18, 3, 1, 0, 0, 0]
+                       T6R8: P_out = 0.00125 [0.000221, 0.00705]  K hist [799, 1, 0, 0, 0, 0, 0]
+                       T6R11: P_out = 0 [0, 0.00478]  K hist [800, 0, 0, 0, 0, 0, 0]
+split/gridfine/raw     N=    800  self -14.52 dB  xt(TX8 ports)  -8.61 dB  xt(13)  -6.89 dB  Pap SI 0.005  P13 mean  -6.25 dB SI 0.179  self SI 1.615
+                       T8R8: P_out = 0.3463 [0.314, 0.38]  K hist [523, 108, 91, 48, 21, 3, 2, 3, 1]
+                       T6R8: P_out = 0.0375 [0.0264, 0.053]  K hist [770, 17, 8, 3, 1, 1, 0]
+                       T6R11: P_out = 0.0125 [0.0068, 0.0229]  K hist [790, 6, 3, 1, 0, 0, 0]
+split/gridfine/ttc     N=    800  self  -8.60 dB  xt(TX8 ports)  -8.81 dB  xt(13)  -7.25 dB  Pap SI 0.005  P13 mean  -4.98 dB SI 0.070  self SI 0.481
+                       T8R8: P_out = 0.1225 [0.102, 0.147]  K hist [702, 56, 32, 8, 1, 0, 1, 0, 0]
+                       T6R8: P_out = 0.00125 [0.000221, 0.00705]  K hist [799, 1, 0, 0, 0, 0, 0]
+                       T6R11: P_out = 0 [0, 0.00478]  K hist [800, 0, 0, 0, 0, 0, 0]
+                       beacon wander rms 2.88 cm (theory 4.03 cm), tilt rms 23.1 urad, runtime 1147 s
+split/gridwide/tt      N=    800  self -12.05 dB  xt(TX8 ports)  -7.99 dB  xt(13)  -6.31 dB  Pap SI 0.004  P13 mean  -5.41 dB SI 0.095  self SI 1.129
+                       T8R8: P_out = 0.2525 [0.224, 0.284]  K hist [598, 99, 78, 22, 3, 0, 0, 0, 0]
+                       T6R8: P_out = 0.0075 [0.00344, 0.0163]  K hist [794, 6, 0, 0, 0, 0, 0]
+                       T6R11: P_out = 0 [0, 0.00478]  K hist [800, 0, 0, 0, 0, 0, 0]
+split/gridwide/raw     N=    800  self -15.06 dB  xt(TX8 ports)  -8.83 dB  xt(13)  -7.09 dB  Pap SI 0.004  P13 mean  -6.49 dB SI 0.193  self SI 1.541
+                       T8R8: P_out = 0.3775 [0.345, 0.412]  K hist [498, 131, 88, 44, 20, 10, 5, 3, 1]
+                       T6R8: P_out = 0.0525 [0.0391, 0.0702]  K hist [758, 24, 8, 5, 1, 3, 1]
+                       T6R11: P_out = 0.0175 [0.0105, 0.0292]  K hist [786, 10, 2, 2, 0, 0, 0]
+split/gridwide/ttc     N=    800  self  -8.67 dB  xt(TX8 ports)  -8.75 dB  xt(13)  -7.20 dB  Pap SI 0.004  P13 mean  -4.98 dB SI 0.072  self SI 0.517
+                       T8R8: P_out = 0.12 [0.0993, 0.144]  K hist [704, 57, 25, 11, 2, 1, 0, 0, 0]
+                       T6R8: P_out = 0.0025 [0.000686, 0.00907]  K hist [798, 2, 0, 0, 0, 0, 0]
+                       T6R11: P_out = 0 [0, 0.00478]  K hist [800, 0, 0, 0, 0, 0, 0]
+                       beacon wander rms 2.91 cm (theory 4.03 cm), tilt rms 24.1 urad, runtime 1120 s
+Zernike/zern           N=  20000  self -11.21 dB  xt(TX8 ports)  -7.69 dB  xt(13)  -6.19 dB  Pap SI 0.184  P13 mean  -5.06 dB SI 0.281  self SI 1.289
+                       T8R8: P_out = 0.144 [0.139, 0.149]  K hist [17120, 1694, 793, 312, 65, 13, 3, 0, 0]
+                       T6R8: P_out = 0.00235 [0.00177, 0.00312]  K hist [19953, 36, 9, 1, 1, 0, 0]
+                       T6R11: P_out = 0.00025 [0.000107, 0.000585]  K hist [19995, 5, 0, 0, 0, 0, 0]
+Zernike/zernbig        N=1000000  self -11.20 dB  xt(TX8 ports)  -7.67 dB  xt(13)  -6.17 dB  Pap SI 0.185  P13 mean  -5.04 dB SI 0.284  self SI 1.317
+                       T8R8: P_out = 0.1461 [0.145, 0.147]  K hist [853913, 83124, 41999, 16414, 3934, 514, 89, 13, 0]
+                       T6R8: P_out = 0.002676 [0.00258, 0.00278]  K hist [997324, 2246, 362, 58, 8, 2, 0]
+                       T6R11: P_out = 8e-05 [6.43e-05, 9.96e-05]  K hist [999920, 69, 10, 1, 0, 0, 0]

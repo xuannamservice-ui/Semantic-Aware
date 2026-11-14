@@ -1,0 +1,52 @@
+2026-11-13 10:32:42 START garden 0.004 attempt=1 free=15070MiB
+2026-11-13 15:28:12 DONE garden 0.004
+DONE garden 0.004
+2026-11-13 15:28:12 START garden 0.0005 attempt=1 free=13701MiB
+2026-11-13 20:16:31 DONE garden 0.0005
+DONE garden 0.0005
+2026-11-13 20:16:31 START stump 0.004 attempt=1 free=13901MiB
+2026-11-13 20:41:13 OOM stump 0.004 attempt=1; retry in 10 min
+2026-11-13 20:51:13 wait stump 0.004 free=1381MiB
+2026-11-13 20:56:14 wait stump 0.004 free=1047MiB
+2026-11-13 21:01:14 wait stump 0.004 free=5644MiB
+2026-11-13 21:06:14 wait stump 0.004 free=5656MiB
+2026-11-13 21:11:14 wait stump 0.004 free=4594MiB
+2026-11-13 21:16:14 wait stump 0.004 free=4594MiB
+2026-11-13 21:21:14 wait stump 0.004 free=3554MiB
+2026-11-13 21:26:14 wait stump 0.004 free=3552MiB
+2026-11-13 21:31:14 wait stump 0.004 free=9178MiB
+2026-11-13 21:36:14 wait stump 0.004 free=4576MiB
+2026-11-13 21:41:14 wait stump 0.004 free=1075MiB
+2026-11-13 21:46:14 wait stump 0.004 free=1069MiB
+2026-11-13 21:51:14 wait stump 0.004 free=1055MiB
+2026-11-13 21:56:14 wait stump 0.004 free=7757MiB
+2026-11-13 22:01:14 wait stump 0.004 free=73MiB
+2026-11-13 22:06:14 wait stump 0.004 free=1629MiB
+2026-11-13 22:11:14 wait stump 0.004 free=4376MiB
+2026-11-13 22:16:14 wait stump 0.004 free=4276MiB
+2026-11-13 22:21:14 wait stump 0.004 free=4276MiB
+2026-11-13 22:26:14 wait stump 0.004 free=3816MiB
+2026-11-13 22:31:14 wait stump 0.004 free=3816MiB
+2026-11-13 22:36:14 wait stump 0.004 free=9003MiB
+2026-11-13 22:41:14 wait stump 0.004 free=9003MiB
+2026-11-13 22:46:14 wait stump 0.004 free=9003MiB
+2026-11-13 22:51:14 wait stump 0.004 free=9003MiB
+2026-11-13 22:56:14 wait stump 0.004 free=9019MiB
+2026-11-13 23:01:14 wait stump 0.004 free=9019MiB
+2026-11-13 23:06:14 wait stump 0.004 free=9017MiB
+2026-11-13 23:11:14 wait stump 0.004 free=9017MiB
+2026-11-13 23:16:14 wait stump 0.004 free=9017MiB
+2026-11-13 23:21:14 wait stump 0.004 free=9147MiB
+2026-11-13 23:26:14 START stump 0.004 attempt=2 free=11083MiB
+2026-11-14 01:45:00 DONE stump 0.004
+DONE stump 0.004
+2026-11-14 01:45:00 START room 0.004 attempt=1 free=31188MiB
+2026-11-14 04:06:01 DONE room 0.004
+DONE room 0.004
+2026-11-14 04:06:01 START bonsai 0.004 attempt=1 free=13635MiB
+2026-11-14 08:29:29 DONE bonsai 0.004
+DONE bonsai 0.004
+2026-11-14 08:29:29 START counter 0.004 attempt=1 free=11530MiB
+2026-11-14 13:34:31 DONE counter 0.004
+DONE counter 0.004
+2026-11-14 13:34:31 START kitchen 0.004 attempt=1 free=23488MiB

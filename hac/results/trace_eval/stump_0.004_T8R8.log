@@ -1,0 +1,32 @@
+/home/namnx/hac_build/HAC/utils/encodings.py:95: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, inputs, embeddings, offsets_list, resolutions_list, calc_grad_inputs=False, min_level_id=None, n_levels_calc=1, binary_vxl=None, PV=0):
+/home/namnx/hac_build/HAC/utils/encodings.py:173: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad):
+hash_params: True 4 13 (18, 24, 33, 44, 59, 80, 108, 148, 201, 275, 376, 514) 15 (130, 258, 514, 1026) True False False
+encoding_param_num=1766272, size=0.2105560302734375MB.
+Loading trained model at iteration 30000
+Reading camera 1/125Reading camera 2/125Reading camera 3/125Reading camera 4/125Reading camera 5/125Reading camera 6/125Reading camera 7/125Reading camera 8/125Reading camera 9/125Reading camera 10/125Reading camera 11/125Reading camera 12/125Reading camera 13/125Reading camera 14/125Reading camera 15/125Reading camera 16/125Reading camera 17/125Reading camera 18/125Reading camera 19/125Reading camera 20/125Reading camera 21/125Reading camera 22/125Reading camera 23/125Reading camera 24/125Reading camera 25/125Reading camera 26/125Reading camera 27/125Reading camera 28/125Reading camera 29/125Reading camera 30/125Reading camera 31/125Reading camera 32/125Reading camera 33/125Reading camera 34/125Reading camera 35/125Reading camera 36/125Reading camera 37/125Reading camera 38/125Reading camera 39/125Reading camera 40/125Reading camera 41/125Reading camera 42/125Reading camera 43/125Reading camera 44/125Reading camera 45/125Reading camera 46/125Reading camera 47/125Reading camera 48/125Reading camera 49/125Reading camera 50/125Reading camera 51/125Reading camera 52/125Reading camera 53/125Reading camera 54/125Reading camera 55/125Reading camera 56/125Reading camera 57/125Reading camera 58/125Reading camera 59/125Reading camera 60/125Reading camera 61/125Reading camera 62/125Reading camera 63/125Reading camera 64/125Reading camera 65/125Reading camera 66/125Reading camera 67/125Reading camera 68/125Reading camera 69/125Reading camera 70/125Reading camera 71/125Reading camera 72/125Reading camera 73/125Reading camera 74/125Reading camera 75/125Reading camera 76/125Reading camera 77/125Reading camera 78/125Reading camera 79/125Reading camera 80/125Reading camera 81/125Reading camera 82/125Reading camera 83/125Reading camera 84/125Reading camera 85/125Reading camera 86/125Reading camera 87/125Reading camera 88/125Reading camera 89/125Reading camera 90/125Reading camera 91/125Reading camera 92/125Reading camera 93/125Reading camera 94/125Reading camera 95/125Reading camera 96/125Reading camera 97/125Reading camera 98/125Reading camera 99/125Reading camera 100/125Reading camera 101/125Reading camera 102/125Reading camera 103/125Reading camera 104/125Reading camera 105/125Reading camera 106/125Reading camera 107/125Reading camera 108/125Reading camera 109/125Reading camera 110/125Reading camera 111/125Reading camera 112/125Reading camera 113/125Reading camera 114/125Reading camera 115/125Reading camera 116/125Reading camera 117/125Reading camera 118/125Reading camera 119/125Reading camera 120/125Reading camera 121/125Reading camera 122/125Reading camera 123/125Reading camera 124/125Reading camera 125/125
+start fetching data from ply file
+Loading Training Cameras
+Loading Test Cameras
+view 0: 24 rows, 62s
+view 1: 48 rows, 111s
+view 2: 72 rows, 170s
+view 3: 96 rows, 213s
+view 4: 120 rows, 255s
+view 5: 144 rows, 294s
+view 6: 168 rows, 334s
+view 7: 192 rows, 379s
+view 8: 216 rows, 431s
+view 9: 240 rows, 483s
+view 10: 264 rows, 533s
+view 11: 288 rows, 573s
+view 12: 312 rows, 621s
+view 13: 336 rows, 663s
+view 14: 360 rows, 705s
+view 15: 384 rows, 746s
+interleaved/drop {'psnr': 23.00395522514979, 'ssim': 0.6731730246295532, 'lpips': 0.31945227505639195, 'psnr_vs_full': 26.089537620544434, 'lost_frac': 0.20300786942243576}
+interleaved/idw {'psnr': 24.090391377607983, 'ssim': 0.6785391879578432, 'lpips': 0.30975970191260177, 'psnr_vs_full': 28.023493111133575, 'lost_frac': 0.20300786942243576}
+contiguous/drop {'psnr': 20.790497442086536, 'ssim': 0.6389822736382484, 'lpips': 0.3356310239372154, 'psnr_vs_full': 22.973523527383804, 'lost_frac': 0.20308172570851943}
+contiguous/idw {'psnr': 22.73120027780533, 'ssim': 0.6598117845132947, 'lpips': 0.31843435717746615, 'psnr_vs_full': 25.873703976472218, 'lost_frac': 0.20308172570851943}
+full {'psnr': 26.646754503250122}

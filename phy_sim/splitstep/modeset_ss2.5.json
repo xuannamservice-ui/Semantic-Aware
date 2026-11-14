@@ -1,0 +1,113 @@
+{
+ "source": "split-step wave optics, tip/tilt-corrected variant (phy_sim/splitstep), 20000 independent realizations",
+ "configs": {
+  "T8R8": {
+   "tx": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "snr_labels": [
+    "op"
+   ],
+   "per_mode_count": [
+    [
+     1875,
+     1021,
+     537,
+     263,
+     265,
+     527,
+     954,
+     1837
+    ]
+   ],
+   "outage_op": 0.22845,
+   "n": 20000
+  },
+  "T6R8": {
+   "tx": [
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3
+   ],
+   "snr_labels": [
+    "op"
+   ],
+   "per_mode_count": [
+    [
+     22,
+     6,
+     1,
+     1,
+     10,
+     33
+    ]
+   ],
+   "outage_op": 0.0033,
+   "n": 20000
+  },
+  "T6R11": {
+   "tx": [
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3
+   ],
+   "snr_labels": [
+    "op"
+   ],
+   "per_mode_count": [
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   ],
+   "outage_op": 5e-05,
+   "n": 20000
+  },
+  "T8R11": {
+   "tx": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "snr_labels": [
+    "op"
+   ],
+   "per_mode_count": [
+    [
+     34,
+     7,
+     2,
+     1,
+     1,
+     5,
+     14,
+     26
+    ]
+   ],
+   "outage_op": 0.0037,
+   "n": 20000
+  }
+ }
+}

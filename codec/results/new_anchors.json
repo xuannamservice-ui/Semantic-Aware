@@ -1,0 +1,50 @@
+{
+ "garden": {
+  "frames": 185,
+  "first": 133062,
+  "new_mean_after_first": 635.4891304347826,
+  "new_p95": 5483.9,
+  "new_max": 8638,
+  "visible_mean": 111690.51351351352
+ },
+ "room": {
+  "frames": 311,
+  "first": 98257,
+  "new_mean_after_first": 324.0387096774194,
+  "new_p95": 1458.2500000000011,
+  "new_max": 35433,
+  "visible_mean": 84654.04501607717
+ },
+ "truck": {
+  "frames": 251,
+  "first": 178118,
+  "new_mean_after_first": 286.6,
+  "new_p95": 1816.649999999999,
+  "new_max": 5356,
+  "visible_mean": 148578.19123505976
+ },
+ "playroom": {
+  "frames": 225,
+  "first": 42803,
+  "new_mean_after_first": 613.1830357142857,
+  "new_p95": 2761.1499999999987,
+  "new_max": 34429,
+  "visible_mean": 32251.702222222222
+ },
+ "bicycle": {
+  "frames": 194,
+  "first": 129442,
+  "new_mean_after_first": 624.4715025906736,
+  "new_p95": 3945.9999999999964,
+  "new_max": 14349,
+  "visible_mean": 85096.8350515464
+ },
+ "kitchen": {
+  "frames": 279,
+  "first": 220905,
+  "new_mean_after_first": 104.50719424460432,
+  "new_p95": 437.0,
+  "new_max": 6185,
+  "visible_mean": 210267.90681003584
+ }
+}

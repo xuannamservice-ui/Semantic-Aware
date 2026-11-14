@@ -1,0 +1,1 @@
+garden _v2s_r0 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 0 --rate-lambda 0

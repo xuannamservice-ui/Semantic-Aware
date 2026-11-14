@@ -1,0 +1,6 @@
+structure function ratio: [0.874 0.912 0.911 0.902 0.888 0.869 0.848 0.822 0.792 0.774 0.735 0.711
+ 0.686 0.659 0.624]
+plane wave 0.2 {'n_real': 480, 'grid': [1024, 0.002], 'box_m': 0.2, 'SI': 0.20164713111010402, 'SI_se_between_realizations': 0.005782050922967603, 'theory_rytov': 0.2, 'theory_andrews_phillips': 0.1930995126918107, 'mean_I': 1.0031972116039958, 'vacuum_I_range': [0.9999959578943453, 1.000004042329877]}
+plane wave 1.0 {'n_real': 480, 'grid': [1024, 0.002], 'box_m': 0.2, 'SI': 0.9369836326633749, 'SI_se_between_realizations': 0.02105451382503026, 'theory_rytov': 1.0, 'theory_andrews_phillips': 0.7064384959192418, 'mean_I': 1.001320055661838, 'vacuum_I_range': [0.9999959578943453, 1.000004042329877]}
+plane wave 2.5 {'n_real': 480, 'grid': [1024, 0.002], 'box_m': 0.2, 'SI': 1.7871648447408388, 'SI_se_between_realizations': 0.045859179060594495, 'theory_rytov': 2.5, 'theory_andrews_phillips': 1.0581970998088344, 'mean_I': 0.9990645889574309, 'vacuum_I_range': [0.9999959578943453, 1.000004042329877]}
+gaussian beam {'s2': 0.2, 'n_real': 2400, 'SI': 0.07139842921955664, 'SI_boot_se': 0.0021148876385695863, 'theory_weak_rytov': 0.06667729326997607, 'mean_I_over_vac': 0.8825284136231475}

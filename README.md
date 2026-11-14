@@ -10,7 +10,9 @@ optical link (which of the parallel streams failed in a slot):
 | Part | Folder | What it does | Hardware |
 |---|---|---|---|
 | Optical link | [`phy_sim/`](phy_sim/) | Wave-optics Monte Carlo of an intensity-modulated OAM free-space link with a mode sorter and linear MMSE equalization; writes outage statistics and **failure-pattern traces** | CPU only |
+| Split-step check | [`phy_sim/splitstep/`](phy_sim/splitstep/) | Multi-screen wave-optics propagation of the same link (10 phase screens over 1.5 km) as an independent check of the single-screen model; also writes failure patterns | CPU only |
 | Codec | [`codec/`](codec/) | Concealment-aware layered 3D Gaussian Splatting codec and generative concealment network; trains on Mip-NeRF 360, Tanks and Temples and Deep Blending scenes and evaluates the rendering quality under the failure traces | NVIDIA GPU |
+| HAC baseline | [`hac/`](hac/) | Scripts that run the official HAC code on the same scenes and apply the same failure patterns to its anchors | NVIDIA GPU |
 
 The codec does not depend on the optical model: it only reads failure-pattern traces (`phy_sim/results/traces_*.npz`,
 `phy_sim/results/correlated/`). Traces from any other multi-stream link can be used in their place.
@@ -32,6 +34,8 @@ phy_sim/                      optical-link simulator (Python, NumPy/SciPy)
   wdm_reference.py            WDM reference: M wavelengths on one Gaussian beam, no crosstalk
   launch_*.sh                 exact command lines used for the published results
   results/                    all outputs (JSON, NPZ) and run logs; see section 4
+  splitstep/                  split-step multi-screen simulation (split_step.py, run_all.sh), validation of the screens,
+                              outage results, failure patterns of the realizations (ss_patterns.py -> traces_ss2.5.npz)
 codec/                        layered 3DGS codec and concealment (PyTorch, gsplat)
   scene_data.py               COLMAP reader, train/test split (every 8th image is a test view)
   train_3dgs.py               reference 3DGS model per scene (MCMC densification, 500,000 Gaussians)
@@ -44,9 +48,12 @@ codec/                        layered 3DGS codec and concealment (PyTorch, gspla
   eval_trajectory.py          camera-path evaluation with an edge cache
   eval_frames.py              frame-level evaluation: concealment vs. erasure coding and in-frame retransmission
   bench_latency.py            latency of gathering, concealment, decoding and rendering (CUDA events)
+  new_anchors.py              anchors that become visible for the first time per frame along the capture path
   queue_*.sh, run_*.sh        job queues used on the shared GPU server (memory guards included)
   results/                    per-scene metrics and evaluations (JSON); see section 4
   archive/                    first-generation (non-layered) codec scripts kept for reference; not used for the paper
+hac/                          HAC baseline: run_one.sh (training, encoding, decoding with the official code and settings),
+                              hac_trace_eval.py (HAC under the failure traces, drop and IDW), run_trace_eval*.sh
 legacy/                       earlier surrogate script and empty measurement templates; superseded, not used
 ```
 
@@ -83,6 +90,8 @@ python run_jconv.py --s2 2.5 --N 10000000 --workers 24        # J and grid conve
 python run_traces_corr.py --s2 2.5 --tau 10 --chains 2000 --slots 250 --seed 9700 --rho-model kolmogorov --tag _pat0
 python wdm_reference.py
 ./launch_all.sh                                               # the full set as published
+cd splitstep && ./run_all.sh                                  # split-step check (several hours; run times in run_all.log)
+python ss_patterns.py --s2 2.5 --variant tt                   # failure patterns of the split-step realizations
 ```
 All generators are NumPy `default_rng` (PCG64) with fixed seeds (listed in [`phy_sim/README.md`](phy_sim/README.md)).
 The physical-layer results were computed twice, on macOS (Apple silicon) and on Ubuntu (Intel Xeon E5-2680 v4,
@@ -99,6 +108,8 @@ python train_layered.py --scene garden --tag _v2a_r1 --anchors 250000 --feat-dim
 python train_layered.py --scene garden --tag _v2s_r1 ... --aware 0     # separate design (ablation)
 python eval_layered.py --scene garden --tag _v2a_r1 --cfg T8R8 --s2 2.5 --n-pat 6
 python eval_frames.py  --scene garden --tag _v2a_r1 --cfg T8R8 --tau 10 --n-anchor 4 --chains 10
+python eval_frames.py  --scene garden --tag _v2a_r1 --cfg T8R8 --tau 10 --n-anchor 4 --chains 10 --stride 4   # faster camera
+python eval_layered.py --scene garden --tag _v2a_r1 --cfg T8R8 --s2 ss2.5 --phy ../phy_sim/splitstep           # split-step patterns
 python bench_latency.py --out results/bench.json --lost 1000,5000,10000,20000,30000
 ```
 `queue_exp.sh jobs_all_v2.txt` runs the trainings and evaluations of all scenes with memory guards for a shared server.
@@ -146,18 +157,32 @@ Optical link, Rytov variance 2.5, MMSE outage at the operating point (10^7 slots
 | 6 modes / 11 ports | 9.17e-5 | 1.083e-4 | |
 | WDM, 6 wavelengths, one Gaussian beam | | 3.3e-17 (Gamma-Gamma CDF) | all channels fail together |
 
-Codec, garden (Mip-NeRF 360), final joint design: loss-free 26.71 dB PSNR / 0.186 LPIPS (reference 3DGS 26.32 / 0.222),
-18.6 MB; in outage slots of the 8-mode/8-port trace: 26.02 dB with concealment, 19.13 dB without, 23.52 dB with
-neighbour interpolation (`results/garden/eval_layered_v2a_r1_T8R8_2.5.json`).
+Split-step check (10 phase screens, 2e4 realizations, tip-tilt corrected, `phy_sim/splitstep/`): T6R8 3.3e-3 and T6R11 5e-5
+agree with the single-screen model within the 95% intervals; for T8R8 the single-screen model is optimistic (0.228 against 0.146).
 
-Latency on an idle NVIDIA L40S, 10,000 lost anchors: LiteConcealNet FP16 (compiled) 1.77 ms, EdgeConcealNet FP16
-1.06 ms; anchor-to-Gaussian decoding of 110k visible anchors 1.62 ms; rendering at 1297 x 840 2.07 ms.
+Codec, eleven scenes (Mip-NeRF 360, Tanks and Temples, Deep Blending), final joint design, outage slots of the 8-mode/8-port
+trace, interleaved mapping (`codec/results/<scene>/eval_layered_v2a_r1_T8R8_2.5.json`):
+
+| | Loss-free | Drop | IDW | Concealment network |
+|---|---|---|---|---|
+| Mean PSNR over 11 scenes (dB) | 27.86 | 22.49 | 24.50 | 27.34 |
+
+The network is 2.99 dB above IDW (95% bootstrap interval [2.90, 3.08]) and better in 99.8% of the
+pairs of test view and failure pattern; joint training adds 0.96 to 1.85 dB over a separately trained network.
+
+Frame level with an edge cache (11 scenes, 3,380 test frames, T8R8, tau_c = 10 ms, `frames_*.json`): frames below 30 dB against
+the loss-free rendering: none 22, concealment 0, retransmission 8, (8,7) erasure code 10 (redundancy 1/6 for the last two).
+
+HAC (official code, `hac/results/`): two to three times smaller on the indoor scenes and better without loss on three of five scenes, but in the same outage slots the layered
+codec renders 2.70 dB above HAC with interpolation on average (5 scenes).
+
+Latency on an idle NVIDIA L40S with the final attribute sizes (`codec/results/bench_l40s_idle_final.json`), 20,000 lost anchors:
+gathering 0.36 + concealment (FP16, compiled) 3.92 + decoding 1.70 + rendering 2.16 = 8.14 ms.
 
 ## 6. Status
 
-The trainings and frame-level evaluations of the remaining scenes, the HAC comparison on the same protocol and the
-multi-screen split-step validation of the channel model are running; their results are added to `codec/results/` and
-`phy_sim/results/` as they finish.
+All results of the paper are in this repository. Training ran on a shared GPU, so the wall-clock times in the logs are not
+representative; the latency measurements were taken with all other jobs of this project paused.
 
 ## 7. License and citation
 

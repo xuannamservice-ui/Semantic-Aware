@@ -1,0 +1,3 @@
+kitchen _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5
+bicycle _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5
+drjohnson _v2a_r1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5

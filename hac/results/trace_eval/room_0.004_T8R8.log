@@ -1,0 +1,55 @@
+/home/namnx/hac_build/HAC/utils/encodings.py:95: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, inputs, embeddings, offsets_list, resolutions_list, calc_grad_inputs=False, min_level_id=None, n_levels_calc=1, binary_vxl=None, PV=0):
+/home/namnx/hac_build/HAC/utils/encodings.py:173: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad):
+hash_params: True 4 13 (18, 24, 33, 44, 59, 80, 108, 148, 201, 275, 376, 514) 15 (130, 258, 514, 1026) True False False
+encoding_param_num=1766272, size=0.2105560302734375MB.
+Loading trained model at iteration 30000
+Reading camera 1/311Reading camera 2/311Reading camera 3/311Reading camera 4/311Reading camera 5/311Reading camera 6/311Reading camera 7/311Reading camera 8/311Reading camera 9/311Reading camera 10/311Reading camera 11/311Reading camera 12/311Reading camera 13/311Reading camera 14/311Reading camera 15/311Reading camera 16/311Reading camera 17/311Reading camera 18/311Reading camera 19/311Reading camera 20/311Reading camera 21/311Reading camera 22/311Reading camera 23/311Reading camera 24/311Reading camera 25/311Reading camera 26/311Reading camera 27/311Reading camera 28/311Reading camera 29/311Reading camera 30/311Reading camera 31/311Reading camera 32/311Reading camera 33/311Reading camera 34/311Reading camera 35/311Reading camera 36/311Reading camera 37/311Reading camera 38/311Reading camera 39/311Reading camera 40/311Reading camera 41/311Reading camera 42/311Reading camera 43/311Reading camera 44/311Reading camera 45/311Reading camera 46/311Reading camera 47/311Reading camera 48/311Reading camera 49/311Reading camera 50/311Reading camera 51/311Reading camera 52/311Reading camera 53/311Reading camera 54/311Reading camera 55/311Reading camera 56/311Reading camera 57/311Reading camera 58/311Reading camera 59/311Reading camera 60/311Reading camera 61/311Reading camera 62/311Reading camera 63/311Reading camera 64/311Reading camera 65/311Reading camera 66/311Reading camera 67/311Reading camera 68/311Reading camera 69/311Reading camera 70/311Reading camera 71/311Reading camera 72/311Reading camera 73/311Reading camera 74/311Reading camera 75/311Reading camera 76/311Reading camera 77/311Reading camera 78/311Reading camera 79/311Reading camera 80/311Reading camera 81/311Reading camera 82/311Reading camera 83/311Reading camera 84/311Reading camera 85/311Reading camera 86/311Reading camera 87/311Reading camera 88/311Reading camera 89/311Reading camera 90/311Reading camera 91/311Reading camera 92/311Reading camera 93/311Reading camera 94/311Reading camera 95/311Reading camera 96/311Reading camera 97/311Reading camera 98/311Reading camera 99/311Reading camera 100/311Reading camera 101/311Reading camera 102/311Reading camera 103/311Reading camera 104/311Reading camera 105/311Reading camera 106/311Reading camera 107/311Reading camera 108/311Reading camera 109/311Reading camera 110/311Reading camera 111/311Reading camera 112/311Reading camera 113/311Reading camera 114/311Reading camera 115/311Reading camera 116/311Reading camera 117/311Reading camera 118/311Reading camera 119/311Reading camera 120/311Reading camera 121/311Reading camera 122/311Reading camera 123/311Reading camera 124/311Reading camera 125/311Reading camera 126/311Reading camera 127/311Reading camera 128/311Reading camera 129/311Reading camera 130/311Reading camera 131/311Reading camera 132/311Reading camera 133/311Reading camera 134/311Reading camera 135/311Reading camera 136/311Reading camera 137/311Reading camera 138/311Reading camera 139/311Reading camera 140/311Reading camera 141/311Reading camera 142/311Reading camera 143/311Reading camera 144/311Reading camera 145/311Reading camera 146/311Reading camera 147/311Reading camera 148/311Reading camera 149/311Reading camera 150/311Reading camera 151/311Reading camera 152/311Reading camera 153/311Reading camera 154/311Reading camera 155/311Reading camera 156/311Reading camera 157/311Reading camera 158/311Reading camera 159/311Reading camera 160/311Reading camera 161/311Reading camera 162/311Reading camera 163/311Reading camera 164/311Reading camera 165/311Reading camera 166/311Reading camera 167/311Reading camera 168/311Reading camera 169/311Reading camera 170/311Reading camera 171/311Reading camera 172/311Reading camera 173/311Reading camera 174/311Reading camera 175/311Reading camera 176/311Reading camera 177/311Reading camera 178/311Reading camera 179/311Reading camera 180/311Reading camera 181/311Reading camera 182/311Reading camera 183/311Reading camera 184/311Reading camera 185/311Reading camera 186/311Reading camera 187/311Reading camera 188/311Reading camera 189/311Reading camera 190/311Reading camera 191/311Reading camera 192/311Reading camera 193/311Reading camera 194/311Reading camera 195/311Reading camera 196/311Reading camera 197/311Reading camera 198/311Reading camera 199/311Reading camera 200/311Reading camera 201/311Reading camera 202/311Reading camera 203/311Reading camera 204/311Reading camera 205/311Reading camera 206/311Reading camera 207/311Reading camera 208/311Reading camera 209/311Reading camera 210/311Reading camera 211/311Reading camera 212/311Reading camera 213/311Reading camera 214/311Reading camera 215/311Reading camera 216/311Reading camera 217/311Reading camera 218/311Reading camera 219/311Reading camera 220/311Reading camera 221/311Reading camera 222/311Reading camera 223/311Reading camera 224/311Reading camera 225/311Reading camera 226/311Reading camera 227/311Reading camera 228/311Reading camera 229/311Reading camera 230/311Reading camera 231/311Reading camera 232/311Reading camera 233/311Reading camera 234/311Reading camera 235/311Reading camera 236/311Reading camera 237/311Reading camera 238/311Reading camera 239/311Reading camera 240/311Reading camera 241/311Reading camera 242/311Reading camera 243/311Reading camera 244/311Reading camera 245/311Reading camera 246/311Reading camera 247/311Reading camera 248/311Reading camera 249/311Reading camera 250/311Reading camera 251/311Reading camera 252/311Reading camera 253/311Reading camera 254/311Reading camera 255/311Reading camera 256/311Reading camera 257/311Reading camera 258/311Reading camera 259/311Reading camera 260/311Reading camera 261/311Reading camera 262/311Reading camera 263/311Reading camera 264/311Reading camera 265/311Reading camera 266/311Reading camera 267/311Reading camera 268/311Reading camera 269/311Reading camera 270/311Reading camera 271/311Reading camera 272/311Reading camera 273/311Reading camera 274/311Reading camera 275/311Reading camera 276/311Reading camera 277/311Reading camera 278/311Reading camera 279/311Reading camera 280/311Reading camera 281/311Reading camera 282/311Reading camera 283/311Reading camera 284/311Reading camera 285/311Reading camera 286/311Reading camera 287/311Reading camera 288/311Reading camera 289/311Reading camera 290/311Reading camera 291/311Reading camera 292/311Reading camera 293/311Reading camera 294/311Reading camera 295/311Reading camera 296/311Reading camera 297/311Reading camera 298/311Reading camera 299/311Reading camera 300/311Reading camera 301/311Reading camera 302/311Reading camera 303/311Reading camera 304/311Reading camera 305/311Reading camera 306/311Reading camera 307/311Reading camera 308/311Reading camera 309/311Reading camera 310/311Reading camera 311/311
+start fetching data from ply file
+Loading Training Cameras
+Loading Test Cameras
+view 0: 24 rows, 58s
+view 1: 48 rows, 109s
+view 2: 72 rows, 159s
+view 3: 96 rows, 207s
+view 4: 120 rows, 248s
+view 5: 144 rows, 287s
+view 6: 168 rows, 326s
+view 7: 192 rows, 366s
+view 8: 216 rows, 408s
+view 9: 240 rows, 455s
+view 10: 264 rows, 503s
+view 11: 288 rows, 548s
+view 12: 312 rows, 593s
+view 13: 336 rows, 637s
+view 14: 360 rows, 679s
+view 15: 384 rows, 718s
+view 16: 408 rows, 769s
+view 17: 432 rows, 822s
+view 18: 456 rows, 868s
+view 19: 480 rows, 915s
+view 20: 504 rows, 961s
+view 21: 528 rows, 1000s
+view 22: 552 rows, 1037s
+view 23: 576 rows, 1071s
+view 24: 600 rows, 1105s
+view 25: 624 rows, 1138s
+view 26: 648 rows, 1169s
+view 27: 672 rows, 1200s
+view 28: 696 rows, 1233s
+view 29: 720 rows, 1264s
+view 30: 744 rows, 1299s
+view 31: 768 rows, 1336s
+view 32: 792 rows, 1376s
+view 33: 816 rows, 1415s
+view 34: 840 rows, 1450s
+view 35: 864 rows, 1483s
+view 36: 888 rows, 1516s
+view 37: 912 rows, 1552s
+view 38: 936 rows, 1590s
+interleaved/drop {'psnr': 27.26504842644064, 'ssim': 0.8755476805898879, 'lpips': 0.28272957558560574, 'psnr_vs_full': 29.96376040042975, 'lost_frac': 0.20589815787015817}
+interleaved/idw {'psnr': 27.254543760902862, 'ssim': 0.8682858243457272, 'lpips': 0.2897633912726345, 'psnr_vs_full': 29.896955107012367, 'lost_frac': 0.20589815787015817}
+contiguous/drop {'psnr': 21.600552946074394, 'ssim': 0.8293728963432149, 'lpips': 0.3089738133498746, 'psnr_vs_full': 22.40986043163854, 'lost_frac': 0.20596778644328442}
+contiguous/idw {'psnr': 23.119812830900536, 'ssim': 0.8346780997056228, 'lpips': 0.3078976234691775, 'psnr_vs_full': 24.253954402401916, 'lost_frac': 0.20596778644328442}
+full {'psnr': 31.54291871877817}

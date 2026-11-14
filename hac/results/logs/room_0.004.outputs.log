@@ -1,0 +1,153 @@
+2026-11-14 01:45:03,078 - INFO: args: Namespace(sh_degree=3, feat_dim=50, n_offsets=10, voxel_size=0.001, update_depth=3, update_init_factor=16, update_hierachy_factor=4, use_feat_bank=False, source_path='data/mipnerf360/room', model_path='outputs/mipnerf360/room/0.004', images='images', resolution=-1, white_background=False, data_device='cuda', eval=True, lod=0, iterations=30000, position_lr_init=0.0, position_lr_final=0.0, position_lr_delay_mult=0.01, position_lr_max_steps=30000, offset_lr_init=0.01, offset_lr_final=0.0001, offset_lr_delay_mult=0.01, offset_lr_max_steps=30000, mask_lr_init=0.01, mask_lr_final=0.0001, mask_lr_delay_mult=0.01, mask_lr_max_steps=30000, feature_lr=0.0075, opacity_lr=0.02, scaling_lr=0.007, rotation_lr=0.002, mlp_opacity_lr_init=0.002, mlp_opacity_lr_final=2e-05, mlp_opacity_lr_delay_mult=0.01, mlp_opacity_lr_max_steps=30000, mlp_cov_lr_init=0.004, mlp_cov_lr_final=0.004, mlp_cov_lr_delay_mult=0.01, mlp_cov_lr_max_steps=30000, mlp_color_lr_init=0.008, mlp_color_lr_final=5e-05, mlp_color_lr_delay_mult=0.01, mlp_color_lr_max_steps=30000, mlp_featurebank_lr_init=0.01, mlp_featurebank_lr_final=1e-05, mlp_featurebank_lr_delay_mult=0.01, mlp_featurebank_lr_max_steps=30000, encoding_xyz_lr_init=0.005, encoding_xyz_lr_final=1e-05, encoding_xyz_lr_delay_mult=0.33, encoding_xyz_lr_max_steps=30000, mlp_grid_lr_init=0.005, mlp_grid_lr_final=1e-05, mlp_grid_lr_delay_mult=0.01, mlp_grid_lr_max_steps=30000, mlp_deform_lr_init=0.005, mlp_deform_lr_final=0.0005, mlp_deform_lr_delay_mult=0.01, mlp_deform_lr_max_steps=30000, percent_dense=0.01, lambda_dssim=0.2, start_stat=500, update_from=1500, update_interval=100, update_until=15000, min_opacity=0.005, success_threshold=0.8, densify_grad_threshold=0.0002, convert_SHs_python=False, compute_cov3D_python=False, debug=False, ip='127.0.0.1', port=6009, debug_from=-1, detect_anomaly=False, warmup=False, use_wandb=False, test_iterations=[30000], save_iterations=[30000, 30000], quiet=False, checkpoint_iterations=[], start_checkpoint=None, gpu='-1', log2=13, log2_2D=15, n_features=4, lmbda=0.004)
+2026-11-14 01:45:03,078 - INFO: Optimizing outputs/mipnerf360/room/0.004
+2026-11-14 02:11:18,521 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 02:11:18,522 - INFO: 
+-----[ITER 12000] bits info: bit_per_feat_param=1.4977630376815796, anchor_num=270283, ttl_size_feat_MB=2.4129145569425248-----
+2026-11-14 02:11:18,524 - INFO: 
+-----[ITER 12000] bits info: bit_per_scaling_param=6.94854211807251, anchor_num=270283, ttl_size_scaling_MB=1.3433023519270364-----
+2026-11-14 02:11:18,524 - INFO: 
+-----[ITER 12000] bits info: bit_per_offsets_param=2.061702013015747, anchor_num=270283, ttl_size_offsets_MB=1.9928562826535767-----
+2026-11-14 02:11:18,525 - INFO: 
+-----[ITER 12000] bits info: bit_per_param=2.074772834777832, anchor_num=270283, ttl_size_MB=5.749073191523138-----
+2026-11-14 02:11:18,525 - INFO: 
+-----[ITER 12000] bits info: 1_rate_mask=0.6398597359657288, mask_numel=2702830, mask_size_MB=0.3037761449813843-----
+2026-11-14 02:17:41,494 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 02:17:41,495 - INFO: 
+-----[ITER 14000] bits info: bit_per_feat_param=1.4529097080230713, anchor_num=279184, ttl_size_feat_MB=2.4177381034178325-----
+2026-11-14 02:17:41,495 - INFO: 
+-----[ITER 14000] bits info: bit_per_scaling_param=6.318869590759277, anchor_num=279184, ttl_size_scaling_MB=1.2618021639536892-----
+2026-11-14 02:17:41,495 - INFO: 
+-----[ITER 14000] bits info: bit_per_offsets_param=2.1027328968048096, anchor_num=279184, ttl_size_offsets_MB=2.099452189427211-----
+2026-11-14 02:17:41,496 - INFO: 
+-----[ITER 14000] bits info: bit_per_param=2.019077777862549, anchor_num=279184, ttl_size_MB=5.778992456798733-----
+2026-11-14 02:17:41,496 - INFO: 
+-----[ITER 14000] bits info: 1_rate_mask=0.5641709566116333, mask_numel=2791840, mask_size_MB=0.32885172963142395-----
+2026-11-14 02:23:52,311 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 02:23:52,314 - INFO: 
+-----[ITER 16000] bits info: bit_per_feat_param=1.3283783197402954, anchor_num=282237, ttl_size_feat_MB=2.2346825112613544-----
+2026-11-14 02:23:52,316 - INFO: 
+-----[ITER 16000] bits info: bit_per_scaling_param=5.947201251983643, anchor_num=282237, ttl_size_scaling_MB=1.2005712316675954-----
+2026-11-14 02:23:52,320 - INFO: 
+-----[ITER 16000] bits info: bit_per_offsets_param=1.4702516794204712, anchor_num=282237, ttl_size_offsets_MB=1.4840105411217053-----
+2026-11-14 02:23:52,322 - INFO: 
+-----[ITER 16000] bits info: bit_per_param=1.7001123428344727, anchor_num=282237, ttl_size_MB=4.919264284050655-----
+2026-11-14 02:23:52,325 - INFO: 
+-----[ITER 16000] bits info: 1_rate_mask=0.4793606102466583, mask_numel=2822370, mask_size_MB=0.3360428810119629-----
+2026-11-14 02:29:50,666 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 02:29:50,666 - INFO: 
+-----[ITER 18000] bits info: bit_per_feat_param=1.433117151260376, anchor_num=282237, ttl_size_feat_MB=2.4108808363692447-----
+2026-11-14 02:29:50,667 - INFO: 
+-----[ITER 18000] bits info: bit_per_scaling_param=5.975460529327393, anchor_num=282237, ttl_size_scaling_MB=1.206275978147346-----
+2026-11-14 02:29:50,667 - INFO: 
+-----[ITER 18000] bits info: bit_per_offsets_param=1.6976102590560913, anchor_num=282237, ttl_size_offsets_MB=1.7134967804618384-----
+2026-11-14 02:29:50,669 - INFO: 
+-----[ITER 18000] bits info: bit_per_param=1.8422898054122925, anchor_num=282237, ttl_size_MB=5.330653594978429-----
+2026-11-14 02:29:50,671 - INFO: 
+-----[ITER 18000] bits info: 1_rate_mask=0.38552388548851013, mask_numel=2822370, mask_size_MB=0.32362091541290283-----
+2026-11-14 02:35:50,182 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 02:35:50,182 - INFO: 
+-----[ITER 20000] bits info: bit_per_feat_param=1.2940332889556885, anchor_num=282237, ttl_size_feat_MB=2.176905115693728-----
+2026-11-14 02:35:50,183 - INFO: 
+-----[ITER 20000] bits info: bit_per_scaling_param=5.494293212890625, anchor_num=282237, ttl_size_scaling_MB=1.1091419459771714-----
+2026-11-14 02:35:50,183 - INFO: 
+-----[ITER 20000] bits info: bit_per_offsets_param=1.2859013080596924, anchor_num=282237, ttl_size_offsets_MB=1.297934988079703-----
+2026-11-14 02:35:50,183 - INFO: 
+-----[ITER 20000] bits info: bit_per_param=1.584238052368164, anchor_num=282237, ttl_size_MB=4.5839820497506025-----
+2026-11-14 02:35:50,184 - INFO: 
+-----[ITER 20000] bits info: 1_rate_mask=0.3158547580242157, mask_numel=2822370, mask_size_MB=0.3027495741844177-----
+2026-11-14 02:42:53,629 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 02:42:53,635 - INFO: 
+-----[ITER 22000] bits info: bit_per_feat_param=1.0891014337539673, anchor_num=282237, ttl_size_feat_MB=1.832155712595096-----
+2026-11-14 02:42:53,642 - INFO: 
+-----[ITER 22000] bits info: bit_per_scaling_param=4.864250183105469, anchor_num=282237, ttl_size_scaling_MB=0.9819541303604638-----
+2026-11-14 02:42:53,647 - INFO: 
+-----[ITER 22000] bits info: bit_per_offsets_param=1.1060192584991455, anchor_num=282237, ttl_size_offsets_MB=1.116369572142446-----
+2026-11-14 02:42:53,651 - INFO: 
+-----[ITER 22000] bits info: bit_per_param=1.3583853244781494, anchor_num=282237, ttl_size_MB=3.930479415098006-----
+2026-11-14 02:42:53,656 - INFO: 
+-----[ITER 22000] bits info: 1_rate_mask=0.2730705142021179, mask_numel=2822370, mask_size_MB=0.28458771109580994-----
+2026-11-14 03:00:04,033 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 03:00:04,036 - INFO: 
+-----[ITER 24000] bits info: bit_per_feat_param=1.0814138650894165, anchor_num=282237, ttl_size_feat_MB=1.8192231955602267-----
+2026-11-14 03:00:04,039 - INFO: 
+-----[ITER 24000] bits info: bit_per_scaling_param=4.54210090637207, anchor_num=282237, ttl_size_scaling_MB=0.9169213296258931-----
+2026-11-14 03:00:04,042 - INFO: 
+-----[ITER 24000] bits info: bit_per_offsets_param=0.9672350883483887, anchor_num=282237, ttl_size_offsets_MB=0.9762866364604861-----
+2026-11-14 03:00:04,047 - INFO: 
+-----[ITER 24000] bits info: bit_per_param=1.2830272912979126, anchor_num=282237, ttl_size_MB=3.712431161646606-----
+2026-11-14 03:00:04,056 - INFO: 
+-----[ITER 24000] bits info: 1_rate_mask=0.2480032742023468, mask_numel=2822370, mask_size_MB=0.2718905806541443-----
+2026-11-14 03:14:36,246 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 03:14:36,246 - INFO: 
+-----[ITER 26000] bits info: bit_per_feat_param=1.3368785381317139, anchor_num=282237, ttl_size_feat_MB=2.248982119361642-----
+2026-11-14 03:14:36,247 - INFO: 
+-----[ITER 26000] bits info: bit_per_scaling_param=5.243264198303223, anchor_num=282237, ttl_size_scaling_MB=1.0584663087390709-----
+2026-11-14 03:14:36,250 - INFO: 
+-----[ITER 26000] bits info: bit_per_offsets_param=1.2858173847198486, anchor_num=282237, ttl_size_offsets_MB=1.2978502793711755-----
+2026-11-14 03:14:36,252 - INFO: 
+-----[ITER 26000] bits info: bit_per_param=1.5916050672531128, anchor_num=282237, ttl_size_MB=4.6052987074718885-----
+2026-11-14 03:14:36,257 - INFO: 
+-----[ITER 26000] bits info: 1_rate_mask=0.23220698535442352, mask_numel=2822370, mask_size_MB=0.26305562257766724-----
+2026-11-14 03:31:50,802 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 03:31:50,807 - INFO: 
+-----[ITER 28000] bits info: bit_per_feat_param=1.1999868154525757, anchor_num=282237, ttl_size_feat_MB=2.0186941554122484-----
+2026-11-14 03:31:50,812 - INFO: 
+-----[ITER 28000] bits info: bit_per_scaling_param=4.858683109283447, anchor_num=282237, ttl_size_scaling_MB=0.980830296074032-----
+2026-11-14 03:31:50,818 - INFO: 
+-----[ITER 28000] bits info: bit_per_offsets_param=1.1065101623535156, anchor_num=282237, ttl_size_offsets_MB=1.1168650699573845-----
+2026-11-14 03:31:50,822 - INFO: 
+-----[ITER 28000] bits info: bit_per_param=1.42263662815094, anchor_num=282237, ttl_size_MB=4.116389521443665-----
+2026-11-14 03:31:50,828 - INFO: 
+-----[ITER 28000] bits info: 1_rate_mask=0.22185716032981873, mask_numel=2822370, mask_size_MB=0.2569003403186798-----
+2026-11-14 03:56:17,196 - INFO: 
+----------------------------------------------------------------------------------------
+2026-11-14 03:56:17,205 - INFO: 
+-----[ITER 30000] bits info: bit_per_feat_param=1.085749864578247, anchor_num=282237, ttl_size_feat_MB=1.8265174897251768-----
+2026-11-14 03:56:17,212 - INFO: 
+-----[ITER 30000] bits info: bit_per_scaling_param=4.321226596832275, anchor_num=282237, ttl_size_scaling_MB=0.8723330719543583-----
+2026-11-14 03:56:17,219 - INFO: 
+-----[ITER 30000] bits info: bit_per_offsets_param=0.9027233719825745, anchor_num=282237, ttl_size_offsets_MB=0.91117120863764-----
+2026-11-14 03:56:17,226 - INFO: 
+-----[ITER 30000] bits info: bit_per_param=1.2476344108581543, anchor_num=282237, ttl_size_MB=3.610021770317175-----
+2026-11-14 03:56:17,229 - INFO: 
+-----[ITER 30000] bits info: 1_rate_mask=0.21497535705566406, mask_numel=2822370, mask_size_MB=0.2526414394378662-----
+2026-11-14 03:56:17,622 - INFO: 
+Estimated sizes in MB: anchor 1.3098, feat 1.8378, scaling 0.8882, offsets 1.014, hash 0.0514, masks 0.2277, MLPs 0.1573, Total 5.4862
+2026-11-14 03:56:42,698 - INFO: 
+Encoded sizes in MB: anchor 1.3098, feat 1.8421, scaling 0.8805, offsets 1.0114, hash 0.0522, masks 0.2287, MLPs 0.1573, Total 5.4818, EncTime 25.0753
+2026-11-14 03:57:26,111 - INFO: 
+DecTime 43.4102
+2026-11-14 04:01:24,271 - INFO: 
+[ITER 30000] Evaluating test: L1 0.0169023406238128 PSNR 31.542918718778168 ssim 0.9149236510961484 lpips 0.23341721907640114
+2026-11-14 04:01:24,274 - INFO: Test FPS: 11.72870
+2026-11-14 04:01:55,758 - INFO: 
+[ITER 30000] Evaluating train: L1 0.012479565665125848 PSNR 34.70190963745117 ssim 0.9244986534118653 lpips 0.23506619036197662
+2026-11-14 04:01:55,759 - INFO: Test FPS: 7.24529
+2026-11-14 04:01:55,777 - INFO: 
+[ITER 30000] Saving Gaussians
+2026-11-14 04:02:04,539 - INFO: 
+ Total Training time: 7825.189031839371
+2026-11-14 04:02:04,545 - INFO: 
+Training complete.
+2026-11-14 04:02:04,546 - INFO: 
+Starting Rendering~
+2026-11-14 04:04:46,569 - INFO: Test FPS: [1;35m9.90366[0m
+2026-11-14 04:04:46,574 - INFO: 
+Rendering complete.
+2026-11-14 04:04:46,574 - INFO: 
+ Starting evaluation...
+2026-11-14 04:05:59,514 - INFO: model_paths: [1;35moutputs/mipnerf360/room/0.004[0m
+2026-11-14 04:05:59,710 - INFO:   SSIM : [1;35m   0.9138575[0m
+2026-11-14 04:05:59,711 - INFO:   PSNR : [1;35m  31.4871540[0m
+2026-11-14 04:05:59,711 - INFO:   LPIPS: [1;35m   0.2302481[0m
+2026-11-14 04:05:59,716 - INFO: 
+Evaluating complete.
