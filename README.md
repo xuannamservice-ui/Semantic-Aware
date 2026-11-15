@@ -197,12 +197,41 @@ codec renders 2.70 dB above HAC with interpolation on average (5 scenes).
 Latency on an idle NVIDIA L40S with the final attribute sizes (`codec/results/bench_l40s_idle_final.json`), 20,000 lost anchors:
 gathering 0.36 + concealment (FP16, compiled) 3.92 + decoding 1.70 + rendering 2.16 = 8.14 ms.
 
-## 6. Status
+## 6. Paper-to-script manifest
+
+Every table and every number of the paper comes from the scripts and files below (S = supplementary material).
+
+| Paper item | Script | Data |
+|---|---|---|
+| Configurations, outage vs SNR, failed streams, anchor pairs | `phy_sim/run_modeset.py` | `phy_sim/results/modeset_<s2>.json`, `traces_<s2>.npz` |
+| Small-ball exponents (test of D2) | `phy_sim/run_smallball.py` | `smallball_<s2>.json` |
+| Hardware tolerance (RIN x sorter loss) | `phy_sim/run_tolerance.py` | `tolerance_<s2>.json` |
+| Model sensitivity | `phy_sim/run_phy_results.py --stages sens` | `sens_<s2>.json` |
+| Receiver impairments (crosstalk, CSI, exact BER, FEC threshold) | `phy_sim/run_sens2.py` | `sens2_<s2>.json` |
+| Zernike truncation (S) and extrapolation to J -> inf | `phy_sim/run_jconv.py`, `phy_sim/jconv_extrap.py` | `jconv_<s2>.json` |
+| Gamma-Gamma surrogates (S), power allocation | `phy_sim/run_phy_results.py`, `phy_sim/run_alloc.py` | `oper_<s2>.json`, `alloc_T8R8_2.5.json` |
+| Temporal Model B (S) | `phy_sim/run_traces_corr.py` | `results/correlated/` |
+| Common carrier, wavelength reuse | `phy_sim/run_beat.py`, `phy_sim/run_reuse.py`, `phy_sim/run_reuse_curve.py` | `beat_<s2>.json`, `modeset_0.2w.json`, `traces_0.2w.npz`, `reuse_curve.json` |
+| WDM reference | `phy_sim/wdm_reference.py` | printed |
+| Split-step consistency | `phy_sim/splitstep/` | `phy_sim/splitstep/results_<s2>.json`, `patterns_tt_2.5.npz` |
+| Reference 3DGS (S), codec quality and rate, main table, by K | `codec/train_3dgs.py`, `codec/train_layered.py`, `codec/eval_layered.py` via `codec/queue_exp.sh jobs_*.txt` | `codec/results/<scene>/metrics_*.json`, `eval_layered_*.json` |
+| K beyond training (K = 1..7 of 8 forced) | `codec/run_kstress.sh` (`eval_layered.py --kforce`) | `eval_layered_v2a_r1_kstress_T8R8_2.5.json` |
+| Seed spread | `codec/queue_exp.sh jobs_seeds.txt jobs_seeds2.txt` | `*_v2a_r1_sd1*`, `*_v2a_r1_sd2*` |
+| Base-layer width | `codec/queue_exp.sh jobs_basedim.txt` | `*_v2a_r1_b6*`, `*_v2a_r1_b24*` |
+| Mapping policies (S), rate weights (S) | `codec/eval_layered.py`, `codec/queue_exp.sh jobs_garden_v2.txt` | `eval_layered_v2a_r*` |
+| Frame-level evaluation with edge cache | `codec/eval_frames.py`, `run_frames*.sh`, `run_fr10.sh` | `frames_*.json` |
+| Reuse link codec evaluation | `codec/run_reuse_eval.sh` | `eval_layered_v2a_r1_T*W4_0.2w.json` |
+| HAC under loss, HAC at equal transmitted bits | `hac/` | `hac/results/` |
+| Latency | `codec/bench_latency.py`, `codec/bench_final.sh` | `codec/results/bench_l40s_idle_final.json` |
+| Failed-slot rate over the RIN x loss grid | `codec/tol_service.py` | `phy_sim/results/tol_service_2.5.json` |
+| Scheduler under time-varying turbulence | `codec/sched_tv.py` | `phy_sim/results/sched_tv.json` |
+
+## 7. Status
 
 All results of the paper are in this repository. Training ran on a shared GPU, so the wall-clock times in the logs are not
 representative; the latency measurements were taken with all other jobs of this project paused.
 
-## 7. License and citation
+## 8. License and citation
 
 MIT License (see `LICENSE`). If you use the code or the traces, please cite the paper (reference to be added on
 publication).

@@ -73,16 +73,21 @@ def main(a):
     pats, cnt = np.unique(tr[tr > 0], return_counts=True)
     M = len(tx); rows = []; t0 = time.time()
     methods = ("drop", "base", "idw") + tuple(nets)
+    pols = a.policies.split(",") if a.policies else POLICIES
     with torch.no_grad():
         for vi in scene.test_idx:
             gt, K, V = scene.view(vi)
             idx = model.visible(K, V, scene.W, scene.H)
             full, _, _ = model.render(at, idx, K, V, scene.W, scene.H)
             mf = metrics.all_metrics(full, gt)
-            for pi in rng.choice(len(pats), a.n_pat, p=cnt / cnt.sum()):
-                failed = patterns_to_streams(pats[pi], tx, rel)
-                for pol in POLICIES:
-                    lost_m = pk.lost_mask(idx, M, pol, failed, np.random.default_rng(int(vi) * 1000 + int(pi)))
+            if a.kforce:                        # stress test: K streams chosen uniformly at random fail
+                draws = [(-1, rng.choice(M, k, replace=False)) for k in a.kforce for _ in range(a.n_pat)]
+            else:
+                draws = [(pi, patterns_to_streams(pats[pi], tx, rel))
+                         for pi in rng.choice(len(pats), a.n_pat, p=cnt / cnt.sum())]
+            for pi, failed in draws:
+                for pol in pols:
+                    lost_m = pk.lost_mask(idx, M, pol, failed, np.random.default_rng(int(vi) * 1000 + (int(pi) if pi >= 0 else 999)))
                     lost = idx[lost_m]
                     avail = torch.zeros(model.xyz.shape[0], dtype=torch.bool, device="cuda")
                     avail[idx[~lost_m]] = True
@@ -102,13 +107,13 @@ def main(a):
                             e[lost] = conc[meth].predict(lost, avail, base, enh)
                         img, _, _ = model.render(L.merge(base, e), ridx, K, V, scene.W, scene.H)
                         m = metrics.all_metrics(img, gt)
-                        rows.append({"view": int(vi), "pattern": int(pats[pi]), "K": len(failed), "policy": pol,
+                        rows.append({"view": int(vi), "pattern": int(pats[pi]) if pi >= 0 else -1, "K": len(failed), "policy": pol,
                                      "method": meth, "lost_frac": float(lost_m.float().mean()), **m,
                                      "psnr_vs_full": metrics.psnr(img.clamp(0, 1), full.clamp(0, 1)),
                                      "full_psnr": mf["psnr"], "full_ssim": mf["ssim"], "full_lpips": mf["lpips"]})
             print(f"view {vi}: {len(rows)} rows, {time.time() - t0:.0f}s", flush=True)
     summ = {}
-    for pol in POLICIES:
+    for pol in pols:
         for meth in methods:
             r = [x for x in rows if x["policy"] == pol and x["method"] == meth]
             summ[f"{pol}/{meth}"] = {k: float(np.mean([x[k] for x in r])) for k in
@@ -134,5 +139,8 @@ if __name__ == "__main__":
     ap.add_argument("--phy", default="phy")
     ap.add_argument("--n-pat", type=int, default=8)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--kforce", type=lambda v: [int(x) for x in v.split(",")], default=None,
+                    help="comma list of K: K random streams fail (n_pat draws per K and view) instead of trace patterns")
+    ap.add_argument("--policies", default="", help="comma list of mapping policies (default: all)")
     ap.add_argument("--suffix", default="", help="suffix of the output file")
     main(ap.parse_args())

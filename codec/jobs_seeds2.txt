@@ -1,0 +1,4 @@
+garden _v2a_r1_sd2 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 --steps-ternary 0 --seed 2
+room _v2a_r1_sd2 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 --steps-ternary 0 --seed 2
+truck _v2a_r1_sd1 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 --steps-ternary 0 --seed 1
+truck _v2a_r1_sd2 --anchors 250000 --feat-dim 48 --base-dim 12 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5 --steps-ternary 0 --seed 2
