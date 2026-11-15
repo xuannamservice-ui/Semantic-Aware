@@ -1,0 +1,13 @@
+tau=10.0 100/1000 392s
+tau=10.0 200/1000 750s
+tau=10.0 300/1000 1004s
+tau=10.0 400/1000 1144s
+tau=10.0 500/1000 1280s
+tau=10.0 600/1000 1423s
+tau=10.0 700/1000 1561s
+tau=10.0 800/1000 1702s
+tau=10.0 900/1000 1841s
+tau=10.0 1000/1000 1979s
+T8R8 {'snap_true': 0.145305, 'snap_pilot1us': 0.152706, 'stale_0.5ms': 0.902995, 'stale_1.0ms': 0.940967, 'any_true': 0.490349, 'mean_Keff_true': 0.23406, 'any_pilot1us': 0.499954, 'mean_Keff_pilot1us': 0.247429}
+T6R11 {'snap_true': 9.7e-05, 'snap_pilot1us': 0.000111, 'stale_0.5ms': 0.565199, 'stale_1.0ms': 0.749355, 'any_true': 0.000356, 'mean_Keff_true': 0.000116, 'any_pilot1us': 0.000415, 'mean_Keff_pilot1us': 0.000137}
+done in 1979s

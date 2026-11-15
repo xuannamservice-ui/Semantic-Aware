@@ -1,0 +1,52 @@
+{
+ "bonsai": {
+  "layered_total_MB": 33.65665136547115,
+  "hac_MB": 8.6241,
+  "parity_streams": 5,
+  "hac_with_code_MB": 22.997600000000002,
+  "hac_mds_below_30": 0.0,
+  "layered_below_30": 0.0,
+  "hac_mds_below_35": 0.0,
+  "layered_below_35": 0.09009009009009009
+ },
+ "counter": {
+  "layered_total_MB": 34.56285708838944,
+  "hac_MB": 7.3964,
+  "parity_streams": 6,
+  "hac_with_code_MB": 29.5856,
+  "hac_mds_below_30": 0.0,
+  "layered_below_30": 0.0,
+  "hac_mds_below_35": 0.0,
+  "layered_below_35": 0.16111111111111112
+ },
+ "garden": {
+  "layered_total_MB": 33.74731328011265,
+  "hac_MB": 22.102,
+  "parity_streams": 2,
+  "hac_with_code_MB": 29.469333333333335,
+  "hac_mds_below_30": 0.1597222222222222,
+  "layered_below_30": 0.04861111111111111,
+  "hac_mds_below_35": 0.1597222222222222,
+  "layered_below_35": 0.5555555555555556
+ },
+ "room": {
+  "layered_total_MB": 29.516179556389588,
+  "hac_MB": 5.4818,
+  "parity_streams": 6,
+  "hac_with_code_MB": 21.9272,
+  "hac_mds_below_30": 0.0,
+  "layered_below_30": 0.0,
+  "hac_mds_below_35": 0.0,
+  "layered_below_35": 0.02564102564102564
+ },
+ "stump": {
+  "layered_total_MB": 36.484645469039265,
+  "hac_MB": 21.3291,
+  "parity_streams": 3,
+  "hac_with_code_MB": 34.12656,
+  "hac_mds_below_30": 0.052083333333333336,
+  "layered_below_30": 0.041666666666666664,
+  "hac_mds_below_35": 0.052083333333333336,
+  "layered_below_35": 0.5104166666666666
+ }
+}

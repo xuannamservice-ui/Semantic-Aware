@@ -36,7 +36,7 @@ import run_modeset as rm
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CFGS = ("T8R8", "T6R11")
-XT_DB = (-25.0, -20.0, -15.0)
+XT_DB = (-25.0, -20.0, -15.0, -10.0)
 CSI = (0.01, 0.05, 0.10)
 PILOTS = (4, 64)
 BER_ALT = (1.8e-4, 1e-3, 2e-2)

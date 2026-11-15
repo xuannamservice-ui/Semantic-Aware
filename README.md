@@ -225,6 +225,11 @@ Every table and every number of the paper comes from the scripts and files below
 | Latency | `codec/bench_latency.py`, `codec/bench_final.sh` | `codec/results/bench_l40s_idle_final.json` |
 | Failed-slot rate over the RIN x loss grid | `codec/tol_service.py` | `phy_sim/results/tol_service_2.5.json` |
 | Scheduler under time-varying turbulence | `codec/sched_tv.py` | `phy_sim/results/sched_tv.json` |
+| Cold start: concealment, in-frame ARQ, 2x replication | `codec/arq_cold.py` | `phy_sim/results/arq_cold.json` (patterns of `phy_sim/results/correlated/patterns/`) |
+| HAC with an MDS code at equal transmitted bits | `codec/hac_eqbits.py` | `codec/results/hac_eqbits.json` |
+| Channel variation inside a slot, pilot aging | `phy_sim/run_aging.py` | `phy_sim/results/aging_<tau>ms.json` |
+| Combined impairment budget | `phy_sim/run_budget.py` | `phy_sim/results/budget_2.5.json` |
+| WDM with PAM-L at the spectral efficiency of reuse | `phy_sim/wdm_pam.py` | `phy_sim/results/wdm_pam.json` |
 
 ## 7. Status
 

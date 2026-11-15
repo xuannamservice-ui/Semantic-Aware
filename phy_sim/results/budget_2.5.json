@@ -1,0 +1,387 @@
+{
+ "s2": 2.5,
+ "config": "T6R11",
+ "N": 10000000,
+ "pilot_symbols": 64,
+ "xt_dB": -20.0,
+ "cases": {
+  "ideal": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": null,
+   "impaired_receiver": false,
+   "outage": 9.999999999998899e-05,
+   "nfail_hist": [
+    9999000,
+    852,
+    121,
+    17,
+    5,
+    4,
+    1
+   ],
+   "best_anchor_pair": [
+    -1,
+    3
+   ],
+   "best_anchor_loss": 7e-07
+  },
+  "hd": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.0038,
+   "impaired_receiver": true,
+   "outage": 0.000124000000000013,
+   "nfail_hist": [
+    9998760,
+    1073,
+    133,
+    28,
+    0,
+    6,
+    0
+   ],
+   "best_anchor_pair": [
+    -1,
+    3
+   ],
+   "best_anchor_loss": 6e-07
+  },
+  "rs0.001_rinNone_dl0": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.001,
+   "impaired_receiver": true,
+   "outage": 0.00021839999999995197,
+   "nfail_hist": [
+    9997816,
+    1834,
+    272,
+    56,
+    13,
+    5,
+    4
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 1.7e-06
+  },
+  "rs0.001_rin-165.0_dl0": {
+   "rin_dB_Hz": -165.0,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.001,
+   "impaired_receiver": true,
+   "outage": 0.0004414000000000362,
+   "nfail_hist": [
+    9995586,
+    3636,
+    599,
+    124,
+    39,
+    12,
+    4
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 4.2e-06
+  },
+  "rs0.001_rin-160.0_dl0": {
+   "rin_dB_Hz": -160.0,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.001,
+   "impaired_receiver": true,
+   "outage": 0.0010993999999999726,
+   "nfail_hist": [
+    9989006,
+    8757,
+    1618,
+    419,
+    141,
+    45,
+    14
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 1.23e-05
+  },
+  "rs0.001_rinNone_dl1": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 1.0,
+   "ber_threshold": 0.001,
+   "impaired_receiver": true,
+   "outage": 0.00037650000000000183,
+   "nfail_hist": [
+    9996235,
+    3133,
+    488,
+    99,
+    33,
+    8,
+    4
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 2.8e-06
+  },
+  "rs0.001_rinNone_dl2": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 2.0,
+   "ber_threshold": 0.001,
+   "impaired_receiver": true,
+   "outage": 0.0006405000000000438,
+   "nfail_hist": [
+    9993595,
+    5195,
+    898,
+    219,
+    63,
+    24,
+    6
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 6.9e-06
+  },
+  "rs0.001_rin-160.0_dl2": {
+   "rin_dB_Hz": -160.0,
+   "extra_loss_dB": 2.0,
+   "ber_threshold": 0.001,
+   "impaired_receiver": true,
+   "outage": 0.0017945999999999795,
+   "nfail_hist": [
+    9982054,
+    14092,
+    2708,
+    745,
+    278,
+    97,
+    26
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 2.62e-05
+  },
+  "rs0.00018_rinNone_dl0": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.00018,
+   "impaired_receiver": true,
+   "outage": 0.0003786000000000067,
+   "nfail_hist": [
+    9996214,
+    3125,
+    506,
+    103,
+    39,
+    9,
+    4
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 3.4e-06
+  },
+  "rs0.00018_rin-165.0_dl0": {
+   "rin_dB_Hz": -165.0,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.00018,
+   "impaired_receiver": true,
+   "outage": 0.0007397000000000098,
+   "nfail_hist": [
+    9992603,
+    5897,
+    1112,
+    270,
+    77,
+    32,
+    9
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 8.4e-06
+  },
+  "rs0.00018_rin-160.0_dl0": {
+   "rin_dB_Hz": -160.0,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.00018,
+   "impaired_receiver": true,
+   "outage": 0.001819000000000015,
+   "nfail_hist": [
+    9981810,
+    14116,
+    2849,
+    790,
+    300,
+    103,
+    32
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 2.9e-05
+  },
+  "rs0.00018_rinNone_dl1": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 1.0,
+   "ber_threshold": 0.00018,
+   "impaired_receiver": true,
+   "outage": 0.0006310000000000482,
+   "nfail_hist": [
+    9993690,
+    5072,
+    914,
+    229,
+    64,
+    25,
+    6
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 7.4e-06
+  },
+  "rs0.00018_rinNone_dl2": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 2.0,
+   "ber_threshold": 0.00018,
+   "impaired_receiver": true,
+   "outage": 0.0010788999999999938,
+   "nfail_hist": [
+    9989211,
+    8513,
+    1637,
+    427,
+    153,
+    44,
+    15
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 1.29e-05
+  },
+  "rs0.00018_rin-160.0_dl2": {
+   "rin_dB_Hz": -160.0,
+   "extra_loss_dB": 2.0,
+   "ber_threshold": 0.00018,
+   "impaired_receiver": true,
+   "outage": 0.002957199999999993,
+   "nfail_hist": [
+    9970428,
+    22429,
+    4923,
+    1405,
+    528,
+    219,
+    68
+   ],
+   "best_anchor_pair": [
+    -1,
+    3
+   ],
+   "best_anchor_loss": 5.62e-05
+  },
+  "hd_rin-165.0_dl0": {
+   "rin_dB_Hz": -165.0,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.0038,
+   "impaired_receiver": true,
+   "outage": 0.00025370000000002335,
+   "nfail_hist": [
+    9997463,
+    2148,
+    309,
+    57,
+    13,
+    6,
+    4
+   ],
+   "best_anchor_pair": [
+    -1,
+    3
+   ],
+   "best_anchor_loss": 1.7e-06
+  },
+  "hd_rin-160.0_dl0": {
+   "rin_dB_Hz": -160.0,
+   "extra_loss_dB": 0.0,
+   "ber_threshold": 0.0038,
+   "impaired_receiver": true,
+   "outage": 0.000642699999999996,
+   "nfail_hist": [
+    9993573,
+    5279,
+    860,
+    203,
+    60,
+    19,
+    6
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 6.2e-06
+  },
+  "hd_rinNone_dl2": {
+   "rin_dB_Hz": null,
+   "extra_loss_dB": 2.0,
+   "ber_threshold": 0.0038,
+   "impaired_receiver": true,
+   "outage": 0.0003765999999999492,
+   "nfail_hist": [
+    9996234,
+    3161,
+    467,
+    96,
+    29,
+    9,
+    4
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 3e-06
+  },
+  "hd_rin-160.0_dl2": {
+   "rin_dB_Hz": -160.0,
+   "extra_loss_dB": 2.0,
+   "ber_threshold": 0.0038,
+   "impaired_receiver": true,
+   "outage": 0.001067499999999999,
+   "nfail_hist": [
+    9989325,
+    8607,
+    1518,
+    367,
+    130,
+    42,
+    11
+   ],
+   "best_anchor_pair": [
+    -3,
+    1
+   ],
+   "best_anchor_loss": 1.09e-05
+  }
+ }
+}

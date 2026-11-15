@@ -1,0 +1,218 @@
+{
+ "W4_PAM2_0.2": {
+  "carriers": 4,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 0.2,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 0.0,
+  "outage": 1.5499599218777689e-96
+ },
+ "W4_PAM4_0.2": {
+  "carriers": 4,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 0.2,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 9.542425094393248,
+  "outage": 1.3329475398734075e-74
+ },
+ "W4_PAM8_0.2": {
+  "carriers": 4,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 0.2,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 16.901960800285135,
+  "outage": 3.274095764737724e-58
+ },
+ "W8_PAM2_0.2": {
+  "carriers": 8,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 0.2,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 0.0,
+  "outage": 6.809644036277985e-88
+ },
+ "W8_PAM4_0.2": {
+  "carriers": 8,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 0.2,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 9.542425094393248,
+  "outage": 3.2526275355793317e-66
+ },
+ "W8_PAM8_0.2": {
+  "carriers": 8,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 0.2,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 16.901960800285135,
+  "outage": 3.5354726955235123e-50
+ },
+ "W4_PAM2_0.5": {
+  "carriers": 4,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 0.5,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 0.0,
+  "outage": 1.3728687056509934e-44
+ },
+ "W4_PAM4_0.5": {
+  "carriers": 4,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 0.5,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 9.542425094393248,
+  "outage": 6.617513745721139e-35
+ },
+ "W4_PAM8_0.5": {
+  "carriers": 4,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 0.5,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 16.901960800285135,
+  "outage": 1.3931559417338374e-27
+ },
+ "W8_PAM2_0.5": {
+  "carriers": 8,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 0.5,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 0.0,
+  "outage": 8.708128723093662e-41
+ },
+ "W8_PAM4_0.5": {
+  "carriers": 8,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 0.5,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 9.542425094393248,
+  "outage": 3.607641921163668e-31
+ },
+ "W8_PAM8_0.5": {
+  "carriers": 8,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 0.5,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 16.901960800285135,
+  "outage": 5.8560553858269395e-24
+ },
+ "W4_PAM2_1.0": {
+  "carriers": 4,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 1.0,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 0.0,
+  "outage": 1.8759975478697974e-27
+ },
+ "W4_PAM4_1.0": {
+  "carriers": 4,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 1.0,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 9.542425094393248,
+  "outage": 8.572670000490653e-22
+ },
+ "W4_PAM8_1.0": {
+  "carriers": 4,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 1.0,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 16.901960800285135,
+  "outage": 1.7689741864235186e-17
+ },
+ "W8_PAM2_1.0": {
+  "carriers": 8,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 1.0,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 0.0,
+  "outage": 3.1029410080221287e-25
+ },
+ "W8_PAM4_1.0": {
+  "carriers": 8,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 1.0,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 9.542425094393248,
+  "outage": 1.3468427543047282e-19
+ },
+ "W8_PAM8_1.0": {
+  "carriers": 8,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 1.0,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 16.901960800285135,
+  "outage": 2.5197318320262694e-15
+ },
+ "W4_PAM2_2.5": {
+  "carriers": 4,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 2.5,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 0.0,
+  "outage": 5.4089666694150135e-18
+ },
+ "W4_PAM4_2.5": {
+  "carriers": 4,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 2.5,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 9.542425094393248,
+  "outage": 1.635328874755575e-14
+ },
+ "W4_PAM8_2.5": {
+  "carriers": 4,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 2.5,
+  "snr0_dB": 63.78730945359081,
+  "penalty_dB": 16.901960800285135,
+  "outage": 7.581211988135189e-12
+ },
+ "W8_PAM2_2.5": {
+  "carriers": 8,
+  "levels": 2,
+  "bits_per_symbol_per_carrier": 1.0,
+  "s2": 2.5,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 0.0,
+  "outage": 1.2474856587151114e-16
+ },
+ "W8_PAM4_2.5": {
+  "carriers": 8,
+  "levels": 4,
+  "bits_per_symbol_per_carrier": 2.0,
+  "s2": 2.5,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 9.542425094393248,
+  "outage": 3.7031211880726123e-13
+ },
+ "W8_PAM8_2.5": {
+  "carriers": 8,
+  "levels": 8,
+  "bits_per_symbol_per_carrier": 3.0,
+  "s2": 2.5,
+  "snr0_dB": 60.05560265262539,
+  "penalty_dB": 16.901960800285135,
+  "outage": 1.655611890287892e-10
+ }
+}
