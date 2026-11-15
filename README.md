@@ -89,6 +89,9 @@ python run_tolerance.py --s2 2.5 --N 10000000                 # RIN x extra loss
 python run_jconv.py --s2 2.5 --N 10000000 --workers 24        # J and grid convergence
 python run_traces_corr.py --s2 2.5 --tau 10 --chains 2000 --slots 250 --seed 9700 --rho-model kolmogorov --tag _pat0
 python wdm_reference.py
+python run_beat.py 2.5 200000                                 # common carrier and wavelength reuse (W = 4, 2, 1), seed 606
+for i in 1 2 3 4 5; do python run_reuse.py chunk 0.2 $((3400+i)) 2000000 reuse_chunks/c$i.npz; done
+python run_reuse.py merge 0.2 0.2w reuse_chunks/c*.npz      # 8 and 6 modes on 4 carriers, 1e7 slots, traces_0.2w.npz
 ./launch_all.sh                                               # the full set as published
 cd splitstep && ./run_all.sh                                  # split-step check (several hours; run times in run_all.log)
 python ss_patterns.py --s2 2.5 --variant tt                   # failure patterns of the split-step realizations
@@ -111,6 +114,9 @@ python eval_frames.py  --scene garden --tag _v2a_r1 --cfg T8R8 --tau 10 --n-anch
 python eval_frames.py  --scene garden --tag _v2a_r1 --cfg T8R8 --tau 10 --n-anchor 4 --chains 10 --stride 4   # faster camera
 python eval_layered.py --scene garden --tag _v2a_r1 --cfg T8R8 --s2 ss2.5 --phy ../phy_sim/splitstep           # split-step patterns
 python bench_latency.py --out results/bench.json --lost 1000,5000,10000,20000,30000
+python eval_layered.py --scene garden --tag _v2a_r1 --cfg T8R11W4 --s2 0.2w --phy ../phy_sim/results   # wavelength-reuse link
+python eval_frames.py  --scene garden --tag _v2a_r1 --cfg T8R8 --tau 10 --n-anchor 4 --chains 50 --eps 10    # ARQ without budget, full replication
+./queue_exp.sh jobs_basedim.txt                                       # base layer with 6 and 24 feature channels
 ```
 `queue_exp.sh jobs_all_v2.txt` runs the trainings and evaluations of all scenes with memory guards for a shared server.
 
@@ -127,6 +133,8 @@ python bench_latency.py --out results/bench.json --lost 1000,5000,10000,20000,30
 | `tolerance_<s2>.json` | outage and best anchor pair versus RIN and extra sorter loss |
 | `jconv_<s2>.json` | outage versus J (435, 595, 780) and grid (64, 96), paired differences |
 | `wdm_reference.json` | WDM reference outage (all channels fail together) |
+| `beat_<s2>.json` | outage with separate carriers, 4 or 2 shared carriers and one common carrier (intermodal beat terms), 2e5 slots |
+| `modeset_0.2w.json`, `traces_0.2w.npz` | wavelength reuse at Rytov variance 0.2 (configurations `T8R11W4`, `T6R11W4`): outage, pattern histogram, best anchor sets, trace of 1e6 slots |
 | `correlated/traces_corr_*` | Model B: temporally correlated slots (tau_c = 2.5, 10 ms); `*_pat*.npz` store per-slot failure patterns |
 | `oper_*`, `analytics`, `alloc_*`, `sens_*`, `jsweep_*`, `power_*` | operating point, effective-capacity reference, power allocation, sensitivity, truncation |
 | `reproducibility.json` | SHA-256 of every trace array from the two machines and the identity check |
@@ -167,11 +175,21 @@ trace, interleaved mapping (`codec/results/<scene>/eval_layered_v2a_r1_T8R8_2.5.
 |---|---|---|---|---|
 | Mean PSNR over 11 scenes (dB) | 27.86 | 22.49 | 24.50 | 27.34 |
 
-The network is 2.99 dB above IDW (95% bootstrap interval [2.90, 3.08]) and better in 99.8% of the
+The network is 2.99 dB above IDW (95% interval [2.81, 3.17] from a bootstrap over the 338 test views) and better in 99.8% of the
 pairs of test view and failure pattern; joint training adds 0.96 to 1.85 dB over a separately trained network.
 
 Frame level with an edge cache (11 scenes, 3,380 test frames, T8R8, tau_c = 10 ms, `frames_*.json`): frames below 30 dB against
-the loss-free rendering: none 22, concealment 0, retransmission 8, (8,7) erasure code 10 (redundancy 1/6 for the last two).
+the loss-free rendering: none 22, concealment 0, retransmission 8, (8,7) erasure code 10 (redundancy at most 1/6 and 1/7). Without a redundancy budget
+(`*_eps10.json`), retransmission and full replication of the enhancement layer on all eight streams leave no frame below 30 or 35 dB,
+whereas concealment alone leaves 9 below 35 dB; replication fits into one slot only up to about 15,700 new anchors per frame.
+
+Common carrier and wavelength reuse (`phy_sim/results/beat_*.json`, `modeset_0.2w.json`): with one carrier for all modes the intermodal
+beat terms drive the outage above 0.97 for every configuration at Rytov variance >= 1.0. At 0.2, eight modes on four carriers (twice the
+spectral efficiency of WDM) have outage 6.8e-4, and concealment gives a failed-slot rate of 2.7e-5 over the eleven scenes
+(`eval_layered_v2a_r1_T8R11W4_0.2w.json`).
+
+Base layer with 6, 12 and 24 feature channels (garden, `*_v2a_r1_b6*`, `*_v2a_r1_b24*`): concealed PSNR in the T8R8 outage slots
+25.91, 26.00 and 26.18 dB; one copy of positions and base layer 3.83, 5.04 and 7.46 MB.
 
 HAC (official code, `hac/results/`): two to three times smaller on the indoor scenes and better without loss on three of five scenes, but in the same outage slots the layered
 codec renders 2.70 dB above HAC with interpolation on average (5 scenes).

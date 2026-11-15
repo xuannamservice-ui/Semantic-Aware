@@ -1,0 +1,2 @@
+garden _v2a_r1_b6 --anchors 250000 --feat-dim 48 --base-dim 6 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5
+garden _v2a_r1_b24 --anchors 250000 --feat-dim 48 --base-dim 24 --net lite --d 96 --layers 2 --aware 1 --rate-lambda 5e-5
