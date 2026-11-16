@@ -23,7 +23,7 @@ import torch
 
 import metrics
 from anchor_model import AnchorModel
-from conceal_net import EdgeConcealNet, LayeredConcealNet, LiteConcealNet, knn
+from conceal_net import EdgeConcealNet, LayeredConcealNet, LiteConcealNet, MLPConcealNet, knn
 from scene_data import Scene, scene_location
 from streaming import Packetizer, mode_reliability_order, patterns_to_streams
 from train_3dgs import OUTDOOR
@@ -45,11 +45,11 @@ def load(out, scene, tag):
     for name, key, tern in (("gen_fp", "net_fp", False), ("gen_tern", "net_ternary", True)):
         n = Net(c["bdim"], c["edim"], d=c["d"], layers=c["layers"], ternary=tern).cuda()
         n.load_state_dict(ck[key]); n.eval(); nets[name] = n
-    for arch, Cls in (("lite", LiteConcealNet), ("edge", EdgeConcealNet)):
+    for arch, Cls in (("lite", LiteConcealNet), ("edge", EdgeConcealNet), ("mlp", MLPConcealNet)):
         lp = os.path.join(out, scene, f"{arch}{tag}.pt")
-        if os.path.exists(lp):                  # deployment networks trained on the frozen representation
+        if os.path.exists(lp):                  # networks trained separately on the frozen representation
             lk = torch.load(lp)
-            for name, key, tern in ((f"{arch}_fp", "net_fp", False), (f"{arch}_tern", "net_ternary", True)):
+            for name, key, tern in [(f"{arch}_fp", "net_fp", False)] + ([] if arch == "mlp" else [(f"{arch}_tern", "net_ternary", True)]):
                 n = Cls(c["bdim"], c["edim"], d=lk["cfg"]["d"], layers=lk["cfg"]["layers"], ternary=tern).cuda()
                 n.load_state_dict(lk[key]); n.eval(); nets[name] = n
     return model, L, nets, c, ck
@@ -80,14 +80,16 @@ def main(a):
             idx = model.visible(K, V, scene.W, scene.H)
             full, _, _ = model.render(at, idx, K, V, scene.W, scene.H)
             mf = metrics.all_metrics(full, gt)
-            if a.kforce:                        # stress test: K streams chosen uniformly at random fail
-                draws = [(-1, rng.choice(M, k, replace=False)) for k in a.kforce for _ in range(a.n_pat)]
+            if a.fracs:                         # small lost fractions: one of round(1/l) interleaved streams fails
+                draws = [(-1, [int(rng.integers(max(2, round(1 / l))))], max(2, round(1 / l))) for l in a.fracs for _ in range(a.n_pat)]
+            elif a.kforce:                      # stress test: K streams chosen uniformly at random fail
+                draws = [(-1, rng.choice(M, k, replace=False), M) for k in a.kforce for _ in range(a.n_pat)]
             else:
-                draws = [(pi, patterns_to_streams(pats[pi], tx, rel))
+                draws = [(pi, patterns_to_streams(pats[pi], tx, rel), M)
                          for pi in rng.choice(len(pats), a.n_pat, p=cnt / cnt.sum())]
-            for pi, failed in draws:
+            for pi, failed, Mx in draws:
                 for pol in pols:
-                    lost_m = pk.lost_mask(idx, M, pol, failed, np.random.default_rng(int(vi) * 1000 + (int(pi) if pi >= 0 else 999)))
+                    lost_m = pk.lost_mask(idx, Mx, pol, failed, np.random.default_rng(int(vi) * 1000 + (int(pi) if pi >= 0 else 999)))
                     lost = idx[lost_m]
                     avail = torch.zeros(model.xyz.shape[0], dtype=torch.bool, device="cuda")
                     avail[idx[~lost_m]] = True
@@ -104,8 +106,12 @@ def main(a):
                             has = r.sum(1) > 0
                             e[lost] = torch.where(has[:, None], m_, stats[2].expand_as(m_))
                         else:
-                            e[lost] = conc[meth].predict(lost, avail, base, enh)
-                        img, _, _ = model.render(L.merge(base, e), ridx, K, V, scene.W, scene.H)
+                            with torch.autocast("cuda", dtype=torch.float16, enabled=a.half):
+                                e[lost] = conc[meth].predict(lost, avail, base, enh).float()
+                        if ridx.numel():
+                            img, _, _ = model.render(L.merge(base, e), ridx, K, V, scene.W, scene.H)
+                        else:                                   # every visible anchor lost: background only
+                            img = torch.zeros_like(full)
                         m = metrics.all_metrics(img, gt)
                         rows.append({"view": int(vi), "pattern": int(pats[pi]) if pi >= 0 else -1, "K": len(failed), "policy": pol,
                                      "method": meth, "lost_frac": float(lost_m.float().mean()), **m,
@@ -141,6 +147,9 @@ if __name__ == "__main__":
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--kforce", type=lambda v: [int(x) for x in v.split(",")], default=None,
                     help="comma list of K: K random streams fail (n_pat draws per K and view) instead of trace patterns")
+    ap.add_argument("--fracs", type=lambda v: [float(x) for x in v.split(",")], default=None,
+                    help="comma list of lost fractions l: one of round(1/l) interleaved streams fails (n_pat draws per l and view)")
+    ap.add_argument("--half", action="store_true", help="run the concealment networks under FP16 autocast")
     ap.add_argument("--policies", default="", help="comma list of mapping policies (default: all)")
     ap.add_argument("--suffix", default="", help="suffix of the output file")
     main(ap.parse_args())

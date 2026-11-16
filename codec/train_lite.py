@@ -15,7 +15,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from conceal_net import EdgeConcealNet, LiteConcealNet, knn
+from conceal_net import EdgeConcealNet, LiteConcealNet, MLPConcealNet, knn
 from eval_layered import load
 from scene_data import Scene, scene_location
 from streaming import Packetizer
@@ -35,7 +35,7 @@ def main(a):
     nbr = knn(model.xyz, c["kn"])
     pk = Packetizer(model.xyz, model.voxel, ck["importance"].cuda(), G=c["G"])
     out, log, t0 = {}, [], time.time()
-    Net = EdgeConcealNet if a.arch == "edge" else LiteConcealNet
+    Net = {"edge": EdgeConcealNet, "lite": LiteConcealNet, "mlp": MLPConcealNet}[a.arch]
     net = Net(c["bdim"], c["edim"], d=a.d, layers=a.layers).cuda()
     for phase, steps in (("fp", a.steps), ("ternary", a.steps_ternary)):
         if phase == "ternary":
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     ap.add_argument("--out", default="results")
     ap.add_argument("--steps", type=int, default=10_000)
     ap.add_argument("--steps-ternary", type=int, default=5_000)
-    ap.add_argument("--arch", default="lite", choices=("lite", "edge"))
+    ap.add_argument("--arch", default="lite", choices=("lite", "edge", "mlp"))
     ap.add_argument("--d", type=int, default=96)
     ap.add_argument("--layers", type=int, default=2)
     ap.add_argument("--lr", type=float, default=5e-4)

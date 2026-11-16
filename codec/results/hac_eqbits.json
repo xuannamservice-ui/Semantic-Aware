@@ -4,49 +4,69 @@
   "hac_MB": 8.6241,
   "parity_streams": 5,
   "hac_with_code_MB": 22.997600000000002,
+  "layered_mds_parity_streams": 3,
+  "layered_mds_MB": 30.94484520893865,
   "hac_mds_below_30": 0.0,
   "layered_below_30": 0.0,
+  "layered_mds_below_30": 0.013945391769333603,
   "hac_mds_below_35": 0.0,
-  "layered_below_35": 0.09009009009009009
+  "layered_below_35": 0.09009009009009009,
+  "layered_mds_below_35": 0.05448593230987415
  },
  "counter": {
   "layered_total_MB": 34.56285708838944,
   "hac_MB": 7.3964,
   "parity_streams": 6,
   "hac_with_code_MB": 29.5856,
+  "layered_mds_parity_streams": 3,
+  "layered_mds_MB": 32.56531192939967,
   "hac_mds_below_30": 0.0,
   "layered_below_30": 0.0,
+  "layered_mds_below_30": 0.013945391769333603,
   "hac_mds_below_35": 0.0,
-  "layered_below_35": 0.16111111111111112
+  "layered_below_35": 0.16111111111111112,
+  "layered_mds_below_35": 0.0639453917693336
  },
  "garden": {
   "layered_total_MB": 33.74731328011265,
   "hac_MB": 22.102,
   "parity_streams": 2,
   "hac_with_code_MB": 29.469333333333335,
+  "layered_mds_parity_streams": 3,
+  "layered_mds_MB": 31.822740246820896,
   "hac_mds_below_30": 0.1597222222222222,
   "layered_below_30": 0.04861111111111111,
+  "layered_mds_below_30": 0.05561205843600027,
   "hac_mds_below_35": 0.1597222222222222,
-  "layered_below_35": 0.5555555555555556
+  "layered_below_35": 0.5555555555555556,
+  "layered_mds_below_35": 0.06950094732488915
  },
  "room": {
   "layered_total_MB": 29.516179556389588,
   "hac_MB": 5.4818,
   "parity_streams": 6,
   "hac_with_code_MB": 21.9272,
+  "layered_mds_parity_streams": 3,
+  "layered_mds_MB": 26.736377463282068,
   "hac_mds_below_30": 0.0,
   "layered_below_30": 0.0,
+  "layered_mds_below_30": 0.013945391769333603,
   "hac_mds_below_35": 0.0,
-  "layered_below_35": 0.02564102564102564
+  "layered_below_35": 0.02564102564102564,
+  "layered_mds_below_35": 0.02249240031634215
  },
  "stump": {
   "layered_total_MB": 36.484645469039265,
   "hac_MB": 21.3291,
   "parity_streams": 3,
   "hac_with_code_MB": 34.12656,
+  "layered_mds_parity_streams": 3,
+  "layered_mds_MB": 33.51290711280377,
   "hac_mds_below_30": 0.052083333333333336,
   "layered_below_30": 0.041666666666666664,
+  "layered_mds_below_30": 0.034778725102666934,
   "hac_mds_below_35": 0.052083333333333336,
-  "layered_below_35": 0.5104166666666666
+  "layered_below_35": 0.5104166666666666,
+  "layered_mds_below_35": 0.06602872510266694
  }
 }

@@ -225,8 +225,11 @@ Every table and every number of the paper comes from the scripts and files below
 | Latency | `codec/bench_latency.py`, `codec/bench_final.sh` | `codec/results/bench_l40s_idle_final.json` |
 | Failed-slot rate over the RIN x loss grid | `codec/tol_service.py` | `phy_sim/results/tol_service_2.5.json` |
 | Scheduler under time-varying turbulence | `codec/sched_tv.py` | `phy_sim/results/sched_tv.json` |
-| Cold start: concealment, in-frame ARQ, 2x replication | `codec/arq_cold.py` | `phy_sim/results/arq_cold.json` (patterns of `phy_sim/results/correlated/patterns/`) |
-| HAC with an MDS code at equal transmitted bits | `codec/hac_eqbits.py` | `codec/results/hac_eqbits.json` |
+| Cold start with rendered views: concealment (anytime fallback: network on the nearest lost anchors that fit, IDW for the rest), in-frame ARQ, 2x replication, scene data, per-scheme deadline | `codec/eval_cold.py` via `codec/run_cold.sh` (schemes without concealment) and `codec/run_cold_any.sh` (`--anytime`, concealment schemes, same windows) | `codec/results/<scene>/cold_v2a_r1_<cfg>_tau<tau>.json`, `cold_v2a_r1_any_<cfg>_tau<tau>.json` |
+| MDS code across the streams at a cold start (bound) and for the anchor payload | `phy_sim/cold_mds_bound.py` | `phy_sim/results/cold_mds_bound.json` |
+| Second channel: multi-beam FSO with PAM-4 and common sway | `phy_sim/run_multibeam.py`, `codec/chain2b.sh` | `phy_sim/results/modeset_mb.json`, `traces_mb.npz`, `eval_layered_v2a_r1_MB8*_mb.json` |
+| MLP baseline (separately trained, no attention), FP16 check | `codec/train_lite.py --arch mlp`, `codec/chain2b.sh` | `eval_layered_v2a_r1_mlp_T8R8_2.5.json` (trained weights on request), `eval_layered_v2a_r1_fp16_T8R8_2.5.json` |
+| HAC with an MDS code, and the layered codec with an MDS code, at equal transmitted bits | `codec/hac_eqbits.py` | `codec/results/hac_eqbits.json` |
 | Channel variation inside a slot, pilot aging | `phy_sim/run_aging.py` | `phy_sim/results/aging_<tau>ms.json` |
 | Combined impairment budget | `phy_sim/run_budget.py` | `phy_sim/results/budget_2.5.json` |
 | WDM with PAM-L at the spectral efficiency of reuse | `phy_sim/wdm_pam.py` | `phy_sim/results/wdm_pam.json` |

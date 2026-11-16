@@ -229,3 +229,27 @@ class EdgeConcealNet(nn.Module):
         """kv_table: list over layers of (A, 2d) cached encodings; nbr_idx (B, Kn) anchor ids of the neighbours."""
         bias = self.pos2(F.gelu(self.pos1(self.posenc(rel))))
         return self.attend([t[nbr_idx] for t in kv_table], bias, own_base)
+
+
+class MLPConcealNet(nn.Module):
+    """Simple learned baseline without attention: an MLP on the lost anchor's own base layer, the inverse-distance mean
+    of the base layers of its neighbours and the inverse-distance mean of the enhancement layers of the received
+    neighbours (the IDW estimate), plus the received fraction. Same inputs and normalisation as the other networks."""
+
+    def __init__(self, base_dim, enh_dim, d=256, layers=2, ternary=False, **kw):
+        super().__init__()
+        self.enh_dim = enh_dim
+        dims = [2 * base_dim + enh_dim + 2] + [d] * layers
+        mods = []
+        for i in range(layers):
+            mods += [nn.Linear(dims[i], dims[i + 1]), nn.GELU()]
+        self.mlp = nn.Sequential(*mods, nn.Linear(d, enh_dim))
+
+    def forward(self, rel, base, enh, recv, own_base):
+        w = 1.0 / rel.norm(dim=-1).clamp_min(1e-6)                                   # (B, Kn)
+        wr = w * recv.to(w.dtype)
+        has = (wr.sum(1, keepdim=True) > 0).to(w.dtype)
+        enh_m = (wr[..., None] * enh).sum(1) / wr.sum(1, keepdim=True).clamp_min(1e-12)
+        base_m = (w[..., None] * base).sum(1) / w.sum(1, keepdim=True)
+        frac = recv.to(w.dtype).mean(1, keepdim=True)
+        return self.mlp(torch.cat([own_base, base_m, enh_m * has, frac, has], -1))
