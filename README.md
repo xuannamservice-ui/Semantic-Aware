@@ -220,15 +220,21 @@ Every table and every number of the paper comes from the scripts and files below
 | Base-layer width | `codec/queue_exp.sh jobs_basedim.txt` | `*_v2a_r1_b6*`, `*_v2a_r1_b24*` |
 | Mapping policies (S), rate weights (S) | `codec/eval_layered.py`, `codec/queue_exp.sh jobs_garden_v2.txt` | `eval_layered_v2a_r*` |
 | Frame-level evaluation with edge cache | `codec/eval_frames.py`, `run_frames*.sh`, `run_fr10.sh` | `frames_*.json` |
+| Frame-level retransmission within the deadline (slots 3 and 5, remapped onto the streams that survived) | `codec/eval_frames.py --arq-last-slot 5 --arq-remap` via `codec/run_arq_feasible.sh` | `frames_*_a35r.json` |
 | Reuse link codec evaluation | `codec/run_reuse_eval.sh` | `eval_layered_v2a_r1_T*W4_0.2w.json` |
 | HAC under loss, HAC at equal transmitted bits | `hac/` | `hac/results/` |
 | Latency | `codec/bench_latency.py`, `codec/bench_final.sh` | `codec/results/bench_l40s_idle_final.json` |
+| Decoding and rasterization of the trained models on every test view (scaled to the idle GPU by the synthetic stages) | `codec/bench_trained.py` | `codec/results/bench_trained.json`, `codec/results/<scene>/bench_trained.json` |
+| rANS entropy coder: one stream per token and layer (`range_code.py`) and with substreams of six channels (`range_code2.py --group 6 --gpu`), bit-exact round trip, size against the empirical entropy, CPU and GPU decoding time | `codec/range_code.py`, `codec/range_code2.py` | `codec/results/<scene>/rangecode_v2a_r1.json`, `rangecode_v2a_r1_g6.json` |
 | Failed-slot rate over the RIN x loss grid | `codec/tol_service.py` | `phy_sim/results/tol_service_2.5.json` |
 | Scheduler under time-varying turbulence | `codec/sched_tv.py` | `phy_sim/results/sched_tv.json` |
-| Cold start with rendered views: concealment (anytime fallback: network on the nearest lost anchors that fit, IDW for the rest), in-frame ARQ, 2x replication, scene data, per-scheme deadline | `codec/eval_cold.py` via `codec/run_cold.sh` (schemes without concealment) and `codec/run_cold_any.sh` (`--anytime`, concealment schemes, same windows) | `codec/results/<scene>/cold_v2a_r1_<cfg>_tau<tau>.json`, `cold_v2a_r1_any_<cfg>_tau<tau>.json` |
-| MDS code across the streams at a cold start (bound) and for the anchor payload | `phy_sim/cold_mds_bound.py` | `phy_sim/results/cold_mds_bound.json` |
+| Cold start (final): per-view schedule (anchor payload on the anchor modes, enhancement tokens on the other streams), replication and an MDS code using all streams after the anchor payload, retransmission, each with and without concealment, adaptive MDS, deployment variant on every scene, concealment neighbours within the view, trained-model decoding and rasterization time and the GPU entropy decoding left after the last data slot | `codec/eval_cold3.py --view-nbr --t-ent 1.73` via `codec/run_final_cold.sh` | `codec/results/<scene>/cold3_v2a_r1_<cfg>_tau<tau>_r4.json` |
+| MDS code across the streams for the anchor payload (the cold-start MDS code is rendered, see the row above) | `phy_sim/cold_mds_bound.py` | `phy_sim/results/cold_mds_bound.json` |
 | Second channel: multi-beam FSO with PAM-4 and common sway | `phy_sim/run_multibeam.py`, `codec/chain2b.sh` | `phy_sim/results/modeset_mb.json`, `traces_mb.npz`, `eval_layered_v2a_r1_MB8*_mb.json` |
 | MLP baseline (separately trained, no attention), FP16 check | `codec/train_lite.py --arch mlp`, `codec/chain2b.sh` | `eval_layered_v2a_r1_mlp_T8R8_2.5.json` (trained weights on request), `eval_layered_v2a_r1_fp16_T8R8_2.5.json` |
+| MLP trained jointly with the representation (architecture against joint training), garden, room, playroom | `codec/train_layered.py --net mlp` via `codec/run_mlp_joint.sh` | `codec/results/<scene>/eval_layered_v2m_r1_T8R8_2.5.json` |
+| Deployment variant on all scenes | `codec/train_lite.py --arch edge` via `codec/run_edge_all.sh` | `eval_layered_v2a_r1_edge_T8R8_2.5.json` |
+| Training-free regression-kriging baseline (ridge base-to-enhancement plus IDW of residuals) | `codec/eval_layered.py --rk` via `codec/run_rk.sh` | `eval_layered_v2a_r1_rk_T8R8_2.5.json` |
 | HAC with an MDS code, and the layered codec with an MDS code, at equal transmitted bits | `codec/hac_eqbits.py` | `codec/results/hac_eqbits.json` |
 | Channel variation inside a slot, pilot aging | `phy_sim/run_aging.py` | `phy_sim/results/aging_<tau>ms.json` |
 | Combined impairment budget | `phy_sim/run_budget.py` | `phy_sim/results/budget_2.5.json` |

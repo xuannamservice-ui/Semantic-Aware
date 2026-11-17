@@ -41,7 +41,7 @@ def load(out, scene, tag):
     L = Layers(model, ck["base_dim"])
     c = ck["net_cfg"]
     nets = {}
-    Net = LiteConcealNet if ck.get("net_type") == "lite" else LayeredConcealNet
+    Net = {"lite": LiteConcealNet, "mlp": MLPConcealNet}.get(ck.get("net_type"), LayeredConcealNet)
     for name, key, tern in (("gen_fp", "net_fp", False), ("gen_tern", "net_ternary", True)):
         n = Net(c["bdim"], c["edim"], d=c["d"], layers=c["layers"], ternary=tern).cuda()
         n.load_state_dict(ck[key]); n.eval(); nets[name] = n
@@ -72,7 +72,9 @@ def main(a):
     tr = np.load(os.path.join(a.phy, f"traces_{a.s2}.npz"))[a.cfg]
     pats, cnt = np.unique(tr[tr > 0], return_counts=True)
     M = len(tx); rows = []; t0 = time.time()
-    methods = ("drop", "base", "idw") + tuple(nets)
+    methods = ("drop", "base", "idw") + tuple(nets) + (("rk",) if a.rk else ())
+    if a.methods:
+        methods = tuple(m_ for m_ in methods if m_ in a.methods.split(","))
     pols = a.policies.split(",") if a.policies else POLICIES
     with torch.no_grad():
         for vi in scene.test_idx:
@@ -99,6 +101,20 @@ def main(a):
                             ridx = idx[~lost_m]
                         elif meth == "base":
                             e[lost] = stats[2]
+                        elif meth == "rk":                      # regression-kriging: ridge base -> enhancement on the received
+                            rec_ = idx[~lost_m]                   # anchors of the view, plus IDW of the neighbours' residuals
+                            if rec_.numel() > base.shape[1] + 1:
+                                X_ = torch.cat([base[rec_], torch.ones(rec_.numel(), 1, device="cuda")], 1).double()
+                                A_ = X_.T @ X_; A_ += 1e-3 * A_.diagonal().mean() * torch.eye(A_.shape[0], device="cuda", dtype=A_.dtype)
+                                W_ = torch.linalg.solve(A_, X_.T @ enh[rec_].double()).float()
+                                lin_ = lambda ii: torch.cat([base[ii], torch.ones(ii.numel(), 1, device="cuda")], 1) @ W_
+                                nb = nbr[lost]; r = avail[nb].float()
+                                w = r / (model.xyz[nb] - model.xyz[lost][:, None]).norm(dim=-1).clamp_min(1e-6)
+                                res_ = enh[nb] - lin_(nb.reshape(-1)).reshape(nb.shape[0], nb.shape[1], -1)
+                                m_ = (w[..., None] * res_).sum(1) / w.sum(1, keepdim=True).clamp_min(1e-12)
+                                e[lost] = lin_(lost) + torch.where((r.sum(1) > 0)[:, None], m_, torch.zeros_like(m_))
+                            else:
+                                e[lost] = stats[2]
                         elif meth == "idw":
                             nb = nbr[lost]; r = avail[nb].float()
                             w = r / (model.xyz[nb] - model.xyz[lost][:, None]).norm(dim=-1).clamp_min(1e-6)
@@ -152,4 +168,6 @@ if __name__ == "__main__":
     ap.add_argument("--half", action="store_true", help="run the concealment networks under FP16 autocast")
     ap.add_argument("--policies", default="", help="comma list of mapping policies (default: all)")
     ap.add_argument("--suffix", default="", help="suffix of the output file")
+    ap.add_argument("--rk", action="store_true", help="add the training-free regression-kriging baseline")
+    ap.add_argument("--methods", default="", help="comma-separated subset of the methods")
     main(ap.parse_args())

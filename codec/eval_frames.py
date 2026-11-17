@@ -10,8 +10,9 @@ Schemes, all with the same redundancy eps (fraction of the frame payload spent o
   none      : lost enhancement data stays missing at the deadline (anchors dropped)
   conceal   : missing enhancement layers are predicted by the concealment network at the deadline
   arq       : the edge reports the lost tokens after one slot; the sender retransmits them in slot 3, 5, ... of the frame
-              (every second slot, round-trip of one slot) while the retransmitted volume stays within eps of the frame
-              payload; retransmissions use the same mapping and see the failure pattern of their slot
+              up to --arq-last-slot (every second slot, round-trip of one slot) while the retransmitted volume stays within
+              eps of the frame payload; retransmissions use the same mapping and see the failure pattern of their slot, or
+              with --arq-remap are spread over the streams that did not fail in the previous transmission slot
   mds       : an (M, M - r) erasure code across the streams with r = round(eps M): the data of a slot is recovered if at
               most r streams fail, otherwise the tokens on the failed streams are lost (tokens are mapped over all M
               streams in this evaluation, a slight overestimate of the loss of a systematic code)
@@ -73,18 +74,18 @@ def main(a):
     order = np.array([v for j, v in enumerate(order) if j % a.stride == 0 or int(v) in test_set])
     T = len(order); F = a.slots_per_frame
     test = set(int(i) for i in scene.test_idx)
-    schemes = ["none", "conceal", "arq", "arq+conceal", "mds", "mds+conceal"]
+    schemes = a.schemes.split(",") if a.schemes else ["none", "conceal", "arq", "arq+conceal", "mds", "mds+conceal"]
     rows, t0 = [], time.time()
 
     def failed_streams(p):
         return set(patterns_to_streams(p, tx, rel))
 
     with torch.no_grad():
-        full = {}
+        full, full_m, vis_cache = {}, {}, {}
         for vi in scene.test_idx:
             gt, K, V = scene.view(vi)
             img, _, _ = model.render(at, model.visible(K, V, scene.W, scene.H), K, V, scene.W, scene.H)
-            full[int(vi)] = img
+            full[int(vi)] = img; full_m[int(vi)] = metrics.all_metrics(img, gt)   # a frame with nothing missing renders exactly this
         for ch in range(a.chains):
             off = rng.integers(0, stream.size - T * F)
             pats = stream[off:off + T * F].reshape(T, F)
@@ -93,8 +94,11 @@ def main(a):
                 prng = np.random.default_rng(a.seed * 1000 + ch)
                 for f, vi in enumerate(order):
                     vi = int(vi)
-                    gt, K, V = scene.view(vi)
-                    idx = model.visible(K, V, scene.W, scene.H)
+                    if vi not in vis_cache:                     # camera, visible anchors and (test views) image: the same for every chain and scheme
+                        gt_, K_, V_ = scene.view(vi)
+                        vis_cache[vi] = (gt_.cpu() if vi in test else None, K_, V_, model.visible(K_, V_, scene.W, scene.H).cpu())
+                    gt, K, V, idx = vis_cache[vi]
+                    idx = idx.cuda(); gt = gt.cuda() if gt is not None else None
                     new = idx[~cached[idx]]
                     if new.numel():
                         S0 = failed_streams(pats[f, 0])
@@ -108,19 +112,27 @@ def main(a):
                             lost = new[lm]
                             if sch.startswith("arq") and lost.numel():
                                 budget = int(a.eps * new.numel())
-                                for s in range(2, F, 2):                # retransmission slots 3, 5, ... (index 2, 4, ...)
+                                prev = S0
+                                for s in range(2, min(F, a.arq_last_slot), 2):   # retransmission slots 3, 5, ... (index 2, 4, ...)
                                     if lost.numel() == 0 or budget <= 0:
                                         break
                                     send = lost[:budget]; budget -= send.numel()
                                     Ss = failed_streams(pats[f, s])
-                                    lm2 = pk.lost_mask(send, M, a.policy, sorted(Ss), prng) if Ss else \
+                                    ok_ = [m_ for m_ in range(M) if m_ not in prev] if a.arq_remap else list(range(M))
+                                    ok_ = ok_ or list(range(M))
+                                    fl_ = sorted(ok_.index(m_) for m_ in Ss if m_ in ok_)
+                                    lm2 = pk.lost_mask(send, len(ok_), a.policy, fl_, prng) if fl_ else \
                                         torch.zeros(send.numel(), dtype=torch.bool, device="cuda")
+                                    prev = Ss
                                     lost = torch.cat([send[lm2], lost[send.numel():]])
                         delivered = new[~torch.isin(new, lost)] if lost.numel() else new
                         cached[delivered] = True
                     if vi not in test:
                         continue
                     miss = idx[~cached[idx]]
+                    if miss.numel() == 0:
+                        rows.append({"chain": ch, "scheme": sch, "view": vi, "frame": f, "n_missing": 0, "n_visible": int(idx.numel()), **full_m[vi], "psi": float("inf")})
+                        continue
                     e = enh.clone(); ridx = idx
                     if miss.numel():
                         if sch.endswith("conceal"):
@@ -141,11 +153,11 @@ def main(a):
                      "psnr": float(np.mean([x["psnr"] for x in rs])), "lpips": float(np.mean([x["lpips"] for x in rs])),
                      **{f"p_fail_psi{t}": float((psi < t).mean()) for t in a.psi_th},
                      "psi_min": float(psi.min()), "psi_p01": float(np.percentile(psi, 1))}
-    res = {"scene": a.scene, "tag": a.tag, "cfg": a.cfg, "tau_c_ms": a.tau, "eps": a.eps, "r_mds": r,
+    res = {"scene": a.scene, "tag": a.tag, "cfg": a.cfg, "tau_c_ms": a.tau, "eps": a.eps, "r_mds": r, "arq_last_slot": a.arq_last_slot, "arq_remap": bool(a.arq_remap),
            "anchor_modes": [int(tx[i]) for i in best], "policy": a.policy,
            "slots_per_frame": F, "stride": a.stride, "n_anchor_copies": a.n_anchor, "net": a.net, "chains": a.chains, "frames": T,
            "summary": summ, "rows": rows}
-    with open(os.path.join(a.out, a.scene, f"frames{a.tag}_{a.cfg}_tau{a.tau:g}_eps{a.eps:g}" + (f"_stride{a.stride}" if a.stride > 1 else "") + ".json"), "w") as fh:
+    with open(os.path.join(a.out, a.scene, f"frames{a.tag}_{a.cfg}_tau{a.tau:g}_eps{a.eps:g}" + (f"_stride{a.stride}" if a.stride > 1 else "") + a.suffix + ".json"), "w") as fh:
         json.dump(res, fh)
     for k, v in summ.items():
         print(k, json.dumps(v), flush=True)
@@ -170,4 +182,8 @@ if __name__ == "__main__":
     ap.add_argument("--out", default="results")
     ap.add_argument("--phy", default="phy")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--arq-last-slot", type=int, default=11, help="last retransmission slot (1-based); 5 keeps rendering within the frame")
+    ap.add_argument("--arq-remap", action="store_true", help="retransmit on the streams that did not fail in the previous transmission slot")
+    ap.add_argument("--schemes", default="", help="comma-separated subset of the schemes")
+    ap.add_argument("--suffix", default="", help="appended to the output file name")
     main(ap.parse_args())

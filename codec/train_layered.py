@@ -24,7 +24,7 @@ import torch.nn.functional as F
 
 import metrics
 from anchor_model import AnchorModel, voxel_anchors
-from conceal_net import LayeredConcealNet, LiteConcealNet, knn
+from conceal_net import LayeredConcealNet, LiteConcealNet, MLPConcealNet, knn
 from scene_data import Scene, scene_location
 from streaming import Packetizer
 from train_3dgs import OUTDOOR
@@ -116,7 +116,7 @@ def main(a):
     nbr = knn(model.xyz, a.kn)
     radius = float((model.xyz[nbr[:, -1]] - model.xyz).norm(dim=1).median())
     pk = Packetizer(model.xyz, voxel, torch.ones(model.xyz.shape[0], device="cuda"), G=a.G)
-    Net = LiteConcealNet if a.net == "lite" else LayeredConcealNet
+    Net = {"lite": LiteConcealNet, "mlp": MLPConcealNet}.get(a.net, LayeredConcealNet)
     net = Net(bdim, edim, d=a.d, layers=a.layers).cuda()
     A0 = model.xyz.shape[0]
     rate = RateModel({"feat": a.feat_dim, "offsets": 3 * a.k, "scaling": 6}).cuda()
@@ -282,7 +282,7 @@ if __name__ == "__main__":
     ap.add_argument("--steps-ternary", type=int, default=8_000)
     ap.add_argument("--lam", type=float, default=1.0)
     ap.add_argument("--rate-lambda", type=float, default=0.0, help="weight of the rate term (per bit per anchor)")
-    ap.add_argument("--net", default="ref", choices=("ref", "lite"), help="concealment network trained jointly")
+    ap.add_argument("--net", default="ref", choices=("ref", "lite", "mlp"), help="concealment network trained jointly")
     ap.add_argument("--prune", type=float, default=0.0, help="drop anchors with importance <= prune * mean importance")
     ap.add_argument("--aware", type=int, default=1, help="1: joint (concealment-aware) training; 0: separate design")
     ap.add_argument("--tag", default="", help="suffix of the output files")
