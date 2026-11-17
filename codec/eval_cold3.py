@@ -53,6 +53,7 @@ LK = np.array([0, 5e3, 1e4, 2e4, 3e4])
 T_GATHER = np.array([0, 0.08, 0.17, 0.36, 0.53])
 T_NET = np.array([0, 0.85, 1.81, 3.92, 5.96])                  # compiled FP16 concealment network (Table 13)
 T_EDGE_NET = np.array([0, 0.63, 1.07, 2.24, 3.39])             # deployment variant, cached encodings
+T_MLP_NET = np.array([0, 0.32, 0.42, 1.04, 1.27])              # MLP of two layers of width 256, FP16, measured with three cold-start runs on the GPU
 T_FRAME, R0, MLP_MBIT = 11.1, 9.35e6, 0.14e6
 SCHEMES = ("none", "conceal", "rep2", "rep2_conceal", "mds", "mds_conceal", "arq", "arq_conceal")
 PSI_MAX = 99.0
@@ -74,6 +75,19 @@ def anytime_count(n_lost, budget, tnet):
     return lo
 
 
+def split_count(n_lost, budget, tnet, tfb):
+    """Largest number of lost anchors that the network conceals (nearest to the camera) while the fallback network
+    conceals the rest within the budget (one gathering pass for each); -1 if even the fallback alone does not fit."""
+    best = -1
+    for m in range(n_lost, -1, -max(1, n_lost // 64)):
+        r = n_lost - m
+        t = t_of(n_lost, T_GATHER) + t_of(m, tnet) + (t_of(r, T_GATHER) + t_of(r, tfb) if r else 0.0)
+        if t <= budget:
+            return m
+    t = 2 * t_of(n_lost, T_GATHER) + t_of(n_lost, tfb)
+    return 0 if t <= budget else best
+
+
 def pairing(left, acc, cost, jf):
     if not left:
         return cost, acc
@@ -82,7 +96,8 @@ def pairing(left, acc, cost, jf):
 
 
 def main(a):
-    global RUN
+    global RUN, T_FRAME
+    T_FRAME = 11.1 * a.frames                    # frames allowed for the first view (1: shown in the frame of the request)
     RUN = tuple(a.schemes.split(",")) if a.schemes else SCHEMES
     rng = np.random.default_rng(a.seed)
     scene = Scene(*scene_location(a.scene, a.data))
@@ -93,6 +108,7 @@ def main(a):
     nbr = knn(model.xyz, c["kn"])
     conc = LayeredConcealer(model, L, nets["gen_fp"], stats, nbr, ck["radius"])
     conc_edge = LayeredConcealer(model, L, nets["edge_fp"], stats, nbr, ck["radius"]) if "edge_fp" in nets else None
+    conc_mlp = LayeredConcealer(model, L, nets["mlp_fp"], stats, nbr, ck["radius"]) if ("mlp_fp" in nets and a.mlp_fallback) else None
     pk = Packetizer(model.xyz, model.voxel, ck["importance"].cuda(), G=c["G"])
     mt = json.load(open(os.path.join(a.out, a.scene, f"metrics_layered{a.tag}.json")))
     rc_path = os.path.join(a.out, a.scene, f"rangecode{a.tag}.json")
@@ -168,6 +184,8 @@ def main(a):
                 NB["t"] = tv_; conc.nbr = tv_
                 if conc_edge is not None:
                     conc_edge.nbr = tv_
+                if conc_mlp is not None:
+                    conc_mlp.nbr = tv_
             SA = max(1, math.ceil((n_vis * b_A + MLP_MBIT) / R0)); L2 = 2 * n_vis * b_E; SR = SA + max(0, math.ceil((L2 - Md * R0 * SA) / (M * R0)))
             t_dr = t_view[vi] if t_view is not None else t_ren * n_vis / 110_000
             t_enc = 0.66 * n_vis / 110_000
@@ -244,9 +262,9 @@ def main(a):
                     if n_lost and sch.endswith("conceal"):
                         budget = T_FRAME - max(last, net_slot[sch] + 1) - t_dr
                         avail = torch.zeros(model.xyz.shape[0], dtype=torch.bool, device=dev); avail[s_[~fail]] = True
-                        if budget < 2 * t_of(n_lost, T_GATHER):
-                            rec.update(deadline_miss=True, psnr=0.0, psi=0.0, ssim=0.0, lpips=1.0); rows.append(rec); continue
-                        if net_lost:
+                        if budget < 2 * t_of(n_lost, T_GATHER):   # no time to conceal: render what arrived, as without concealment
+                            ridx = s_[~fail]; rec["variant"] = "drop"
+                        elif net_lost:
                             e[lost] = idw(lost, avail); rec["variant"] = "idw"
                         else:
                             nf = n_lost if t_of(n_lost, T_GATHER) + t_of(n_lost, T_NET) <= budget else anytime_count(n_lost, budget, T_NET)
@@ -254,8 +272,22 @@ def main(a):
                             if conc_edge is not None and nf < n_lost:
                                 ne = n_lost if t_enc + t_of(n_lost, T_GATHER) + t_of(n_lost, T_EDGE_NET) <= budget else anytime_count(n_lost, budget - t_enc, T_EDGE_NET)
                             use_edge = ne > nf; n_net = ne if use_edge else nf; net_ = conc_edge if use_edge else conc
+                            mm_ = -1
+                            if conc_mlp is not None and n_net < n_lost:   # MLP instead of IDW for the anchors the network cannot reach
+                                mf_ = split_count(n_lost, budget, T_NET, T_MLP_NET)
+                                me_ = split_count(n_lost, budget - t_enc, T_EDGE_NET, T_MLP_NET) if conc_edge is not None else -1
+                                use_edge = me_ > mf_; mm_ = me_ if use_edge else mf_; net_ = conc_edge if use_edge else conc
                             if n_net >= n_lost:
                                 e[lost] = net_.predict(lost, avail, base, enh); rec["variant"] = "edge" if use_edge else "full"
+                            elif mm_ >= 0:
+                                depth = (V[:3, :3] @ model.xyz[lost].T + V[:3, 3:]).T[:, 2]
+                                order = torch.argsort(depth)
+                                sub, rest = lost[order[:mm_]], lost[order[mm_:]]
+                                if rest.numel():
+                                    e[rest] = conc_mlp.predict(rest, avail, base, enh)
+                                if mm_:
+                                    e[sub] = net_.predict(sub, avail, base, enh)
+                                n_net = mm_; rec["variant"] = "mlp_fb_edge" if use_edge else "mlp_fb"
                             else:
                                 depth = (V[:3, :3] @ model.xyz[lost].T + V[:3, 3:]).T[:, 2]
                                 order = torch.argsort(depth)
@@ -289,7 +321,7 @@ def main(a):
            "timing": "bench_trained" if t_view is not None else "synthetic", "n_ev": a.n_ev, "n_mds": a.n_mds, "has_edge_variant": conc_edge is not None,
            "strata": {f"{k[0]},{k[1]}": {kk: vv for kk, vv in v.items() if kk in ("pE", "pD", "nW", "WE")} for k, v in strata.items()},
            "summary": summ, "views": views, "rows": rows}
-    res["schemes"] = list(RUN); res["view_nbr"] = bool(a.view_nbr); res["t_ent"] = a.t_ent
+    res["schemes"] = list(RUN); res["view_nbr"] = bool(a.view_nbr); res["t_ent"] = a.t_ent; res["frames"] = a.frames; res["mlp_fallback"] = conc_mlp is not None
     with open(os.path.join(a.out, a.scene, f"cold3{a.tag}_{a.cfg}_tau{a.tau:g}{a.suffix}.json"), "w") as fh:
         json.dump(res, fh)
     for k, v in summ.items():
@@ -312,6 +344,8 @@ if __name__ == "__main__":
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--schemes", default="", help="comma list of schemes to render (default: all)")
     ap.add_argument("--suffix", default="")
+    ap.add_argument("--mlp-fallback", action="store_true", help="the separately trained MLP conceals the lost anchors the network cannot reach in time")
+    ap.add_argument("--frames", type=int, default=1, help="frame periods allowed for the first view of a cold start")
     ap.add_argument("--t-ent", type=float, default=0.0, help="GPU entropy decoding time of 112,000 anchors (ms, both layers)")
     ap.add_argument("--view-nbr", action="store_true", help="concealment neighbours only among the anchors of the view")
     main(ap.parse_args())
