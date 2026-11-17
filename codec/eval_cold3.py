@@ -96,7 +96,9 @@ def pairing(left, acc, cost, jf):
 
 
 def main(a):
-    global RUN, T_FRAME
+    global RUN, T_FRAME, T_NET
+    if a.net_timing == "mlp":                    # the main network is the jointly trained MLP (tag _v2m_r1)
+        T_NET = T_MLP_NET
     T_FRAME = 11.1 * a.frames                    # frames allowed for the first view (1: shown in the frame of the request)
     RUN = tuple(a.schemes.split(",")) if a.schemes else SCHEMES
     rng = np.random.default_rng(a.seed)
@@ -116,7 +118,7 @@ def main(a):
                  else 1.012 * mt["rate_bits_per_anchor"]["base_layer"])
     b_A = mt["rate_bits_per_anchor"]["position_fixed"] + base_bits     # bits per anchor on every anchor mode
     b_E = (json.load(open(rc_path))["layers"]["enhancement"]["real_bits_per_anchor"] if os.path.exists(rc_path)
-           else 1.013 * mt["rate_bits_per_anchor"]["enhancement_layer"])
+           else 1.013 * mt["rate_bits_per_anchor"]["enh_layer"])
     bt_path = os.path.join(a.out, a.scene, "bench_trained.json")
     t_view = {v["view"]: v["ren_cal"] for v in json.load(open(bt_path))["views"]} if os.path.exists(bt_path) else None
     t_ren = 2.159 * scene.W * scene.H / (1297 * 840)
@@ -321,7 +323,7 @@ def main(a):
            "timing": "bench_trained" if t_view is not None else "synthetic", "n_ev": a.n_ev, "n_mds": a.n_mds, "has_edge_variant": conc_edge is not None,
            "strata": {f"{k[0]},{k[1]}": {kk: vv for kk, vv in v.items() if kk in ("pE", "pD", "nW", "WE")} for k, v in strata.items()},
            "summary": summ, "views": views, "rows": rows}
-    res["schemes"] = list(RUN); res["view_nbr"] = bool(a.view_nbr); res["t_ent"] = a.t_ent; res["frames"] = a.frames; res["mlp_fallback"] = conc_mlp is not None
+    res["schemes"] = list(RUN); res["view_nbr"] = bool(a.view_nbr); res["t_ent"] = a.t_ent; res["frames"] = a.frames; res["mlp_fallback"] = conc_mlp is not None; res["net_timing"] = a.net_timing
     with open(os.path.join(a.out, a.scene, f"cold3{a.tag}_{a.cfg}_tau{a.tau:g}{a.suffix}.json"), "w") as fh:
         json.dump(res, fh)
     for k, v in summ.items():
@@ -345,6 +347,7 @@ if __name__ == "__main__":
     ap.add_argument("--schemes", default="", help="comma list of schemes to render (default: all)")
     ap.add_argument("--suffix", default="")
     ap.add_argument("--mlp-fallback", action="store_true", help="the separately trained MLP conceals the lost anchors the network cannot reach in time")
+    ap.add_argument("--net-timing", default="attn", choices=("attn", "mlp"), help="timing of the main concealment network")
     ap.add_argument("--frames", type=int, default=1, help="frame periods allowed for the first view of a cold start")
     ap.add_argument("--t-ent", type=float, default=0.0, help="GPU entropy decoding time of 112,000 anchors (ms, both layers)")
     ap.add_argument("--view-nbr", action="store_true", help="concealment neighbours only among the anchors of the view")
