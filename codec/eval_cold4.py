@@ -45,7 +45,10 @@ schedule misses the deadline fails at every cold start of that view (always_fail
 Output: <out>/<scene>/cold4<tag>_<cfg>_tau<tau>_r5.json and _r6.json (structure of the cold3 files plus executed
 timing fields); --aggregate pools them into <out>/rev6_cold4_summary.json, with the comparison against the modelled
 cold3<tag>_*_r5/_r6 rows of the same windows.
+--exec-frames 1 executes and writes only the one-frame (_r5) evaluation; the ARQ transport of the two-frame deadline
+is still drawn (not executed), so the random stream of every window, and with it every window, is that of the full run.
 usage: python eval_cold4.py --scene garden --runs T8R8:2.5,T8R8:10,T6R11:2.5,T6R11:10 --margin <ms> --chunk 8192
+       python eval_cold4.py --scene garden --margin 0 --chunk 8192 --exec-frames 1 --suffix _run2   (repeat of _r5)
        python eval_cold4.py --aggregate
 """
 import argparse
@@ -666,7 +669,7 @@ def run_scene(a):
                             trs[fr] = transport(sch, ctx, prng, rt_ok)
                             if fr != a.frames[-1]:
                                 prng.bit_generator.state = st_
-                        for fr in a.frames:
+                        for fr in a.exec_frames:
                             TF = 11.1 * fr * a.deadline_scale
                             tr = trs[fr]; tr["SA"] = SA
                             always = res_f[fr]["views"][-1]["always_fail"][sch]
@@ -712,7 +715,7 @@ def run_scene(a):
             gc.collect()
             print(f"{cfg} tau{tau:g} view {vi}: S_A {SA} S_R {SR}, free A {free['A']['total']:.2f} R {free['R']['total']:.2f} ms, "
                   f"{len(res_f[a.frames[0]]['rows'])} rows, {time.time() - t_run:.0f}s", flush=True)
-        for fr in a.frames:
+        for fr in a.exec_frames:
             rows, views = res_f[fr]["rows"], res_f[fr]["views"]
             summ = summarize(rows, views)
             res = {"scene": a.scene, "cfg": cfg, "tau_c_ms": tau, "n_anchor": na, "b_A": b_A, "b_E": b_E, "t_ren": None,
@@ -761,7 +764,7 @@ def dist(x):
     return {"n": int(x.size), "mean": float(x.mean()), "p50": float(np.median(x)), "p99": float(np.percentile(x, 99)), "max": float(x.max())} if x.size else {}
 
 
-def aggregate(a):
+def aggregate(a, write=True):
     out = {"semantics": __doc__.split("usage")[0], "configs": {}, "validation_vs_modelled": {}}
     ALLS = ("garden", "bicycle", "stump", "room", "counter", "kitchen", "bonsai", "truck", "train", "playroom", "drjohnson")
     for cfg, tau in (("T8R8", "2.5"), ("T8R8", "10"), ("T6R11", "2.5"), ("T6R11", "10")):
@@ -858,6 +861,8 @@ def aggregate(a):
         tab["undeliverable_views_frac"] = {c: out["configs"][c]["undeliverable_views"]["frac"] if c in out["configs"] else None for c in cols}
         out[f"table_cold_{th}dB"] = tab
     out["table_columns"] = cols
+    if not write:
+        return out
     with open(os.path.join(a.out, f"rev6_cold4_summary{a.suffix}.json"), "w") as fh:
         json.dump(out, fh, indent=1)
     for k, g in out["configs"].items():
@@ -871,6 +876,7 @@ if __name__ == "__main__":
     ap.add_argument("--tag", default="_v2m_r1")
     ap.add_argument("--runs", default="T8R8:2.5,T8R8:10,T6R11:2.5,T6R11:10")
     ap.add_argument("--frames", default="1,2")
+    ap.add_argument("--exec-frames", default="", help="deadlines (frames) executed and written (default: --frames); the others are only drawn")
     ap.add_argument("--margin", type=float, default=0.3, help="safety margin of the anytime deadline checks (ms)")
     ap.add_argument("--chunk", type=int, default=8192, help="lost anchors per MLP chunk")
     ap.add_argument("--rerun", type=int, default=3, help="re-executions of a window that misses the deadline (median kept)")
@@ -897,6 +903,8 @@ if __name__ == "__main__":
     ap.add_argument("--aggregate", action="store_true")
     a = ap.parse_args()
     a.frames = [int(x) for x in a.frames.split(",")]
+    a.exec_frames = [int(x) for x in a.exec_frames.split(",")] if a.exec_frames else a.frames
+    assert set(a.exec_frames) <= set(a.frames)
     a.cal_chunks = [int(x) for x in a.cal_chunks.split(",")]
     if a.aggregate:
         aggregate(a)

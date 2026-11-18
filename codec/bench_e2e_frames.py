@@ -24,8 +24,9 @@ the receive-complete time within the frame period from the transmission schedule
            must have arrived), S_A ms without. The whole view is entropy-decoded after reception (no overlap with
            reception), every lost anchor is concealed by the network (no anytime truncation), neighbours among the
            anchors of the view (precomputed).
-Networks: deploy = jointly trained MLP (tag _v2m_r1) on garden, room and playroom, EdgeConcealNet (tag _v2a_r1)
-elsewhere; attn = the cross-attention concealment network of the paper (tag _v2a_r1).
+Networks: deploy = jointly trained MLP (tag _v2m_r1) where layered_v2m_r1.pt exists, EdgeConcealNet (tag _v2a_r1)
+elsewhere (the rev6 runs of 17 Nov: MLP on garden, room and playroom); mlp = the jointly trained MLP with its own _v2m_r1
+representation on every scene (error if missing); attn = the cross-attention concealment network of the paper (tag _v2a_r1).
 Pacing (--barrier, used for concurrent sessions): frame k is released at start + k * 11.11 ms + t_rx; a frame that is
 released while the previous one is still processed waits, and the wait counts in its E2E.
 Output: --out-json (summary) and <out-json without .json>_rows.json.gz (one row per timed frame).
@@ -35,6 +36,8 @@ usage:
   python bench_e2e_frames.py --mode session --scenes room --nets deploy --runs T8R8:10:conceal --chains 3 \
       --duration 60 --barrier /tmp/rev6_bar2 --n-procs 2 --out-json results/rev6_raw/conc2_room.json
   python bench_e2e_frames.py --aggregate 'results/rev6_raw/session_*.json' --out-json results/rev6_latency_session.json
+  python bench_e2e_frames.py --mode session --scenes garden --nets mlp --runs T8R8:10:conceal,T8R8:2.5:conceal,T6R11:10:conceal \
+      --reps 3 --chains 10 --chains-t6 3 --out-json results/rev6_raw/mlp_session_garden.json   (MLP on every scene)
 """
 import argparse
 import glob
@@ -207,7 +210,10 @@ class Edge:
     def __init__(self, scene_name, net_kind, a):
         self.scene = scene_name
         has_mlp_joint = os.path.exists(os.path.join(a.out, scene_name, "layered_v2m_r1.pt"))
-        if net_kind == "deploy" and has_mlp_joint:
+        if net_kind == "mlp":                   # jointly trained MLP on every scene (its own _v2m_r1 representation)
+            assert has_mlp_joint, f"{scene_name}: layered_v2m_r1.pt missing"
+            self.tag, self.netname, self.kind = "_v2m_r1", "gen_fp", "mlp"
+        elif net_kind == "deploy" and has_mlp_joint:
             self.tag, self.netname, self.kind = "_v2m_r1", "gen_fp", "mlp"
         elif net_kind == "deploy":
             self.tag, self.netname, self.kind = "_v2a_r1", "edge_fp", "edge"
@@ -730,6 +736,7 @@ def aggregate(a):
         res["deploy"]["median_over_reps_steady_state"] = tail_summary([r for r in med if not r["first"]], ("variant", "cfg", "tau", "scheme"))
         res["median_over_reps"] = tail_summary(med, ("net", "cfg", "tau", "scheme"))
         res["median_over_reps_steady_state"] = tail_summary([r for r in med if not r["first"]], ("net", "cfg", "tau", "scheme"))
+        res["median_over_reps_first_frame"] = tail_summary([r for r in med if r["first"]], ("net", "cfg", "tau", "scheme"))
     elif mode == "cold":
         res["all"] = summarize(rows, ("net", "cfg", "tau", "kind"))
         res["per_scene"] = summarize(rows, ("net", "scene", "cfg", "tau", "kind"))
@@ -803,7 +810,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", default="session", choices=("session", "cold"))
     ap.add_argument("--scenes", default="garden")
-    ap.add_argument("--nets", default="deploy,attn", help="deploy (MLP joint / EdgeConcealNet) and/or attn (cross-attention reference)")
+    ap.add_argument("--nets", default="deploy,attn", help="deploy (MLP joint / EdgeConcealNet), mlp (jointly trained MLP, tag _v2m_r1, "
+                    "required on every scene) and/or attn (cross-attention reference)")
     ap.add_argument("--runs", default="T8R8:10:conceal,T8R8:10:arq+conceal,T8R8:2.5:conceal,T8R8:2.5:arq+conceal,T6R11:10:conceal,T6R11:2.5:conceal",
                     help="session runs cfg:tau:scheme (attn: only the T8R8 conceal runs)")
     ap.add_argument("--cold-runs", default="T8R8:2.5,T8R8:10,T6R11:2.5")

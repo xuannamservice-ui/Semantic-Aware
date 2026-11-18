@@ -1,0 +1,507 @@
+{
+ "gpu": "NVIDIA L40S",
+ "torch": "2.10.0+cu128",
+ "anchors": 250000,
+ "A_vis": 110000,
+ "bdim": 18,
+ "edim": 66,
+ "feat_dim": 48,
+ "W": 1297,
+ "H": 840,
+ "n_rep": 2000,
+ "n_warm": 50,
+ "chunk": 16384,
+ "stages": {
+  "mlp_fp16_L5000": {
+   "mean": 0.28532854368537663,
+   "p50": 0.2877439856529236,
+   "p99": 0.4782182455062866,
+   "p999": 1.9293041871786296,
+   "n": 2000
+  },
+  "mlp_mixed_L5000": {
+   "mean": 0.2571609918326139,
+   "p50": 0.2385919988155365,
+   "p99": 0.4814476877450943,
+   "p999": 1.0396757692098935,
+   "n": 2000
+  },
+  "mlp_fp16_compiled_L5000": {
+   "mean": 0.14882667174190284,
+   "p50": 0.1454080045223236,
+   "p99": 0.21190464422106742,
+   "p999": 0.31419564121961996,
+   "n": 2000
+  },
+  "mlp_mixed_compiled_L5000": {
+   "mean": 0.1356437120139599,
+   "p50": 0.1340479999780655,
+   "p99": 0.16692096427083014,
+   "p999": 0.2029825947880889,
+   "n": 2000
+  },
+  "mlp_fp16_L10000": {
+   "mean": 0.3131588641405106,
+   "p50": 0.3059360086917877,
+   "p99": 0.4230700826644897,
+   "p999": 0.5840723907947557,
+   "n": 2000
+  },
+  "mlp_mixed_L10000": {
+   "mean": 0.31406918388605115,
+   "p50": 0.308896005153656,
+   "p99": 0.39450783401727674,
+   "p999": 0.5133305344581707,
+   "n": 2000
+  },
+  "mlp_fp16_compiled_L10000": {
+   "mean": 0.17071980794519187,
+   "p50": 0.16891200095415115,
+   "p99": 0.22156864330172538,
+   "p999": 0.2549826913774288,
+   "n": 2000
+  },
+  "mlp_mixed_compiled_L10000": {
+   "mean": 0.157605935908854,
+   "p50": 0.1499200016260147,
+   "p99": 0.2298003189265728,
+   "p999": 0.3490034915209231,
+   "n": 2000
+  },
+  "mlp_fp16_L20000": {
+   "mean": 0.5904736319482327,
+   "p50": 0.5763840079307556,
+   "p99": 0.9173871743679046,
+   "p999": 0.9893755848407809,
+   "n": 2000
+  },
+  "mlp_mixed_L20000": {
+   "mean": 0.5985728159248829,
+   "p50": 0.5915200114250183,
+   "p99": 0.7523490965366363,
+   "p999": 1.0256519246101485,
+   "n": 2000
+  },
+  "mlp_fp16_compiled_L20000": {
+   "mean": 0.35181351979076864,
+   "p50": 0.34670400619506836,
+   "p99": 0.4501942405104637,
+   "p999": 0.6075388687253233,
+   "n": 2000
+  },
+  "mlp_mixed_compiled_L20000": {
+   "mean": 0.33106660783290864,
+   "p50": 0.3293440043926239,
+   "p99": 0.4263459104299545,
+   "p999": 0.5917861573696157,
+   "n": 2000
+  },
+  "mlp_fp16_L30000": {
+   "mean": 0.7247165761590004,
+   "p50": 0.7183519899845123,
+   "p99": 1.1314703512191773,
+   "p999": 1.846076439142285,
+   "n": 2000
+  },
+  "mlp_mixed_L30000": {
+   "mean": 0.7812634554803372,
+   "p50": 0.7540000081062317,
+   "p99": 1.2973091256618499,
+   "p999": 1.4570974656343478,
+   "n": 2000
+  },
+  "mlp_fp16_compiled_L30000": {
+   "mean": 0.468637807905674,
+   "p50": 0.45788800716400146,
+   "p99": 0.6695094114542007,
+   "p999": 0.8653491610885002,
+   "n": 2000
+  },
+  "mlp_mixed_compiled_L30000": {
+   "mean": 0.443973552018404,
+   "p50": 0.43779200315475464,
+   "p99": 0.532203511595726,
+   "p999": 0.6992311745882098,
+   "n": 2000
+  }
+ },
+ "mlp_params": 109634,
+ "mlp_d": 256,
+ "mlp_layers": 2,
+ "mlp_profile": {
+  "mlp_fp16_L5000": {
+   "host_enqueue_ms_p50": 0.2398197539150715,
+   "host_enqueue_ms_max": 0.2742679789662361,
+   "gpu_kernel_ms_per_call": 0.0880044499999996,
+   "kernels_per_call": 27.0,
+   "top_kernels": [
+    [
+     "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+     0.0166,
+     3.0
+    ],
+    [
+     "void at::native::reduce_kernel<256, 2, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0082,
+     2.0
+    ],
+    [
+     "ampere_fp16_s16816gemm_fp16_128x128_ldg8_relu_f2f_stages_64x3_tn",
+     0.0082,
+     1.0
+    ],
+    [
+     "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0076,
+     3.0
+    ],
+    [
+     "ampere_fp16_s16816gemm_fp16_128x128_ldg8_relu_f2f_stages_32x5_tn",
+     0.0071,
+     1.0
+    ],
+    [
+     "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso",
+     0.0066,
+     3.0
+    ],
+    [
+     "void cutlass::Kernel2<cutlass_80_tensorop_f16_s16816gemm_f16_128x64_64x3_tn_align2>(cutlas",
+     0.0056,
+     1.0
+    ],
+    [
+     "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(a",
+     0.0054,
+     1.0
+    ]
+   ]
+  },
+  "mlp_fp16_compiled_L5000": {
+   "host_enqueue_ms_p50": 0.15887059271335602,
+   "host_enqueue_ms_max": 0.19544176757335663,
+   "gpu_kernel_ms_per_call": 0.04251389999999982,
+   "kernels_per_call": 7.0,
+   "top_kernels": [
+    [
+     "triton_per_fused__to_copy_clamp_min_div_gt_linalg_vector_norm_mul_reciprocal_sum_unsqueeze",
+     0.0119,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_5",
+     0.0085,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_4",
+     0.0073,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_6",
+     0.0066,
+     1.0
+    ],
+    [
+     "triton_per_fused_clamp_min_div_linalg_vector_norm_mul_reciprocal_sum_unsqueeze_1",
+     0.0048,
+     1.0
+    ],
+    [
+     "triton_per_fused__to_copy_clamp_min_gt_linalg_vector_norm_mean_mul_reciprocal_sum_0",
+     0.0021,
+     1.0
+    ],
+    [
+     "triton_poi_fused__to_copy_cat_clamp_min_div_gt_mean_mul_3",
+     0.0013,
+     1.0
+    ]
+   ]
+  },
+  "mlp_fp16_L10000": {
+   "host_enqueue_ms_p50": 0.26729144155979156,
+   "host_enqueue_ms_max": 0.30391011387109756,
+   "gpu_kernel_ms_per_call": 0.12344164999999954,
+   "kernels_per_call": 27.0,
+   "top_kernels": [
+    [
+     "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+     0.0274,
+     3.0
+    ],
+    [
+     "ampere_fp16_s1688gemm_fp16_128x128_ldg8_relu_f2f_tn",
+     0.0142,
+     1.0
+    ],
+    [
+     "void at::native::reduce_kernel<256, 2, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0117,
+     2.0
+    ],
+    [
+     "ampere_fp16_s1688gemm_fp16_64x128_sliced1x2_ldg8_relu_f2f_tn",
+     0.0113,
+     1.0
+    ],
+    [
+     "void cutlass::Kernel2<cutlass_80_wmma_tensorop_f16_s161616gemm_f16_32x32_64x1_tn_align2>(c",
+     0.009,
+     1.0
+    ],
+    [
+     "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0082,
+     3.0
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso",
+     0.0077,
+     2.0
+    ],
+    [
+     "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(a",
+     0.0077,
+     1.0
+    ]
+   ]
+  },
+  "mlp_fp16_compiled_L10000": {
+   "host_enqueue_ms_p50": 0.1496695913374424,
+   "host_enqueue_ms_max": 0.1842975616455078,
+   "gpu_kernel_ms_per_call": 0.08767774999999997,
+   "kernels_per_call": 7.0,
+   "top_kernels": [
+    [
+     "triton_per_fused__to_copy_clamp_min_div_gt_linalg_vector_norm_mul_reciprocal_sum_unsqueeze",
+     0.031,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_4",
+     0.0168,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_5",
+     0.014,
+     1.0
+    ],
+    [
+     "triton_per_fused_clamp_min_div_linalg_vector_norm_mul_reciprocal_sum_unsqueeze_1",
+     0.0135,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_6",
+     0.0081,
+     1.0
+    ],
+    [
+     "triton_per_fused__to_copy_clamp_min_gt_linalg_vector_norm_mean_mul_reciprocal_sum_0",
+     0.0023,
+     1.0
+    ],
+    [
+     "triton_poi_fused__to_copy_cat_clamp_min_div_gt_mean_mul_3",
+     0.0021,
+     1.0
+    ]
+   ]
+  },
+  "mlp_fp16_L20000": {
+   "host_enqueue_ms_p50": 0.5898061208426952,
+   "host_enqueue_ms_max": 0.6695762276649475,
+   "gpu_kernel_ms_per_call": 0.30879424999999955,
+   "kernels_per_call": 54.0,
+   "top_kernels": [
+    [
+     "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+     0.1267,
+     6.0
+    ],
+    [
+     "ampere_fp16_s1688gemm_fp16_128x128_ldg8_relu_f2f_tn",
+     0.0268,
+     2.0
+    ],
+    [
+     "void at::native::reduce_kernel<256, 2, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0234,
+     4.0
+    ],
+    [
+     "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0182,
+     6.0
+    ],
+    [
+     "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(a",
+     0.016,
+     2.0
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso",
+     0.0154,
+     4.0
+    ],
+    [
+     "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso",
+     0.0137,
+     6.0
+    ],
+    [
+     "ampere_fp16_s16816gemm_fp16_128x64_ldg8_relu_f2f_stages_32x6_tn",
+     0.0113,
+     2.0
+    ]
+   ]
+  },
+  "mlp_fp16_compiled_L20000": {
+   "host_enqueue_ms_p50": 0.34659868106245995,
+   "host_enqueue_ms_max": 0.39199087768793106,
+   "gpu_kernel_ms_per_call": 0.1345627500000004,
+   "kernels_per_call": 16.0,
+   "top_kernels": [
+    [
+     "triton_per_fused__to_copy_clamp_min_div_gt_linalg_vector_norm_mul_reciprocal_sum_unsqueeze",
+     0.0427,
+     2.0
+    ],
+    [
+     "triton_per_fused_clamp_min_div_linalg_vector_norm_mul_reciprocal_sum_unsqueeze_1",
+     0.0155,
+     2.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_6",
+     0.0151,
+     2.0
+    ],
+    [
+     "ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_stages_32x1_tn",
+     0.0141,
+     1.0
+    ],
+    [
+     "triton_poi_fused_addmm_gelu_5",
+     0.0127,
+     2.0
+    ],
+    [
+     "triton_tem_fused_addmm_t_4",
+     0.0127,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_5",
+     0.0064,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_4",
+     0.0058,
+     1.0
+    ]
+   ]
+  },
+  "mlp_fp16_L30000": {
+   "host_enqueue_ms_p50": 0.7042260840535164,
+   "host_enqueue_ms_max": 0.7566483691334724,
+   "gpu_kernel_ms_per_call": 0.43666499999999886,
+   "kernels_per_call": 53.95,
+   "top_kernels": [
+    [
+     "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:",
+     0.2107,
+     6.0
+    ],
+    [
+     "ampere_fp16_s1688gemm_fp16_128x128_ldg8_relu_f2f_tn",
+     0.0514,
+     4.0
+    ],
+    [
+     "void at::native::reduce_kernel<256, 2, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0301,
+     4.0
+    ],
+    [
+     "void at::native::(anonymous namespace)::CatArrayBatchedCopy_alignedK_contig<at::native::(a",
+     0.0216,
+     2.0
+    ],
+    [
+     "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso",
+     0.0209,
+     4.0
+    ],
+    [
+     "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<c10::Half, at::native::func_wr",
+     0.0201,
+     6.0
+    ],
+    [
+     "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso",
+     0.0141,
+     6.0
+    ],
+    [
+     "void cutlass::Kernel2<cutlass_80_wmma_tensorop_f16_s161616gemm_f16_32x32_128x1_tn_align2>(",
+     0.012,
+     1.0
+    ]
+   ]
+  },
+  "mlp_fp16_compiled_L30000": {
+   "host_enqueue_ms_p50": 0.46028709039092064,
+   "host_enqueue_ms_max": 0.5596829578280449,
+   "gpu_kernel_ms_per_call": 0.20267219999999986,
+   "kernels_per_call": 15.95,
+   "top_kernels": [
+    [
+     "triton_per_fused__to_copy_clamp_min_div_gt_linalg_vector_norm_mul_reciprocal_sum_unsqueeze",
+     0.0799,
+     2.0
+    ],
+    [
+     "triton_per_fused_clamp_min_div_linalg_vector_norm_mul_reciprocal_sum_unsqueeze_1",
+     0.0231,
+     2.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_6",
+     0.0195,
+     2.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_5",
+     0.0156,
+     1.0
+    ],
+    [
+     "triton_tem_fused_addmm_gelu_t_4",
+     0.0156,
+     1.0
+    ],
+    [
+     "ampere_fp16_s1688gemm_fp16_128x128_ldg8_f2f_stages_32x1_tn",
+     0.0144,
+     1.0
+    ],
+    [
+     "triton_poi_fused_addmm_gelu_5",
+     0.0127,
+     2.0
+    ],
+    [
+     "triton_tem_fused_addmm_t_4",
+     0.0112,
+     1.0
+    ]
+   ]
+  }
+ }
+}

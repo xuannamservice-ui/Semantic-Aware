@@ -1,0 +1,321 @@
+{
+ "info": {
+  "gpu": "NVIDIA L40S",
+  "torch": "2.10.0+cu128",
+  "args": {
+   "mode": "session",
+   "scenes": "garden",
+   "nets": "mlp",
+   "runs": "T8R8:10:conceal",
+   "cold_runs": "T8R8:2.5,T8R8:10,T6R11:2.5",
+   "chains": 3,
+   "reps": 3,
+   "chains_t6": 0,
+   "chains_attn": 0,
+   "probe_every": 8,
+   "n_ev": 3,
+   "eps": 0.16666666666666666,
+   "arq_last_slot": 5,
+   "s2": "2.5",
+   "threads": 16,
+   "seed": 0,
+   "data": "data/360_v2",
+   "out": "results",
+   "phy": "phy",
+   "out_json": "results/rev6_raw/mlpconc2_garden.json",
+   "barrier": "/tmp/rev6_mlp_bar_2",
+   "n_procs": 2,
+   "duration": 60.0,
+   "max_retry": 5,
+   "max_frames": 0,
+   "attn_all_runs": false,
+   "no_probe": true,
+   "aggregate": ""
+  },
+  "gpu_apps_before": [],
+  "gpu_before": "0 %, 4 MiB, 2520 MHz, 43",
+  "checks": {
+   "garden/mlp": {
+    "tag": "_v2m_r1",
+    "net": "gen_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 124.85351462288352
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 442.763789122627
+     }
+    },
+    "A": 249472
+   }
+  },
+  "start": 1795007043.9325686,
+  "gpu_apps_after": [
+   "1438907, 546",
+   "1438906, 540"
+  ],
+  "gpu_after": "68 %, 1090 MiB, 2520 MHz, 49",
+  "wait_log": []
+ },
+ "summary": {
+  "2 | garden": {
+   "frames": 5406,
+   "T_edge_wall": {
+    "n": 5406,
+    "mean": 6.454344561598226,
+    "p50": 6.31165,
+    "p99": 9.227249999999998,
+    "p999": 12.677252500000018,
+    "max": 24.9817
+   },
+   "E2E": {
+    "n": 5406,
+    "mean": 7.485247780244173,
+    "p50": 7.320399999999999,
+    "p99": 10.395049999999998,
+    "p999": 20.533604500000127,
+    "max": 35.0455
+   },
+   "t_rx": {
+    "n": 5406,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.007584165741768406,
+   "n_E2E_gt_11.1": 41,
+   "cp95_E2E": [
+    0.005447866857999985,
+    0.010274850937606645
+   ],
+   "cp95_one_sided_upper_E2E": 0.009829327306321278,
+   "frac_Tedge_gt_11.1": 0.003329633740288568,
+   "n_Tedge_gt_11.1": 18,
+   "cp95_Tedge": [
+    0.001974509129309663,
+    0.005257171131661069
+   ],
+   "cp95_one_sided_upper_Tedge": 0.004933464258576832,
+   "stages": {
+    "dec": {
+     "n": 5406,
+     "mean": 0.33445773214946356,
+     "p50": 0.002,
+     "p99": 2.3509449999999994,
+     "p999": 3.270634500000001,
+     "max": 17.2698
+    },
+    "enc": {
+     "n": 5406,
+     "mean": 0.004037828338882723,
+     "p50": 0.001,
+     "p99": 0.14029499999999998,
+     "p999": 0.1659,
+     "max": 0.2529
+    },
+    "gath": {
+     "n": 5406,
+     "mean": 1.0883092859785424,
+     "p50": 0.8091,
+     "p99": 2.3602499999999997,
+     "p999": 3.2713035000000343,
+     "max": 6.0571
+    },
+    "conc": {
+     "n": 5406,
+     "mean": 0.021521531631520527,
+     "p50": 0.001,
+     "p99": 0.5877499999999998,
+     "p999": 1.6623900000000107,
+     "max": 2.7085
+    },
+    "ren": {
+     "n": 5406,
+     "mean": 4.90897684054754,
+     "p50": 4.9009,
+     "p99": 6.939254999999999,
+     "p999": 7.514935500000011,
+     "max": 17.1141
+    }
+   },
+   "sum_stage_means": 6.35730321864595,
+   "sum_stage_p99": 12.378494999999997,
+   "p99_of_event_total": 9.134719999999994,
+   "host_overhead_mean": 0.09704134295227532,
+   "stage_corr": {
+    "dec~enc": -0.041968491011301096,
+    "dec~gath": 0.13511972923914234,
+    "dec~conc": 0.30037332848646514,
+    "dec~ren": -0.10433246221204467,
+    "enc~gath": -0.04980157503243905,
+    "enc~conc": -0.013745263423535247,
+    "enc~ren": -0.008712480484242831,
+    "gath~conc": 0.10818618426205501,
+    "gath~ren": -0.176694746682176,
+    "conc~ren": -0.03205867335490547
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6220358149858276,
+    "enc": -0.045509978877012996,
+    "gath": 0.4759579397553049,
+    "conc": 0.338240227727157,
+    "ren": 0.5168972260740714
+   },
+   "n_miss": {
+    "n": 5406,
+    "mean": 140.92859785423605,
+    "p50": 0.0,
+    "p99": 768.0,
+    "p999": 33152.0,
+    "max": 33152.0
+   },
+   "frames_with_miss": 150,
+   "worst": [
+    {
+     "mode": "paced",
+     "n_procs": 2,
+     "scene": "garden",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 3,
+     "view": 3,
+     "test": false,
+     "n_new": 4474,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 15.2504,
+     "first": false,
+     "dec": 0.9667,
+     "enc": 0.0266,
+     "gath": 0.6656,
+     "conc": 0.001,
+     "ren": 17.1141,
+     "wall": 18.7951,
+     "n_miss": 0,
+     "n_vis": 128278,
+     "e2e": 35.0455
+    },
+    {
+     "mode": "paced",
+     "n_procs": 2,
+     "scene": "garden",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 4,
+     "view": 4,
+     "test": false,
+     "n_new": 6791,
+     "n_lost_tx": 1728,
+     "t_rx": 1.0,
+     "wait": 23.0358,
+     "first": false,
+     "dec": 0.9472,
+     "enc": 0.0145,
+     "gath": 0.602,
+     "conc": 1.0467,
+     "ren": 3.2992,
+     "wall": 5.9298,
+     "n_miss": 1728,
+     "n_vis": 124787,
+     "e2e": 29.9656
+    },
+    {
+     "mode": "paced",
+     "n_procs": 2,
+     "scene": "garden",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 1,
+     "view": 1,
+     "test": false,
+     "n_new": 39372,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 1.5492,
+     "first": false,
+     "dec": 17.2698,
+     "enc": 0.001,
+     "gath": 1.793,
+     "conc": 0.001,
+     "ren": 5.591,
+     "wall": 24.9817,
+     "n_miss": 0,
+     "n_vis": 133182,
+     "e2e": 27.5309
+    },
+    {
+     "mode": "paced",
+     "n_procs": 2,
+     "scene": "garden",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 2,
+     "view": 2,
+     "test": false,
+     "n_new": 6051,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 15.5194,
+     "first": false,
+     "dec": 1.5114,
+     "enc": 0.001,
+     "gath": 1.9784,
+     "conc": 0.002,
+     "ren": 6.9478,
+     "wall": 10.7407,
+     "n_miss": 0,
+     "n_vis": 133250,
+     "e2e": 27.2601
+    },
+    {
+     "mode": "paced",
+     "n_procs": 2,
+     "scene": "garden",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 5,
+     "view": 5,
+     "test": false,
+     "n_new": 4792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 17.9565,
+     "first": false,
+     "dec": 0.9595,
+     "enc": 0.0166,
+     "gath": 0.3817,
+     "conc": 0.0123,
+     "ren": 3.1191,
+     "wall": 4.5105,
+     "n_miss": 0,
+     "n_vis": 119781,
+     "e2e": 23.467
+    }
+   ]
+  }
+ }
+}
