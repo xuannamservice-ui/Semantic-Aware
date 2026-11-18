@@ -1,5 +1,5 @@
 {
- "semantics": "One-frame (_r5) column of the executed cold start (eval_cold4.py) over repeated runs: the run of rev6_cold4_summary.json\n(suffix \"\", margin 0 ms, chunk 8192) and the repeats with suffixes _run2 and _run3 (same windows, same margin and chunk,\nexecuted again with a new calibration), plus the run with a positive safety margin (suffix _m05, margin 0.5 ms).\nEvery run is pooled exactly as eval_cold4.py --aggregate (undeliverable views left out per run, mean over the views of a\nscene, then over the scenes). Output results/rev6_cold4_r5_runs.json:\n  runs:    {run: {configs: {<cfg>|tau<t>|_r5: ...}, table_cold_30dB, table_cold_35dB, table_columns}} (structure of\n           rev6_cold4_summary.json, one-frame columns only)\n  median / min / max: table_cold_30dB and table_cold_35dB per entry over the margin-0 runs (run1, run2, run3)\n  margin_05: the margin-0.5 run in the same structure\n  always_fail_views: per run and column, the deliverable views whose loss-free schedule of replication/MDS (S_R slots)\n           or of the plain schedule (S_A slots) exceeds the deadline, with the executed loss-free totals\n  pooled_feasibility: the same tables with the feasibility of every view and schedule decided once from all loss-free\n           executions of that schedule (median over the 4 runs x 3 executions x both tau_c, and for the S_A schedule,\n           which does not depend on the configuration, over both configurations as well; the margin does not enter a\n           loss-free execution, so the margin-0.5 run contributes), instead of the median of 3 executions of one run; a\n           view that one run classified infeasible but the pooled median finds feasible takes the executed windows of\n           the same view from the other runs (same windows); per run, then median / min / max over run1-run3\n",
+ "semantics": "One-frame (_r5) column of the executed cold start (eval_cold4.py) over repeated runs: the run of rev6_cold4_summary.json\n(suffix \"\", margin 0 ms, chunk 8192) and the repeats with suffixes _run2 and _run3 (same windows, same margin and chunk,\nexecuted again with a new calibration), plus the run with a positive safety margin (suffix _m05, margin 0.5 ms).\nEvery run is pooled exactly as eval_cold4.py --aggregate (undeliverable views left out per run, mean over the views of a\nscene, then over the scenes). Output results/rev6_cold4_r5_runs.json:\n  runs:    {run: {configs: {<cfg>|tau<t>|_r5: ...}, table_cold_30dB, table_cold_35dB, table_columns}} (structure of\n           rev6_cold4_summary.json, one-frame columns only)\n  median / min / max: table_cold_30dB and table_cold_35dB per entry over the margin-0 runs (run1, run2, run3)\n  margin_05: the margin-0.5 run in the same structure\n  always_fail_views: per run and column, the deliverable views whose loss-free schedule of replication/MDS (S_R slots)\n           or of the plain schedule (S_A slots) exceeds the deadline, with the executed loss-free totals\n  pooled_feasibility: the same tables with the feasibility of every view and schedule decided once from all loss-free\n           executions of that schedule (median over the 4 runs x 3 executions x both tau_c, and for the S_A schedule,\n           which does not depend on the configuration, over both configurations as well; the margin does not enter a\n           loss-free execution, so the margin-0.5 run contributes), instead of the median of 3 executions of one run; a\n           view that one run classified infeasible but the pooled median finds feasible takes the executed windows of\n           the same view from the other runs (same windows); per run, then median / min / max over run1-run3;\n           adaptive = MDS + conceal on the views where the code is feasible, concealment alone (its own result for the\n           view) where it is not; window_median: the table from one outcome per window, the execution with the median\n           total time over run1-run3 (window_median())\n  protocol_stats: per column, the statistics quoted in the text under the same protocol (undeliverable views, views\n           whose redundant schedule is infeasible, windows per scheme, deadline misses, window classes of concealment\n           alone, one-sided 95% bound of a zero-failure entry as fill.py computes it)\n",
  "runs": {
   "run1": {
    "configs": {
@@ -21192,6 +21192,1607 @@
    "T8R8|tau10|_r5",
    "T6R11|tau2.5|_r5",
    "T6R11|tau10|_r5"
-  ]
+  ],
+  "window_median": {
+   "table_cold_30dB": {
+    "none": {
+     "T8R8|tau2.5|_r5": 0.19846557387364977,
+     "T8R8|tau10|_r5": 0.23135512654975174,
+     "T6R11|tau2.5|_r5": 0.00017440104530797292,
+     "T6R11|tau10|_r5": 9.989148877968057e-05
+    },
+    "conceal": {
+     "T8R8|tau2.5|_r5": 0.1250520300009121,
+     "T8R8|tau10|_r5": 0.13064495886398053,
+     "T6R11|tau2.5|_r5": 9.73639235886e-05,
+     "T6R11|tau10|_r5": 5.531412103769895e-05
+    },
+    "rep2": {
+     "T8R8|tau2.5|_r5": 0.05215652544947251,
+     "T8R8|tau10|_r5": 0.05509486953493234,
+     "T6R11|tau2.5|_r5": 0.024800556015452703,
+     "T6R11|tau10|_r5": 0.024799179195402966
+    },
+    "rep2_conceal": {
+     "T8R8|tau2.5|_r5": 0.04735210193875226,
+     "T8R8|tau10|_r5": 0.04423067556576005,
+     "T6R11|tau2.5|_r5": 0.024799624498473984,
+     "T6R11|tau10|_r5": 0.02480054660392805
+    },
+    "mds": {
+     "T8R8|tau2.5|_r5": 0.04353297424100665,
+     "T8R8|tau10|_r5": 0.04314611144012819,
+     "T6R11|tau2.5|_r5": 0.02479686796279171,
+     "T6R11|tau10|_r5": 0.024798403647134662
+    },
+    "mds_conceal": {
+     "T8R8|tau2.5|_r5": 0.04135602563086632,
+     "T8R8|tau10|_r5": 0.04123106208700441,
+     "T6R11|tau2.5|_r5": 0.02479628125146989,
+     "T6R11|tau10|_r5": 0.024797801390239013
+    },
+    "adaptive": {
+     "T8R8|tau2.5|_r5": 0.02499455911737227,
+     "T8R8|tau10|_r5": 0.02249870980141749,
+     "T6R11|tau2.5|_r5": 1.1207580013725376e-05,
+     "T6R11|tau10|_r5": 8.515186062203346e-06
+    },
+    "arq": {
+     "T8R8|tau2.5|_r5": 0.09624845668448133,
+     "T8R8|tau10|_r5": 0.10041520900884979,
+     "T6R11|tau2.5|_r5": 8.23061559384441e-05,
+     "T6R11|tau10|_r5": 4.06919737797465e-05
+    },
+    "arq_conceal": {
+     "T8R8|tau2.5|_r5": 0.0976535812814835,
+     "T8R8|tau10|_r5": 0.10050533229179189,
+     "T6R11|tau2.5|_r5": 7.913678184100043e-05,
+     "T6R11|tau10|_r5": 4.205938230483137e-05
+    }
+   },
+   "table_cold_35dB": {
+    "none": {
+     "T8R8|tau2.5|_r5": 0.2360529258205433,
+     "T8R8|tau10|_r5": 0.2766971044963336,
+     "T6R11|tau2.5|_r5": 0.00024147732214298298,
+     "T6R11|tau10|_r5": 0.00012045232399376005
+    },
+    "conceal": {
+     "T8R8|tau2.5|_r5": 0.17345824875873078,
+     "T8R8|tau10|_r5": 0.18491629667761764,
+     "T6R11|tau2.5|_r5": 0.00015724817027625764,
+     "T6R11|tau10|_r5": 8.450589542731027e-05
+    },
+    "rep2": {
+     "T8R8|tau2.5|_r5": 0.059080720653270184,
+     "T8R8|tau10|_r5": 0.05988729384327682,
+     "T6R11|tau2.5|_r5": 0.024800556015452703,
+     "T6R11|tau10|_r5": 0.024800104394460943
+    },
+    "rep2_conceal": {
+     "T8R8|tau2.5|_r5": 0.053600585031353766,
+     "T8R8|tau10|_r5": 0.05479934959518507,
+     "T6R11|tau2.5|_r5": 0.024799624498473984,
+     "T6R11|tau10|_r5": 0.024801471802986027
+    },
+    "mds": {
+     "T8R8|tau2.5|_r5": 0.04404656756936488,
+     "T8R8|tau10|_r5": 0.04372604314058288,
+     "T6R11|tau2.5|_r5": 0.024797016203077685,
+     "T6R11|tau10|_r5": 0.024798447129135637
+    },
+    "mds_conceal": {
+     "T8R8|tau2.5|_r5": 0.04296392754764309,
+     "T8R8|tau10|_r5": 0.042744403614520345,
+     "T6R11|tau2.5|_r5": 0.024796691790897073,
+     "T6R11|tau10|_r5": 0.024798155410086717
+    },
+    "adaptive": {
+     "T8R8|tau2.5|_r5": 0.026602461034149035,
+     "T8R8|tau10|_r5": 0.0256037734349426,
+     "T6R11|tau2.5|_r5": 1.3696809014876997e-05,
+     "T6R11|tau10|_r5": 8.869205909914432e-06
+    },
+    "arq": {
+     "T8R8|tau2.5|_r5": 0.11997967408029374,
+     "T8R8|tau10|_r5": 0.1279462374062913,
+     "T6R11|tau2.5|_r5": 0.00011727773516013066,
+     "T6R11|tau10|_r5": 5.411639788379099e-05
+    },
+    "arq_conceal": {
+     "T8R8|tau2.5|_r5": 0.11940584364400854,
+     "T8R8|tau10|_r5": 0.12420304919247926,
+     "T6R11|tau2.5|_r5": 0.00011410836106268696,
+     "T6R11|tau10|_r5": 5.381121585616466e-05
+    }
+   }
+  }
+ },
+ "protocol_stats": {
+  "definitions": {
+   "undeliverable": "view whose loss-free plain schedule (S_A slots) has a pooled median total > 11.1 ms (all loss-free executions of the view: 4 runs x 3 executions x 2 tau_c x 2 configurations; the schedule does not depend on the configuration)",
+   "infeasible_for_scheme": "deliverable view whose loss-free replication/MDS schedule (S_R slots) has a pooled median total > 11.1 ms (4 runs x 3 executions x 2 tau_c of that configuration); counts as failed (p = 1) for rep2, rep2_conceal, mds, mds_conceal",
+   "window_median": "One outcome per window (view, stratum, window, scheme) from the margin-0 runs run1-run3: the execution whose total\n    time is the median of the executions of that window (upper median if two; a run in which the view was infeasible\n    for the scheme has no execution of it); a window whose anchor payload is lost in every run is 'anchor_lost', and a\n    view that is infeasible for the scheme under the pooled rule is 'always_fail' (failed) whatever a run executed.",
+   "zero_bound": "fill.py cold_zero_bound: mean over the scenes of the mean over the deliverable views of p_E (p_D for MDS) x 3 / number of windows of the scheme on the deliverable views"
+  },
+  "T8R8|tau2.5|_r5": {
+   "undeliverable": {
+    "n": 38,
+    "of": 338,
+    "pct": 11.242603550295858,
+    "per_scene": {
+     "counter": 1,
+     "kitchen": 24,
+     "truck": 1,
+     "train": 12
+    },
+    "views": {
+     "counter": [
+      120
+     ],
+     "kitchen": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      200,
+      264
+     ],
+     "truck": [
+      64
+     ],
+     "train": [
+      0,
+      40,
+      56,
+      64,
+      112,
+      144,
+      152,
+      160,
+      168,
+      200,
+      272,
+      296
+     ]
+    }
+   },
+   "redundancy_infeasible_views": {
+    "n": 4,
+    "sum_of_weights": 0.03305785123966942,
+    "views": [
+     {
+      "scene": "kitchen",
+      "view": 184,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 211387,
+      "pooled_median_R_ms": 11.131052859127522,
+      "pooled_median_A_ms": 11.04415487498045,
+      "frac_R_executions_above": 0.625,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 192,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 203398,
+      "pooled_median_R_ms": 11.160465888679028,
+      "pooled_median_A_ms": 11.089973151683807,
+      "frac_R_executions_above": 0.6666666666666666,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 216,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 206969,
+      "pooled_median_R_ms": 11.131579987704754,
+      "pooled_median_A_ms": 11.04780100286007,
+      "frac_R_executions_above": 0.5833333333333334,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 224,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 199616,
+      "pooled_median_R_ms": 11.234885547310114,
+      "pooled_median_A_ms": 11.071398388594389,
+      "frac_R_executions_above": 0.75,
+      "weight": 0.008264462809917356
+     }
+    ],
+    "deliverable_views_per_scene": {
+     "garden": 24,
+     "bicycle": 25,
+     "stump": 16,
+     "room": 39,
+     "counter": 29,
+     "kitchen": 11,
+     "bonsai": 37,
+     "truck": 31,
+     "train": 26,
+     "playroom": 29,
+     "drjohnson": 33
+    }
+   },
+   "windows_per_scheme": {
+    "none": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "drop": 354,
+      "complete": 546
+     },
+     "below30": 264,
+     "deadline_miss_executed": 1,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 3,
+      "3": 894
+     }
+    },
+    "conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "drop": 192,
+      "complete": 546,
+      "full": 126,
+      "anytime": 19,
+      "idw": 17
+     },
+     "below30": 146,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 3,
+      "3": 894
+     }
+    },
+    "rep2": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 888,
+     "anchor_lost": 0,
+     "infeasible": 12,
+     "classes": {
+      "complete": 851,
+      "drop": 37,
+      "always_fail": 12
+     },
+     "below30": 36,
+     "deadline_miss_executed": 2,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 9,
+      "3": 879
+     }
+    },
+    "rep2_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 888,
+     "anchor_lost": 0,
+     "infeasible": 12,
+     "classes": {
+      "complete": 851,
+      "full": 7,
+      "idw": 3,
+      "anytime": 3,
+      "drop": 24,
+      "always_fail": 12
+     },
+     "below30": 29,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 9,
+      "3": 879
+     }
+    },
+    "mds": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 590,
+     "anchor_lost": 2,
+     "infeasible": 8,
+     "classes": {
+      "drop": 590,
+      "anchor_lost": 2,
+      "always_fail": 8
+     },
+     "below30": 566,
+     "deadline_miss_executed": 0,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 584
+     }
+    },
+    "mds_conceal": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 590,
+     "anchor_lost": 2,
+     "infeasible": 8,
+     "classes": {
+      "anytime": 65,
+      "full": 227,
+      "drop": 284,
+      "idw": 14,
+      "anchor_lost": 2,
+      "always_fail": 8
+     },
+     "below30": 352,
+     "deadline_miss_executed": 0,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 584
+     }
+    },
+    "arq": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "complete": 721,
+      "drop": 179
+     },
+     "below30": 107,
+     "deadline_miss_executed": 2,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 3,
+      "3": 894
+     }
+    },
+    "arq_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "complete": 724,
+      "full": 13,
+      "idw": 5,
+      "drop": 158
+     },
+     "below30": 107,
+     "deadline_miss_executed": 4,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 3,
+      "3": 894
+     }
+    }
+   },
+   "deadline_miss_window_median": {
+    "n_miss": 15,
+    "n_executed": 6556,
+    "frac": 0.002287980475899939,
+    "cp95_one_sided_upper": 0.0035208762714721174
+   },
+   "deadline_miss_per_run": {
+    "run1": {
+     "n_miss": 18,
+     "n_executed": 6534,
+     "frac": 0.0027548209366391185
+    },
+    "run2": {
+     "n_miss": 19,
+     "n_executed": 6544,
+     "frac": 0.0029034229828850855
+    },
+    "run3": {
+     "n_miss": 13,
+     "n_executed": 6524,
+     "frac": 0.001992642550582465
+    }
+   },
+   "deadline_miss_per_run_range_pct": [
+    0.1992642550582465,
+    0.29034229828850855
+   ],
+   "conceal_window_classes": {
+    "n_windows": 1014,
+    "n_below30": 260,
+    "classes": {
+     "drop": {
+      "windows": 192,
+      "below30": 126
+     },
+     "complete": {
+      "windows": 546,
+      "below30": 3
+     },
+     "full": {
+      "windows": 126,
+      "below30": 3
+     },
+     "anytime": {
+      "windows": 19,
+      "below30": 5
+     },
+     "idw": {
+      "windows": 17,
+      "below30": 9
+     },
+     "undeliverable": {
+      "windows": 114,
+      "below30": 114
+     }
+    },
+    "legend": {
+     "complete": "view arrived complete",
+     "full": "network conceals every lost anchor",
+     "anytime": "network on part, IDW on the rest",
+     "idw": "IDW on all lost anchors",
+     "drop": "rendered from what arrived",
+     "anchor_lost": "anchor payload lost",
+     "undeliverable": "view undeliverable within one frame (pooled rule)"
+    }
+   },
+   "zero_failure_bound_one_frame": {
+    "E": {
+     "mean_p_stratum": 0.6161402580270302,
+     "n_windows": 900,
+     "bound": 0.002053800860090101
+    },
+    "D": {
+     "mean_p_stratum": 0.011743663227846323,
+     "n_windows": 600,
+     "bound": 5.871831613923161e-05
+    }
+   },
+   "zero_failure_bound_two_frames_run1": {
+    "E": {
+     "mean_p_stratum": 0.6188070150805547,
+     "n_windows": 1014,
+     "bound": 0.0018307899854454282
+    },
+    "D": {
+     "mean_p_stratum": 0.011991619359483634,
+     "n_windows": 676,
+     "bound": 5.321724567818181e-05
+    }
+   }
+  },
+  "T8R8|tau10|_r5": {
+   "undeliverable": {
+    "n": 38,
+    "of": 338,
+    "pct": 11.242603550295858,
+    "per_scene": {
+     "counter": 1,
+     "kitchen": 24,
+     "truck": 1,
+     "train": 12
+    },
+    "views": {
+     "counter": [
+      120
+     ],
+     "kitchen": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      200,
+      264
+     ],
+     "truck": [
+      64
+     ],
+     "train": [
+      0,
+      40,
+      56,
+      64,
+      112,
+      144,
+      152,
+      160,
+      168,
+      200,
+      272,
+      296
+     ]
+    }
+   },
+   "redundancy_infeasible_views": {
+    "n": 4,
+    "sum_of_weights": 0.03305785123966942,
+    "views": [
+     {
+      "scene": "kitchen",
+      "view": 184,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 211387,
+      "pooled_median_R_ms": 11.131052859127522,
+      "pooled_median_A_ms": 11.04415487498045,
+      "frac_R_executions_above": 0.625,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 192,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 203398,
+      "pooled_median_R_ms": 11.160465888679028,
+      "pooled_median_A_ms": 11.089973151683807,
+      "frac_R_executions_above": 0.6666666666666666,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 216,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 206969,
+      "pooled_median_R_ms": 11.131579987704754,
+      "pooled_median_A_ms": 11.04780100286007,
+      "frac_R_executions_above": 0.5833333333333334,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 224,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 199616,
+      "pooled_median_R_ms": 11.234885547310114,
+      "pooled_median_A_ms": 11.071398388594389,
+      "frac_R_executions_above": 0.75,
+      "weight": 0.008264462809917356
+     }
+    ],
+    "deliverable_views_per_scene": {
+     "garden": 24,
+     "bicycle": 25,
+     "stump": 16,
+     "room": 39,
+     "counter": 29,
+     "kitchen": 11,
+     "bonsai": 37,
+     "truck": 31,
+     "train": 26,
+     "playroom": 29,
+     "drjohnson": 33
+    }
+   },
+   "windows_per_scheme": {
+    "none": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "drop": 485,
+      "complete": 415
+     },
+     "below30": 363,
+     "deadline_miss_executed": 2,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 9,
+      "3": 888
+     }
+    },
+    "conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "full": 194,
+      "anytime": 35,
+      "complete": 415,
+      "drop": 230,
+      "idw": 26
+     },
+     "below30": 180,
+     "deadline_miss_executed": 2,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 9,
+      "3": 888
+     }
+    },
+    "rep2": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 888,
+     "anchor_lost": 0,
+     "infeasible": 12,
+     "classes": {
+      "complete": 841,
+      "drop": 47,
+      "always_fail": 12
+     },
+     "below30": 47,
+     "deadline_miss_executed": 1,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 3,
+      "3": 885
+     }
+    },
+    "rep2_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 888,
+     "anchor_lost": 0,
+     "infeasible": 12,
+     "classes": {
+      "complete": 841,
+      "full": 23,
+      "anytime": 2,
+      "drop": 21,
+      "always_fail": 12,
+      "idw": 1
+     },
+     "below30": 27,
+     "deadline_miss_executed": 1,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 3,
+      "3": 885
+     }
+    },
+    "mds": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 589,
+     "anchor_lost": 3,
+     "infeasible": 8,
+     "classes": {
+      "drop": 589,
+      "anchor_lost": 3,
+      "always_fail": 8
+     },
+     "below30": 568,
+     "deadline_miss_executed": 0,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 2,
+      "3": 587
+     }
+    },
+    "mds_conceal": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 589,
+     "anchor_lost": 3,
+     "infeasible": 8,
+     "classes": {
+      "drop": 290,
+      "anytime": 53,
+      "full": 220,
+      "idw": 26,
+      "anchor_lost": 3,
+      "always_fail": 8
+     },
+     "below30": 369,
+     "deadline_miss_executed": 0,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 2,
+      "3": 587
+     }
+    },
+    "arq": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "drop": 224,
+      "complete": 676
+     },
+     "below30": 132,
+     "deadline_miss_executed": 1,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 9,
+      "3": 888
+     }
+    },
+    "arq_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "idw": 9,
+      "complete": 677,
+      "full": 18,
+      "drop": 195,
+      "anytime": 1
+     },
+     "below30": 132,
+     "deadline_miss_executed": 2,
+     "n_exec_per_window": {
+      "1": 3,
+      "2": 9,
+      "3": 888
+     }
+    }
+   },
+   "deadline_miss_window_median": {
+    "n_miss": 9,
+    "n_executed": 6554,
+    "frac": 0.00137320720170888,
+    "cp95_one_sided_upper": 0.0023950538435463463
+   },
+   "deadline_miss_per_run": {
+    "run1": {
+     "n_miss": 19,
+     "n_executed": 6542,
+     "frac": 0.002904310608376643
+    },
+    "run2": {
+     "n_miss": 12,
+     "n_executed": 6508,
+     "frac": 0.0018438844499078057
+    },
+    "run3": {
+     "n_miss": 17,
+     "n_executed": 6542,
+     "frac": 0.0025985937022317334
+    }
+   },
+   "deadline_miss_per_run_range_pct": [
+    0.18438844499078058,
+    0.2904310608376643
+   ],
+   "conceal_window_classes": {
+    "n_windows": 1014,
+    "n_below30": 294,
+    "classes": {
+     "full": {
+      "windows": 194,
+      "below30": 2
+     },
+     "anytime": {
+      "windows": 35,
+      "below30": 10
+     },
+     "complete": {
+      "windows": 415,
+      "below30": 2
+     },
+     "drop": {
+      "windows": 230,
+      "below30": 153
+     },
+     "idw": {
+      "windows": 26,
+      "below30": 13
+     },
+     "undeliverable": {
+      "windows": 114,
+      "below30": 114
+     }
+    },
+    "legend": {
+     "complete": "view arrived complete",
+     "full": "network conceals every lost anchor",
+     "anytime": "network on part, IDW on the rest",
+     "idw": "IDW on all lost anchors",
+     "drop": "rendered from what arrived",
+     "anchor_lost": "anchor payload lost",
+     "undeliverable": "view undeliverable within one frame (pooled rule)"
+    }
+   },
+   "zero_failure_bound_one_frame": {
+    "E": {
+     "mean_p_stratum": 0.5315109172171278,
+     "n_windows": 900,
+     "bound": 0.001771703057390426
+    },
+    "D": {
+     "mean_p_stratum": 0.011255252518238664,
+     "n_windows": 600,
+     "bound": 5.627626259119332e-05
+    }
+   },
+   "zero_failure_bound_two_frames_run1": {
+    "E": {
+     "mean_p_stratum": 0.5337109286023214,
+     "n_windows": 1014,
+     "bound": 0.0015790264159831994
+    },
+    "D": {
+     "mean_p_stratum": 0.01148320859285396,
+     "n_windows": 676,
+     "bound": 5.0960984879529405e-05
+    }
+   }
+  },
+  "T6R11|tau2.5|_r5": {
+   "undeliverable": {
+    "n": 38,
+    "of": 338,
+    "pct": 11.242603550295858,
+    "per_scene": {
+     "counter": 1,
+     "kitchen": 24,
+     "truck": 1,
+     "train": 12
+    },
+    "views": {
+     "counter": [
+      120
+     ],
+     "kitchen": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      200,
+      264
+     ],
+     "truck": [
+      64
+     ],
+     "train": [
+      0,
+      40,
+      56,
+      64,
+      112,
+      144,
+      152,
+      160,
+      168,
+      200,
+      272,
+      296
+     ]
+    }
+   },
+   "redundancy_infeasible_views": {
+    "n": 3,
+    "sum_of_weights": 0.024793388429752067,
+    "views": [
+     {
+      "scene": "kitchen",
+      "view": 184,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 211387,
+      "pooled_median_R_ms": 11.138822883367538,
+      "pooled_median_A_ms": 11.04415487498045,
+      "frac_R_executions_above": 0.5833333333333334,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 192,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 203398,
+      "pooled_median_R_ms": 11.142810340970755,
+      "pooled_median_A_ms": 11.089973151683807,
+      "frac_R_executions_above": 0.625,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 224,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 199616,
+      "pooled_median_R_ms": 11.162661481648684,
+      "pooled_median_A_ms": 11.071398388594389,
+      "frac_R_executions_above": 0.5833333333333334,
+      "weight": 0.008264462809917356
+     }
+    ],
+    "deliverable_views_per_scene": {
+     "garden": 24,
+     "bicycle": 25,
+     "stump": 16,
+     "room": 39,
+     "counter": 29,
+     "kitchen": 11,
+     "bonsai": 37,
+     "truck": 31,
+     "train": 26,
+     "playroom": 29,
+     "drjohnson": 33
+    }
+   },
+   "windows_per_scheme": {
+    "none": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "drop": 349,
+      "complete": 551
+     },
+     "below30": 212,
+     "deadline_miss_executed": 2,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 894
+     }
+    },
+    "conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "anytime": 22,
+      "complete": 551,
+      "full": 142,
+      "idw": 19,
+      "drop": 166
+     },
+     "below30": 99,
+     "deadline_miss_executed": 1,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 894
+     }
+    },
+    "rep2": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 891,
+     "anchor_lost": 0,
+     "infeasible": 9,
+     "classes": {
+      "complete": 889,
+      "always_fail": 9,
+      "drop": 2
+     },
+     "below30": 14,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 3,
+      "3": 888
+     }
+    },
+    "rep2_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 891,
+     "anchor_lost": 0,
+     "infeasible": 9,
+     "classes": {
+      "complete": 889,
+      "always_fail": 9,
+      "full": 2
+     },
+     "below30": 12,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 3,
+      "3": 888
+     }
+    },
+    "mds": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 453,
+     "anchor_lost": 141,
+     "infeasible": 6,
+     "classes": {
+      "anchor_lost": 141,
+      "drop": 453,
+      "always_fail": 6
+     },
+     "below30": 570,
+     "deadline_miss_executed": 0,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 2,
+      "3": 451
+     }
+    },
+    "mds_conceal": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 453,
+     "anchor_lost": 141,
+     "infeasible": 6,
+     "classes": {
+      "anchor_lost": 141,
+      "drop": 212,
+      "full": 178,
+      "anytime": 48,
+      "idw": 15,
+      "always_fail": 6
+     },
+     "below30": 401,
+     "deadline_miss_executed": 0,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 2,
+      "3": 451
+     }
+    },
+    "arq": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "complete": 752,
+      "drop": 148
+     },
+     "below30": 81,
+     "deadline_miss_executed": 4,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 894
+     }
+    },
+    "arq_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "complete": 752,
+      "drop": 148
+     },
+     "below30": 80,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 894
+     }
+    }
+   },
+   "deadline_miss_window_median": {
+    "n_miss": 16,
+    "n_executed": 6288,
+    "frac": 0.002544529262086514,
+    "cp95_one_sided_upper": 0.0038621406794161323
+   },
+   "deadline_miss_per_run": {
+    "run1": {
+     "n_miss": 24,
+     "n_executed": 6266,
+     "frac": 0.003830194701563996
+    },
+    "run2": {
+     "n_miss": 22,
+     "n_executed": 6288,
+     "frac": 0.003498727735368957
+    },
+    "run3": {
+     "n_miss": 22,
+     "n_executed": 6276,
+     "frac": 0.003505417463352454
+    }
+   },
+   "deadline_miss_per_run_range_pct": [
+    0.34987277353689566,
+    0.3830194701563996
+   ],
+   "conceal_window_classes": {
+    "n_windows": 1014,
+    "n_below30": 213,
+    "classes": {
+     "anytime": {
+      "windows": 22,
+      "below30": 2
+     },
+     "complete": {
+      "windows": 551,
+      "below30": 1
+     },
+     "full": {
+      "windows": 142,
+      "below30": 1
+     },
+     "idw": {
+      "windows": 19,
+      "below30": 6
+     },
+     "drop": {
+      "windows": 166,
+      "below30": 89
+     },
+     "undeliverable": {
+      "windows": 114,
+      "below30": 114
+     }
+    },
+    "legend": {
+     "complete": "view arrived complete",
+     "full": "network conceals every lost anchor",
+     "anytime": "network on part, IDW on the rest",
+     "idw": "IDW on all lost anchors",
+     "drop": "rendered from what arrived",
+     "anchor_lost": "anchor payload lost",
+     "undeliverable": "view undeliverable within one frame (pooled rule)"
+    }
+   },
+   "zero_failure_bound_one_frame": {
+    "E": {
+     "mean_p_stratum": 0.0006494768329844527,
+     "n_windows": 900,
+     "bound": 2.1649227766148424e-06
+    },
+    "D": {
+     "mean_p_stratum": 3.835459557375419e-06,
+     "n_windows": 600,
+     "bound": 1.9177297786877093e-08
+    }
+   },
+   "zero_failure_bound_two_frames_run1": {
+    "E": {
+     "mean_p_stratum": 0.0006553370237118387,
+     "n_windows": 1014,
+     "bound": 1.938866934058694e-06
+    },
+    "D": {
+     "mean_p_stratum": 3.9176789821951005e-06,
+     "n_windows": 676,
+     "bound": 1.73861493292682e-08
+    }
+   }
+  },
+  "T6R11|tau10|_r5": {
+   "undeliverable": {
+    "n": 38,
+    "of": 338,
+    "pct": 11.242603550295858,
+    "per_scene": {
+     "counter": 1,
+     "kitchen": 24,
+     "truck": 1,
+     "train": 12
+    },
+    "views": {
+     "counter": [
+      120
+     ],
+     "kitchen": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      200,
+      264
+     ],
+     "truck": [
+      64
+     ],
+     "train": [
+      0,
+      40,
+      56,
+      64,
+      112,
+      144,
+      152,
+      160,
+      168,
+      200,
+      272,
+      296
+     ]
+    }
+   },
+   "redundancy_infeasible_views": {
+    "n": 3,
+    "sum_of_weights": 0.024793388429752067,
+    "views": [
+     {
+      "scene": "kitchen",
+      "view": 184,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 211387,
+      "pooled_median_R_ms": 11.138822883367538,
+      "pooled_median_A_ms": 11.04415487498045,
+      "frac_R_executions_above": 0.5833333333333334,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 192,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 203398,
+      "pooled_median_R_ms": 11.142810340970755,
+      "pooled_median_A_ms": 11.089973151683807,
+      "frac_R_executions_above": 0.625,
+      "weight": 0.008264462809917356
+     },
+     {
+      "scene": "kitchen",
+      "view": 224,
+      "S_A": 4,
+      "S_R": 5,
+      "n_visible": 199616,
+      "pooled_median_R_ms": 11.162661481648684,
+      "pooled_median_A_ms": 11.071398388594389,
+      "frac_R_executions_above": 0.5833333333333334,
+      "weight": 0.008264462809917356
+     }
+    ],
+    "deliverable_views_per_scene": {
+     "garden": 24,
+     "bicycle": 25,
+     "stump": 16,
+     "room": 39,
+     "counter": 29,
+     "kitchen": 11,
+     "bonsai": 37,
+     "truck": 31,
+     "train": 26,
+     "playroom": 29,
+     "drjohnson": 33
+    }
+   },
+   "windows_per_scheme": {
+    "none": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 898,
+     "anchor_lost": 2,
+     "infeasible": 0,
+     "classes": {
+      "drop": 238,
+      "complete": 660,
+      "anchor_lost": 2
+     },
+     "below30": 189,
+     "deadline_miss_executed": 4,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 9,
+      "3": 889
+     }
+    },
+    "conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 898,
+     "anchor_lost": 2,
+     "infeasible": 0,
+     "classes": {
+      "full": 97,
+      "complete": 660,
+      "anytime": 22,
+      "drop": 110,
+      "idw": 9,
+      "anchor_lost": 2
+     },
+     "below30": 89,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 9,
+      "3": 889
+     }
+    },
+    "rep2": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 889,
+     "anchor_lost": 2,
+     "infeasible": 9,
+     "classes": {
+      "complete": 883,
+      "drop": 6,
+      "always_fail": 9,
+      "anchor_lost": 2
+     },
+     "below30": 18,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 883
+     }
+    },
+    "rep2_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 889,
+     "anchor_lost": 2,
+     "infeasible": 9,
+     "classes": {
+      "complete": 883,
+      "drop": 6,
+      "always_fail": 9,
+      "anchor_lost": 2
+     },
+     "below30": 19,
+     "deadline_miss_executed": 4,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 6,
+      "3": 883
+     }
+    },
+    "mds": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 348,
+     "anchor_lost": 246,
+     "infeasible": 6,
+     "classes": {
+      "anchor_lost": 246,
+      "drop": 348,
+      "always_fail": 6
+     },
+     "below30": 589,
+     "deadline_miss_executed": 0,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 3,
+      "3": 345
+     }
+    },
+    "mds_conceal": {
+     "stratum": "D",
+     "windows": 600,
+     "executed": 348,
+     "anchor_lost": 246,
+     "infeasible": 6,
+     "classes": {
+      "anchor_lost": 246,
+      "drop": 182,
+      "full": 116,
+      "idw": 27,
+      "anytime": 23,
+      "always_fail": 6
+     },
+     "below30": 483,
+     "deadline_miss_executed": 1,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 3,
+      "3": 345
+     }
+    },
+    "arq": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "complete": 803,
+      "drop": 97
+     },
+     "below30": 64,
+     "deadline_miss_executed": 3,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 9,
+      "3": 891
+     }
+    },
+    "arq_conceal": {
+     "stratum": "E",
+     "windows": 900,
+     "executed": 900,
+     "anchor_lost": 0,
+     "infeasible": 0,
+     "classes": {
+      "complete": 804,
+      "full": 4,
+      "idw": 3,
+      "drop": 89
+     },
+     "below30": 65,
+     "deadline_miss_executed": 4,
+     "n_exec_per_window": {
+      "1": 0,
+      "2": 9,
+      "3": 891
+     }
+    }
+   },
+   "deadline_miss_window_median": {
+    "n_miss": 22,
+    "n_executed": 6070,
+    "frac": 0.003624382207578254,
+    "cp95_one_sided_upper": 0.005171406830495357
+   },
+   "deadline_miss_per_run": {
+    "run1": {
+     "n_miss": 27,
+     "n_executed": 6036,
+     "frac": 0.0044731610337972166
+    },
+    "run2": {
+     "n_miss": 19,
+     "n_executed": 6070,
+     "frac": 0.003130148270181219
+    },
+    "run3": {
+     "n_miss": 15,
+     "n_executed": 6050,
+     "frac": 0.0024793388429752068
+    }
+   },
+   "deadline_miss_per_run_range_pct": [
+    0.24793388429752067,
+    0.44731610337972166
+   ],
+   "conceal_window_classes": {
+    "n_windows": 1014,
+    "n_below30": 203,
+    "classes": {
+     "full": {
+      "windows": 97,
+      "below30": 2
+     },
+     "complete": {
+      "windows": 660,
+      "below30": 3
+     },
+     "anytime": {
+      "windows": 22,
+      "below30": 5
+     },
+     "drop": {
+      "windows": 110,
+      "below30": 75
+     },
+     "idw": {
+      "windows": 9,
+      "below30": 2
+     },
+     "undeliverable": {
+      "windows": 114,
+      "below30": 114
+     },
+     "anchor_lost": {
+      "windows": 2,
+      "below30": 2
+     }
+    },
+    "legend": {
+     "complete": "view arrived complete",
+     "full": "network conceals every lost anchor",
+     "anytime": "network on part, IDW on the rest",
+     "idw": "IDW on all lost anchors",
+     "drop": "rendered from what arrived",
+     "anchor_lost": "anchor payload lost",
+     "undeliverable": "view undeliverable within one frame (pooled rule)"
+    }
+   },
+   "zero_failure_bound_one_frame": {
+    "E": {
+     "mean_p_stratum": 0.00043539979907540827,
+     "n_windows": 900,
+     "bound": 1.4513326635846943e-06
+    },
+    "D": {
+     "mean_p_stratum": 5.2714481653090545e-06,
+     "n_windows": 600,
+     "bound": 2.6357240826545274e-08
+    }
+   },
+   "zero_failure_bound_two_frames_run1": {
+    "E": {
+     "mean_p_stratum": 0.00043874494338543203,
+     "n_windows": 1014,
+     "bound": 1.298061962678793e-06
+    },
+    "D": {
+     "mean_p_stratum": 5.341219840984278e-06,
+     "n_windows": 676,
+     "bound": 2.3703638347563366e-08
+    }
+   }
+  }
  }
 }
