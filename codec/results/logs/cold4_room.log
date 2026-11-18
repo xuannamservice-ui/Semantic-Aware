@@ -1,0 +1,173 @@
+calibration 18s: ren [1.5919810634466405, 1.769732278374837e-05], idw [0.06113567913981387, 3.348954783576861e-05], knn [0.6251343935096576, 5.950956275469906e-06, 1.0892772924565576e-06], dec [0.6642950235019357, 1.0505598597228609e-05], chunk p99 0.614
+/usr/local/lib/python3.10/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+T8R8 tau2.5 view 0: S_A 3 S_R 3, free A 8.15 R 7.85 ms, 22 rows, 6s
+T8R8 tau2.5 view 8: S_A 3 S_R 3, free A 7.22 R 7.27 ms, 44 rows, 9s
+T8R8 tau2.5 view 16: S_A 3 S_R 3, free A 7.44 R 7.58 ms, 66 rows, 11s
+T8R8 tau2.5 view 24: S_A 3 S_R 3, free A 7.46 R 7.66 ms, 88 rows, 14s
+T8R8 tau2.5 view 32: S_A 2 S_R 3, free A 6.40 R 7.02 ms, 110 rows, 43s
+T8R8 tau2.5 view 40: S_A 3 S_R 3, free A 8.14 R 8.33 ms, 132 rows, 54s
+T8R8 tau2.5 view 48: S_A 3 S_R 3, free A 7.56 R 7.77 ms, 154 rows, 56s
+T8R8 tau2.5 view 56: S_A 2 S_R 3, free A 6.22 R 6.56 ms, 176 rows, 64s
+T8R8 tau2.5 view 64: S_A 3 S_R 3, free A 7.39 R 7.52 ms, 198 rows, 66s
+T8R8 tau2.5 view 72: S_A 3 S_R 3, free A 7.63 R 7.67 ms, 220 rows, 69s
+T8R8 tau2.5 view 80: S_A 3 S_R 3, free A 7.87 R 7.74 ms, 242 rows, 72s
+T8R8 tau2.5 view 88: S_A 2 S_R 2, free A 6.10 R 6.05 ms, 264 rows, 75s
+T8R8 tau2.5 view 96: S_A 3 S_R 3, free A 7.69 R 7.85 ms, 286 rows, 77s
+T8R8 tau2.5 view 104: S_A 3 S_R 3, free A 7.77 R 7.76 ms, 308 rows, 80s
+T8R8 tau2.5 view 112: S_A 2 S_R 2, free A 5.61 R 5.66 ms, 330 rows, 82s
+T8R8 tau2.5 view 120: S_A 3 S_R 3, free A 7.19 R 7.38 ms, 352 rows, 91s
+T8R8 tau2.5 view 128: S_A 3 S_R 3, free A 7.63 R 7.66 ms, 374 rows, 102s
+T8R8 tau2.5 view 136: S_A 3 S_R 3, free A 7.13 R 7.25 ms, 396 rows, 105s
+T8R8 tau2.5 view 144: S_A 2 S_R 2, free A 6.10 R 5.90 ms, 418 rows, 106s
+T8R8 tau2.5 view 152: S_A 3 S_R 3, free A 7.42 R 7.10 ms, 440 rows, 114s
+T8R8 tau2.5 view 160: S_A 3 S_R 3, free A 7.68 R 7.73 ms, 462 rows, 117s
+T8R8 tau2.5 view 168: S_A 3 S_R 3, free A 8.21 R 8.43 ms, 484 rows, 123s
+T8R8 tau2.5 view 176: S_A 3 S_R 4, free A 8.29 R 8.51 ms, 506 rows, 127s
+T8R8 tau2.5 view 184: S_A 3 S_R 3, free A 7.22 R 7.29 ms, 528 rows, 129s
+T8R8 tau2.5 view 192: S_A 2 S_R 3, free A 6.19 R 6.45 ms, 550 rows, 139s
+T8R8 tau2.5 view 200: S_A 2 S_R 3, free A 6.09 R 6.36 ms, 572 rows, 141s
+T8R8 tau2.5 view 208: S_A 1 S_R 1, free A 3.53 R 3.58 ms, 594 rows, 143s
+T8R8 tau2.5 view 216: S_A 2 S_R 2, free A 5.05 R 5.11 ms, 616 rows, 145s
+T8R8 tau2.5 view 224: S_A 1 S_R 1, free A 4.03 R 3.93 ms, 638 rows, 147s
+T8R8 tau2.5 view 232: S_A 1 S_R 1, free A 3.69 R 3.60 ms, 660 rows, 148s
+T8R8 tau2.5 view 240: S_A 2 S_R 2, free A 5.08 R 5.20 ms, 682 rows, 150s
+T8R8 tau2.5 view 248: S_A 2 S_R 2, free A 5.42 R 5.51 ms, 704 rows, 152s
+view 256 disturbed (others [], probe 0.030/0.3 ms vs 0.023): executed again
+T8R8 tau2.5 view 256: S_A 2 S_R 2, free A 5.23 R 5.36 ms, 726 rows, 156s
+T8R8 tau2.5 view 264: S_A 1 S_R 2, free A 4.40 R 4.74 ms, 748 rows, 157s
+T8R8 tau2.5 view 272: S_A 1 S_R 1, free A 3.23 R 3.15 ms, 770 rows, 159s
+T8R8 tau2.5 view 280: S_A 1 S_R 1, free A 4.75 R 3.84 ms, 792 rows, 161s
+T8R8 tau2.5 view 288: S_A 1 S_R 1, free A 4.09 R 3.98 ms, 814 rows, 162s
+T8R8 tau2.5 view 296: S_A 1 S_R 1, free A 3.94 R 3.95 ms, 836 rows, 163s
+T8R8 tau2.5 view 304: S_A 1 S_R 1, free A 4.27 R 4.16 ms, 858 rows, 165s
+T8R8 2.5 1 {"none/30": 0.10624, "conceal/30": 0.00536, "rep2/30": 0.01608, "rep2_conceal/30": 0.00536, "mds/30": 0.00899, "mds_conceal/30": 0.00318, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.00318, "none/35": 0.17989, "conceal/35": 0.01509, "rep2/35": 0.02098, "rep2_conceal/35": 0.00536, "mds/35": 0.0091, "mds_conceal/35": 0.00519, "arq/35": 0.0, "arq_conceal/35": 0.0, "adaptive/35": 0.00519}
+T8R8 2.5 2 {"none/30": 0.10624, "conceal/30": 0.0, "rep2/30": 0.01608, "rep2_conceal/30": 0.0, "mds/30": 0.00899, "mds_conceal/30": 0.00026, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.00026, "none/35": 0.17989, "conceal/35": 0.00438, "rep2/35": 0.02098, "rep2_conceal/35": 0.0, "mds/35": 0.0091, "mds_conceal/35": 0.00077, "arq/35": 0.0, "arq_conceal/35": 0.0, "adaptive/35": 0.00077}
+T8R8 tau10 view 0: S_A 3 S_R 3, free A 6.95 R 7.12 ms, 22 rows, 6s
+T8R8 tau10 view 8: S_A 3 S_R 3, free A 7.22 R 7.26 ms, 44 rows, 9s
+T8R8 tau10 view 16: S_A 3 S_R 3, free A 7.36 R 7.39 ms, 66 rows, 11s
+T8R8 tau10 view 24: S_A 3 S_R 3, free A 7.66 R 7.51 ms, 88 rows, 14s
+T8R8 tau10 view 32: S_A 2 S_R 3, free A 6.22 R 6.49 ms, 110 rows, 17s
+T8R8 tau10 view 40: S_A 3 S_R 3, free A 7.68 R 7.84 ms, 132 rows, 31s
+T8R8 tau10 view 48: S_A 3 S_R 3, free A 7.66 R 7.66 ms, 154 rows, 37s
+T8R8 tau10 view 56: S_A 2 S_R 3, free A 6.44 R 6.51 ms, 176 rows, 43s
+T8R8 tau10 view 64: S_A 3 S_R 3, free A 7.50 R 7.49 ms, 198 rows, 45s
+T8R8 tau10 view 72: S_A 3 S_R 3, free A 7.63 R 7.64 ms, 220 rows, 48s
+T8R8 tau10 view 80: S_A 3 S_R 3, free A 7.80 R 7.80 ms, 242 rows, 53s
+T8R8 tau10 view 88: S_A 2 S_R 2, free A 6.09 R 6.01 ms, 264 rows, 57s
+T8R8 tau10 view 96: S_A 3 S_R 3, free A 7.62 R 8.14 ms, 286 rows, 60s
+T8R8 tau10 view 104: S_A 3 S_R 3, free A 7.75 R 7.75 ms, 308 rows, 64s
+T8R8 tau10 view 112: S_A 2 S_R 2, free A 5.87 R 5.84 ms, 330 rows, 66s
+T8R8 tau10 view 120: S_A 3 S_R 3, free A 7.16 R 7.46 ms, 352 rows, 78s
+T8R8 tau10 view 128: S_A 3 S_R 3, free A 7.63 R 7.68 ms, 374 rows, 88s
+T8R8 tau10 view 136: S_A 3 S_R 3, free A 6.95 R 7.12 ms, 396 rows, 90s
+T8R8 tau10 view 144: S_A 2 S_R 2, free A 5.77 R 5.86 ms, 418 rows, 94s
+T8R8 tau10 view 152: S_A 3 S_R 3, free A 7.29 R 7.11 ms, 440 rows, 97s
+view 160 disturbed (others [], probe 0.031/1.3 ms vs 0.023): executed again
+T8R8 tau10 view 160: S_A 3 S_R 3, free A 7.87 R 7.75 ms, 462 rows, 103s
+T8R8 tau10 view 168: S_A 3 S_R 3, free A 7.41 R 7.54 ms, 484 rows, 108s
+T8R8 tau10 view 176: S_A 3 S_R 4, free A 8.17 R 8.43 ms, 506 rows, 120s
+T8R8 tau10 view 184: S_A 3 S_R 3, free A 7.04 R 6.95 ms, 528 rows, 122s
+T8R8 tau10 view 192: S_A 2 S_R 3, free A 6.15 R 6.39 ms, 550 rows, 124s
+T8R8 tau10 view 200: S_A 2 S_R 3, free A 6.10 R 6.40 ms, 572 rows, 126s
+T8R8 tau10 view 208: S_A 1 S_R 1, free A 3.51 R 3.46 ms, 594 rows, 128s
+T8R8 tau10 view 216: S_A 2 S_R 2, free A 5.14 R 5.08 ms, 616 rows, 131s
+T8R8 tau10 view 224: S_A 1 S_R 1, free A 3.90 R 3.89 ms, 638 rows, 133s
+T8R8 tau10 view 232: S_A 1 S_R 1, free A 3.69 R 3.68 ms, 660 rows, 135s
+T8R8 tau10 view 240: S_A 2 S_R 2, free A 5.12 R 5.22 ms, 682 rows, 137s
+T8R8 tau10 view 248: S_A 2 S_R 2, free A 5.36 R 5.35 ms, 704 rows, 139s
+T8R8 tau10 view 256: S_A 2 S_R 2, free A 5.17 R 5.19 ms, 726 rows, 141s
+T8R8 tau10 view 264: S_A 1 S_R 2, free A 4.47 R 4.69 ms, 748 rows, 144s
+T8R8 tau10 view 272: S_A 1 S_R 1, free A 3.14 R 3.11 ms, 770 rows, 145s
+T8R8 tau10 view 280: S_A 1 S_R 1, free A 3.66 R 3.60 ms, 792 rows, 150s
+T8R8 tau10 view 288: S_A 1 S_R 1, free A 4.56 R 4.40 ms, 814 rows, 154s
+T8R8 tau10 view 296: S_A 1 S_R 1, free A 3.89 R 3.94 ms, 836 rows, 155s
+T8R8 tau10 view 304: S_A 1 S_R 1, free A 4.20 R 4.18 ms, 858 rows, 157s
+T8R8 10.0 1 {"none/30": 0.18081, "conceal/30": 0.00923, "rep2/30": 0.02155, "rep2_conceal/30": 0.0, "mds/30": 0.0087, "mds_conceal/30": 0.00457, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.00457, "none/35": 0.26278, "conceal/35": 0.03613, "rep2/35": 0.02155, "rep2_conceal/35": 0.01306, "mds/35": 0.0088, "mds_conceal/35": 0.00562, "arq/35": 0.00923, "arq_conceal/35": 0.0, "adaptive/35": 0.00562}
+T8R8 10.0 2 {"none/30": 0.18081, "conceal/30": 0.0, "rep2/30": 0.02155, "rep2_conceal/30": 0.0, "mds/30": 0.0087, "mds_conceal/30": 0.00036, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.00036, "none/35": 0.26278, "conceal/35": 0.00383, "rep2/35": 0.02155, "rep2_conceal/35": 0.00383, "mds/35": 0.0088, "mds_conceal/35": 0.00082, "arq/35": 0.0, "arq_conceal/35": 0.0, "adaptive/35": 0.00082}
+T6R11 tau2.5 view 0: S_A 3 S_R 3, free A 6.91 R 7.01 ms, 22 rows, 3s
+T6R11 tau2.5 view 8: S_A 3 S_R 3, free A 7.15 R 7.28 ms, 44 rows, 8s
+T6R11 tau2.5 view 16: S_A 3 S_R 3, free A 7.23 R 7.43 ms, 66 rows, 10s
+T6R11 tau2.5 view 24: S_A 3 S_R 3, free A 7.27 R 7.45 ms, 88 rows, 13s
+T6R11 tau2.5 view 32: S_A 2 S_R 3, free A 6.18 R 6.50 ms, 110 rows, 15s
+T6R11 tau2.5 view 40: S_A 3 S_R 3, free A 7.81 R 7.69 ms, 132 rows, 18s
+T6R11 tau2.5 view 48: S_A 3 S_R 3, free A 7.60 R 7.66 ms, 154 rows, 23s
+T6R11 tau2.5 view 56: S_A 2 S_R 3, free A 6.26 R 6.52 ms, 176 rows, 25s
+T6R11 tau2.5 view 64: S_A 3 S_R 3, free A 7.59 R 7.45 ms, 198 rows, 32s
+T6R11 tau2.5 view 72: S_A 3 S_R 3, free A 7.70 R 7.63 ms, 220 rows, 34s
+T6R11 tau2.5 view 80: S_A 3 S_R 3, free A 7.77 R 7.80 ms, 242 rows, 37s
+view 88 disturbed (others [], probe 0.031/1.3 ms vs 0.023): executed again
+T6R11 tau2.5 view 88: S_A 2 S_R 2, free A 6.19 R 6.14 ms, 264 rows, 41s
+T6R11 tau2.5 view 96: S_A 3 S_R 3, free A 7.52 R 7.69 ms, 286 rows, 44s
+T6R11 tau2.5 view 104: S_A 3 S_R 3, free A 7.86 R 7.74 ms, 308 rows, 50s
+T6R11 tau2.5 view 112: S_A 2 S_R 2, free A 5.69 R 5.66 ms, 330 rows, 56s
+T6R11 tau2.5 view 120: S_A 3 S_R 3, free A 7.36 R 7.27 ms, 352 rows, 65s
+T6R11 tau2.5 view 128: S_A 3 S_R 3, free A 7.54 R 7.78 ms, 374 rows, 70s
+T6R11 tau2.5 view 136: S_A 3 S_R 3, free A 6.85 R 6.98 ms, 396 rows, 73s
+T6R11 tau2.5 view 144: S_A 2 S_R 2, free A 6.53 R 5.90 ms, 418 rows, 80s
+T6R11 tau2.5 view 152: S_A 3 S_R 3, free A 7.12 R 7.14 ms, 440 rows, 82s
+T6R11 tau2.5 view 160: S_A 3 S_R 3, free A 7.86 R 7.78 ms, 462 rows, 85s
+T6R11 tau2.5 view 168: S_A 3 S_R 3, free A 7.85 R 7.71 ms, 484 rows, 99s
+T6R11 tau2.5 view 176: S_A 3 S_R 4, free A 8.22 R 8.49 ms, 506 rows, 102s
+T6R11 tau2.5 view 184: S_A 3 S_R 3, free A 7.17 R 7.21 ms, 528 rows, 114s
+T6R11 tau2.5 view 192: S_A 2 S_R 3, free A 6.14 R 6.38 ms, 550 rows, 116s
+T6R11 tau2.5 view 200: S_A 2 S_R 3, free A 6.11 R 6.45 ms, 572 rows, 121s
+T6R11 tau2.5 view 208: S_A 1 S_R 1, free A 3.62 R 3.53 ms, 594 rows, 124s
+T6R11 tau2.5 view 216: S_A 2 S_R 2, free A 5.10 R 5.12 ms, 616 rows, 126s
+T6R11 tau2.5 view 224: S_A 1 S_R 1, free A 3.97 R 3.93 ms, 638 rows, 127s
+T6R11 tau2.5 view 232: S_A 1 S_R 1, free A 3.68 R 3.66 ms, 660 rows, 129s
+T6R11 tau2.5 view 240: S_A 2 S_R 2, free A 5.06 R 5.12 ms, 682 rows, 131s
+T6R11 tau2.5 view 248: S_A 2 S_R 2, free A 5.50 R 5.49 ms, 704 rows, 133s
+T6R11 tau2.5 view 256: S_A 2 S_R 2, free A 5.35 R 5.50 ms, 726 rows, 135s
+T6R11 tau2.5 view 264: S_A 1 S_R 2, free A 4.44 R 4.76 ms, 748 rows, 144s
+T6R11 tau2.5 view 272: S_A 1 S_R 1, free A 3.17 R 3.07 ms, 770 rows, 145s
+T6R11 tau2.5 view 280: S_A 1 S_R 1, free A 3.70 R 3.65 ms, 792 rows, 149s
+view 288 disturbed (others [], probe 0.030/1.7 ms vs 0.023): executed again
+T6R11 tau2.5 view 288: S_A 1 S_R 1, free A 4.22 R 4.08 ms, 814 rows, 155s
+T6R11 tau2.5 view 296: S_A 1 S_R 1, free A 4.03 R 3.94 ms, 836 rows, 156s
+T6R11 tau2.5 view 304: S_A 1 S_R 1, free A 4.23 R 4.18 ms, 858 rows, 159s
+T6R11 2.5 1 {"none/30": 7e-05, "conceal/30": 0.0, "rep2/30": 0.0, "rep2_conceal/30": 0.0, "mds/30": 0.0, "mds_conceal/30": 0.0, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.0, "none/35": 0.00022, "conceal/35": 0.0, "rep2/35": 0.0, "rep2_conceal/35": 0.0, "mds/35": 0.0, "mds_conceal/35": 0.0, "arq/35": 0.0, "arq_conceal/35": 0.0, "adaptive/35": 0.0}
+T6R11 2.5 2 {"none/30": 7e-05, "conceal/30": 0.0, "rep2/30": 0.0, "rep2_conceal/30": 0.0, "mds/30": 0.0, "mds_conceal/30": 0.0, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.0, "none/35": 0.00022, "conceal/35": 0.0, "rep2/35": 0.0, "rep2_conceal/35": 0.0, "mds/35": 0.0, "mds_conceal/35": 0.0, "arq/35": 0.0, "arq_conceal/35": 0.0, "adaptive/35": 0.0}
+T6R11 tau10 view 0: S_A 3 S_R 3, free A 7.09 R 7.20 ms, 22 rows, 2s
+T6R11 tau10 view 8: S_A 3 S_R 3, free A 7.38 R 7.34 ms, 44 rows, 4s
+T6R11 tau10 view 16: S_A 3 S_R 3, free A 7.42 R 7.58 ms, 66 rows, 9s
+T6R11 tau10 view 24: S_A 3 S_R 3, free A 8.13 R 7.42 ms, 88 rows, 11s
+T6R11 tau10 view 32: S_A 2 S_R 3, free A 6.19 R 6.38 ms, 110 rows, 15s
+T6R11 tau10 view 40: S_A 3 S_R 3, free A 7.62 R 7.78 ms, 132 rows, 17s
+T6R11 tau10 view 48: S_A 3 S_R 3, free A 7.57 R 7.58 ms, 154 rows, 20s
+T6R11 tau10 view 56: S_A 2 S_R 3, free A 6.30 R 6.55 ms, 176 rows, 24s
+T6R11 tau10 view 64: S_A 3 S_R 3, free A 7.43 R 7.55 ms, 198 rows, 26s
+T6R11 tau10 view 72: S_A 3 S_R 3, free A 7.64 R 7.71 ms, 220 rows, 29s
+T6R11 tau10 view 80: S_A 3 S_R 3, free A 7.78 R 7.82 ms, 242 rows, 31s
+T6R11 tau10 view 88: S_A 2 S_R 2, free A 6.57 R 6.21 ms, 264 rows, 35s
+T6R11 tau10 view 96: S_A 3 S_R 3, free A 7.52 R 7.69 ms, 286 rows, 38s
+T6R11 tau10 view 104: S_A 3 S_R 3, free A 8.82 R 8.89 ms, 308 rows, 43s
+T6R11 tau10 view 112: S_A 2 S_R 2, free A 5.74 R 5.68 ms, 330 rows, 46s
+T6R11 tau10 view 120: S_A 3 S_R 3, free A 7.16 R 7.26 ms, 352 rows, 48s
+T6R11 tau10 view 128: S_A 3 S_R 3, free A 7.61 R 7.67 ms, 374 rows, 50s
+T6R11 tau10 view 136: S_A 3 S_R 3, free A 6.96 R 7.09 ms, 396 rows, 52s
+T6R11 tau10 view 144: S_A 2 S_R 2, free A 5.94 R 5.85 ms, 418 rows, 57s
+T6R11 tau10 view 152: S_A 3 S_R 3, free A 6.98 R 7.01 ms, 440 rows, 59s
+T6R11 tau10 view 160: S_A 3 S_R 3, free A 7.68 R 7.73 ms, 462 rows, 61s
+T6R11 tau10 view 168: S_A 3 S_R 3, free A 7.66 R 7.89 ms, 484 rows, 65s
+T6R11 tau10 view 176: S_A 3 S_R 4, free A 8.25 R 8.58 ms, 506 rows, 69s
+T6R11 tau10 view 184: S_A 3 S_R 3, free A 7.09 R 7.19 ms, 528 rows, 76s
+T6R11 tau10 view 192: S_A 2 S_R 3, free A 6.27 R 6.79 ms, 550 rows, 80s
+T6R11 tau10 view 200: S_A 2 S_R 3, free A 6.20 R 6.49 ms, 572 rows, 92s
+T6R11 tau10 view 208: S_A 1 S_R 1, free A 3.78 R 3.73 ms, 594 rows, 93s
+T6R11 tau10 view 216: S_A 2 S_R 2, free A 5.12 R 5.39 ms, 616 rows, 105s
+T6R11 tau10 view 224: S_A 1 S_R 1, free A 4.07 R 4.06 ms, 638 rows, 106s
+T6R11 tau10 view 232: S_A 1 S_R 1, free A 4.00 R 4.06 ms, 660 rows, 116s
+T6R11 tau10 view 240: S_A 2 S_R 2, free A 5.09 R 5.14 ms, 682 rows, 118s
+T6R11 tau10 view 248: S_A 2 S_R 2, free A 5.49 R 5.55 ms, 704 rows, 125s
+T6R11 tau10 view 256: S_A 2 S_R 2, free A 5.26 R 5.35 ms, 726 rows, 126s
+T6R11 tau10 view 264: S_A 1 S_R 2, free A 4.44 R 4.78 ms, 748 rows, 128s
+T6R11 tau10 view 272: S_A 1 S_R 1, free A 3.41 R 3.38 ms, 770 rows, 130s
+T6R11 tau10 view 280: S_A 1 S_R 1, free A 3.82 R 3.78 ms, 792 rows, 131s
+T6R11 tau10 view 288: S_A 1 S_R 1, free A 4.08 R 4.04 ms, 814 rows, 131s
+T6R11 tau10 view 296: S_A 1 S_R 1, free A 4.06 R 4.04 ms, 836 rows, 133s
+T6R11 tau10 view 304: S_A 1 S_R 1, free A 4.32 R 4.28 ms, 858 rows, 137s
+T6R11 10.0 1 {"none/30": 8e-05, "conceal/30": 1e-05, "rep2/30": 0.0, "rep2_conceal/30": 0.0, "mds/30": 0.0, "mds_conceal/30": 0.0, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.0, "none/35": 0.0001, "conceal/35": 2e-05, "rep2/35": 0.0, "rep2_conceal/35": 0.0, "mds/35": 0.0, "mds_conceal/35": 0.0, "arq/35": 0.0, "arq_conceal/35": 0.0, "adaptive/35": 0.0}
+T6R11 10.0 2 {"none/30": 8e-05, "conceal/30": 0.0, "rep2/30": 0.0, "rep2_conceal/30": 0.0, "mds/30": 0.0, "mds_conceal/30": 0.0, "arq/30": 0.0, "arq_conceal/30": 0.0, "adaptive/30": 0.0, "none/35": 0.0001, "conceal/35": 0.0, "rep2/35": 0.0, "rep2_conceal/35": 0.0, "mds/35": 0.0, "mds_conceal/35": 0.0, "arq/35": 0.0, "arq_conceal/35": 0.0, "adaptive/35": 0.0}

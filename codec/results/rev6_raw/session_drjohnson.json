@@ -1,0 +1,3491 @@
+{
+ "info": {
+  "gpu": "NVIDIA L40S",
+  "torch": "2.10.0+cu128",
+  "args": {
+   "mode": "session",
+   "scenes": "drjohnson",
+   "nets": "deploy,attn",
+   "runs": "T8R8:10:conceal,T8R8:10:arq+conceal,T8R8:2.5:conceal,T8R8:2.5:arq+conceal,T6R11:10:conceal,T6R11:2.5:conceal",
+   "cold_runs": "T8R8:2.5,T8R8:10,T6R11:2.5",
+   "chains": 10,
+   "reps": 3,
+   "chains_t6": 3,
+   "chains_attn": 5,
+   "probe_every": 8,
+   "n_ev": 3,
+   "eps": 0.16666666666666666,
+   "arq_last_slot": 5,
+   "s2": "2.5",
+   "threads": 16,
+   "seed": 0,
+   "data": "data/360_v2",
+   "out": "results",
+   "phy": "phy",
+   "out_json": "results/rev6_raw/session_drjohnson.json",
+   "barrier": null,
+   "n_procs": 1,
+   "duration": 60.0,
+   "max_retry": 5,
+   "no_probe": false,
+   "aggregate": ""
+  },
+  "gpu_apps_before": [],
+  "gpu_before": "0 %, 4 MiB, 600 MHz, 60",
+  "waited_s": 0.014862537384033203,
+  "checks": {
+   "drjohnson/edge": {
+    "tag": "_v2a_r1",
+    "net": "edge_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 129.8600763647044
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 468.88727394788737
+     }
+    },
+    "A": 238330
+   },
+   "drjohnson/attn": {
+    "tag": "_v2a_r1",
+    "net": "gen_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 129.8600763647044
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 468.88727394788737
+     }
+    },
+    "A": 238330
+   }
+  },
+  "fp16_check": {
+   "edge": {
+    "n": 3392,
+    "max_abs": 0.009958982467651367,
+    "rel_rms": 0.0009840592974796891
+   },
+   "attn": {
+    "n": 3392,
+    "max_abs": 0.05285680294036865,
+    "rel_rms": 0.0017273265402764082
+   }
+  },
+  "probes": [
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/0/0",
+    "ok": true,
+    "median_ms": 0.10199099779129028,
+    "max_ms": 0.19180402159690857,
+    "load": [
+     "1.77",
+     "1.96",
+     "2.03"
+    ],
+    "waited_s": 1.0049138069152832
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.10698335245251656,
+    "max_ms": 0.30608195811510086,
+    "load": [
+     "1.77",
+     "1.96",
+     "2.03"
+    ],
+    "waited_s": 1.000673532485962
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/1/0",
+    "ok": true,
+    "median_ms": 0.09040534496307373,
+    "max_ms": 1.1643338948488235,
+    "load": [
+     "1.71",
+     "1.94",
+     "2.02"
+    ],
+    "waited_s": 1.0007150173187256
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.10771909728646278,
+    "max_ms": 1.1749127879738808,
+    "load": [
+     "1.71",
+     "1.94",
+     "2.02"
+    ],
+    "waited_s": 1.0007593631744385
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/2/0",
+    "ok": true,
+    "median_ms": 0.08852127939462662,
+    "max_ms": 0.6236303597688675,
+    "load": [
+     "1.71",
+     "1.94",
+     "2.02"
+    ],
+    "waited_s": 1.000939130783081
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.1066066324710846,
+    "max_ms": 0.2782624214887619,
+    "load": [
+     "1.65",
+     "1.92",
+     "2.01"
+    ],
+    "waited_s": 1.0007166862487793
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/3/0",
+    "ok": true,
+    "median_ms": 0.0890498049557209,
+    "max_ms": 0.375501811504364,
+    "load": [
+     "1.65",
+     "1.92",
+     "2.01"
+    ],
+    "waited_s": 1.0007083415985107
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "median_ms": 0.10661175474524498,
+    "max_ms": 0.35685207694768906,
+    "load": [
+     "1.60",
+     "1.91",
+     "2.01"
+    ],
+    "waited_s": 1.000605821609497
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/4/0",
+    "ok": true,
+    "median_ms": 0.08968636393547058,
+    "max_ms": 0.3997059538960457,
+    "load": [
+     "1.60",
+     "1.91",
+     "2.01"
+    ],
+    "waited_s": 1.0007240772247314
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "median_ms": 0.10681618005037308,
+    "max_ms": 0.3195740282535553,
+    "load": [
+     "1.55",
+     "1.89",
+     "2.00"
+    ],
+    "waited_s": 1.0008914470672607
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/5/0",
+    "ok": true,
+    "median_ms": 0.09033875539898872,
+    "max_ms": 0.2946155145764351,
+    "load": [
+     "1.55",
+     "1.89",
+     "2.00"
+    ],
+    "waited_s": 1.0007336139678955
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "median_ms": 0.10545039549469948,
+    "max_ms": 0.3506084904074669,
+    "load": [
+     "1.55",
+     "1.89",
+     "2.00"
+    ],
+    "waited_s": 1.0006155967712402
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/6/0",
+    "ok": true,
+    "median_ms": 0.09133340790867805,
+    "max_ms": 0.2948492765426636,
+    "load": [
+     "1.51",
+     "1.88",
+     "2.00"
+    ],
+    "waited_s": 1.0007939338684082
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "median_ms": 0.1081833615899086,
+    "max_ms": 0.153430737555027,
+    "load": [
+     "1.51",
+     "1.88",
+     "2.00"
+    ],
+    "waited_s": 1.0007598400115967
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/7/0",
+    "ok": true,
+    "median_ms": 0.09059906005859375,
+    "max_ms": 0.3538047894835472,
+    "load": [
+     "1.51",
+     "1.88",
+     "2.00"
+    ],
+    "waited_s": 1.0008478164672852
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "median_ms": 0.10795565322041512,
+    "max_ms": 0.703001394867897,
+    "load": [
+     "1.55",
+     "1.88",
+     "2.00"
+    ],
+    "waited_s": 1.000955581665039
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/8/0",
+    "ok": true,
+    "median_ms": 0.08946005254983902,
+    "max_ms": 0.5495036020874977,
+    "load": [
+     "1.55",
+     "1.88",
+     "2.00"
+    ],
+    "waited_s": 1.0011053085327148
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "median_ms": 0.108327716588974,
+    "max_ms": 0.3094952553510666,
+    "load": [
+     "1.75",
+     "1.92",
+     "2.01"
+    ],
+    "waited_s": 1.0008738040924072
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/9/0",
+    "ok": true,
+    "median_ms": 0.09117834270000458,
+    "max_ms": 0.3436282277107239,
+    "load": [
+     "1.75",
+     "1.92",
+     "2.01"
+    ],
+    "waited_s": 1.000882625579834
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "median_ms": 0.1082979142665863,
+    "max_ms": 0.3204410895705223,
+    "load": [
+     "1.68",
+     "1.90",
+     "2.00"
+    ],
+    "waited_s": 1.0007483959197998
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "median_ms": 0.09072385728359222,
+    "max_ms": 0.43178535997867584,
+    "load": [
+     "1.68",
+     "1.90",
+     "2.00"
+    ],
+    "waited_s": 1.000885009765625
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.10842736810445786,
+    "max_ms": 0.3724489361047745,
+    "load": [
+     "1.79",
+     "1.92",
+     "2.01"
+    ],
+    "waited_s": 1.0007812976837158
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "median_ms": 0.09004119783639908,
+    "max_ms": 0.1754043623805046,
+    "load": [
+     "1.79",
+     "1.92",
+     "2.01"
+    ],
+    "waited_s": 1.0008735656738281
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.10835845023393631,
+    "max_ms": 0.14310237020254135,
+    "load": [
+     "1.79",
+     "1.92",
+     "2.01"
+    ],
+    "waited_s": 1.0008175373077393
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "median_ms": 0.09074248373508453,
+    "max_ms": 0.1740865409374237,
+    "load": [
+     "1.73",
+     "1.90",
+     "2.00"
+    ],
+    "waited_s": 1.00091552734375
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.10721664875745773,
+    "max_ms": 0.15172548592090607,
+    "load": [
+     "1.73",
+     "1.90",
+     "2.00"
+    ],
+    "waited_s": 1.0008268356323242
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "median_ms": 0.09078672155737877,
+    "max_ms": 0.19769370555877686,
+    "load": [
+     "1.73",
+     "1.90",
+     "2.00"
+    ],
+    "waited_s": 1.000831127166748
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "median_ms": 0.10570045560598373,
+    "max_ms": 0.36789756268262863,
+    "load": [
+     "1.67",
+     "1.89",
+     "2.00"
+    ],
+    "waited_s": 1.0013458728790283
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "median_ms": 0.08809566497802734,
+    "max_ms": 0.17239898443222046,
+    "load": [
+     "1.67",
+     "1.89",
+     "2.00"
+    ],
+    "waited_s": 1.000697135925293
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "median_ms": 0.10572373867034912,
+    "max_ms": 0.1337304711341858,
+    "load": [
+     "1.78",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0006484985351562
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "median_ms": 0.08812360465526581,
+    "max_ms": 0.1636715605854988,
+    "load": [
+     "1.78",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0007445812225342
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "median_ms": 0.1054760068655014,
+    "max_ms": 0.13201870024204254,
+    "load": [
+     "1.87",
+     "1.93",
+     "2.01"
+    ],
+    "waited_s": 1.0006232261657715
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "median_ms": 0.09276717901229858,
+    "max_ms": 0.3431420773267746,
+    "load": [
+     "1.87",
+     "1.93",
+     "2.01"
+    ],
+    "waited_s": 1.0007727146148682
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "median_ms": 0.10570324957370758,
+    "max_ms": 0.3499304875731468,
+    "load": [
+     "1.87",
+     "1.93",
+     "2.01"
+    ],
+    "waited_s": 1.0017437934875488
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "median_ms": 0.08826842531561852,
+    "max_ms": 0.16994308680295944,
+    "load": [
+     "1.80",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0007338523864746
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "median_ms": 0.10593980550765991,
+    "max_ms": 0.2202531322836876,
+    "load": [
+     "1.80",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0006639957427979
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "median_ms": 0.09259860962629318,
+    "max_ms": 0.6578704342246056,
+    "load": [
+     "1.82",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0009071826934814
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "median_ms": 0.10748952627182007,
+    "max_ms": 0.12583285570144653,
+    "load": [
+     "1.82",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0006656646728516
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "median_ms": 0.08820416405797005,
+    "max_ms": 0.49867015331983566,
+    "load": [
+     "1.82",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0008785724639893
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "median_ms": 0.10610930621623993,
+    "max_ms": 0.12343097478151321,
+    "load": [
+     "1.75",
+     "1.90",
+     "1.99"
+    ],
+    "waited_s": 1.0007431507110596
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "median_ms": 0.09238161146640778,
+    "max_ms": 0.4259580746293068,
+    "load": [
+     "1.75",
+     "1.90",
+     "1.99"
+    ],
+    "waited_s": 1.0007538795471191
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.10598544031381607,
+    "max_ms": 0.13624224811792374,
+    "load": [
+     "1.77",
+     "1.90",
+     "2.00"
+    ],
+    "waited_s": 1.0005946159362793
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "median_ms": 0.08819112554192543,
+    "max_ms": 0.3876117989420891,
+    "load": [
+     "1.77",
+     "1.90",
+     "2.00"
+    ],
+    "waited_s": 1.000770092010498
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.10613212361931801,
+    "max_ms": 0.12531038373708725,
+    "load": [
+     "1.71",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.0007266998291016
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "median_ms": 0.08751638233661652,
+    "max_ms": 0.16554351896047592,
+    "load": [
+     "1.71",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.0007495880126953
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.10623037815093994,
+    "max_ms": 0.3260979428887367,
+    "load": [
+     "1.71",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.0006260871887207
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "median_ms": 0.09414181113243103,
+    "max_ms": 0.16550906002521515,
+    "load": [
+     "1.65",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.0007426738739014
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "median_ms": 0.10610558092594147,
+    "max_ms": 0.1479797065258026,
+    "load": [
+     "1.65",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.000596046447754
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "median_ms": 0.08763466030359268,
+    "max_ms": 0.16929302364587784,
+    "load": [
+     "1.65",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.0007214546203613
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "median_ms": 0.10584061965346336,
+    "max_ms": 0.3044474869966507,
+    "load": [
+     "1.68",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.0006484985351562
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "median_ms": 0.09392434731125832,
+    "max_ms": 0.22946298122406006,
+    "load": [
+     "1.68",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.0007367134094238
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "median_ms": 0.10614469647407532,
+    "max_ms": 0.6310436874628067,
+    "load": [
+     "1.71",
+     "1.87",
+     "1.99"
+    ],
+    "waited_s": 1.0007505416870117
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "median_ms": 0.08819019421935081,
+    "max_ms": 0.16841106116771698,
+    "load": [
+     "1.71",
+     "1.87",
+     "1.99"
+    ],
+    "waited_s": 1.000643014907837
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "median_ms": 0.10626204311847687,
+    "max_ms": 0.13348180800676346,
+    "load": [
+     "1.73",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.000776767730713
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "median_ms": 0.09409012272953987,
+    "max_ms": 0.17387047410011292,
+    "load": [
+     "1.73",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.000701904296875
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "median_ms": 0.10646320879459381,
+    "max_ms": 0.12580957263708115,
+    "load": [
+     "1.73",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.0006170272827148
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "median_ms": 0.09008962661027908,
+    "max_ms": 0.30562374740839005,
+    "load": [
+     "1.75",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.0008411407470703
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "median_ms": 0.10723527520895004,
+    "max_ms": 0.43745990842580795,
+    "load": [
+     "1.75",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.000758409500122
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "median_ms": 0.0933762639760971,
+    "max_ms": 0.20727887749671936,
+    "load": [
+     "1.75",
+     "1.88",
+     "1.99"
+    ],
+    "waited_s": 1.000814437866211
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "median_ms": 0.10596541687846184,
+    "max_ms": 0.19110646098852158,
+    "load": [
+     "1.93",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.00059175491333
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "median_ms": 0.09295064955949783,
+    "max_ms": 0.16993097960948944,
+    "load": [
+     "1.93",
+     "1.91",
+     "2.00"
+    ],
+    "waited_s": 1.0006968975067139
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.10902620851993561,
+    "max_ms": 0.12947898358106613,
+    "load": [
+     "1.86",
+     "1.90",
+     "1.99"
+    ],
+    "waited_s": 1.0007874965667725
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "median_ms": 0.09118719026446342,
+    "max_ms": 0.39101578295230865,
+    "load": [
+     "1.86",
+     "1.90",
+     "1.99"
+    ],
+    "waited_s": 1.0008444786071777
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.10875333100557327,
+    "max_ms": 0.2937186509370804,
+    "load": [
+     "1.95",
+     "1.92",
+     "2.00"
+    ],
+    "waited_s": 1.0007832050323486
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "median_ms": 0.09110849350690842,
+    "max_ms": 0.17391424626111984,
+    "load": [
+     "1.95",
+     "1.92",
+     "2.00"
+    ],
+    "waited_s": 1.0007431507110596
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.10730698704719543,
+    "max_ms": 0.14218036085367203,
+    "load": [
+     "1.87",
+     "1.90",
+     "1.99"
+    ],
+    "waited_s": 1.000821828842163
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "median_ms": 0.09040161967277527,
+    "max_ms": 0.9232861921191216,
+    "load": [
+     "1.87",
+     "1.90",
+     "1.99"
+    ],
+    "waited_s": 1.001098871231079
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "median_ms": 0.10685715824365616,
+    "max_ms": 0.13071205466985703,
+    "load": [
+     "1.80",
+     "1.89",
+     "1.99"
+    ],
+    "waited_s": 1.0006585121154785
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "median_ms": 0.08814316242933273,
+    "max_ms": 0.7678233087062836,
+    "load": [
+     "1.80",
+     "1.89",
+     "1.99"
+    ],
+    "waited_s": 1.000816822052002
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "median_ms": 0.10621361434459686,
+    "max_ms": 0.12523960322141647,
+    "load": [
+     "1.80",
+     "1.89",
+     "1.99"
+    ],
+    "waited_s": 1.0006775856018066
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "median_ms": 0.08818600326776505,
+    "max_ms": 0.17532799392938614,
+    "load": [
+     "1.74",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.0006701946258545
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "median_ms": 0.10750535875558853,
+    "max_ms": 0.1637861132621765,
+    "load": [
+     "1.74",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.0008296966552734
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "median_ms": 0.0908849760890007,
+    "max_ms": 0.17540622502565384,
+    "load": [
+     "1.74",
+     "1.87",
+     "1.98"
+    ],
+    "waited_s": 1.0008556842803955
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "median_ms": 0.10752212256193161,
+    "max_ms": 0.14028046280145645,
+    "load": [
+     "1.68",
+     "1.86",
+     "1.98"
+    ],
+    "waited_s": 1.0007288455963135
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "median_ms": 0.09011104702949524,
+    "max_ms": 0.4434743896126747,
+    "load": [
+     "1.68",
+     "1.86",
+     "1.98"
+    ],
+    "waited_s": 1.0008692741394043
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "median_ms": 0.10581314563751221,
+    "max_ms": 0.3201151266694069,
+    "load": [
+     "1.62",
+     "1.84",
+     "1.97"
+    ],
+    "waited_s": 1.0005526542663574
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "median_ms": 0.09420141577720642,
+    "max_ms": 0.16851350665092468,
+    "load": [
+     "1.62",
+     "1.84",
+     "1.97"
+    ],
+    "waited_s": 1.0006325244903564
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "median_ms": 0.10644970461726189,
+    "max_ms": 0.14444440603256226,
+    "load": [
+     "1.57",
+     "1.83",
+     "1.97"
+    ],
+    "waited_s": 1.0006778240203857
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "median_ms": 0.09085191413760185,
+    "max_ms": 0.16759242862462997,
+    "load": [
+     "1.57",
+     "1.83",
+     "1.97"
+    ],
+    "waited_s": 1.0006356239318848
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "median_ms": 0.1066369004547596,
+    "max_ms": 0.17639435827732086,
+    "load": [
+     "1.57",
+     "1.83",
+     "1.97"
+    ],
+    "waited_s": 1.0005834102630615
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/10/conceal/0/0",
+    "ok": true,
+    "median_ms": 0.08740462362766266,
+    "max_ms": 0.1925090327858925,
+    "load": [
+     "1.53",
+     "1.81",
+     "1.96"
+    ],
+    "waited_s": 1.0007834434509277
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/10/conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.10649627074599266,
+    "max_ms": 0.1325523480772972,
+    "load": [
+     "1.53",
+     "1.81",
+     "1.96"
+    ],
+    "waited_s": 1.0005769729614258
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/10/conceal/1/0",
+    "ok": true,
+    "median_ms": 0.09113270789384842,
+    "max_ms": 0.16593746840953827,
+    "load": [
+     "1.53",
+     "1.81",
+     "1.96"
+    ],
+    "waited_s": 1.0007948875427246
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/10/conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.10796263813972473,
+    "max_ms": 0.15196669846773148,
+    "load": [
+     "1.49",
+     "1.80",
+     "1.95"
+    ],
+    "waited_s": 1.0006434917449951
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/10/conceal/2/0",
+    "ok": true,
+    "median_ms": 0.09290594607591629,
+    "max_ms": 0.16659777611494064,
+    "load": [
+     "1.49",
+     "1.80",
+     "1.95"
+    ],
+    "waited_s": 1.0007271766662598
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/10/conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.10660197585821152,
+    "max_ms": 0.13544317334890366,
+    "load": [
+     "1.45",
+     "1.79",
+     "1.95"
+    ],
+    "waited_s": 1.0006046295166016
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/2.5/conceal/0/0",
+    "ok": true,
+    "median_ms": 0.08845888078212738,
+    "max_ms": 0.9158467873930931,
+    "load": [
+     "1.45",
+     "1.79",
+     "1.95"
+    ],
+    "waited_s": 1.0009446144104004
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/2.5/conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.10661687701940536,
+    "max_ms": 0.283900648355484,
+    "load": [
+     "1.49",
+     "1.79",
+     "1.95"
+    ],
+    "waited_s": 1.000732183456421
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/2.5/conceal/1/0",
+    "ok": true,
+    "median_ms": 0.09412132203578949,
+    "max_ms": 0.16725342720746994,
+    "load": [
+     "1.49",
+     "1.79",
+     "1.95"
+    ],
+    "waited_s": 1.00077486038208
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/2.5/conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.1066070981323719,
+    "max_ms": 0.13214070349931717,
+    "load": [
+     "1.49",
+     "1.79",
+     "1.95"
+    ],
+    "waited_s": 1.0008375644683838
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/2.5/conceal/2/0",
+    "ok": true,
+    "median_ms": 0.090782530605793,
+    "max_ms": 0.2874396741390228,
+    "load": [
+     "2.65",
+     "2.03",
+     "2.03"
+    ],
+    "waited_s": 1.0009565353393555
+   },
+   {
+    "tag": "drjohnson/edge/T6R11/2.5/conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.10918499901890755,
+    "max_ms": 0.13372022658586502,
+    "load": [
+     "2.65",
+     "2.03",
+     "2.03"
+    ],
+    "waited_s": 1.000777006149292
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/0/0",
+    "ok": true,
+    "median_ms": 0.09484682232141495,
+    "max_ms": 0.31899288296699524,
+    "load": [
+     "2.55",
+     "2.03",
+     "2.02"
+    ],
+    "waited_s": 1.0006558895111084
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.10316912084817886,
+    "max_ms": 0.13273581862449646,
+    "load": [
+     "2.55",
+     "2.03",
+     "2.02"
+    ],
+    "waited_s": 1.0006992816925049
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/1/0",
+    "ok": true,
+    "median_ms": 0.08837413042783737,
+    "max_ms": 0.3527514636516571,
+    "load": [
+     "2.55",
+     "2.03",
+     "2.02"
+    ],
+    "waited_s": 1.0007970333099365
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.1034899614751339,
+    "max_ms": 0.24874508380889893,
+    "load": [
+     "2.43",
+     "2.01",
+     "2.02"
+    ],
+    "waited_s": 1.000645637512207
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/2/0",
+    "ok": true,
+    "median_ms": 0.09147776290774345,
+    "max_ms": 0.16010832041502,
+    "load": [
+     "2.43",
+     "2.01",
+     "2.02"
+    ],
+    "waited_s": 1.0007407665252686
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.10284315794706345,
+    "max_ms": 0.22011250257492065,
+    "load": [
+     "2.39",
+     "2.01",
+     "2.02"
+    ],
+    "waited_s": 1.0006046295166016
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/3/0",
+    "ok": true,
+    "median_ms": 0.08977577090263367,
+    "max_ms": 0.16670674085617065,
+    "load": [
+     "2.39",
+     "2.01",
+     "2.02"
+    ],
+    "waited_s": 1.0007827281951904
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "median_ms": 0.10338053107261658,
+    "max_ms": 0.3030989319086075,
+    "load": [
+     "2.36",
+     "2.01",
+     "2.02"
+    ],
+    "waited_s": 1.0006308555603027
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/4/0",
+    "ok": true,
+    "median_ms": 0.09374693036079407,
+    "max_ms": 0.6449436768889427,
+    "load": [
+     "2.36",
+     "2.01",
+     "2.02"
+    ],
+    "waited_s": 1.0008392333984375
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "median_ms": 0.10608835145831108,
+    "max_ms": 0.8761212229728699,
+    "load": [
+     "2.36",
+     "2.01",
+     "2.02"
+    ],
+    "waited_s": 1.0007457733154297
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "median_ms": 0.0925576314330101,
+    "max_ms": 0.4504276439547539,
+    "load": [
+     "2.25",
+     "1.99",
+     "2.01"
+    ],
+    "waited_s": 1.0010180473327637
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "median_ms": 0.1059272326529026,
+    "max_ms": 0.864669680595398,
+    "load": [
+     "2.25",
+     "1.99",
+     "2.01"
+    ],
+    "waited_s": 1.0013196468353271
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "median_ms": 0.09142886847257614,
+    "max_ms": 0.5927179008722305,
+    "load": [
+     "2.25",
+     "1.99",
+     "2.01"
+    ],
+    "waited_s": 1.0009264945983887
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "median_ms": 0.10351184755563736,
+    "max_ms": 1.0323068127036095,
+    "load": [
+     "2.23",
+     "1.99",
+     "2.01"
+    ],
+    "waited_s": 1.0013961791992188
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "median_ms": 0.09372178465127945,
+    "max_ms": 0.393817201256752,
+    "load": [
+     "2.23",
+     "1.99",
+     "2.01"
+    ],
+    "waited_s": 1.0008511543273926
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "median_ms": 0.10392116382718086,
+    "max_ms": 0.6139259785413742,
+    "load": [
+     "2.13",
+     "1.97",
+     "2.01"
+    ],
+    "waited_s": 1.00089693069458
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "median_ms": 0.08927471935749054,
+    "max_ms": 0.4178415983915329,
+    "load": [
+     "2.13",
+     "1.97",
+     "2.01"
+    ],
+    "waited_s": 1.0007219314575195
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "median_ms": 0.10295584797859192,
+    "max_ms": 0.5949707701802254,
+    "load": [
+     "2.12",
+     "1.97",
+     "2.01"
+    ],
+    "waited_s": 1.000915288925171
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "median_ms": 0.09186659008264542,
+    "max_ms": 0.1962892711162567,
+    "load": [
+     "2.12",
+     "1.97",
+     "2.01"
+    ],
+    "waited_s": 1.0006718635559082
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "median_ms": 0.1033153384923935,
+    "max_ms": 0.1585511490702629,
+    "load": [
+     "2.03",
+     "1.96",
+     "2.00"
+    ],
+    "waited_s": 1.0006394386291504
+   }
+  ],
+  "busy_log": [],
+  "gpu_apps_after": [
+   "2803567, 540"
+  ],
+  "gpu_after": "91 %, 549 MiB, 2430 MHz, 68",
+  "wait_log": []
+ },
+ "summary": {
+  "attn | T8R8 | 10.0 | conceal": {
+   "frames": 3945,
+   "T_edge_wall": {
+    "n": 3945,
+    "mean": 2.3248897845373895,
+    "p50": 2.0945,
+    "p99": 4.900048,
+    "p999": 12.517852800000021,
+    "max": 12.7932
+   },
+   "E2E": {
+    "n": 3945,
+    "mean": 3.3248897845373895,
+    "p50": 3.0945,
+    "p99": 5.900048,
+    "p999": 13.517852800000021,
+    "max": 13.7932
+   },
+   "t_rx": {
+    "n": 3945,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0022813688212927757,
+   "n_E2E_gt_11.1": 9,
+   "cp95_E2E": [
+    0.0010437011823872197,
+    0.004326311690432911
+   ],
+   "cp95_one_sided_upper_E2E": 0.003977660391836715,
+   "frac_Tedge_gt_11.1": 0.001520912547528517,
+   "n_Tedge_gt_11.1": 6,
+   "cp95_Tedge": [
+    0.0005583461656723843,
+    0.003307425139249871
+   ],
+   "cp95_one_sided_upper_Tedge": 0.002999652206992498,
+   "stages": {
+    "dec": {
+     "n": 3945,
+     "mean": 0.09056413181242079,
+     "p50": 0.0081,
+     "p99": 1.008708,
+     "p999": 1.4005192000000153,
+     "max": 1.4604
+    },
+    "enc": {
+     "n": 3945,
+     "mean": 0.007528643852978453,
+     "p50": 0.0072,
+     "p99": 0.0123,
+     "p999": 0.0195,
+     "max": 0.0256
+    },
+    "gath": {
+     "n": 3945,
+     "mean": 0.3237915842839037,
+     "p50": 0.307,
+     "p99": 0.46241599999999994,
+     "p999": 1.630902400000015,
+     "max": 1.6805
+    },
+    "conc": {
+     "n": 3945,
+     "mean": 0.03362139416983523,
+     "p50": 0.0082,
+     "p99": 0.7574719999999999,
+     "p999": 6.083905600000031,
+     "max": 6.3437
+    },
+    "ren": {
+     "n": 3945,
+     "mean": 1.851703929024081,
+     "p50": 1.6456,
+     "p99": 3.7604399999999996,
+     "p999": 3.996740800000002,
+     "max": 4.0663
+    }
+   },
+   "sum_stage_means": 2.3072096831432196,
+   "sum_stage_p99": 6.001335999999999,
+   "p99_of_event_total": 4.881028000000001,
+   "host_overhead_mean": 0.017680101394169846,
+   "stage_corr": {
+    "dec~enc": 0.4863904875188628,
+    "dec~gath": 0.27386279850108414,
+    "dec~conc": 0.32380913317836946,
+    "dec~ren": 0.21742906843071616,
+    "enc~gath": 0.3646002643095489,
+    "enc~conc": 0.13208821206283963,
+    "enc~ren": 0.15303069977860828,
+    "gath~conc": 0.880824314985188,
+    "gath~ren": 0.18836978927439077,
+    "conc~ren": 0.15848351068722727
+   },
+   "stage_corr_with_total": {
+    "dec": 0.582048405548429,
+    "enc": 0.32829600092627725,
+    "gath": 0.6097437211259907,
+    "conc": 0.6354351934765219,
+    "ren": 0.8122158316145532
+   },
+   "n_miss": {
+    "n": 3945,
+    "mean": 85.8699619771863,
+    "p50": 0.0,
+    "p99": 256.0,
+    "p999": 25792.0,
+    "max": 26688.0
+   },
+   "frames_with_miss": 51,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 71132,
+     "n_lost_tx": 26688,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20763600,
+     "base_bits": 9265520,
+     "dec": 1.2225,
+     "enc": 0.0092,
+     "gath": 1.6701,
+     "conc": 6.3427,
+     "ren": 3.5318,
+     "wall": 12.7932,
+     "n_miss": 26688,
+     "n_vis": 142137,
+     "e2e": 13.7932
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 71132,
+     "n_lost_tx": 26688,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20763600,
+     "base_bits": 9265520,
+     "dec": 1.2155,
+     "enc": 0.0082,
+     "gath": 1.6681,
+     "conc": 6.3437,
+     "ren": 3.5133,
+     "wall": 12.7646,
+     "n_miss": 26688,
+     "n_vis": 142137,
+     "e2e": 13.7646
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 71132,
+     "n_lost_tx": 26688,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20763600,
+     "base_bits": 9265520,
+     "dec": 1.2444,
+     "enc": 0.013,
+     "gath": 1.6805,
+     "conc": 6.0804,
+     "ren": 3.6086,
+     "wall": 12.644,
+     "n_miss": 26688,
+     "n_vis": 142137,
+     "e2e": 13.644
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 25792,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20078000,
+     "base_bits": 8962256,
+     "dec": 1.2132,
+     "enc": 0.0082,
+     "gath": 1.6292,
+     "conc": 6.143,
+     "ren": 3.5474,
+     "wall": 12.5592,
+     "n_miss": 25792,
+     "n_vis": 142137,
+     "e2e": 13.5592
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 25792,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20078000,
+     "base_bits": 8962256,
+     "dec": 1.2022,
+     "enc": 0.0092,
+     "gath": 1.6274,
+     "conc": 6.1571,
+     "ren": 3.5031,
+     "wall": 12.5154,
+     "n_miss": 25792,
+     "n_vis": 142137,
+     "e2e": 13.5154
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | conceal": {
+   "frames": 3945,
+   "T_edge_wall": {
+    "n": 3945,
+    "mean": 2.4707536121673,
+    "p50": 2.2272,
+    "p99": 5.252412,
+    "p999": 8.51320160000002,
+    "max": 10.6077
+   },
+   "E2E": {
+    "n": 3945,
+    "mean": 3.4707536121673,
+    "p50": 3.2272,
+    "p99": 6.252412,
+    "p999": 9.51320160000002,
+    "max": 11.6077
+   },
+   "t_rx": {
+    "n": 3945,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0007604562737642585,
+   "n_E2E_gt_11.1": 3,
+   "cp95_E2E": [
+    0.0001568518298698681,
+    0.0022207519873582455
+   ],
+   "cp95_one_sided_upper_E2E": 0.0019642550392058367,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.0009346401262543179
+   ],
+   "cp95_one_sided_upper_Tedge": 0.00075908621549157,
+   "stages": {
+    "dec": {
+     "n": 3945,
+     "mean": 0.09635655259822562,
+     "p50": 0.0092,
+     "p99": 1.023164,
+     "p999": 1.4535016000000018,
+     "max": 1.5145
+    },
+    "enc": {
+     "n": 3945,
+     "mean": 0.008456704689480355,
+     "p50": 0.0082,
+     "p99": 0.0164,
+     "p999": 0.05891520000000455,
+     "max": 0.1248
+    },
+    "gath": {
+     "n": 3945,
+     "mean": 0.3686662864385298,
+     "p50": 0.3689,
+     "p99": 0.5947479999999998,
+     "p999": 1.1806360000000091,
+     "max": 2.9105
+    },
+    "conc": {
+     "n": 3945,
+     "mean": 0.03313799746514575,
+     "p50": 0.0101,
+     "p99": 0.9871519999999995,
+     "p999": 3.3068416000000034,
+     "max": 4.2878
+    },
+    "ren": {
+     "n": 3945,
+     "mean": 1.9429050950570343,
+     "p50": 1.7541,
+     "p99": 3.8571,
+     "p999": 4.361824800000096,
+     "max": 7.5666
+    }
+   },
+   "sum_stage_means": 2.4495226362484175,
+   "sum_stage_p99": 6.478563999999999,
+   "p99_of_event_total": 5.2251,
+   "host_overhead_mean": 0.02123097591888467,
+   "stage_corr": {
+    "dec~enc": 0.23860803438382847,
+    "dec~gath": 0.14532484421365008,
+    "dec~conc": 0.3937271755633833,
+    "dec~ren": 0.21673902633180778,
+    "enc~gath": 0.2694194624669133,
+    "enc~conc": 0.10002710349933962,
+    "enc~ren": 0.10815890183981926,
+    "gath~conc": 0.439902759054279,
+    "gath~ren": 0.21067869253159568,
+    "conc~ren": 0.13757585405700365
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6003869141288978,
+    "enc": 0.21633970714877981,
+    "gath": 0.42285537221230707,
+    "conc": 0.5338765065081891,
+    "ren": 0.8526635144924813
+   },
+   "n_miss": {
+    "n": 3945,
+    "mean": 53.68897338403042,
+    "p50": 0.0,
+    "p99": 655.0,
+    "p999": 14272.0,
+    "max": 17536.0
+   },
+   "frames_with_miss": 72,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69909,
+     "n_lost_tx": 17536,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 24474032,
+     "base_bits": 9108768,
+     "dec": 1.3477,
+     "enc": 0.0133,
+     "gath": 1.2204,
+     "conc": 4.2878,
+     "ren": 3.7168,
+     "wall": 10.6077,
+     "n_miss": 17536,
+     "n_vis": 142137,
+     "e2e": 11.6077
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69909,
+     "n_lost_tx": 17536,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 24474032,
+     "base_bits": 9108768,
+     "dec": 1.2797,
+     "enc": 0.0123,
+     "gath": 1.1796,
+     "conc": 4.1564,
+     "ren": 3.8185,
+     "wall": 10.4662,
+     "n_miss": 17536,
+     "n_vis": 142137,
+     "e2e": 11.4662
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69909,
+     "n_lost_tx": 17536,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 24474032,
+     "base_bits": 9108768,
+     "dec": 1.2493,
+     "enc": 0.0123,
+     "gath": 1.1633,
+     "conc": 4.2598,
+     "ren": 3.7233,
+     "wall": 10.4291,
+     "n_miss": 17536,
+     "n_vis": 142137,
+     "e2e": 11.4291
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 9,
+     "view": 9,
+     "test": false,
+     "n_new": 57202,
+     "n_lost_tx": 14272,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20227840,
+     "base_bits": 7465168,
+     "dec": 1.2368,
+     "enc": 0.0092,
+     "gath": 0.895,
+     "conc": 3.3126,
+     "ren": 3.0792,
+     "wall": 8.552,
+     "n_miss": 14272,
+     "n_vis": 99107,
+     "e2e": 9.552
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 1,
+     "frame": 9,
+     "view": 9,
+     "test": false,
+     "n_new": 57202,
+     "n_lost_tx": 14272,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20227840,
+     "base_bits": 7465168,
+     "dec": 1.239,
+     "enc": 0.0113,
+     "gath": 0.9208,
+     "conc": 3.2991,
+     "ren": 3.0208,
+     "wall": 8.5109,
+     "n_miss": 14272,
+     "n_vis": 99107,
+     "e2e": 9.5109
+    }
+   ]
+  },
+  "edge | T6R11 | 10.0 | conceal": {
+   "frames": 2367,
+   "T_edge_wall": {
+    "n": 2367,
+    "mean": 2.2764020701309673,
+    "p50": 2.0224,
+    "p99": 5.0710820000000005,
+    "p999": 5.690582800000016,
+    "max": 5.7456
+   },
+   "E2E": {
+    "n": 2367,
+    "mean": 3.2764020701309673,
+    "p50": 3.0224,
+    "p99": 6.0710820000000005,
+    "p999": 6.690582800000016,
+    "max": 6.7456
+   },
+   "t_rx": {
+    "n": 2367,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.0015572481865842446
+   ],
+   "cp95_one_sided_upper_E2E": 0.0012648235477669282,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.0015572481865842446
+   ],
+   "cp95_one_sided_upper_Tedge": 0.0012648235477669282,
+   "stages": {
+    "dec": {
+     "n": 2367,
+     "mean": 0.08940198563582595,
+     "p50": 0.0073,
+     "p99": 1.0086,
+     "p999": 1.3946118000000012,
+     "max": 1.4049
+    },
+    "enc": {
+     "n": 2367,
+     "mean": 0.041744655682298265,
+     "p50": 0.007,
+     "p99": 0.34740800000000016,
+     "p999": 0.6058340000000004,
+     "max": 0.6238
+    },
+    "gath": {
+     "n": 2367,
+     "mean": 0.3016795521757499,
+     "p50": 0.3,
+     "p99": 0.3532140000000003,
+     "p999": 0.3871,
+     "max": 0.4904
+    },
+    "conc": {
+     "n": 2367,
+     "mean": 0.008275285171102662,
+     "p50": 0.0082,
+     "p99": 0.0113,
+     "p999": 0.02009740000000052,
+     "max": 0.0214
+    },
+    "ren": {
+     "n": 2367,
+     "mean": 1.8186055344317702,
+     "p50": 1.5933,
+     "p99": 3.779334000000001,
+     "p999": 3.9792267999999997,
+     "max": 4.0079
+    }
+   },
+   "sum_stage_means": 2.2597070130967487,
+   "sum_stage_p99": 5.499856000000001,
+   "p99_of_event_total": 5.053114000000001,
+   "host_overhead_mean": 0.016695057034220532,
+   "stage_corr": {
+    "dec~enc": 0.9323801936729682,
+    "dec~gath": -0.40838539651905137,
+    "dec~conc": 0.09342840782879484,
+    "dec~ren": 0.20793265604029507,
+    "enc~gath": -0.4137452924732098,
+    "enc~conc": 0.1128629132432297,
+    "enc~ren": 0.21475164560616652,
+    "gath~conc": 0.14380061176083972,
+    "gath~ren": -0.05750718983046588,
+    "conc~ren": 0.05522758619228231
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6283877473524421,
+    "enc": 0.6195973706020518,
+    "gath": -0.21599106249992486,
+    "conc": 0.09694138374127774,
+    "ren": 0.8897215961091558
+   },
+   "n_miss": {
+    "n": 2367,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.4049,
+     "enc": 0.6062,
+     "gath": 0.161,
+     "conc": 0.0092,
+     "ren": 3.546,
+     "wall": 5.7456,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.7456
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.4036,
+     "enc": 0.6113,
+     "gath": 0.1649,
+     "conc": 0.0082,
+     "ren": 3.498,
+     "wall": 5.7032,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.7032
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.3844,
+     "enc": 0.6238,
+     "gath": 0.1657,
+     "conc": 0.0082,
+     "ren": 3.5011,
+     "wall": 5.7031,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.7031
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.3824,
+     "enc": 0.6001,
+     "gath": 0.172,
+     "conc": 0.0082,
+     "ren": 3.4877,
+     "wall": 5.6689,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.6689
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.3929,
+     "enc": 0.6018,
+     "gath": 0.1628,
+     "conc": 0.0082,
+     "ren": 3.4816,
+     "wall": 5.665,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.665
+    }
+   ]
+  },
+  "edge | T6R11 | 2.5 | conceal": {
+   "frames": 2367,
+   "T_edge_wall": {
+    "n": 2367,
+    "mean": 2.374970891423743,
+    "p50": 2.1505,
+    "p99": 5.0872980000000005,
+    "p999": 5.771654000000038,
+    "max": 5.8737
+   },
+   "E2E": {
+    "n": 2367,
+    "mean": 3.374970891423743,
+    "p50": 3.1505,
+    "p99": 6.0872980000000005,
+    "p999": 6.771654000000038,
+    "max": 6.8737
+   },
+   "t_rx": {
+    "n": 2367,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.0015572481865842446
+   ],
+   "cp95_one_sided_upper_E2E": 0.0012648235477669282,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.0015572481865842446
+   ],
+   "cp95_one_sided_upper_Tedge": 0.0012648235477669282,
+   "stages": {
+    "dec": {
+     "n": 2367,
+     "mean": 0.09180684410646388,
+     "p50": 0.0082,
+     "p99": 1.0200880000000028,
+     "p999": 1.4031916000000035,
+     "max": 1.4359
+    },
+    "enc": {
+     "n": 2367,
+     "mean": 0.04568762146176595,
+     "p50": 0.0072,
+     "p99": 0.4223720000000001,
+     "p999": 0.6259586000000155,
+     "max": 0.6459
+    },
+    "gath": {
+     "n": 2367,
+     "mean": 0.33235259822560204,
+     "p50": 0.3164,
+     "p99": 0.4253380000000001,
+     "p999": 0.44783020000000484,
+     "max": 0.4741
+    },
+    "conc": {
+     "n": 2367,
+     "mean": 0.009214364174059991,
+     "p50": 0.0083,
+     "p99": 0.014334000000000015,
+     "p999": 0.02723400000000047,
+     "max": 0.0357
+    },
+    "ren": {
+     "n": 2367,
+     "mean": 1.8775515420363333,
+     "p50": 1.6906,
+     "p99": 3.7861680000000018,
+     "p999": 3.9948680000000008,
+     "max": 4.1759
+    }
+   },
+   "sum_stage_means": 2.356612970004221,
+   "sum_stage_p99": 5.668300000000005,
+   "p99_of_event_total": 5.066508000000002,
+   "host_overhead_mean": 0.01835792141951838,
+   "stage_corr": {
+    "dec~enc": 0.9335233364002681,
+    "dec~gath": -0.2003171683909211,
+    "dec~conc": 0.06959502704301788,
+    "dec~ren": 0.20848053973073885,
+    "enc~gath": -0.17343321279865972,
+    "enc~conc": 0.10311301355174873,
+    "enc~ren": 0.2117202045359387,
+    "gath~conc": 0.6567124050131078,
+    "gath~ren": 0.08613386710992868,
+    "conc~ren": 0.11680330655654336
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6373344157188963,
+    "enc": 0.6284147122679187,
+    "gath": 0.03382839096982465,
+    "conc": 0.17299346877795907,
+    "ren": 0.8821249942325832
+   },
+   "n_miss": {
+    "n": 2367,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.4359,
+     "enc": 0.6459,
+     "gath": 0.1925,
+     "conc": 0.0104,
+     "ren": 3.5674,
+     "wall": 5.8737,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.8737
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.3966,
+     "enc": 0.6431,
+     "gath": 0.1894,
+     "conc": 0.0113,
+     "ren": 3.5553,
+     "wall": 5.8172,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.8172
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.4171,
+     "enc": 0.6031,
+     "gath": 0.1905,
+     "conc": 0.0092,
+     "ren": 3.5645,
+     "wall": 5.8013,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.8013
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.4059,
+     "enc": 0.638,
+     "gath": 0.1823,
+     "conc": 0.0102,
+     "ren": 3.4621,
+     "wall": 5.7203,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.7203
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T6R11",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 32130448,
+     "base_bits": 8962256,
+     "dec": 1.3985,
+     "enc": 0.6031,
+     "gath": 0.1815,
+     "conc": 0.009,
+     "ren": 3.4816,
+     "wall": 5.6912,
+     "n_miss": 0,
+     "n_vis": 142137,
+     "e2e": 6.6912
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | arq+conceal": {
+   "frames": 7890,
+   "T_edge_wall": {
+    "n": 7890,
+    "mean": 2.3432907984790874,
+    "p50": 2.1182,
+    "p99": 5.111995999999999,
+    "p999": 6.357847300000137,
+    "max": 7.7044
+   },
+   "E2E": {
+    "n": 7890,
+    "mean": 3.366104486692015,
+    "p50": 3.1182,
+    "p99": 6.561288999999997,
+    "p999": 9.357847300000136,
+    "max": 10.7044
+   },
+   "t_rx": {
+    "n": 7890,
+    "mean": 1.0228136882129277,
+    "p50": 1.0,
+    "p99": 3.0,
+    "p999": 3.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_E2E": 0.00037961516158123616,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_Tedge": 0.00037961516158123616,
+   "stages": {
+    "dec": {
+     "n": 7890,
+     "mean": 0.09126822560202791,
+     "p50": 0.0081,
+     "p99": 1.0212209999999995,
+     "p999": 1.4042663000000026,
+     "max": 1.5811
+    },
+    "enc": {
+     "n": 7890,
+     "mean": 0.044566780735107725,
+     "p50": 0.0072,
+     "p99": 0.41998799999999975,
+     "p999": 0.6355771000000048,
+     "max": 0.7209
+    },
+    "gath": {
+     "n": 7890,
+     "mean": 0.3210231558935361,
+     "p50": 0.30745,
+     "p99": 0.4209,
+     "p999": 0.4864,
+     "max": 0.6145
+    },
+    "conc": {
+     "n": 7890,
+     "mean": 0.014055158428390368,
+     "p50": 0.0082,
+     "p99": 0.0165,
+     "p999": 1.2732763000000105,
+     "max": 1.6886
+    },
+    "ren": {
+     "n": 7890,
+     "mean": 1.8545710773130546,
+     "p50": 1.6571,
+     "p99": 3.7859309999999993,
+     "p999": 4.019311,
+     "max": 4.0663
+    }
+   },
+   "sum_stage_means": 2.325484397972117,
+   "sum_stage_p99": 5.664539999999999,
+   "p99_of_event_total": 5.092321,
+   "host_overhead_mean": 0.017806400506970854,
+   "stage_corr": {
+    "dec~enc": 0.9327864931723746,
+    "dec~gath": -0.1486837007224761,
+    "dec~conc": 0.25188230255350014,
+    "dec~ren": 0.20983903159271144,
+    "enc~gath": -0.13280922978788073,
+    "enc~conc": 0.24673302166804273,
+    "enc~ren": 0.21580120199027142,
+    "gath~conc": 0.0820527085104211,
+    "gath~ren": 0.08784450187403631,
+    "conc~ren": 0.10577267514486884
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6443566366575659,
+    "enc": 0.6361619006436299,
+    "gath": 0.05940551906881387,
+    "conc": 0.3024539702378202,
+    "ren": 0.8725834621706805
+   },
+   "n_miss": {
+    "n": 7890,
+    "mean": 19.21634980988593,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 11907.0,
+    "max": 14484.0
+   },
+   "frames_with_miss": 39,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 14333,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 25410144,
+     "base_bits": 8962256,
+     "dec": 1.3219,
+     "enc": 0.6666,
+     "gath": 0.3154,
+     "conc": 1.6886,
+     "ren": 3.6895,
+     "wall": 7.7044,
+     "n_miss": 14333,
+     "n_vis": 142137,
+     "e2e": 10.7044
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69772,
+     "n_lost_tx": 14484,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 25822128,
+     "base_bits": 9093952,
+     "dec": 1.3079,
+     "enc": 0.65,
+     "gath": 0.378,
+     "conc": 1.6812,
+     "ren": 3.6424,
+     "wall": 7.681,
+     "n_miss": 14484,
+     "n_vis": 142137,
+     "e2e": 10.681
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69772,
+     "n_lost_tx": 14484,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 25822128,
+     "base_bits": 9093952,
+     "dec": 1.3046,
+     "enc": 0.6881,
+     "gath": 0.3083,
+     "conc": 1.5779,
+     "ren": 3.6434,
+     "wall": 7.5408,
+     "n_miss": 14484,
+     "n_vis": 142137,
+     "e2e": 10.5408
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 14333,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 25410144,
+     "base_bits": 8962256,
+     "dec": 1.2972,
+     "enc": 0.6707,
+     "gath": 0.3082,
+     "conc": 1.6159,
+     "ren": 3.5983,
+     "wall": 7.5119,
+     "n_miss": 14333,
+     "n_vis": 142137,
+     "e2e": 10.5119
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 14333,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 25410144,
+     "base_bits": 8962256,
+     "dec": 1.3117,
+     "enc": 0.641,
+     "gath": 0.3268,
+     "conc": 1.6085,
+     "ren": 3.5799,
+     "wall": 7.4883,
+     "n_miss": 14333,
+     "n_vis": 142137,
+     "e2e": 10.4883
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | conceal": {
+   "frames": 7890,
+   "T_edge_wall": {
+    "n": 7890,
+    "mean": 2.369393257287706,
+    "p50": 2.1325000000000003,
+    "p99": 5.240862999999999,
+    "p999": 7.060725900000131,
+    "max": 8.3726
+   },
+   "E2E": {
+    "n": 7890,
+    "mean": 3.369393257287706,
+    "p50": 3.1325000000000003,
+    "p99": 6.240862999999999,
+    "p999": 8.060725900000131,
+    "max": 9.3726
+   },
+   "t_rx": {
+    "n": 7890,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_E2E": 0.00037961516158123616,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_Tedge": 0.00037961516158123616,
+   "stages": {
+    "dec": {
+     "n": 7890,
+     "mean": 0.09217330798479087,
+     "p50": 0.0082,
+     "p99": 1.0362319999999996,
+     "p999": 1.398933200000001,
+     "max": 1.4459
+    },
+    "enc": {
+     "n": 7890,
+     "mean": 0.045586375158428394,
+     "p50": 0.0072,
+     "p99": 0.41582099999999966,
+     "p999": 0.642944300000001,
+     "max": 0.7679
+    },
+    "gath": {
+     "n": 7890,
+     "mean": 0.3268934854245881,
+     "p50": 0.3072,
+     "p99": 0.42309899999999967,
+     "p999": 0.5067770000000055,
+     "max": 1.8676
+    },
+    "conc": {
+     "n": 7890,
+     "mean": 0.021233738910012675,
+     "p50": 0.0084,
+     "p99": 0.7515109999999999,
+     "p999": 2.197173000000034,
+     "max": 3.3679
+    },
+    "ren": {
+     "n": 7890,
+     "mean": 1.8653234474017744,
+     "p50": 1.67625,
+     "p99": 3.7987709999999977,
+     "p999": 4.007222000000001,
+     "max": 4.4995
+    }
+   },
+   "sum_stage_means": 2.35121035487961,
+   "sum_stage_p99": 6.4254339999999965,
+   "p99_of_event_total": 5.223551999999999,
+   "host_overhead_mean": 0.018182902408111542,
+   "stage_corr": {
+    "dec~enc": 0.9344530316387569,
+    "dec~gath": -0.10322540509353785,
+    "dec~conc": 0.32361131461870596,
+    "dec~ren": 0.20974480981675195,
+    "enc~gath": -0.09360872705323005,
+    "enc~conc": 0.3117035558187273,
+    "enc~ren": 0.21475005697222435,
+    "gath~conc": 0.055019882726013956,
+    "gath~ren": 0.09826108928462313,
+    "conc~ren": 0.10965880803037896
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6558104580228208,
+    "enc": 0.6459936273960091,
+    "gath": 0.10137668244947082,
+    "conc": 0.3957560845657952,
+    "ren": 0.8541345155363533
+   },
+   "n_miss": {
+    "n": 7890,
+    "mean": 50.104182509505705,
+    "p50": 0.0,
+    "p99": 64.0,
+    "p999": 21440.0,
+    "max": 26688.0
+   },
+   "frames_with_miss": 87,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 71132,
+     "n_lost_tx": 26688,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20763600,
+     "base_bits": 9265520,
+     "dec": 1.194,
+     "enc": 0.6154,
+     "gath": 0.254,
+     "conc": 2.7495,
+     "ren": 3.5409,
+     "wall": 8.3726,
+     "n_miss": 26688,
+     "n_vis": 142137,
+     "e2e": 9.3726
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 25792,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20078000,
+     "base_bits": 8962256,
+     "dec": 1.1858,
+     "enc": 0.6215,
+     "gath": 0.257,
+     "conc": 2.6696,
+     "ren": 3.5697,
+     "wall": 8.3232,
+     "n_miss": 25792,
+     "n_vis": 142137,
+     "e2e": 9.3232
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 25792,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20078000,
+     "base_bits": 8962256,
+     "dec": 1.1725,
+     "enc": 0.5949,
+     "gath": 0.2499,
+     "conc": 2.6491,
+     "ren": 3.585,
+     "wall": 8.2691,
+     "n_miss": 25792,
+     "n_vis": 142137,
+     "e2e": 9.2691
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 71132,
+     "n_lost_tx": 26688,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20763600,
+     "base_bits": 9265520,
+     "dec": 1.1868,
+     "enc": 0.599,
+     "gath": 0.2437,
+     "conc": 2.7341,
+     "ren": 3.4857,
+     "wall": 8.2677,
+     "n_miss": 26688,
+     "n_vis": 142137,
+     "e2e": 9.2677
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 71132,
+     "n_lost_tx": 26688,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 20763600,
+     "base_bits": 9265520,
+     "dec": 1.1785,
+     "enc": 0.6021,
+     "gath": 0.256,
+     "conc": 2.7443,
+     "ren": 3.4427,
+     "wall": 8.2402,
+     "n_miss": 26688,
+     "n_vis": 142137,
+     "e2e": 9.2402
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | arq+conceal": {
+   "frames": 7890,
+   "T_edge_wall": {
+    "n": 7890,
+    "mean": 2.4369257541191383,
+    "p50": 2.1832000000000003,
+    "p99": 5.365262999999999,
+    "p999": 6.363620700000011,
+    "max": 7.3405
+   },
+   "E2E": {
+    "n": 7890,
+    "mean": 3.463541723700887,
+    "p50": 3.1832000000000003,
+    "p99": 6.750194999999998,
+    "p999": 9.339786100000019,
+    "max": 10.3405
+   },
+   "t_rx": {
+    "n": 7890,
+    "mean": 1.026615969581749,
+    "p50": 1.0,
+    "p99": 3.0,
+    "p999": 3.0,
+    "max": 3.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_E2E": 0.00037961516158123616,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_Tedge": 0.00037961516158123616,
+   "stages": {
+    "dec": {
+     "n": 7890,
+     "mean": 0.0943077186311787,
+     "p50": 0.0094,
+     "p99": 1.0334199999999993,
+     "p999": 1.4131999000000006,
+     "max": 1.4298
+    },
+    "enc": {
+     "n": 7890,
+     "mean": 0.04864013941698353,
+     "p50": 0.0084,
+     "p99": 0.43330999999999964,
+     "p999": 0.6502212000000073,
+     "max": 0.8663
+    },
+    "gath": {
+     "n": 7890,
+     "mean": 0.34742150823827633,
+     "p50": 0.3626,
+     "p99": 0.4463219999999999,
+     "p999": 0.5911441000000024,
+     "max": 1.833
+    },
+    "conc": {
+     "n": 7890,
+     "mean": 0.016693726235741446,
+     "p50": 0.0102,
+     "p99": 0.0236,
+     "p999": 1.1399221000000008,
+     "max": 1.288
+    },
+    "ren": {
+     "n": 7890,
+     "mean": 1.9106849936628643,
+     "p50": 1.7244,
+     "p99": 3.804419999999999,
+     "p999": 4.0317773000000035,
+     "max": 4.395
+    }
+   },
+   "sum_stage_means": 2.417748086185047,
+   "sum_stage_p99": 5.741071999999998,
+   "p99_of_event_total": 5.3442,
+   "host_overhead_mean": 0.019177667934093798,
+   "stage_corr": {
+    "dec~enc": 0.9351563695395513,
+    "dec~gath": -0.11509139469371671,
+    "dec~conc": 0.255190828043688,
+    "dec~ren": 0.21437150802922791,
+    "enc~gath": -0.09097043475522883,
+    "enc~conc": 0.25130517805781055,
+    "enc~ren": 0.21506661582781794,
+    "gath~conc": 0.1462877160077265,
+    "gath~ren": 0.12961360123191948,
+    "conc~ren": 0.10108423394519207
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6570016064113722,
+    "enc": 0.6467949340853715,
+    "gath": 0.1313426946780612,
+    "conc": 0.3156844447280343,
+    "ren": 0.8629427232165728
+   },
+   "n_miss": {
+    "n": 7890,
+    "mean": 7.778326996197719,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 4739.0,
+    "max": 5821.0
+   },
+   "frames_with_miss": 54,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 5821,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 29390976,
+     "base_bits": 8962256,
+     "dec": 1.3691,
+     "enc": 0.6656,
+     "gath": 0.3166,
+     "conc": 1.288,
+     "ren": 3.6792,
+     "wall": 7.3405,
+     "n_miss": 5821,
+     "n_vis": 142137,
+     "e2e": 10.3405
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 2,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 5821,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 29390976,
+     "base_bits": 8962256,
+     "dec": 1.3548,
+     "enc": 0.6308,
+     "gath": 0.3072,
+     "conc": 1.2052,
+     "ren": 3.6915,
+     "wall": 7.2149,
+     "n_miss": 5821,
+     "n_vis": 142137,
+     "e2e": 10.2149
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 2,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 68757,
+     "n_lost_tx": 5821,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 29390976,
+     "base_bits": 8962256,
+     "dec": 1.3681,
+     "enc": 0.6369,
+     "gath": 0.299,
+     "conc": 1.0752,
+     "ren": 3.5942,
+     "wall": 6.9946,
+     "n_miss": 5821,
+     "n_vis": 142137,
+     "e2e": 9.9946
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 2,
+     "frame": 13,
+     "view": 13,
+     "test": false,
+     "n_new": 482,
+     "n_lost_tx": 176,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 143840,
+     "base_bits": 63360,
+     "dec": 0.8735,
+     "enc": 0.3729,
+     "gath": 0.4739,
+     "conc": 1.0291,
+     "ren": 3.8062,
+     "wall": 6.5789,
+     "n_miss": 176,
+     "n_vis": 143747,
+     "e2e": 9.5789
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 1,
+     "frame": 13,
+     "view": 13,
+     "test": false,
+     "n_new": 482,
+     "n_lost_tx": 176,
+     "t_rx": 3.0,
+     "first": false,
+     "enh_bits": 143840,
+     "base_bits": 63360,
+     "dec": 0.8724,
+     "enc": 0.3676,
+     "gath": 0.4628,
+     "conc": 1.0148,
+     "ren": 3.7522,
+     "wall": 6.4903,
+     "n_miss": 176,
+     "n_vis": 143747,
+     "e2e": 9.4903
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | conceal": {
+   "frames": 7890,
+   "T_edge_wall": {
+    "n": 7890,
+    "mean": 2.344417515842839,
+    "p50": 2.10615,
+    "p99": 5.228536999999988,
+    "p999": 6.4294755000000166,
+    "max": 7.6924
+   },
+   "E2E": {
+    "n": 7890,
+    "mean": 3.3444175158428395,
+    "p50": 3.10615,
+    "p99": 6.228536999999988,
+    "p999": 7.4294755000000166,
+    "max": 8.6924
+   },
+   "t_rx": {
+    "n": 7890,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_E2E": 0.00037961516158123616,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.00046742930820624405
+   ],
+   "cp95_one_sided_upper_Tedge": 0.00037961516158123616,
+   "stages": {
+    "dec": {
+     "n": 7890,
+     "mean": 0.09227076045627376,
+     "p50": 0.0079,
+     "p99": 1.0230209999999995,
+     "p999": 1.4229772000000043,
+     "max": 1.4643
+    },
+    "enc": {
+     "n": 7890,
+     "mean": 0.04508747782002534,
+     "p50": 0.0072,
+     "p99": 0.4178989999999997,
+     "p999": 0.6431,
+     "max": 0.6665
+    },
+    "gath": {
+     "n": 7890,
+     "mean": 0.3181082382762991,
+     "p50": 0.3062,
+     "p99": 0.41251099999999996,
+     "p999": 0.48453320000000094,
+     "max": 0.5356
+    },
+    "conc": {
+     "n": 7890,
+     "mean": 0.021696311787072244,
+     "p50": 0.0082,
+     "p99": 0.790322,
+     "p999": 1.5210427000000124,
+     "max": 1.9538
+    },
+    "ren": {
+     "n": 7890,
+     "mean": 1.849707122940431,
+     "p50": 1.6486,
+     "p99": 3.7838989999999995,
+     "p999": 3.989599900000001,
+     "max": 4.1011
+    }
+   },
+   "sum_stage_means": 2.3268699112801086,
+   "sum_stage_p99": 6.427651999999998,
+   "p99_of_event_total": 5.209257999999988,
+   "host_overhead_mean": 0.01754760456273765,
+   "stage_corr": {
+    "dec~enc": 0.9348450870492813,
+    "dec~gath": -0.08311485496551273,
+    "dec~conc": 0.36308917703497257,
+    "dec~ren": 0.22071767743094786,
+    "enc~gath": -0.07890428797523005,
+    "enc~conc": 0.34093478759323237,
+    "enc~ren": 0.2235904445882449,
+    "gath~conc": 0.20011889311934333,
+    "gath~ren": 0.08306868796434476,
+    "conc~ren": 0.10190234747634529
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6673831967760667,
+    "enc": 0.6542789782474083,
+    "gath": 0.10020517173453124,
+    "conc": 0.39224965591513966,
+    "ren": 0.8569291500782814
+   },
+   "n_miss": {
+    "n": 7890,
+    "mean": 33.15513307984791,
+    "p50": 0.0,
+    "p99": 256.0,
+    "p999": 14272.0,
+    "max": 17536.0
+   },
+   "frames_with_miss": 111,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69909,
+     "n_lost_tx": 17536,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 24474032,
+     "base_bits": 9108768,
+     "dec": 1.2544,
+     "enc": 0.6185,
+     "gath": 0.2673,
+     "conc": 1.9538,
+     "ren": 3.5819,
+     "wall": 7.6924,
+     "n_miss": 17536,
+     "n_vis": 142137,
+     "e2e": 8.6924
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 2,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69909,
+     "n_lost_tx": 17536,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 24474032,
+     "base_bits": 9108768,
+     "dec": 1.2361,
+     "enc": 0.5948,
+     "gath": 0.2532,
+     "conc": 1.9474,
+     "ren": 3.5053,
+     "wall": 7.5561,
+     "n_miss": 17536,
+     "n_vis": 142137,
+     "e2e": 8.5561
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 1,
+     "frame": 12,
+     "view": 12,
+     "test": false,
+     "n_new": 69909,
+     "n_lost_tx": 17536,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 24474032,
+     "base_bits": 9108768,
+     "dec": 1.2493,
+     "enc": 0.6031,
+     "gath": 0.254,
+     "conc": 1.9333,
+     "ren": 3.4796,
+     "wall": 7.538,
+     "n_miss": 17536,
+     "n_vis": 142137,
+     "e2e": 8.538
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 8,
+     "rep": 0,
+     "frame": 14,
+     "view": 14,
+     "test": false,
+     "n_new": 226,
+     "n_lost_tx": 64,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 75920,
+     "base_bits": 29872,
+     "dec": 0.854,
+     "enc": 0.3758,
+     "gath": 0.4874,
+     "conc": 1.1182,
+     "ren": 3.878,
+     "wall": 6.7374,
+     "n_miss": 64,
+     "n_vis": 144073,
+     "e2e": 7.7374
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 8,
+     "rep": 1,
+     "frame": 14,
+     "view": 14,
+     "test": false,
+     "n_new": 226,
+     "n_lost_tx": 64,
+     "t_rx": 1.0,
+     "first": false,
+     "enh_bits": 75920,
+     "base_bits": 29872,
+     "dec": 0.8722,
+     "enc": 0.3738,
+     "gath": 0.4813,
+     "conc": 1.0762,
+     "ren": 3.8502,
+     "wall": 6.6753,
+     "n_miss": 64,
+     "n_vis": 144073,
+     "e2e": 7.6753
+    }
+   ]
+  }
+ }
+}

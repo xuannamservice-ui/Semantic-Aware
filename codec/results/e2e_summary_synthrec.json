@@ -1,0 +1,396 @@
+{
+ "tag": "_v2a_r1",
+ "suffix": "_synthrec",
+ "seed": 0,
+ "psi_max": 99.0,
+ "variants": {
+  "T6R11_syn_burst30_hd3.8e-3": {
+   "name": "T6R11_syn_burst30_hd3.8e-3",
+   "cfg": "T6R11",
+   "N": 1000000,
+   "n_records": 400,
+   "n_sample": 150,
+   "modes": [
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3
+   ],
+   "anchor_modes": [
+    -1,
+    2
+   ],
+   "phy_variant": "syn_burst30",
+   "threshold": "hd3.8e-3",
+   "rx_modes": [
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3
+   ],
+   "results": {
+    "stream": {
+     "n_rendered": 10,
+     "n_anchor_lost": 0,
+     "n_psi30": 0,
+     "abar_30": 0.0,
+     "abar_30_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "n_psi35": 5,
+     "abar_35": 0.0002,
+     "abar_35_ci": [
+      7.483441137895942e-05,
+      0.00032516558862104056
+     ],
+     "mean_psi": 34.555263137817384,
+     "mean_psi_anchor_ok": 34.555263137817384,
+     "median_psi": 35.147064208984375,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 0.16682628165942864
+    },
+    "token_fill": {
+     "n_rendered": 10,
+     "n_anchor_lost": 0,
+     "n_psi30": 0,
+     "abar_30": 0.0,
+     "abar_30_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "n_psi35": 1,
+     "abar_35": 4e-05,
+     "abar_35_ci": [
+      1.0114314177847145e-06,
+      0.00017800644681127816
+     ],
+     "mean_psi": 69.16481513977051,
+     "mean_psi_anchor_ok": 69.16481513977051,
+     "median_psi": 71.07168388366699,
+     "n_no_loss": 5,
+     "mean_enh_tok_lost_frac": 0.03443323605264788
+    },
+    "token_rate": {
+     "n_rendered": 10,
+     "n_anchor_lost": 0,
+     "n_psi30": 0,
+     "abar_30": 0.0,
+     "abar_30_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "n_psi35": 1,
+     "abar_35": 4e-05,
+     "abar_35_ci": [
+      1.0114314177847145e-06,
+      0.00017800644681127816
+     ],
+     "mean_psi": 86.31969032287597,
+     "mean_psi_anchor_ok": 86.31969032287597,
+     "median_psi": 99.0,
+     "n_no_loss": 8,
+     "mean_enh_tok_lost_frac": 0.02111254334980222
+    }
+   }
+  },
+  "T6R11_syn_fade3_rs1e-3": {
+   "name": "T6R11_syn_fade3_rs1e-3",
+   "cfg": "T6R11",
+   "N": 1000000,
+   "n_records": 400,
+   "n_sample": 150,
+   "modes": [
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3
+   ],
+   "anchor_modes": [
+    -1,
+    2
+   ],
+   "phy_variant": "syn_fade3",
+   "threshold": "rs1e-3",
+   "rx_modes": [
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3
+   ],
+   "results": {
+    "stream": {
+     "n_rendered": 10,
+     "n_anchor_lost": 10,
+     "n_psi30": 0,
+     "abar_30": 0.0004,
+     "abar_30_ci": [
+      0.00027660115687249564,
+      0.0004
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.0004,
+     "abar_35_ci": [
+      0.00027660115687249564,
+      0.0004
+     ],
+     "mean_psi": 6.8426612377166744,
+     "mean_psi_anchor_ok": null,
+     "median_psi": 6.865116357803345,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 1.0
+    },
+    "token_fill": {
+     "n_rendered": 10,
+     "n_anchor_lost": 7,
+     "n_psi30": 0,
+     "abar_30": 0.00028,
+     "abar_30_ci": [
+      0.00013901885997600109,
+      0.00037330419552890625
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.00028,
+     "abar_35_ci": [
+      0.00013901885997600109,
+      0.00037330419552890625
+     ],
+     "mean_psi": 28.534140205383302,
+     "mean_psi_anchor_ok": 40.69250361124674,
+     "median_psi": 25.28745746612549,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 0.03216099177760374
+    },
+    "token_rate": {
+     "n_rendered": 10,
+     "n_anchor_lost": 7,
+     "n_psi30": 0,
+     "abar_30": 0.00028,
+     "abar_30_ci": [
+      0.00013901885997600109,
+      0.00037330419552890625
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.00028,
+     "abar_35_ci": [
+      0.00013901885997600109,
+      0.00037330419552890625
+     ],
+     "mean_psi": 29.077853202819824,
+     "mean_psi_anchor_ok": 42.79071553548177,
+     "median_psi": 25.20345115661621,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 0.023047780867132533
+    }
+   }
+  },
+  "T8R8_syn_burst30_hd3.8e-3": {
+   "name": "T8R8_syn_burst30_hd3.8e-3",
+   "cfg": "T8R8",
+   "N": 1000000,
+   "n_records": 400,
+   "n_sample": 150,
+   "modes": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "anchor_modes": [
+    -2,
+    -1,
+    1,
+    3
+   ],
+   "phy_variant": "syn_burst30",
+   "threshold": "hd3.8e-3",
+   "rx_modes": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "results": {
+    "stream": {
+     "n_rendered": 10,
+     "n_anchor_lost": 0,
+     "n_psi30": 0,
+     "abar_30": 0.0,
+     "abar_30_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "n_psi35": 2,
+     "abar_35": 8e-05,
+     "abar_35_ci": [
+      1.0084290530733356e-05,
+      0.00022243818492305662
+     ],
+     "mean_psi": 35.86579551696777,
+     "mean_psi_anchor_ok": 35.86579551696777,
+     "median_psi": 36.36971092224121,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 0.12501499030608726
+    },
+    "token_fill": {
+     "n_rendered": 10,
+     "n_anchor_lost": 0,
+     "n_psi30": 0,
+     "abar_30": 0.0,
+     "abar_30_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.0,
+     "abar_35_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "mean_psi": 51.9144645690918,
+     "mean_psi_anchor_ok": 51.9144645690918,
+     "median_psi": 42.14668273925781,
+     "n_no_loss": 2,
+     "mean_enh_tok_lost_frac": 0.04450167382613439
+    },
+    "token_rate": {
+     "n_rendered": 10,
+     "n_anchor_lost": 0,
+     "n_psi30": 0,
+     "abar_30": 0.0,
+     "abar_30_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.0,
+     "abar_35_ci": [
+      0.0,
+      0.0001233988431275043
+     ],
+     "mean_psi": 69.51346626281739,
+     "mean_psi_anchor_ok": 69.51346626281739,
+     "median_psi": 73.65726852416992,
+     "n_no_loss": 5,
+     "mean_enh_tok_lost_frac": 0.0365118284830978
+    }
+   }
+  },
+  "T8R8_syn_fade3_rs1e-3": {
+   "name": "T8R8_syn_fade3_rs1e-3",
+   "cfg": "T8R8",
+   "N": 1000000,
+   "n_records": 400,
+   "n_sample": 150,
+   "modes": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "anchor_modes": [
+    -2,
+    -1,
+    1,
+    3
+   ],
+   "phy_variant": "syn_fade3",
+   "threshold": "rs1e-3",
+   "rx_modes": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4
+   ],
+   "results": {
+    "stream": {
+     "n_rendered": 10,
+     "n_anchor_lost": 10,
+     "n_psi30": 0,
+     "abar_30": 0.0004,
+     "abar_30_ci": [
+      0.00027660115687249564,
+      0.0004
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.0004,
+     "abar_35_ci": [
+      0.00027660115687249564,
+      0.0004
+     ],
+     "mean_psi": 6.8426612377166744,
+     "mean_psi_anchor_ok": null,
+     "median_psi": 6.865116357803345,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 1.0
+    },
+    "token_fill": {
+     "n_rendered": 10,
+     "n_anchor_lost": 8,
+     "n_psi30": 0,
+     "abar_30": 0.00032,
+     "abar_30_ci": [
+      0.0001775618150769434,
+      0.00038991570946926666
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.00032,
+     "abar_35_ci": [
+      0.0001775618150769434,
+      0.00038991570946926666
+     ],
+     "mean_psi": 28.214975357055664,
+     "mean_psi_anchor_ok": 40.328500747680664,
+     "median_psi": 26.375725746154785,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 0.029249880177402217
+    },
+    "token_rate": {
+     "n_rendered": 10,
+     "n_anchor_lost": 8,
+     "n_psi30": 0,
+     "abar_30": 0.00032,
+     "abar_30_ci": [
+      0.0001775618150769434,
+      0.00038991570946926666
+     ],
+     "n_psi35": 0,
+     "abar_35": 0.00032,
+     "abar_35_ci": [
+      0.0001775618150769434,
+      0.00038991570946926666
+     ],
+     "mean_psi": 28.833477401733397,
+     "mean_psi_anchor_ok": 43.73214530944824,
+     "median_psi": 26.37718105316162,
+     "n_no_loss": 0,
+     "mean_enh_tok_lost_frac": 0.03064739351075272
+    }
+   }
+  }
+ }
+}

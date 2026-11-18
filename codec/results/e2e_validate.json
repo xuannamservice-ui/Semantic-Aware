@@ -1,0 +1,44 @@
+{
+ "garden": {
+  "rans_base_bits_per_anchor": [
+   122.4629908157061,
+   122.4629908157061
+  ],
+  "rans_enhancement_bits_per_anchor": [
+   441.20874267976575,
+   441.20874267976575
+  ],
+  "T8R8": {
+   "views": [
+    0,
+    8,
+    16,
+    24
+   ],
+   "zero_mask_psi_min": 99.0,
+   "n_whole": 24,
+   "max_abs_diff_stream": 0.0,
+   "max_abs_diff_token_fill": 0.0,
+   "max_abs_diff_token_rate": 0.0,
+   "mean_eval_layered": 33.464130878448486,
+   "mean_e2e_stream": 33.464130878448486,
+   "max_abs_diff_lost_frac_vs_token_frac": 0.000488794335199022
+  },
+  "T6R11": {
+   "views": [
+    0,
+    8,
+    16,
+    24
+   ],
+   "zero_mask_psi_min": 99.0,
+   "n_whole": 24,
+   "max_abs_diff_stream": 0.0,
+   "max_abs_diff_token_fill": 0.0,
+   "max_abs_diff_token_rate": 0.0,
+   "mean_eval_layered": 33.764712969462074,
+   "mean_e2e_stream": 33.764712969462074,
+   "max_abs_diff_lost_frac_vs_token_frac": 0.0004144847112047545
+  }
+ }
+}

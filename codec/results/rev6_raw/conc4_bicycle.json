@@ -1,0 +1,321 @@
+{
+ "info": {
+  "gpu": "NVIDIA L40S",
+  "torch": "2.10.0+cu128",
+  "args": {
+   "mode": "session",
+   "scenes": "bicycle",
+   "nets": "deploy",
+   "runs": "T8R8:10:conceal",
+   "cold_runs": "T8R8:2.5,T8R8:10,T6R11:2.5",
+   "chains": 3,
+   "reps": 3,
+   "chains_t6": 0,
+   "chains_attn": 0,
+   "probe_every": 8,
+   "n_ev": 3,
+   "eps": 0.16666666666666666,
+   "arq_last_slot": 5,
+   "s2": "2.5",
+   "threads": 16,
+   "seed": 0,
+   "data": "data/360_v2",
+   "out": "results",
+   "phy": "phy",
+   "out_json": "results/rev6_raw/conc4_bicycle.json",
+   "barrier": "/tmp/rev6_bar_4",
+   "n_procs": 4,
+   "duration": 60.0,
+   "max_retry": 5,
+   "no_probe": true,
+   "aggregate": ""
+  },
+  "gpu_apps_before": [],
+  "gpu_before": "0 %, 4 MiB, 585 MHz, 54",
+  "checks": {
+   "bicycle/edge": {
+    "tag": "_v2a_r1",
+    "net": "edge_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 126.51921669033665
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 448.8299401916268
+     }
+    },
+    "A": 249965
+   }
+  },
+  "start": 1794950074.904402,
+  "gpu_apps_after": [
+   "2946646, 4854",
+   "2946643, 540",
+   "2946644, 4136",
+   "2946645, 542"
+  ],
+  "gpu_after": "100 %, 10099 MiB, 2520 MHz, 57",
+  "wait_log": []
+ },
+ "summary": {
+  "4 | bicycle": {
+   "frames": 5406,
+   "T_edge_wall": {
+    "n": 5406,
+    "mean": 14.608136440991489,
+    "p50": 13.961649999999999,
+    "p99": 22.059675,
+    "p999": 27.183373500000016,
+    "max": 30.256
+   },
+   "E2E": {
+    "n": 5406,
+    "mean": 10035.918587384389,
+    "p50": 9994.06675,
+    "p99": 19586.88236,
+    "p999": 19640.8227475,
+    "max": 19646.099
+   },
+   "t_rx": {
+    "n": 5406,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 1.0,
+   "n_E2E_gt_11.1": 5406,
+   "cp95_E2E": [
+    0.9993178651212806,
+    1.0
+   ],
+   "cp95_one_sided_upper_E2E": 1.0,
+   "frac_Tedge_gt_11.1": 0.9581945985941547,
+   "n_Tedge_gt_11.1": 5180,
+   "cp95_Tedge": [
+    0.9525139371319921,
+    0.9633735963664063
+   ],
+   "cp95_one_sided_upper_Tedge": 0.9625802191539667,
+   "stages": {
+    "dec": {
+     "n": 5406,
+     "mean": 1.1601199778024416,
+     "p50": 0.002,
+     "p99": 6.227944999999999,
+     "p999": 7.205144500000022,
+     "max": 7.8643
+    },
+    "enc": {
+     "n": 5406,
+     "mean": 0.047261394746577874,
+     "p50": 0.002,
+     "p99": 1.1141,
+     "p999": 3.12018600000003,
+     "max": 3.8635
+    },
+    "gath": {
+     "n": 5406,
+     "mean": 2.6335759341472436,
+     "p50": 2.5344,
+     "p99": 5.344784999999998,
+     "p999": 6.234864000000013,
+     "max": 6.7738
+    },
+    "conc": {
+     "n": 5406,
+     "mean": 0.03639160192378838,
+     "p50": 0.001,
+     "p99": 1.6374399999999967,
+     "p999": 4.83938200000007,
+     "max": 7.083
+    },
+    "ren": {
+     "n": 5406,
+     "mean": 9.492075083240843,
+     "p50": 9.4648,
+     "p99": 12.729144999999992,
+     "p999": 13.78031250000002,
+     "max": 14.6842
+    }
+   },
+   "sum_stage_means": 13.369423991861002,
+   "sum_stage_p99": 27.053414999999987,
+   "p99_of_event_total": 20.903974999999992,
+   "host_overhead_mean": 1.2387124491305956,
+   "stage_corr": {
+    "dec~enc": 0.30568008246830813,
+    "dec~gath": 0.013909536224259906,
+    "dec~conc": 0.20648304581084703,
+    "dec~ren": 0.09388812054292099,
+    "enc~gath": 0.007984295840853344,
+    "enc~conc": 0.21956486372445747,
+    "enc~ren": 0.009808196299490026,
+    "gath~conc": -0.04551971777293565,
+    "gath~ren": -0.2235876280484405,
+    "conc~ren": 0.14621915401442268
+   },
+   "stage_corr_with_total": {
+    "dec": 0.8163479868069794,
+    "enc": 0.34097628489239706,
+    "gath": 0.20210737456553465,
+    "conc": 0.33903561793941267,
+    "ren": 0.4539493358933532
+   },
+   "n_miss": {
+    "n": 5406,
+    "mean": 104.85923048464669,
+    "p50": 0.0,
+    "p99": 956.7999999999884,
+    "p999": 32320.0,
+    "max": 32320.0
+   },
+   "frames_with_miss": 124,
+   "worst": [
+    {
+     "mode": "paced",
+     "n_procs": 4,
+     "scene": "bicycle",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 9,
+     "frame": 65,
+     "view": 65,
+     "test": false,
+     "n_new": 0,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 19632.0019,
+     "first": false,
+     "dec": 0.001,
+     "enc": 0.002,
+     "gath": 2.3788,
+     "conc": 0.001,
+     "ren": 8.4818,
+     "wall": 13.0971,
+     "n_miss": 0,
+     "n_vis": 71167,
+     "e2e": 19646.099
+    },
+    {
+     "mode": "paced",
+     "n_procs": 4,
+     "scene": "bicycle",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 9,
+     "frame": 64,
+     "view": 64,
+     "test": true,
+     "n_new": 1,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 19629.2219,
+     "first": false,
+     "dec": 1.1357,
+     "enc": 0.0583,
+     "gath": 2.9061,
+     "conc": 0.002,
+     "ren": 9.4894,
+     "wall": 13.818,
+     "n_miss": 0,
+     "n_vis": 91174,
+     "e2e": 19644.0399
+    },
+    {
+     "mode": "paced",
+     "n_procs": 4,
+     "scene": "bicycle",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 9,
+     "frame": 66,
+     "view": 66,
+     "test": false,
+     "n_new": 0,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 19634.0606,
+     "first": false,
+     "dec": 0.001,
+     "enc": 0.002,
+     "gath": 1.6978,
+     "conc": 0.002,
+     "ren": 6.9939,
+     "wall": 8.957,
+     "n_miss": 0,
+     "n_vis": 90401,
+     "e2e": 19644.0176
+    },
+    {
+     "mode": "paced",
+     "n_procs": 4,
+     "scene": "bicycle",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 9,
+     "frame": 67,
+     "view": 67,
+     "test": false,
+     "n_new": 0,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 19631.988,
+     "first": false,
+     "dec": 0.002,
+     "enc": 0.001,
+     "gath": 1.6077,
+     "conc": 0.001,
+     "ren": 6.9581,
+     "wall": 9.1552,
+     "n_miss": 0,
+     "n_vis": 78525,
+     "e2e": 19642.1432
+    },
+    {
+     "mode": "paced",
+     "n_procs": 4,
+     "scene": "bicycle",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 9,
+     "frame": 63,
+     "view": 63,
+     "test": false,
+     "n_new": 0,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "wait": 19625.7098,
+     "first": false,
+     "dec": 0.001,
+     "enc": 0.002,
+     "gath": 5.077,
+     "conc": 0.002,
+     "ren": 9.1351,
+     "wall": 14.5517,
+     "n_miss": 0,
+     "n_vis": 85261,
+     "e2e": 19641.2615
+    }
+   ]
+  }
+ }
+}

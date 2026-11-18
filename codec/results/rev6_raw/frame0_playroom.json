@@ -1,0 +1,2949 @@
+{
+ "info": {
+  "gpu": "NVIDIA L40S",
+  "torch": "2.10.0+cu128",
+  "args": {
+   "mode": "session",
+   "scenes": "playroom",
+   "nets": "deploy,attn",
+   "runs": "T8R8:10:conceal,T8R8:10:arq+conceal,T8R8:2.5:conceal,T8R8:2.5:arq+conceal",
+   "cold_runs": "T8R8:2.5,T8R8:10,T6R11:2.5",
+   "chains": 10,
+   "reps": 3,
+   "chains_t6": 0,
+   "chains_attn": 0,
+   "probe_every": 8,
+   "n_ev": 3,
+   "eps": 0.16666666666666666,
+   "arq_last_slot": 5,
+   "s2": "2.5",
+   "threads": 16,
+   "seed": 0,
+   "data": "data/360_v2",
+   "out": "results",
+   "phy": "phy",
+   "out_json": "results/rev6_raw/frame0_playroom.json",
+   "barrier": null,
+   "n_procs": 1,
+   "duration": 60.0,
+   "max_retry": 5,
+   "max_frames": 1,
+   "attn_all_runs": true,
+   "no_probe": true,
+   "aggregate": ""
+  },
+  "gpu_apps_before": [],
+  "gpu_before": "0 %, 4 MiB, 2520 MHz, 46",
+  "waited_s": 0.023542404174804688,
+  "checks": {
+   "playroom/mlp": {
+    "tag": "_v2m_r1",
+    "net": "gen_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 134.21177202325748
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 459.2208184549428
+     }
+    },
+    "A": 180071
+   },
+   "playroom/attn": {
+    "tag": "_v2a_r1",
+    "net": "gen_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 131.81012011811984
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 459.2479406736384
+     }
+    },
+    "A": 180156
+   }
+  },
+  "fp16_check": {
+   "mlp": {
+    "n": 5312,
+    "max_abs": 0.00886225700378418,
+    "rel_rms": 0.0006174070877023041
+   },
+   "attn": {
+    "n": 5312,
+    "max_abs": 0.13311553001403809,
+    "rel_rms": 0.001688951044343412
+   }
+  },
+  "probes": [
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/mlp/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "playroom/attn/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   }
+  ],
+  "busy_log": [],
+  "gpu_apps_after": [
+   "3362217, 534"
+  ],
+  "gpu_after": "25 %, 543 MiB, 2520 MHz, 47",
+  "wait_log": []
+ },
+ "summary": {
+  "attn | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.9582400000000004,
+    "p50": 3.5917,
+    "p99": 7.3177389999999995,
+    "p999": 7.3258038999999995,
+    "max": 7.3267
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 5.75824,
+    "p50": 4.6025,
+    "p99": 10.317739000000001,
+    "p999": 10.3258039,
+    "max": 10.3267
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.8,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.1506466666666664,
+     "p50": 1.1473,
+     "p99": 1.219814,
+     "p999": 1.2233114,
+     "max": 1.2237
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.012229999999999996,
+     "p50": 0.0121,
+     "p99": 0.015471,
+     "p999": 0.0154971,
+     "max": 0.0155
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.45377333333333336,
+     "p50": 0.3998,
+     "p99": 0.953343,
+     "p999": 0.9672543000000002,
+     "max": 0.9688
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.3260066666666666,
+     "p50": 0.0113,
+     "p99": 3.165533,
+     "p999": 3.1661333,
+     "max": 3.1662
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.9932633333333338,
+     "p50": 1.9849999999999999,
+     "p99": 2.136557,
+     "p999": 2.1435257,
+     "max": 2.1443
+    }
+   },
+   "sum_stage_means": 3.9359200000000008,
+   "sum_stage_p99": 7.490717999999999,
+   "p99_of_event_total": 7.294007000000001,
+   "host_overhead_mean": 0.022319999999999927,
+   "stage_corr": {
+    "dec~enc": -0.16020373210943342,
+    "dec~gath": -0.7198698925792276,
+    "dec~conc": -0.7253237790461593,
+    "dec~ren": -0.6394806863753028,
+    "enc~gath": 0.028386269618518888,
+    "enc~conc": 0.02609828105803479,
+    "enc~ren": -0.25235006349984285,
+    "gath~conc": 0.994475129012983,
+    "gath~ren": 0.7741538179135605,
+    "conc~ren": 0.7798348129311331
+   },
+   "stage_corr_with_total": {
+    "dec": -0.7125778074518291,
+    "enc": 0.011813566951617647,
+    "gath": 0.9954498148727092,
+    "conc": 0.9993732327595565,
+    "ren": 0.7936303931074816
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 1423.0,
+    "p50": 0.0,
+    "p99": 14230.0,
+    "p999": 14230.0,
+    "max": 14230.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 14230,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 13127552,
+     "base_bits": 5651872,
+     "dec": 1.0885,
+     "enc": 0.0135,
+     "gath": 0.9688,
+     "conc": 3.1639,
+     "ren": 2.0685,
+     "wall": 7.3267,
+     "n_miss": 14230,
+     "n_vis": 42803,
+     "e2e": 10.3267
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 14230,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 13127552,
+     "base_bits": 5651872,
+     "dec": 1.0661,
+     "enc": 0.0122,
+     "gath": 0.9021,
+     "conc": 3.1468,
+     "ren": 2.1443,
+     "wall": 7.2958,
+     "n_miss": 14230,
+     "n_vis": 42803,
+     "e2e": 10.2958
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 14230,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 13127552,
+     "base_bits": 5651872,
+     "dec": 1.0557,
+     "enc": 0.0113,
+     "gath": 0.9155,
+     "conc": 3.1662,
+     "ren": 2.1176,
+     "wall": 7.2879,
+     "n_miss": 14230,
+     "n_vis": 42803,
+     "e2e": 10.2879
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1489,
+     "enc": 0.0133,
+     "gath": 0.3934,
+     "conc": 0.0122,
+     "ren": 2.0356,
+     "wall": 3.6246,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 8.6246
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1477,
+     "enc": 0.0123,
+     "gath": 0.4004,
+     "conc": 0.0102,
+     "ren": 2.005,
+     "wall": 3.5995,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 8.5995
+    }
+   ]
+  },
+  "attn | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 4.456523333333333,
+    "p50": 3.58345,
+    "p99": 9.496877,
+    "p999": 9.509587699999999,
+    "max": 9.511
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 5.456523333333333,
+    "p50": 4.58345,
+    "p99": 10.496877,
+    "p999": 10.509587699999999,
+    "max": 10.511
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.12049,
+     "p50": 1.1418,
+     "p99": 1.184925,
+     "p999": 1.1894925,
+     "max": 1.19
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.012839999999999999,
+     "p50": 0.01235,
+     "p99": 0.017791,
+     "p999": 0.018339100000000007,
+     "max": 0.0184
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.5474666666666667,
+     "p50": 0.39875,
+     "p99": 1.449781,
+     "p999": 1.4552881,
+     "max": 1.4559
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.7528333333333335,
+     "p50": 0.0123,
+     "p99": 4.924365,
+     "p999": 4.9299765,
+     "max": 4.9306
+    },
+    "ren": {
+     "n": 30,
+     "mean": 2.00041,
+     "p50": 1.99115,
+     "p99": 2.101342,
+     "p999": 2.1040042,
+     "max": 2.1043
+    }
+   },
+   "sum_stage_means": 4.4340399999999995,
+   "sum_stage_p99": 9.678204000000001,
+   "p99_of_event_total": 9.47461,
+   "host_overhead_mean": 0.02248333333333322,
+   "stage_corr": {
+    "dec~enc": 0.1118164954854808,
+    "dec~gath": -0.9247586804509534,
+    "dec~conc": -0.9330142010821235,
+    "dec~ren": -0.8405427245127685,
+    "enc~gath": -0.08008241067804767,
+    "enc~conc": -0.11259151430208968,
+    "enc~ren": 0.06652788931688582,
+    "gath~conc": 0.9979542547048248,
+    "gath~ren": 0.7922590135712398,
+    "conc~ren": 0.7997878187101575
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9303569144989958,
+    "enc": -0.1017855621073076,
+    "gath": 0.998545953368398,
+    "conc": 0.9998134702608401,
+    "ren": 0.8054414893379571
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 3198.7,
+    "p50": 0.0,
+    "p99": 21363.0,
+    "p999": 21363.0,
+    "max": 21363.0
+   },
+   "frames_with_miss": 9,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 21363,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9858288,
+     "base_bits": 5651872,
+     "dec": 0.9862,
+     "enc": 0.0124,
+     "gath": 1.4559,
+     "conc": 4.9306,
+     "ren": 2.1043,
+     "wall": 9.511,
+     "n_miss": 21363,
+     "n_vis": 42803,
+     "e2e": 10.511
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 21363,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9858288,
+     "base_bits": 5651872,
+     "dec": 0.9904,
+     "enc": 0.0132,
+     "gath": 1.4316,
+     "conc": 4.9091,
+     "ren": 2.0941,
+     "wall": 9.4623,
+     "n_miss": 21363,
+     "n_vis": 42803,
+     "e2e": 10.4623
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 21363,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9858288,
+     "base_bits": 5651872,
+     "dec": 1.0015,
+     "enc": 0.0123,
+     "gath": 1.4348,
+     "conc": 4.9037,
+     "ren": 2.0685,
+     "wall": 9.4437,
+     "n_miss": 21363,
+     "n_vis": 42803,
+     "e2e": 10.4437
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 5312,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 17235696,
+     "base_bits": 5651872,
+     "dec": 1.1254,
+     "enc": 0.0126,
+     "gath": 0.6284,
+     "conc": 1.2954,
+     "ren": 2.0449,
+     "wall": 5.129,
+     "n_miss": 5312,
+     "n_vis": 42803,
+     "e2e": 6.129
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 5312,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 17235696,
+     "base_bits": 5651872,
+     "dec": 1.0782,
+     "enc": 0.0124,
+     "gath": 0.6429,
+     "conc": 1.2584,
+     "ren": 2.05,
+     "wall": 5.0643,
+     "n_miss": 5312,
+     "n_vis": 42803,
+     "e2e": 6.0643
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.5883266666666667,
+    "p50": 3.5774,
+    "p99": 3.752017,
+    "p999": 3.7709917,
+    "max": 3.7731
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.588326666666668,
+    "p50": 4.5774,
+    "p99": 4.752017,
+    "p999": 4.770991700000001,
+    "max": 4.7731
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.15685,
+     "p50": 1.1494499999999999,
+     "p99": 1.21214,
+     "p999": 1.213184,
+     "max": 1.2133
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.012746666666666668,
+     "p50": 0.012150000000000001,
+     "p99": 0.028186000000000017,
+     "p999": 0.032518600000000064,
+     "max": 0.033
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.4051666666666666,
+     "p50": 0.40085,
+     "p99": 0.461634,
+     "p999": 0.46826340000000005,
+     "max": 0.469
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.011199999999999996,
+     "p50": 0.0113,
+     "p99": 0.012242,
+     "p999": 0.012294200000000002,
+     "max": 0.0123
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.9797999999999998,
+     "p50": 1.9758,
+     "p99": 2.0774529999999998,
+     "p999": 2.0942353000000002,
+     "max": 2.0961
+    }
+   },
+   "sum_stage_means": 3.565763333333333,
+   "sum_stage_p99": 3.791655,
+   "p99_of_event_total": 3.7313080000000003,
+   "host_overhead_mean": 0.0225633333333333,
+   "stage_corr": {
+    "dec~enc": -0.04446560409768518,
+    "dec~gath": 0.3420540225845585,
+    "dec~conc": 0.08070526897575538,
+    "dec~ren": 0.21713568465571223,
+    "enc~gath": 0.08901459872696874,
+    "enc~conc": 0.03429955684230499,
+    "enc~ren": -0.1147828626105425,
+    "gath~conc": 0.5009786379317507,
+    "gath~ren": 0.44847794445584815,
+    "conc~ren": 0.28946076296714746
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6789239698304196,
+    "enc": 0.012339788231634348,
+    "gath": 0.7550346426041806,
+    "conc": 0.37228450243196654,
+    "ren": 0.7915745785464945
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1634,
+     "enc": 0.0122,
+     "gath": 0.469,
+     "conc": 0.0123,
+     "ren": 2.0961,
+     "wall": 3.7731,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.7731
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1919,
+     "enc": 0.0164,
+     "gath": 0.4372,
+     "conc": 0.0113,
+     "ren": 2.0214,
+     "wall": 3.7004,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.7004
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.197,
+     "enc": 0.0113,
+     "gath": 0.4157,
+     "conc": 0.0113,
+     "ren": 2.0318,
+     "wall": 3.6964,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.6964
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1745,
+     "enc": 0.0133,
+     "gath": 0.4434,
+     "conc": 0.0113,
+     "ren": 1.9742,
+     "wall": 3.6451,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.6451
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 6,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.2133,
+     "enc": 0.0113,
+     "gath": 0.4157,
+     "conc": 0.0113,
+     "ren": 1.9662,
+     "wall": 3.6421,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.6421
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.614456666666667,
+    "p50": 3.5613,
+    "p99": 4.420145000000001,
+    "p999": 4.691454500000003,
+    "max": 4.7216
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.614456666666667,
+    "p50": 4.5613,
+    "p99": 5.420145000000001,
+    "p999": 5.691454500000003,
+    "max": 5.7216
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.1638,
+     "p50": 1.1571500000000001,
+     "p99": 1.2473960000000002,
+     "p999": 1.2545996000000001,
+     "max": 1.2554
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.012469999999999997,
+     "p50": 0.01205,
+     "p99": 0.024021000000000015,
+     "p999": 0.027962100000000056,
+     "max": 0.0284
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.3949533333333333,
+     "p50": 0.3926,
+     "p99": 0.4323,
+     "p999": 0.43491,
+     "max": 0.4352
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.011143333333333331,
+     "p50": 0.0113,
+     "p99": 0.012868000000000001,
+     "p999": 0.013076800000000003,
+     "max": 0.0131
+    },
+    "ren": {
+     "n": 30,
+     "mean": 2.00962,
+     "p50": 1.968,
+     "p99": 2.8144330000000006,
+     "p999": 3.0969133000000038,
+     "max": 3.1283
+    }
+   },
+   "sum_stage_means": 3.591986666666666,
+   "sum_stage_p99": 4.531018000000001,
+   "p99_of_event_total": 4.399064000000001,
+   "host_overhead_mean": 0.022469999999999858,
+   "stage_corr": {
+    "dec~enc": -0.15187520822175932,
+    "dec~gath": 0.2440743348183969,
+    "dec~conc": -0.26000661281790316,
+    "dec~ren": 0.08362472496202236,
+    "enc~gath": 0.2693886733689539,
+    "enc~conc": 0.12362407166311849,
+    "enc~ren": -0.10253713698826021,
+    "gath~conc": 0.5058288614731009,
+    "gath~ren": -0.31131139622531395,
+    "conc~ren": -0.016637236049186023
+   },
+   "stage_corr_with_total": {
+    "dec": 0.25856260468820924,
+    "enc": -0.09103129979691574,
+    "gath": -0.1859304774831762,
+    "conc": -0.007965766477269699,
+    "ren": 0.9807700148668874
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1817,
+     "enc": 0.0113,
+     "gath": 0.3677,
+     "conc": 0.0112,
+     "ren": 3.1283,
+     "wall": 4.7216,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 5.7216
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.2206,
+     "enc": 0.0113,
+     "gath": 0.3891,
+     "conc": 0.0102,
+     "ren": 2.0306,
+     "wall": 3.6821,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.6821
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.2155,
+     "enc": 0.0113,
+     "gath": 0.4147,
+     "conc": 0.0113,
+     "ren": 1.9896,
+     "wall": 3.6624,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.6624
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1744,
+     "enc": 0.0122,
+     "gath": 0.3973,
+     "conc": 0.0102,
+     "ren": 2.046,
+     "wall": 3.6609,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.6609
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 8,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42803,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19675168,
+     "base_bits": 5651872,
+     "dec": 1.1897,
+     "enc": 0.0123,
+     "gath": 0.3986,
+     "conc": 0.011,
+     "ren": 2.0214,
+     "wall": 3.6526,
+     "n_miss": 0,
+     "n_vis": 42803,
+     "e2e": 4.6526
+    }
+   ]
+  },
+  "mlp | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.744313333333332,
+    "p50": 3.6608,
+    "p99": 4.467515000000001,
+    "p999": 4.490091500000001,
+    "max": 4.4926
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 5.544313333333334,
+    "p50": 4.67745,
+    "p99": 8.733174,
+    "p999": 8.7643374,
+    "max": 8.7678
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.8,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.1545,
+     "p50": 1.1606999999999998,
+     "p99": 1.197142,
+     "p999": 1.1998042,
+     "max": 1.2001
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.012339999999999997,
+     "p50": 0.01145,
+     "p99": 0.02300400000000001,
+     "p999": 0.026240400000000042,
+     "max": 0.0266
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.44231999999999994,
+     "p50": 0.3958,
+     "p99": 0.8682650000000001,
+     "p999": 0.8738765000000002,
+     "max": 0.8745
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.045896666666666676,
+     "p50": 0.0113,
+     "p99": 0.35811,
+     "p999": 0.358371,
+     "max": 0.3584
+    },
+    "ren": {
+     "n": 30,
+     "mean": 2.066656666666667,
+     "p50": 2.0551500000000003,
+     "p99": 2.15546,
+     "p999": 2.1648560000000003,
+     "max": 2.1659
+    }
+   },
+   "sum_stage_means": 3.7217133333333328,
+   "sum_stage_p99": 4.601981,
+   "p99_of_event_total": 4.445060000000001,
+   "host_overhead_mean": 0.022599999999999763,
+   "stage_corr": {
+    "dec~enc": 0.06028701992985034,
+    "dec~gath": -0.857580639025356,
+    "dec~conc": -0.9011967931586937,
+    "dec~ren": -0.2888131223209484,
+    "enc~gath": -0.0989213512056834,
+    "enc~conc": -0.11818886207278986,
+    "enc~ren": -0.18865409419543597,
+    "gath~conc": 0.9886690156696801,
+    "gath~ren": 0.5389142871412368,
+    "conc~ren": 0.4976162543253086
+   },
+   "stage_corr_with_total": {
+    "dec": -0.8038721290617967,
+    "enc": -0.1216846255633949,
+    "gath": 0.9880972978070086,
+    "conc": 0.9731338181100809,
+    "ren": 0.6530391719068803
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 1422.0,
+    "p50": 0.0,
+    "p99": 14220.0,
+    "p999": 14220.0,
+    "max": 14220.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.1829,
+     "enc": 0.0131,
+     "gath": 0.4076,
+     "conc": 0.0124,
+     "ren": 2.1288,
+     "wall": 3.7678,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 8.7678
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.1756,
+     "enc": 0.0142,
+     "gath": 0.3994,
+     "conc": 0.0113,
+     "ren": 2.0275,
+     "wall": 3.6484,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 8.6484
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.153,
+     "enc": 0.0113,
+     "gath": 0.378,
+     "conc": 0.0111,
+     "ren": 2.0531,
+     "wall": 3.6292,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 8.6292
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 14220,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 13098064,
+     "base_bits": 5742592,
+     "dec": 1.0824,
+     "enc": 0.0113,
+     "gath": 0.853,
+     "conc": 0.3574,
+     "ren": 2.1659,
+     "wall": 4.4926,
+     "n_miss": 14220,
+     "n_vis": 42792,
+     "e2e": 7.4926
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 14220,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 13098064,
+     "base_bits": 5742592,
+     "dec": 1.0425,
+     "enc": 0.0112,
+     "gath": 0.8745,
+     "conc": 0.3553,
+     "ren": 2.1005,
+     "wall": 4.4061,
+     "n_miss": 14220,
+     "n_vis": 42792,
+     "e2e": 7.4061
+    }
+   ]
+  },
+  "mlp | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.9245300000000003,
+    "p50": 3.6933,
+    "p99": 5.000625,
+    "p999": 5.0051925,
+    "max": 5.0057
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.924530000000002,
+    "p50": 4.693300000000001,
+    "p99": 6.000625,
+    "p999": 6.0051925,
+    "max": 6.0057
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.1444233333333333,
+     "p50": 1.1587,
+     "p99": 1.220742,
+     "p999": 1.2234042,
+     "max": 1.2237
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.01211,
+     "p50": 0.0122,
+     "p99": 0.014791000000000002,
+     "p999": 0.015339100000000008,
+     "max": 0.0154
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.5265333333333333,
+     "p50": 0.4024,
+     "p99": 1.2771190000000001,
+     "p999": 1.2794419000000001,
+     "max": 1.2797
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.15711666666666665,
+     "p50": 0.0113,
+     "p99": 0.5919,
+     "p999": 0.5919,
+     "max": 0.5919
+    },
+    "ren": {
+     "n": 30,
+     "mean": 2.0612633333333337,
+     "p50": 2.0618,
+     "p99": 2.130386,
+     "p999": 2.1373286,
+     "max": 2.1381
+    }
+   },
+   "sum_stage_means": 3.9014466666666667,
+   "sum_stage_p99": 5.234938,
+   "p99_of_event_total": 4.979245,
+   "host_overhead_mean": 0.023083333333333213,
+   "stage_corr": {
+    "dec~enc": -0.12651071773479816,
+    "dec~gath": -0.9212161769933052,
+    "dec~conc": -0.8581538869324318,
+    "dec~ren": -0.381012011297384,
+    "enc~gath": 0.22114262041807392,
+    "enc~conc": -0.036108086815890617,
+    "enc~ren": -0.05737233349409559,
+    "gath~conc": 0.8423239047765454,
+    "gath~ren": 0.4709436585479613,
+    "conc~ren": 0.5686747292672529
+   },
+   "stage_corr_with_total": {
+    "dec": -0.8974303454327827,
+    "enc": 0.09445885712156168,
+    "gath": 0.9540467112600651,
+    "conc": 0.9569986801037292,
+    "ren": 0.6083975547251148
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 3197.6,
+    "p50": 0.0,
+    "p99": 21352.0,
+    "p999": 21352.0,
+    "max": 21352.0
+   },
+   "frames_with_miss": 9,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 21352,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9842560,
+     "base_bits": 5742592,
+     "dec": 0.9974,
+     "enc": 0.0133,
+     "gath": 1.2708,
+     "conc": 0.5919,
+     "ren": 2.1115,
+     "wall": 5.0057,
+     "n_miss": 21352,
+     "n_vis": 42792,
+     "e2e": 6.0057
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 21352,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9842560,
+     "base_bits": 5742592,
+     "dec": 1.0097,
+     "enc": 0.0133,
+     "gath": 1.2616,
+     "conc": 0.5877,
+     "ren": 2.0931,
+     "wall": 4.9882,
+     "n_miss": 21352,
+     "n_vis": 42792,
+     "e2e": 5.9882
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 21352,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9842560,
+     "base_bits": 5742592,
+     "dec": 0.9974,
+     "enc": 0.0125,
+     "gath": 1.2797,
+     "conc": 0.5919,
+     "ren": 2.0811,
+     "wall": 4.9852,
+     "n_miss": 21352,
+     "n_vis": 42792,
+     "e2e": 5.9852
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 5312,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 17218384,
+     "base_bits": 5742592,
+     "dec": 1.1334,
+     "enc": 0.0113,
+     "gath": 0.6113,
+     "conc": 0.4618,
+     "ren": 2.1023,
+     "wall": 4.342,
+     "n_miss": 5312,
+     "n_vis": 42792,
+     "e2e": 5.342
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 5312,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 17211472,
+     "base_bits": 5742592,
+     "dec": 1.1203,
+     "enc": 0.0113,
+     "gath": 0.6144,
+     "conc": 0.458,
+     "ren": 2.1082,
+     "wall": 4.3354,
+     "n_miss": 5312,
+     "n_vis": 42792,
+     "e2e": 5.3354
+    }
+   ]
+  },
+  "mlp | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.6637166666666663,
+    "p50": 3.65825,
+    "p99": 3.7520249999999997,
+    "p999": 3.7565925,
+    "max": 3.7571
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.663716666666668,
+    "p50": 4.658250000000001,
+    "p99": 4.752025000000001,
+    "p999": 4.7565925,
+    "max": 4.7571
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.1765333333333337,
+     "p50": 1.1628,
+     "p99": 1.250424,
+     "p999": 1.2567924000000001,
+     "max": 1.2575
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.01194333333333333,
+     "p50": 0.0113,
+     "p99": 0.01682,
+     "p999": 0.017342000000000007,
+     "max": 0.0174
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.3954666666666667,
+     "p50": 0.38955,
+     "p99": 0.448998,
+     "p999": 0.4578198000000001,
+     "max": 0.4588
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.011229999999999995,
+     "p50": 0.01125,
+     "p99": 0.013649000000000001,
+     "p999": 0.014144900000000007,
+     "max": 0.0142
+    },
+    "ren": {
+     "n": 30,
+     "mean": 2.046126666666667,
+     "p50": 2.04285,
+     "p99": 2.09329,
+     "p999": 2.095639,
+     "max": 2.0959
+    }
+   },
+   "sum_stage_means": 3.6413,
+   "sum_stage_p99": 3.823181,
+   "p99_of_event_total": 3.72886,
+   "host_overhead_mean": 0.022416666666666647,
+   "stage_corr": {
+    "dec~enc": -0.016521005203809662,
+    "dec~gath": 0.1380849988745815,
+    "dec~conc": -0.06586511529651613,
+    "dec~ren": -0.0693728009005696,
+    "enc~gath": 0.24174706580830022,
+    "enc~conc": -0.06199811037558514,
+    "enc~ren": -0.3331336079706997,
+    "gath~conc": 0.630460904113968,
+    "gath~ren": -0.10759343805660673,
+    "conc~ren": 0.026644745135083598
+   },
+   "stage_corr_with_total": {
+    "dec": 0.7087446718185424,
+    "enc": -0.09337734725265491,
+    "gath": 0.4432679832428342,
+    "conc": 0.23873905449678495,
+    "ren": 0.5231046736929865
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.2331,
+     "enc": 0.011,
+     "gath": 0.3831,
+     "conc": 0.0104,
+     "ren": 2.0959,
+     "wall": 3.7571,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7571
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 8,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.2178,
+     "enc": 0.0121,
+     "gath": 0.4088,
+     "conc": 0.0121,
+     "ren": 2.0667,
+     "wall": 3.7396,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7396
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.2575,
+     "enc": 0.0123,
+     "gath": 0.3912,
+     "conc": 0.0103,
+     "ren": 2.0408,
+     "wall": 3.7349,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7349
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.1776,
+     "enc": 0.0123,
+     "gath": 0.4588,
+     "conc": 0.0142,
+     "ren": 2.05,
+     "wall": 3.7338,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7338
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.196,
+     "enc": 0.0154,
+     "gath": 0.4239,
+     "conc": 0.0113,
+     "ren": 2.0449,
+     "wall": 3.7115,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7115
+    }
+   ]
+  },
+  "mlp | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.6711533333333337,
+    "p50": 3.661,
+    "p99": 3.820319,
+    "p999": 3.8356919000000005,
+    "max": 3.8374
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.671153333333334,
+    "p50": 4.661,
+    "p99": 4.820319,
+    "p999": 4.8356919,
+    "max": 4.8374
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 1.1646666666666667,
+     "p50": 1.15965,
+     "p99": 1.221505,
+     "p999": 1.2281605000000002,
+     "max": 1.2289
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.011870000000000002,
+     "p50": 0.0113,
+     "p99": 0.016181,
+     "p999": 0.016468100000000006,
+     "max": 0.0165
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.40364333333333335,
+     "p50": 0.40075,
+     "p99": 0.460807,
+     "p999": 0.4690807000000001,
+     "max": 0.47
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.01186333333333333,
+     "p50": 0.0113,
+     "p99": 0.026086000000000015,
+     "p999": 0.03041860000000006,
+     "max": 0.0309
+    },
+    "ren": {
+     "n": 30,
+     "mean": 2.0566133333333334,
+     "p50": 2.0495,
+     "p99": 2.139065,
+     "p999": 2.1446765,
+     "max": 2.1453
+    }
+   },
+   "sum_stage_means": 3.6486566666666667,
+   "sum_stage_p99": 3.863644,
+   "p99_of_event_total": 3.790773,
+   "host_overhead_mean": 0.02249666666666661,
+   "stage_corr": {
+    "dec~enc": 0.1283572719896511,
+    "dec~gath": 0.14996764375120503,
+    "dec~conc": 0.40717674796180114,
+    "dec~ren": 0.07598778943577666,
+    "enc~gath": 0.24733759910584588,
+    "enc~conc": 0.08698253124605358,
+    "enc~ren": -0.03880993732387742,
+    "gath~conc": 0.2331087417961484,
+    "gath~ren": 0.33384253468368513,
+    "conc~ren": 0.08665920401207568
+   },
+   "stage_corr_with_total": {
+    "dec": 0.521490849757827,
+    "enc": 0.1623182554561201,
+    "gath": 0.7249191560396907,
+    "conc": 0.3752647219663785,
+    "ren": 0.7651896479922946
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.1653,
+     "enc": 0.0123,
+     "gath": 0.47,
+     "conc": 0.0113,
+     "ren": 2.1453,
+     "wall": 3.8374,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.8374
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.1897,
+     "enc": 0.0113,
+     "gath": 0.4188,
+     "conc": 0.0143,
+     "ren": 2.1238,
+     "wall": 3.7785,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7785
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.2034,
+     "enc": 0.0121,
+     "gath": 0.425,
+     "conc": 0.0309,
+     "ren": 2.0632,
+     "wall": 3.7568,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7568
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.1817,
+     "enc": 0.0113,
+     "gath": 0.4106,
+     "conc": 0.0104,
+     "ren": 2.1083,
+     "wall": 3.7452,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7452
+    },
+    {
+     "mode": "session",
+     "scene": "playroom",
+     "net": "mlp",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 42792,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 19653616,
+     "base_bits": 5742592,
+     "dec": 1.1445,
+     "enc": 0.0113,
+     "gath": 0.4383,
+     "conc": 0.0113,
+     "ren": 2.0808,
+     "wall": 3.7084,
+     "n_miss": 0,
+     "n_vis": 42792,
+     "e2e": 4.7084
+    }
+   ]
+  }
+ }
+}

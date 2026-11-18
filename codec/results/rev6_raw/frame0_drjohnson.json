@@ -1,0 +1,2941 @@
+{
+ "info": {
+  "gpu": "NVIDIA L40S",
+  "torch": "2.10.0+cu128",
+  "args": {
+   "mode": "session",
+   "scenes": "drjohnson",
+   "nets": "deploy,attn",
+   "runs": "T8R8:10:conceal,T8R8:10:arq+conceal,T8R8:2.5:conceal,T8R8:2.5:arq+conceal",
+   "cold_runs": "T8R8:2.5,T8R8:10,T6R11:2.5",
+   "chains": 10,
+   "reps": 3,
+   "chains_t6": 0,
+   "chains_attn": 0,
+   "probe_every": 8,
+   "n_ev": 3,
+   "eps": 0.16666666666666666,
+   "arq_last_slot": 5,
+   "s2": "2.5",
+   "threads": 16,
+   "seed": 0,
+   "data": "data/360_v2",
+   "out": "results",
+   "phy": "phy",
+   "out_json": "results/rev6_raw/frame0_drjohnson.json",
+   "barrier": null,
+   "n_procs": 1,
+   "duration": 60.0,
+   "max_retry": 5,
+   "max_frames": 1,
+   "attn_all_runs": true,
+   "no_probe": true,
+   "aggregate": ""
+  },
+  "gpu_apps_before": [],
+  "gpu_before": "0 %, 4 MiB, 2520 MHz, 46",
+  "waited_s": 0.015185356140136719,
+  "checks": {
+   "drjohnson/edge": {
+    "tag": "_v2a_r1",
+    "net": "edge_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 129.8600763647044
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 468.88727394788737
+     }
+    },
+    "A": 238330
+   },
+   "drjohnson/attn": {
+    "tag": "_v2a_r1",
+    "net": "gen_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 129.8600763647044
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 468.88727394788737
+     }
+    },
+    "A": 238330
+   }
+  },
+  "fp16_check": {
+   "edge": null,
+   "attn": null
+  },
+  "probes": [
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/edge/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "drjohnson/attn/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   }
+  ],
+  "busy_log": [],
+  "gpu_apps_after": [
+   "3363064, 540"
+  ],
+  "gpu_after": "60 %, 549 MiB, 2520 MHz, 48",
+  "wait_log": []
+ },
+ "summary": {
+  "attn | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 2.9638400000000003,
+    "p50": 2.8784,
+    "p99": 3.802796,
+    "p999": 3.8230496,
+    "max": 3.8253
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.16384,
+    "p50": 3.8784,
+    "p99": 6.802796000000001,
+    "p999": 6.823049600000001,
+    "max": 6.8253
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.2,
+    "p50": 1.0,
+    "p99": 3.0,
+    "p999": 3.0,
+    "max": 3.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.9644333333333334,
+     "p50": 0.9597,
+     "p99": 0.999749,
+     "p999": 1.0002449,
+     "max": 1.0003
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.008416666666666666,
+     "p50": 0.0082,
+     "p99": 0.011401000000000003,
+     "p999": 0.012210100000000012,
+     "max": 0.0123
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.3128733333333332,
+     "p50": 0.297,
+     "p99": 0.462174,
+     "p999": 0.4646274,
+     "max": 0.4649
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.07881333333333333,
+     "p50": 0.0082,
+     "p99": 0.744187,
+     "p999": 0.7545487000000002,
+     "max": 0.7557
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5816600000000003,
+     "p50": 1.5821,
+     "p99": 1.632874,
+     "p999": 1.6405474,
+     "max": 1.6414
+    }
+   },
+   "sum_stage_means": 2.9461966666666664,
+   "sum_stage_p99": 3.850385,
+   "p99_of_event_total": 3.785141,
+   "host_overhead_mean": 0.017643333333333323,
+   "stage_corr": {
+    "dec~enc": 0.09252496438646929,
+    "dec~gath": -0.06573916934816129,
+    "dec~conc": -0.12697241234078324,
+    "dec~ren": 0.03787500529297308,
+    "enc~gath": 0.03653457041933133,
+    "enc~conc": 0.06068203168671232,
+    "enc~ren": -0.1578801248837029,
+    "gath~conc": 0.9654811098775207,
+    "gath~ren": 0.2544621423433074,
+    "conc~ren": 0.12965060474399653
+   },
+   "stage_corr_with_total": {
+    "dec": -0.0536920316686274,
+    "enc": 0.048594801548048495,
+    "gath": 0.9829780072136048,
+    "conc": 0.9901299786954354,
+    "ren": 0.2447526868959004
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 160.2,
+    "p50": 0.0,
+    "p99": 1602.0,
+    "p999": 1602.0,
+    "max": 1602.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 1602,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 8487216,
+     "base_bits": 2591760,
+     "dec": 0.9728,
+     "enc": 0.0082,
+     "gath": 0.4649,
+     "conc": 0.7557,
+     "ren": 1.6059,
+     "wall": 3.8253,
+     "n_miss": 1602,
+     "n_vis": 19577,
+     "e2e": 6.8253
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 1602,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 8487216,
+     "base_bits": 2591760,
+     "dec": 0.9574,
+     "enc": 0.0084,
+     "gath": 0.4555,
+     "conc": 0.716,
+     "ren": 1.5931,
+     "wall": 3.7477,
+     "n_miss": 1602,
+     "n_vis": 19577,
+     "e2e": 6.7477
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 1602,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 8487216,
+     "base_bits": 2591760,
+     "dec": 0.9441,
+     "enc": 0.0092,
+     "gath": 0.4189,
+     "conc": 0.6707,
+     "ren": 1.5718,
+     "wall": 3.6314,
+     "n_miss": 1602,
+     "n_vis": 19577,
+     "e2e": 6.6314
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 1.0003,
+     "enc": 0.0082,
+     "gath": 0.3205,
+     "conc": 0.0083,
+     "ren": 1.6414,
+     "wall": 2.9958,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9958
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9851,
+     "enc": 0.0092,
+     "gath": 0.3092,
+     "conc": 0.0092,
+     "ren": 1.612,
+     "wall": 2.9414,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9414
+    }
+   ]
+  },
+  "attn | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.00889,
+    "p50": 2.8752,
+    "p99": 4.2517949999999995,
+    "p999": 4.2529695,
+    "max": 4.2531
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.00889,
+    "p50": 3.8752,
+    "p99": 5.2517949999999995,
+    "p999": 5.2529695,
+    "max": 5.2531
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.96691,
+     "p50": 0.9615,
+     "p99": 1.007061,
+     "p999": 1.0094361,
+     "max": 1.0097
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.008583333333333335,
+     "p50": 0.0082,
+     "p99": 0.010142,
+     "p999": 0.010194200000000002,
+     "max": 0.0102
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.3107999999999999,
+     "p50": 0.29585,
+     "p99": 0.462522,
+     "p999": 0.4646622,
+     "max": 0.4649
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.12111,
+     "p50": 0.0082,
+     "p99": 1.145824,
+     "p999": 1.1495824,
+     "max": 1.15
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5843433333333332,
+     "p50": 1.57695,
+     "p99": 1.668982,
+     "p999": 1.6700781999999998,
+     "max": 1.6702
+    }
+   },
+   "sum_stage_means": 2.9917466666666663,
+   "sum_stage_p99": 4.294531,
+   "p99_of_event_total": 4.234821,
+   "host_overhead_mean": 0.017143333333333302,
+   "stage_corr": {
+    "dec~enc": 0.31151060232664923,
+    "dec~gath": -0.0900881480410844,
+    "dec~conc": -0.12197685020852489,
+    "dec~ren": -0.11882625831509587,
+    "enc~gath": -0.0845263526606716,
+    "enc~conc": -0.18152966748050575,
+    "enc~ren": -0.16189912391203895,
+    "gath~conc": 0.9843563926936015,
+    "gath~ren": 0.8056289005161601,
+    "conc~ren": 0.8221406592804357
+   },
+   "stage_corr_with_total": {
+    "dec": -0.08161743055435476,
+    "enc": -0.15823882839958547,
+    "gath": 0.9872366547413718,
+    "conc": 0.9980103716208555,
+    "ren": 0.8441807831700289
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 486.4,
+    "p50": 0.0,
+    "p99": 4864.0,
+    "p999": 4864.0,
+    "max": 4864.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 4864,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 6953712,
+     "base_bits": 2591760,
+     "dec": 0.9574,
+     "enc": 0.0082,
+     "gath": 0.4649,
+     "conc": 1.1356,
+     "ren": 1.6702,
+     "wall": 4.2531,
+     "n_miss": 4864,
+     "n_vis": 19577,
+     "e2e": 5.2531
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 4864,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 6953712,
+     "base_bits": 2591760,
+     "dec": 0.9667,
+     "enc": 0.0082,
+     "gath": 0.4567,
+     "conc": 1.15,
+     "ren": 1.6496,
+     "wall": 4.2486,
+     "n_miss": 4864,
+     "n_vis": 19577,
+     "e2e": 5.2486
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 4864,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 6953712,
+     "base_bits": 2591760,
+     "dec": 0.9596,
+     "enc": 0.0083,
+     "gath": 0.4474,
+     "conc": 1.1295,
+     "ren": 1.666,
+     "wall": 4.2295,
+     "n_miss": 4864,
+     "n_vis": 19577,
+     "e2e": 5.2295
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 6,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 1.0097,
+     "enc": 0.0092,
+     "gath": 0.3092,
+     "conc": 0.0084,
+     "ren": 1.5696,
+     "wall": 2.9243,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9243
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 1.0006,
+     "enc": 0.0093,
+     "gath": 0.2958,
+     "conc": 0.0091,
+     "ren": 1.5903,
+     "wall": 2.9231,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9231
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 2.8884099999999995,
+    "p50": 2.8854499999999996,
+    "p99": 2.998796,
+    "p999": 3.0112196,
+    "max": 3.0126
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 3.8884099999999995,
+    "p50": 3.8854499999999996,
+    "p99": 3.998796,
+    "p999": 4.0112196,
+    "max": 4.0126
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.96256,
+     "p50": 0.9594,
+     "p99": 0.9879519999999999,
+     "p999": 0.9908752,
+     "max": 0.9912
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.008749999999999999,
+     "p50": 0.009,
+     "p99": 0.009271,
+     "p999": 0.009297099999999999,
+     "max": 0.0093
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.3018033333333333,
+     "p50": 0.30065,
+     "p99": 0.341747,
+     "p999": 0.3484547000000001,
+     "max": 0.3492
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008280000000000001,
+     "p50": 0.0082,
+     "p99": 0.0092,
+     "p999": 0.0092,
+     "max": 0.0092
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5885533333333337,
+     "p50": 1.5882,
+     "p99": 1.646252,
+     "p999": 1.6465652000000002,
+     "max": 1.6466
+    }
+   },
+   "sum_stage_means": 2.8699466666666673,
+   "sum_stage_p99": 2.994422,
+   "p99_of_event_total": 2.979618,
+   "host_overhead_mean": 0.018463333333333276,
+   "stage_corr": {
+    "dec~enc": 0.011755147380541144,
+    "dec~gath": 0.5827562244433839,
+    "dec~conc": 0.25146088431547053,
+    "dec~ren": 0.5284142147327534,
+    "enc~gath": 0.1076756044505473,
+    "enc~conc": 0.19282557199244657,
+    "enc~ren": 0.11483170837992568,
+    "gath~conc": 0.5917090670712547,
+    "gath~ren": 0.5327180526451787,
+    "conc~ren": 0.18769607819225648
+   },
+   "stage_corr_with_total": {
+    "dec": 0.7388210948317322,
+    "enc": 0.1175273240528509,
+    "gath": 0.7765691757913411,
+    "conc": 0.37108787753872224,
+    "ren": 0.9242877507241039
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9787,
+     "enc": 0.0092,
+     "gath": 0.3492,
+     "conc": 0.0092,
+     "ren": 1.6466,
+     "wall": 3.0126,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.0126
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9719,
+     "enc": 0.0091,
+     "gath": 0.3123,
+     "conc": 0.0084,
+     "ren": 1.6454,
+     "wall": 2.965,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.965
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.974,
+     "enc": 0.0091,
+     "gath": 0.3092,
+     "conc": 0.0082,
+     "ren": 1.6435,
+     "wall": 2.9611,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9611
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 2,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.98,
+     "enc": 0.0092,
+     "gath": 0.3174,
+     "conc": 0.0082,
+     "ren": 1.6056,
+     "wall": 2.9383,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9383
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9766,
+     "enc": 0.0082,
+     "gath": 0.3133,
+     "conc": 0.0082,
+     "ren": 1.6038,
+     "wall": 2.9284,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9284
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 2.873626666666666,
+    "p50": 2.86665,
+    "p99": 2.953763,
+    "p999": 2.9551463,
+    "max": 2.9553
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 3.873626666666666,
+    "p50": 3.86665,
+    "p99": 3.953763,
+    "p999": 3.9551463,
+    "max": 3.9553
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.9659966666666666,
+     "p50": 0.9631000000000001,
+     "p99": 1.009582,
+     "p999": 1.0106781999999999,
+     "max": 1.0108
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.008590000000000004,
+     "p50": 0.0082,
+     "p99": 0.011691000000000002,
+     "p999": 0.012239100000000008,
+     "max": 0.0123
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.2948133333333333,
+     "p50": 0.2898,
+     "p99": 0.31770200000000004,
+     "p999": 0.31932020000000005,
+     "max": 0.3195
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008016666666666667,
+     "p50": 0.0082,
+     "p99": 0.0092,
+     "p999": 0.0092,
+     "max": 0.0092
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5788133333333334,
+     "p50": 1.58,
+     "p99": 1.617581,
+     "p999": 1.6178681,
+     "max": 1.6179
+    }
+   },
+   "sum_stage_means": 2.85623,
+   "sum_stage_p99": 2.965756,
+   "p99_of_event_total": 2.9356400000000002,
+   "host_overhead_mean": 0.01739666666666661,
+   "stage_corr": {
+    "dec~enc": 0.08818522385990243,
+    "dec~gath": 0.2236267882193083,
+    "dec~conc": 0.2808306937096383,
+    "dec~ren": 0.18246123624489574,
+    "enc~gath": 0.1968106522899599,
+    "enc~conc": 0.29333023644619655,
+    "enc~ren": 0.2663868226950283,
+    "gath~conc": 0.054613991856870964,
+    "gath~ren": 0.0802542660889837,
+    "conc~ren": 0.47271965369933167
+   },
+   "stage_corr_with_total": {
+    "dec": 0.6894966578969035,
+    "enc": 0.3146913994198552,
+    "gath": 0.4978816917692541,
+    "conc": 0.491914090944244,
+    "ren": 0.7587205940043551
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9985,
+     "enc": 0.0101,
+     "gath": 0.3032,
+     "conc": 0.0082,
+     "ren": 1.6168,
+     "wall": 2.9553,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9553
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 1.0066,
+     "enc": 0.0082,
+     "gath": 0.3052,
+     "conc": 0.0082,
+     "ren": 1.6046,
+     "wall": 2.95,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.95
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 1.0108,
+     "enc": 0.0091,
+     "gath": 0.3092,
+     "conc": 0.0082,
+     "ren": 1.5555,
+     "wall": 2.9098,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9098
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9655,
+     "enc": 0.0082,
+     "gath": 0.3133,
+     "conc": 0.0082,
+     "ren": 1.5944,
+     "wall": 2.908,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.908
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9769,
+     "enc": 0.0072,
+     "gath": 0.3031,
+     "conc": 0.0084,
+     "ren": 1.5901,
+     "wall": 2.9039,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 3.9039
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.215336666666666,
+    "p50": 3.1296999999999997,
+    "p99": 4.048614,
+    "p999": 4.0651614,
+    "max": 4.067
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.415336666666667,
+    "p50": 4.1297,
+    "p99": 7.048614,
+    "p999": 7.0651614,
+    "max": 7.067
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.2,
+    "p50": 1.0,
+    "p99": 3.0,
+    "p999": 3.0,
+    "max": 3.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.9371833333333333,
+     "p50": 0.9349,
+     "p99": 0.957252,
+     "p999": 0.9575652,
+     "max": 0.9576
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.2977966666666666,
+     "p50": 0.2975,
+     "p99": 0.321743,
+     "p999": 0.32521430000000007,
+     "max": 0.3256
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.2887066666666666,
+     "p50": 0.2801,
+     "p99": 0.375097,
+     "p999": 0.3831097000000001,
+     "max": 0.384
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.08517999999999999,
+     "p50": 0.0084,
+     "p99": 0.816914,
+     "p999": 0.8412914000000004,
+     "max": 0.844
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5832200000000003,
+     "p50": 1.5774,
+     "p99": 1.6454110000000002,
+     "p999": 1.6464811000000001,
+     "max": 1.6466
+    }
+   },
+   "sum_stage_means": 3.192086666666667,
+   "sum_stage_p99": 4.116417,
+   "p99_of_event_total": 4.023817,
+   "host_overhead_mean": 0.02324999999999998,
+   "stage_corr": {
+    "dec~enc": -0.15722924039532848,
+    "dec~gath": -0.4588261787693658,
+    "dec~conc": -0.43437621501563856,
+    "dec~ren": -0.060368994915472554,
+    "enc~gath": 0.44664000907098594,
+    "enc~conc": 0.13694576076844386,
+    "enc~ren": 0.17296469208552923,
+    "gath~conc": 0.8122480128828717,
+    "gath~ren": 0.6392602521610984,
+    "conc~ren": 0.41951262505878184
+   },
+   "stage_corr_with_total": {
+    "dec": -0.3976913087599321,
+    "enc": 0.22303327684334026,
+    "gath": 0.8824503501605576,
+    "conc": 0.9845516853809154,
+    "ren": 0.5531055448088991
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 160.2,
+    "p50": 0.0,
+    "p99": 1602.0,
+    "p999": 1602.0,
+    "max": 1602.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 1602,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 8487216,
+     "base_bits": 2591760,
+     "dec": 0.9226,
+     "enc": 0.2847,
+     "gath": 0.3482,
+     "conc": 0.844,
+     "ren": 1.6425,
+     "wall": 4.067,
+     "n_miss": 1602,
+     "n_vis": 19577,
+     "e2e": 7.067
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 1602,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 8487216,
+     "base_bits": 2591760,
+     "dec": 0.9247,
+     "enc": 0.3256,
+     "gath": 0.384,
+     "conc": 0.7506,
+     "ren": 1.5944,
+     "wall": 4.0036,
+     "n_miss": 1602,
+     "n_vis": 19577,
+     "e2e": 7.0036
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 1602,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 8487216,
+     "base_bits": 2591760,
+     "dec": 0.9257,
+     "enc": 0.298,
+     "gath": 0.3533,
+     "conc": 0.7281,
+     "ren": 1.6302,
+     "wall": 3.9581,
+     "n_miss": 1602,
+     "n_vis": 19577,
+     "e2e": 6.9581
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9421,
+     "enc": 0.3123,
+     "gath": 0.3082,
+     "conc": 0.0082,
+     "ren": 1.6466,
+     "wall": 3.2416,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.2416
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 8,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9433,
+     "enc": 0.306,
+     "gath": 0.299,
+     "conc": 0.0092,
+     "ren": 1.621,
+     "wall": 3.2126,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.2126
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.168646666666667,
+    "p50": 3.0867500000000003,
+    "p99": 4.030628,
+    "p999": 4.0611128,
+    "max": 4.0645
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.168646666666667,
+    "p50": 4.08675,
+    "p99": 5.030628,
+    "p999": 5.0611128,
+    "max": 5.0645
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.9339999999999999,
+     "p50": 0.93235,
+     "p99": 0.971363,
+     "p999": 0.9727463,
+     "max": 0.9729
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.2893333333333334,
+     "p50": 0.2867,
+     "p99": 0.314732,
+     "p999": 0.31713320000000006,
+     "max": 0.3174
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.2717333333333334,
+     "p50": 0.26265,
+     "p99": 0.365732,
+     "p999": 0.3759632000000001,
+     "max": 0.3771
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.08282999999999999,
+     "p50": 0.0082,
+     "p99": 0.769835,
+     "p999": 0.7772735000000002,
+     "max": 0.7781
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5686566666666666,
+     "p50": 1.5589,
+     "p99": 1.663172,
+     "p999": 1.6666172000000001,
+     "max": 1.667
+    }
+   },
+   "sum_stage_means": 3.1465533333333333,
+   "sum_stage_p99": 4.084834,
+   "p99_of_event_total": 4.007614,
+   "host_overhead_mean": 0.02209333333333346,
+   "stage_corr": {
+    "dec~enc": 0.3361444976295198,
+    "dec~gath": -0.35621204063071155,
+    "dec~conc": -0.4295928014880285,
+    "dec~ren": -0.15437822877581978,
+    "enc~gath": 0.19136675887046295,
+    "enc~conc": 0.04291145989058347,
+    "enc~ren": 0.12615403027328148,
+    "gath~conc": 0.8971272071622082,
+    "gath~ren": 0.7579562988228516,
+    "conc~ren": 0.7347535879722764
+   },
+   "stage_corr_with_total": {
+    "dec": -0.3418030442927009,
+    "enc": 0.12818751976522627,
+    "gath": 0.9266991732340594,
+    "conc": 0.9892405717072167,
+    "ren": 0.804600351860493
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 486.4,
+    "p50": 0.0,
+    "p99": 4864.0,
+    "p999": 4864.0,
+    "max": 4864.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 4864,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 6953712,
+     "base_bits": 2591760,
+     "dec": 0.9183,
+     "enc": 0.3,
+     "gath": 0.3771,
+     "conc": 0.7781,
+     "ren": 1.667,
+     "wall": 4.0645,
+     "n_miss": 4864,
+     "n_vis": 19577,
+     "e2e": 5.0645
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 4864,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 6953712,
+     "base_bits": 2591760,
+     "dec": 0.9052,
+     "enc": 0.2867,
+     "gath": 0.3318,
+     "conc": 0.7496,
+     "ren": 1.6538,
+     "wall": 3.9477,
+     "n_miss": 4864,
+     "n_vis": 19577,
+     "e2e": 4.9477
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 4864,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 6953712,
+     "base_bits": 2591760,
+     "dec": 0.9187,
+     "enc": 0.2844,
+     "gath": 0.3379,
+     "conc": 0.7281,
+     "ren": 1.5964,
+     "wall": 3.8888,
+     "n_miss": 4864,
+     "n_vis": 19577,
+     "e2e": 4.8888
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9626,
+     "enc": 0.3174,
+     "gath": 0.2693,
+     "conc": 0.0082,
+     "ren": 1.5534,
+     "wall": 3.1366,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1366
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9676,
+     "enc": 0.2929,
+     "gath": 0.2601,
+     "conc": 0.0082,
+     "ren": 1.5822,
+     "wall": 3.1358,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1358
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.100916666666666,
+    "p50": 3.08915,
+    "p99": 3.19948,
+    "p999": 3.2120080000000004,
+    "max": 3.2134
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.1009166666666665,
+    "p50": 4.08915,
+    "p99": 4.19948,
+    "p999": 4.212008,
+    "max": 4.2134
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.93475,
+     "p50": 0.9314,
+     "p99": 0.966381,
+     "p999": 0.9666681,
+     "max": 0.9667
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.2936333333333333,
+     "p50": 0.29035,
+     "p99": 0.324701,
+     "p999": 0.3255101,
+     "max": 0.3256
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.2702766666666667,
+     "p50": 0.2683,
+     "p99": 0.29889400000000005,
+     "p999": 0.30186940000000007,
+     "max": 0.3022
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008390000000000002,
+     "p50": 0.0082,
+     "p99": 0.009839,
+     "p999": 0.010073900000000004,
+     "max": 0.0101
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5718633333333332,
+     "p50": 1.5648,
+     "p99": 1.627869,
+     "p999": 1.6288869,
+     "max": 1.629
+    }
+   },
+   "sum_stage_means": 3.0789133333333334,
+   "sum_stage_p99": 3.227684,
+   "p99_of_event_total": 3.179561,
+   "host_overhead_mean": 0.022003333333333316,
+   "stage_corr": {
+    "dec~enc": 0.05142546986516644,
+    "dec~gath": 0.2723966069693505,
+    "dec~conc": 0.23962128255572204,
+    "dec~ren": 0.30348045171167287,
+    "enc~gath": 0.46666160912077354,
+    "enc~conc": 0.3015027798891961,
+    "enc~ren": 0.12164191075043879,
+    "gath~conc": 0.4598448272855216,
+    "gath~ren": 0.20845537087913274,
+    "conc~ren": 0.18453218075937794
+   },
+   "stage_corr_with_total": {
+    "dec": 0.5830818545685726,
+    "enc": 0.4966237981471371,
+    "gath": 0.6031522902801075,
+    "conc": 0.40250093985547863,
+    "ren": 0.8208441563747279
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9513,
+     "enc": 0.3256,
+     "gath": 0.3022,
+     "conc": 0.0101,
+     "ren": 1.6046,
+     "wall": 3.2134,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.2134
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 2,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9462,
+     "enc": 0.2908,
+     "gath": 0.2704,
+     "conc": 0.0083,
+     "ren": 1.629,
+     "wall": 3.1654,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1654
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9513,
+     "enc": 0.2899,
+     "gath": 0.2641,
+     "conc": 0.0082,
+     "ren": 1.6251,
+     "wall": 3.1626,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1626
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 8,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9236,
+     "enc": 0.2981,
+     "gath": 0.2876,
+     "conc": 0.0092,
+     "ren": 1.6026,
+     "wall": 3.1424,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1424
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9411,
+     "enc": 0.2992,
+     "gath": 0.2765,
+     "conc": 0.009,
+     "ren": 1.5923,
+     "wall": 3.1405,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1405
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 3.120256666666667,
+    "p50": 3.1088500000000003,
+    "p99": 3.339198,
+    "p999": 3.400219800000001,
+    "max": 3.407
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 4.120256666666666,
+    "p50": 4.10885,
+    "p99": 4.339198,
+    "p999": 4.400219800000001,
+    "max": 4.407
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 0.94139,
+     "p50": 0.9375,
+     "p99": 0.96612,
+     "p999": 0.966642,
+     "max": 0.9667
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.2969833333333334,
+     "p50": 0.2954,
+     "p99": 0.318359,
+     "p999": 0.3191159,
+     "max": 0.3192
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.27708999999999995,
+     "p50": 0.27035,
+     "p99": 0.343422,
+     "p999": 0.35600220000000016,
+     "max": 0.3574
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008570000000000001,
+     "p50": 0.0082,
+     "p99": 0.011543000000000003,
+     "p999": 0.012404300000000012,
+     "max": 0.0125
+    },
+    "ren": {
+     "n": 30,
+     "mean": 1.5740900000000002,
+     "p50": 1.5652,
+     "p99": 1.715052,
+     "p999": 1.7519052000000006,
+     "max": 1.756
+    }
+   },
+   "sum_stage_means": 3.0981233333333336,
+   "sum_stage_p99": 3.354496,
+   "p99_of_event_total": 3.315833,
+   "host_overhead_mean": 0.022133333333333338,
+   "stage_corr": {
+    "dec~enc": -0.06826778989686627,
+    "dec~gath": 0.1294502406026573,
+    "dec~conc": -0.07427512825250071,
+    "dec~ren": 0.04024738382277076,
+    "enc~gath": 0.32125141604060764,
+    "enc~conc": 0.2675767777681692,
+    "enc~ren": 0.3282236723905581,
+    "gath~conc": 0.7546633274244026,
+    "gath~ren": 0.8555380782640407,
+    "conc~ren": 0.8030044231123376
+   },
+   "stage_corr_with_total": {
+    "dec": 0.2437006829576671,
+    "enc": 0.4378806256393434,
+    "gath": 0.9233333897843202,
+    "conc": 0.7727289526710341,
+    "ren": 0.9536159047033844
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9381,
+     "enc": 0.3192,
+     "gath": 0.3574,
+     "conc": 0.0125,
+     "ren": 1.756,
+     "wall": 3.407,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.407
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9636,
+     "enc": 0.2908,
+     "gath": 0.2939,
+     "conc": 0.0082,
+     "ren": 1.5944,
+     "wall": 3.1732,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1732
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 8,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9535,
+     "enc": 0.2916,
+     "gath": 0.3092,
+     "conc": 0.0092,
+     "ren": 1.578,
+     "wall": 3.1642,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1642
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9667,
+     "enc": 0.3082,
+     "gath": 0.2744,
+     "conc": 0.0082,
+     "ren": 1.58,
+     "wall": 3.1629,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1629
+    },
+    {
+     "mode": "session",
+     "scene": "drjohnson",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 19577,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 9247936,
+     "base_bits": 2591760,
+     "dec": 0.9299,
+     "enc": 0.2938,
+     "gath": 0.2877,
+     "conc": 0.0092,
+     "ren": 1.6148,
+     "wall": 3.1569,
+     "n_miss": 0,
+     "n_vis": 19577,
+     "e2e": 4.1569
+    }
+   ]
+  }
+ }
+}

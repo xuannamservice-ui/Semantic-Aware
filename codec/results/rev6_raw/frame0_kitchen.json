@@ -1,0 +1,2949 @@
+{
+ "info": {
+  "gpu": "NVIDIA L40S",
+  "torch": "2.10.0+cu128",
+  "args": {
+   "mode": "session",
+   "scenes": "kitchen",
+   "nets": "deploy,attn",
+   "runs": "T8R8:10:conceal,T8R8:10:arq+conceal,T8R8:2.5:conceal,T8R8:2.5:arq+conceal",
+   "cold_runs": "T8R8:2.5,T8R8:10,T6R11:2.5",
+   "chains": 10,
+   "reps": 3,
+   "chains_t6": 0,
+   "chains_attn": 0,
+   "probe_every": 8,
+   "n_ev": 3,
+   "eps": 0.16666666666666666,
+   "arq_last_slot": 5,
+   "s2": "2.5",
+   "threads": 16,
+   "seed": 0,
+   "data": "data/360_v2",
+   "out": "results",
+   "phy": "phy",
+   "out_json": "results/rev6_raw/frame0_kitchen.json",
+   "barrier": null,
+   "n_procs": 1,
+   "duration": 60.0,
+   "max_retry": 5,
+   "max_frames": 1,
+   "attn_all_runs": true,
+   "no_probe": true,
+   "aggregate": ""
+  },
+  "gpu_apps_before": [],
+  "gpu_before": "0 %, 4 MiB, 600 MHz, 46",
+  "waited_s": 0.024166345596313477,
+  "checks": {
+   "kitchen/edge": {
+    "tag": "_v2a_r1",
+    "net": "edge_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 121.99892781987374
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 439.98892613959146
+     }
+    },
+    "A": 249958
+   },
+   "kitchen/attn": {
+    "tag": "_v2a_r1",
+    "net": "gen_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 121.99892781987374
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 439.98892613959146
+     }
+    },
+    "A": 249958
+   }
+  },
+  "fp16_check": {
+   "edge": {
+    "n": 27584,
+    "max_abs": 0.028378546237945557,
+    "rel_rms": 0.0012940136948600411
+   },
+   "attn": {
+    "n": 27584,
+    "max_abs": 0.3998839855194092,
+    "rel_rms": 0.008752823807299137
+   }
+  },
+  "probes": [
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/edge/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "kitchen/attn/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   }
+  ],
+  "busy_log": [],
+  "gpu_apps_after": [
+   "3356632, 542"
+  ],
+  "gpu_after": "27 %, 551 MiB, 2520 MHz, 48",
+  "wait_log": []
+ },
+ "summary": {
+  "attn | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 9.96724,
+    "p50": 10.24225,
+    "p99": 10.935683000000001,
+    "p999": 10.9454183,
+    "max": 10.9465
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 11.767239999999997,
+    "p50": 11.4146,
+    "p99": 14.298221,
+    "p999": 14.309992099999999,
+    "max": 14.3113
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.8,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 0.7333333333333333,
+   "n_E2E_gt_11.1": 22,
+   "cp95_E2E": [
+    0.5411063486052488,
+    0.8772051901276452
+   ],
+   "cp95_one_sided_upper_E2E": 0.8598149005322322,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.540366666666667,
+     "p50": 3.5312,
+     "p99": 4.00372,
+     "p999": 4.100812000000001,
+     "max": 4.1116
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.022186666666666667,
+     "p50": 0.019000000000000003,
+     "p99": 0.07602100000000003,
+     "p999": 0.08779210000000016,
+     "max": 0.0891
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.6126166666666666,
+     "p50": 0.5504,
+     "p99": 1.2116190000000002,
+     "p999": 1.2400419000000005,
+     "max": 1.2432
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.017666666666666664,
+     "p50": 0.017599999999999998,
+     "p99": 0.03973500000000001,
+     "p999": 0.04456350000000007,
+     "max": 0.0451
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.7401,
+     "p50": 5.82055,
+     "p99": 6.502695,
+     "p999": 6.621319500000002,
+     "max": 6.6345
+    }
+   },
+   "sum_stage_means": 9.932936666666667,
+   "sum_stage_p99": 11.83379,
+   "p99_of_event_total": 10.891715,
+   "host_overhead_mean": 0.03430333333333326,
+   "stage_corr": {
+    "dec~enc": 0.5772694167946328,
+    "dec~gath": 0.6488240296890199,
+    "dec~conc": 0.4369127111153672,
+    "dec~ren": 0.3662646089020579,
+    "enc~gath": 0.7879618431978218,
+    "enc~conc": 0.3489815500914515,
+    "enc~ren": 0.3625134287663331,
+    "gath~conc": 0.6384800406388812,
+    "gath~ren": 0.5193709713670023,
+    "conc~ren": 0.5675101024708413
+   },
+   "stage_corr_with_total": {
+    "dec": 0.7251010774745505,
+    "enc": 0.7016525013614648,
+    "gath": 0.8905326459946553,
+    "conc": 0.6943933642648255,
+    "ren": 0.8209318329350472
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.5,
+     "enc": 0.0113,
+     "gath": 0.3512,
+     "conc": 0.0072,
+     "ren": 5.4221,
+     "wall": 9.3113,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 14.3113
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.4244,
+     "enc": 0.0101,
+     "gath": 0.3502,
+     "conc": 0.0092,
+     "ren": 5.4518,
+     "wall": 9.2662,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 14.2662
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.4212,
+     "enc": 0.0101,
+     "gath": 0.3256,
+     "conc": 0.0082,
+     "ren": 5.4139,
+     "wall": 9.1979,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 14.1979
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 3,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.5511,
+     "enc": 0.0289,
+     "gath": 0.7954,
+     "conc": 0.0248,
+     "ren": 5.9749,
+     "wall": 10.4199,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 13.4199
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 3,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.5644,
+     "enc": 0.0287,
+     "gath": 0.8192,
+     "conc": 0.0256,
+     "ren": 5.8624,
+     "wall": 10.3311,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 13.3311
+    }
+   ]
+  },
+  "attn | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 11.45217,
+    "p50": 9.2561,
+    "p99": 16.673185,
+    "p999": 16.6767085,
+    "max": 16.6771
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 12.45217,
+    "p50": 10.2561,
+    "p99": 17.673185,
+    "p999": 17.6767085,
+    "max": 17.6771
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.3,
+   "n_E2E_gt_11.1": 9,
+   "cp95_E2E": [
+    0.1473451847547011,
+    0.4939590414625536
+   ],
+   "cp95_one_sided_upper_E2E": 0.4650727065703091,
+   "frac_Tedge_gt_11.1": 0.3,
+   "n_Tedge_gt_11.1": 9,
+   "cp95_Tedge": [
+    0.1473451847547011,
+    0.4939590414625536
+   ],
+   "cp95_one_sided_upper_Tedge": 0.4650727065703091,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.3484200000000013,
+     "p50": 3.4519,
+     "p99": 3.499717,
+     "p999": 3.5082517,
+     "max": 3.5092
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.009556666666666665,
+     "p50": 0.0092,
+     "p99": 0.018122000000000006,
+     "p999": 0.020262200000000032,
+     "max": 0.0205
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.7292566666666669,
+     "p50": 0.32165,
+     "p99": 1.735695,
+     "p999": 1.7420895,
+     "max": 1.7428
+    },
+    "conc": {
+     "n": 30,
+     "mean": 1.9032966666666669,
+     "p50": 0.00865,
+     "p99": 6.36661,
+     "p999": 6.377311,
+     "max": 6.3785
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.442603333333334,
+     "p50": 5.43745,
+     "p99": 5.517602,
+     "p999": 5.5192202,
+     "max": 5.5194
+    }
+   },
+   "sum_stage_means": 11.433133333333338,
+   "sum_stage_p99": 17.137746,
+   "p99_of_event_total": 16.653762,
+   "host_overhead_mean": 0.01903666666666671,
+   "stage_corr": {
+    "dec~enc": -0.2717762241499353,
+    "dec~gath": -0.9955312082062039,
+    "dec~conc": -0.9963385408580787,
+    "dec~ren": -0.6309887061611118,
+    "enc~gath": 0.27375371925656017,
+    "enc~conc": 0.2730431520355393,
+    "enc~ren": 0.41230020269456974,
+    "gath~conc": 0.9996644535076002,
+    "gath~ren": 0.6530214306905301,
+    "conc~ren": 0.6500117060143054
+   },
+   "stage_corr_with_total": {
+    "dec": -0.995610321727923,
+    "enc": 0.27662670229234754,
+    "gath": 0.9997688238513638,
+    "conc": 0.9999174330569045,
+    "ren": 0.658212859981929
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 8275.2,
+    "p50": 0.0,
+    "p99": 27584.0,
+    "p999": 27584.0,
+    "max": 27584.0
+   },
+   "frames_with_miss": 9,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0852,
+     "enc": 0.0205,
+     "gath": 1.6947,
+     "conc": 6.3375,
+     "ren": 5.5194,
+     "wall": 16.6771,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 17.6771
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84377984,
+     "base_bits": 26557760,
+     "dec": 3.0904,
+     "enc": 0.0084,
+     "gath": 1.6945,
+     "conc": 6.3785,
+     "ren": 5.4733,
+     "wall": 16.6636,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 17.6636
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84377984,
+     "base_bits": 26557760,
+     "dec": 3.0965,
+     "enc": 0.0101,
+     "gath": 1.707,
+     "conc": 6.2996,
+     "ren": 5.5102,
+     "wall": 16.6408,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 17.6408
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0843,
+     "enc": 0.0092,
+     "gath": 1.7183,
+     "conc": 6.3242,
+     "ren": 5.4835,
+     "wall": 16.6397,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 17.6397
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.1048,
+     "enc": 0.0092,
+     "gath": 1.7428,
+     "conc": 6.3058,
+     "ren": 5.4477,
+     "wall": 16.6278,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 17.6278
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 10.656853333333334,
+    "p50": 9.405,
+    "p99": 22.198124,
+    "p999": 22.3506524,
+    "max": 22.3676
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 12.256853333333334,
+    "p50": 10.415849999999999,
+    "p99": 25.198124,
+    "p999": 25.3506524,
+    "max": 25.3676
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.6,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 0.2,
+   "n_E2E_gt_11.1": 6,
+   "cp95_E2E": [
+    0.07713551200106562,
+    0.3856665109966071
+   ],
+   "cp95_one_sided_upper_E2E": 0.35700911456165313,
+   "frac_Tedge_gt_11.1": 0.1,
+   "n_Tedge_gt_11.1": 3,
+   "cp95_Tedge": [
+    0.021117137029722576,
+    0.2652884504742081
+   ],
+   "cp95_one_sided_upper_Tedge": 0.23859785729325092,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.4138466666666667,
+     "p50": 3.4648,
+     "p99": 3.591501,
+     "p999": 3.6262401000000004,
+     "max": 3.6301
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.01174666666666666,
+     "p50": 0.0113,
+     "p99": 0.015501000000000003,
+     "p999": 0.01631010000000001,
+     "max": 0.0164
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.6231266666666666,
+     "p50": 0.3855,
+     "p99": 2.753555,
+     "p999": 2.7562955000000002,
+     "max": 2.7566
+    },
+    "conc": {
+     "n": 30,
+     "mean": 1.0668300000000002,
+     "p50": 0.0112,
+     "p99": 10.580941000000001,
+     "p999": 10.582794100000001,
+     "max": 10.583
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.517806666666668,
+     "p50": 5.4994,
+     "p99": 5.974086,
+     "p999": 6.114138600000001,
+     "max": 6.1297
+    }
+   },
+   "sum_stage_means": 10.633356666666668,
+   "sum_stage_p99": 22.915584000000003,
+   "p99_of_event_total": 22.175137,
+   "host_overhead_mean": 0.02349666666666638,
+   "stage_corr": {
+    "dec~enc": 0.2120315026388886,
+    "dec~gath": -0.9838453794167206,
+    "dec~conc": -0.9840047992887127,
+    "dec~ren": -0.6277717073047496,
+    "enc~gath": -0.21679564491788775,
+    "enc~conc": -0.22011230377025207,
+    "enc~ren": -0.31758814282965764,
+    "gath~conc": 0.9998836512760113,
+    "gath~ren": 0.6378054334697264,
+    "conc~ren": 0.637838124665647
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9821219705729698,
+    "enc": -0.22510688446762703,
+    "gath": 0.9995865425954849,
+    "conc": 0.9996573079929506,
+    "ren": 0.6565018495946892
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 4606.3,
+    "p50": 0.0,
+    "p99": 46063.0,
+    "p999": 46063.0,
+    "max": 46063.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 46063,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 76430128,
+     "base_bits": 26557760,
+     "dec": 2.8754,
+     "enc": 0.0105,
+     "gath": 2.7461,
+     "conc": 10.583,
+     "ren": 6.1297,
+     "wall": 22.3676,
+     "n_miss": 46063,
+     "n_vis": 220905,
+     "e2e": 25.3676
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 46063,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 76430128,
+     "base_bits": 26557760,
+     "dec": 2.8703,
+     "enc": 0.0113,
+     "gath": 2.7566,
+     "conc": 10.5492,
+     "ren": 5.5726,
+     "wall": 21.7832,
+     "n_miss": 46063,
+     "n_vis": 220905,
+     "e2e": 24.7832
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 46063,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 76430128,
+     "base_bits": 26557760,
+     "dec": 2.86,
+     "enc": 0.0113,
+     "gath": 2.732,
+     "conc": 10.5759,
+     "ren": 5.5419,
+     "wall": 21.744,
+     "n_miss": 46063,
+     "n_vis": 220905,
+     "e2e": 24.744
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.458,
+     "enc": 0.0123,
+     "gath": 0.3882,
+     "conc": 0.0112,
+     "ren": 5.4723,
+     "wall": 9.3658,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 14.3658
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.4376,
+     "enc": 0.0123,
+     "gath": 0.384,
+     "conc": 0.0113,
+     "ren": 5.4734,
+     "wall": 9.3418,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 14.3418
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 12.97240333333333,
+    "p50": 10.24375,
+    "p99": 33.828032,
+    "p999": 33.840873200000004,
+    "max": 33.8423
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 13.97240333333333,
+    "p50": 11.24375,
+    "p99": 34.828032,
+    "p999": 34.840873200000004,
+    "max": 34.8423
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.5666666666666667,
+   "n_E2E_gt_11.1": 17,
+   "cp95_E2E": [
+    0.37427345060922074,
+    0.745392450096737
+   ],
+   "cp95_one_sided_upper_E2E": 0.7213304261583888,
+   "frac_Tedge_gt_11.1": 0.23333333333333334,
+   "n_Tedge_gt_11.1": 7,
+   "cp95_Tedge": [
+    0.09933786495801977,
+    0.4228365229782195
+   ],
+   "cp95_one_sided_upper_Tedge": 0.3939474225223633,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.39431,
+     "p50": 3.4755,
+     "p99": 3.900122,
+     "p999": 3.9022622,
+     "max": 3.9025
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.018699999999999994,
+     "p50": 0.01485,
+     "p99": 0.033031000000000005,
+     "p999": 0.03462310000000002,
+     "max": 0.0348
+    },
+    "gath": {
+     "n": 30,
+     "mean": 1.2183733333333333,
+     "p50": 0.7726,
+     "p99": 5.603606,
+     "p999": 5.631950600000001,
+     "max": 5.6351
+    },
+    "conc": {
+     "n": 30,
+     "mean": 2.605766666666667,
+     "p50": 0.0236,
+     "p99": 19.678038,
+     "p999": 19.7113938,
+     "max": 19.7151
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.701490000000001,
+     "p50": 5.6708,
+     "p99": 6.185653,
+     "p999": 6.228535300000001,
+     "max": 6.2333
+    }
+   },
+   "sum_stage_means": 12.93864,
+   "sum_stage_p99": 35.40045,
+   "p99_of_event_total": 33.780311999999995,
+   "host_overhead_mean": 0.033763333333333104,
+   "stage_corr": {
+    "dec~enc": -0.08314751770170149,
+    "dec~gath": -0.8953989241453248,
+    "dec~conc": -0.9438585471924952,
+    "dec~ren": -0.13066023021687112,
+    "enc~gath": 0.37172167069415973,
+    "enc~conc": 0.2537427443386557,
+    "enc~ren": 0.7980841139777565,
+    "gath~conc": 0.9884825146619398,
+    "gath~ren": 0.5124011069770501,
+    "conc~ren": 0.38473403887370217
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9208178725676704,
+    "enc": 0.3092049635928811,
+    "gath": 0.9966991554163565,
+    "conc": 0.9972922289965018,
+    "ren": 0.4500381682621887
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 11046.4,
+    "p50": 0.0,
+    "p99": 82880.0,
+    "p999": 82880.0,
+    "max": 82880.0
+   },
+   "frames_with_miss": 6,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 82880,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 60260864,
+     "base_bits": 26557760,
+     "dec": 2.4996,
+     "enc": 0.0287,
+     "gath": 5.5009,
+     "conc": 19.7151,
+     "ren": 6.0497,
+     "wall": 33.8423,
+     "n_miss": 82880,
+     "n_vis": 220905,
+     "e2e": 34.8423
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 82880,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 60260864,
+     "base_bits": 26557760,
+     "dec": 2.5384,
+     "enc": 0.0256,
+     "gath": 5.5265,
+     "conc": 19.5873,
+     "ren": 6.069,
+     "wall": 33.7931,
+     "n_miss": 82880,
+     "n_vis": 220905,
+     "e2e": 34.7931
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 82880,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 60260864,
+     "base_bits": 26557760,
+     "dec": 2.5395,
+     "enc": 0.0256,
+     "gath": 5.6351,
+     "conc": 19.5392,
+     "ren": 5.9339,
+     "wall": 33.721,
+     "n_miss": 82880,
+     "n_vis": 220905,
+     "e2e": 34.721
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.1035,
+     "enc": 0.0113,
+     "gath": 1.8186,
+     "conc": 6.3101,
+     "ren": 5.5683,
+     "wall": 16.8348,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 17.8348
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.1037,
+     "enc": 0.0123,
+     "gath": 1.8196,
+     "conc": 6.3017,
+     "ren": 5.5306,
+     "wall": 16.7899,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 17.7899
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 11.659896666666667,
+    "p50": 11.808399999999999,
+    "p99": 12.198603,
+    "p999": 12.2271303,
+    "max": 12.2303
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 13.459896666666667,
+    "p50": 12.87675,
+    "p99": 16.957311,
+    "p999": 16.9975311,
+    "max": 17.002
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.8,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 1.0,
+   "n_E2E_gt_11.1": 30,
+   "cp95_E2E": [
+    0.8842966917779722,
+    1.0
+   ],
+   "cp95_one_sided_upper_E2E": 1.0,
+   "frac_Tedge_gt_11.1": 1.0,
+   "n_Tedge_gt_11.1": 30,
+   "cp95_Tedge": [
+    0.8842966917779722,
+    1.0
+   ],
+   "cp95_one_sided_upper_Tedge": 1.0,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.4372866666666666,
+     "p50": 3.45345,
+     "p99": 3.515454,
+     "p999": 3.5199954000000004,
+     "max": 3.5205
+    },
+    "enc": {
+     "n": 30,
+     "mean": 2.174923333333333,
+     "p50": 2.173,
+     "p99": 2.214505,
+     "p999": 2.2185505,
+     "max": 2.219
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.27386999999999995,
+     "p50": 0.2751,
+     "p99": 0.38619600000000004,
+     "p999": 0.39339960000000007,
+     "max": 0.3942
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.019889999999999998,
+     "p50": 0.0215,
+     "p99": 0.029468,
+     "p999": 0.029676800000000003,
+     "max": 0.0297
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.7082299999999995,
+     "p50": 5.7513000000000005,
+     "p99": 6.291737,
+     "p999": 6.410413700000002,
+     "max": 6.4236
+    }
+   },
+   "sum_stage_means": 11.614199999999999,
+   "sum_stage_p99": 12.43736,
+   "p99_of_event_total": 12.161041,
+   "host_overhead_mean": 0.04569666666666639,
+   "stage_corr": {
+    "dec~enc": 0.7295136210870873,
+    "dec~gath": 0.7974289448719384,
+    "dec~conc": 0.8438242059120731,
+    "dec~ren": 0.5558422511599472,
+    "enc~gath": 0.6476848813841717,
+    "enc~conc": 0.6162176294709726,
+    "enc~ren": 0.38342076056992536,
+    "gath~conc": 0.9555021029896307,
+    "gath~ren": 0.6242769157255026,
+    "conc~ren": 0.6248564005334617
+   },
+   "stage_corr_with_total": {
+    "dec": 0.7749239009288041,
+    "enc": 0.5837605389809444,
+    "gath": 0.8274268233833867,
+    "conc": 0.8276704289615726,
+    "ren": 0.9436170032111305
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.5031,
+     "enc": 2.1873,
+     "gath": 0.3277,
+     "conc": 0.0277,
+     "ren": 5.8951,
+     "wall": 12.002,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 17.002
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.4836,
+     "enc": 2.176,
+     "gath": 0.3176,
+     "conc": 0.0254,
+     "ren": 5.7866,
+     "wall": 11.8479,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 16.8479
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.4703,
+     "enc": 2.177,
+     "gath": 0.3297,
+     "conc": 0.0287,
+     "ren": 5.716,
+     "wall": 11.7785,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 16.7785
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 3,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.456,
+     "enc": 2.1719,
+     "gath": 0.3595,
+     "conc": 0.0276,
+     "ren": 5.9689,
+     "wall": 12.0384,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 15.0384
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 3,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.4818,
+     "enc": 2.182,
+     "gath": 0.34,
+     "conc": 0.0256,
+     "ren": 5.8132,
+     "wall": 11.9113,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 14.9113
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 12.100959999999997,
+    "p50": 11.316749999999999,
+    "p99": 14.043568,
+    "p999": 14.0489968,
+    "max": 14.0496
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 13.100959999999997,
+    "p50": 12.316749999999999,
+    "p99": 15.043568,
+    "p999": 15.0489968,
+    "max": 15.0496
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 1.0,
+   "n_E2E_gt_11.1": 30,
+   "cp95_E2E": [
+    0.8842966917779722,
+    1.0
+   ],
+   "cp95_one_sided_upper_E2E": 1.0,
+   "frac_Tedge_gt_11.1": 1.0,
+   "n_Tedge_gt_11.1": 30,
+   "cp95_Tedge": [
+    0.8842966917779722,
+    1.0
+   ],
+   "cp95_one_sided_upper_Tedge": 1.0,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.2786033333333338,
+     "p50": 3.37875,
+     "p99": 3.420242,
+     "p999": 3.4229042,
+     "max": 3.4232
+    },
+    "enc": {
+     "n": 30,
+     "mean": 2.1724033333333335,
+     "p50": 2.16935,
+     "p99": 2.2261480000000002,
+     "p999": 2.2336648,
+     "max": 2.2345
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.24071666666666666,
+     "p50": 0.20884999999999998,
+     "p99": 0.34640200000000004,
+     "p999": 0.34802020000000006,
+     "max": 0.3482
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.87213,
+     "p50": 0.01235,
+     "p99": 2.896711,
+     "p999": 2.8977811,
+     "max": 2.8979
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.506793333333333,
+     "p50": 5.5122,
+     "p99": 5.589374,
+     "p999": 5.591827400000001,
+     "max": 5.5921
+    }
+   },
+   "sum_stage_means": 12.070646666666665,
+   "sum_stage_p99": 14.478877,
+   "p99_of_event_total": 14.014264,
+   "host_overhead_mean": 0.030313333333333265,
+   "stage_corr": {
+    "dec~enc": -0.5402401768636983,
+    "dec~gath": -0.9867712736767861,
+    "dec~conc": -0.9964506509517624,
+    "dec~ren": -0.6318886670705919,
+    "enc~gath": 0.4949669196591104,
+    "enc~conc": 0.5513679048543854,
+    "enc~ren": 0.4010486787878073,
+    "gath~conc": 0.9880408772868722,
+    "gath~ren": 0.636728628630591,
+    "conc~ren": 0.6564841772102373
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9940195987328407,
+    "enc": 0.5622987570587691,
+    "gath": 0.986956167230515,
+    "conc": 0.9993741597837439,
+    "ren": 0.6796743933583788
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 8275.2,
+    "p50": 0.0,
+    "p99": 27584.0,
+    "p999": 27584.0,
+    "max": 27584.0
+   },
+   "frames_with_miss": 9,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0218,
+     "enc": 2.2006,
+     "gath": 0.3185,
+     "conc": 2.8979,
+     "ren": 5.5808,
+     "wall": 14.0496,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 15.0496
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0228,
+     "enc": 2.2345,
+     "gath": 0.3206,
+     "conc": 2.8609,
+     "ren": 5.5624,
+     "wall": 14.0288,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 15.0288
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84377984,
+     "base_bits": 26557760,
+     "dec": 3.0228,
+     "enc": 2.1588,
+     "gath": 0.3326,
+     "conc": 2.8825,
+     "ren": 5.5921,
+     "wall": 14.0192,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 15.0192
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0145,
+     "enc": 2.2057,
+     "gath": 0.3133,
+     "conc": 2.8591,
+     "ren": 5.5827,
+     "wall": 14.0035,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 15.0035
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0289,
+     "enc": 2.2036,
+     "gath": 0.3154,
+     "conc": 2.8938,
+     "ren": 5.5132,
+     "wall": 13.9862,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 14.9862
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 11.848913333333334,
+    "p50": 11.474250000000001,
+    "p99": 16.119733999999998,
+    "p999": 16.1237534,
+    "max": 16.1242
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 13.448913333333333,
+    "p50": 12.517199999999999,
+    "p99": 19.119733999999998,
+    "p999": 19.1237534,
+    "max": 19.1242
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.6,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 1.0,
+   "n_E2E_gt_11.1": 30,
+   "cp95_E2E": [
+    0.8842966917779722,
+    1.0
+   ],
+   "cp95_one_sided_upper_E2E": 1.0,
+   "frac_Tedge_gt_11.1": 0.9666666666666667,
+   "n_Tedge_gt_11.1": 29,
+   "cp95_Tedge": [
+    0.8278305443665873,
+    0.9991564290733695
+   ],
+   "cp95_one_sided_upper_Tedge": 0.9982916843555343,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.3479733333333335,
+     "p50": 3.4001,
+     "p99": 3.493238,
+     "p999": 3.5031038000000003,
+     "max": 3.5042
+    },
+    "enc": {
+     "n": 30,
+     "mean": 2.174053333333333,
+     "p50": 2.16585,
+     "p99": 2.256122,
+     "p999": 2.2713122,
+     "max": 2.273
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.23472999999999997,
+     "p50": 0.2396,
+     "p99": 0.431733,
+     "p999": 0.43233330000000003,
+     "max": 0.4324
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.5002833333333334,
+     "p50": 0.0164,
+     "p99": 4.913541,
+     "p999": 4.9258341,
+     "max": 4.9272
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.559810000000001,
+     "p50": 5.596299999999999,
+     "p99": 6.1247750000000005,
+     "p999": 6.263757500000002,
+     "max": 6.2792
+    }
+   },
+   "sum_stage_means": 11.816850000000002,
+   "sum_stage_p99": 17.219409,
+   "p99_of_event_total": 16.077623,
+   "host_overhead_mean": 0.03206333333333315,
+   "stage_corr": {
+    "dec~enc": -0.6598013398269159,
+    "dec~gath": -0.7297556409807934,
+    "dec~conc": -0.973460540990422,
+    "dec~ren": -0.1405108636451143,
+    "enc~gath": 0.7488728012350006,
+    "enc~conc": 0.7257900429859176,
+    "enc~ren": 0.33047336022511986,
+    "gath~conc": 0.8529061342928121,
+    "gath~ren": 0.5855876078658467,
+    "conc~ren": 0.31304633155294354
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9249155833593518,
+    "enc": 0.750446147076263,
+    "gath": 0.9121908635074383,
+    "conc": 0.9853976753232468,
+    "ren": 0.4642572076457218
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 4606.3,
+    "p50": 0.0,
+    "p99": 46063.0,
+    "p999": 46063.0,
+    "max": 46063.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 46063,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 76430128,
+     "base_bits": 26557760,
+     "dec": 2.8099,
+     "enc": 2.2098,
+     "gath": 0.4324,
+     "conc": 4.9272,
+     "ren": 5.7016,
+     "wall": 16.1242,
+     "n_miss": 46063,
+     "n_vis": 220905,
+     "e2e": 19.1242
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 46063,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 76430128,
+     "base_bits": 26557760,
+     "dec": 2.7814,
+     "enc": 2.273,
+     "gath": 0.4301,
+     "conc": 4.8488,
+     "ren": 5.7363,
+     "wall": 16.1088,
+     "n_miss": 46063,
+     "n_vis": 220905,
+     "e2e": 19.1088
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 4,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 46063,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 76430128,
+     "base_bits": 26557760,
+     "dec": 2.8182,
+     "enc": 2.2065,
+     "gath": 0.4007,
+     "conc": 4.8801,
+     "ren": 5.7467,
+     "wall": 16.0923,
+     "n_miss": 46063,
+     "n_vis": 220905,
+     "e2e": 19.0923
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.4026,
+     "enc": 2.1588,
+     "gath": 0.1738,
+     "conc": 0.0102,
+     "ren": 5.4026,
+     "wall": 11.1719,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 16.1719
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 9,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 96427824,
+     "base_bits": 26557760,
+     "dec": 3.3656,
+     "enc": 2.1494,
+     "gath": 0.1812,
+     "conc": 0.0092,
+     "ren": 5.4426,
+     "wall": 11.1683,
+     "n_miss": 0,
+     "n_vis": 220905,
+     "e2e": 16.1683
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 12.424780000000004,
+    "p50": 11.5071,
+    "p99": 19.600999,
+    "p999": 19.6027999,
+    "max": 19.603
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 13.424780000000004,
+    "p50": 12.5071,
+    "p99": 20.600999,
+    "p999": 20.6027999,
+    "max": 20.603
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 1.0,
+   "n_E2E_gt_11.1": 30,
+   "cp95_E2E": [
+    0.8842966917779722,
+    1.0
+   ],
+   "cp95_one_sided_upper_E2E": 1.0,
+   "frac_Tedge_gt_11.1": 0.9,
+   "n_Tedge_gt_11.1": 27,
+   "cp95_Tedge": [
+    0.7347115495257919,
+    0.9788828629702774
+   ],
+   "cp95_one_sided_upper_Tedge": 0.9721844502602504,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 3.2522166666666674,
+     "p50": 3.3884499999999997,
+     "p99": 3.4483330000000003,
+     "p999": 3.4515433000000004,
+     "max": 3.4519
+    },
+    "enc": {
+     "n": 30,
+     "mean": 2.17882,
+     "p50": 2.1637500000000003,
+     "p99": 2.2504809999999997,
+     "p999": 2.2507680999999997,
+     "max": 2.2508
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.24237999999999998,
+     "p50": 0.24685,
+     "p99": 0.43939,
+     "p999": 0.4469590000000001,
+     "max": 0.4478
+    },
+    "conc": {
+     "n": 30,
+     "mean": 1.1662133333333335,
+     "p50": 0.0164,
+     "p99": 8.787132999999999,
+     "p999": 8.8033933,
+     "max": 8.8052
+    },
+    "ren": {
+     "n": 30,
+     "mean": 5.55217,
+     "p50": 5.5761,
+     "p99": 5.776803,
+     "p999": 5.7792303,
+     "max": 5.7795
+    }
+   },
+   "sum_stage_means": 12.3918,
+   "sum_stage_p99": 20.70214,
+   "p99_of_event_total": 19.558543,
+   "host_overhead_mean": 0.03297999999999988,
+   "stage_corr": {
+    "dec~enc": -0.8256011387090805,
+    "dec~gath": -0.7988588076231463,
+    "dec~conc": -0.9938260473255711,
+    "dec~ren": -0.44143086364400524,
+    "enc~gath": 0.627253332348497,
+    "enc~conc": 0.8092962874744526,
+    "enc~ren": 0.26021591504787833,
+    "gath~conc": 0.8495226011345156,
+    "gath~ren": 0.8464545060855034,
+    "conc~ren": 0.5190527177665613
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9845028615484241,
+    "enc": 0.7985930679506803,
+    "gath": 0.8830025029649872,
+    "conc": 0.9974451259040835,
+    "ren": 0.5773460684606864
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 11046.4,
+    "p50": 0.0,
+    "p99": 82880.0,
+    "p999": 82880.0,
+    "max": 82880.0
+   },
+   "frames_with_miss": 6,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 82880,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 60260864,
+     "base_bits": 26557760,
+     "dec": 2.3387,
+     "enc": 2.2427,
+     "gath": 0.3963,
+     "conc": 8.8052,
+     "ren": 5.7795,
+     "wall": 19.603,
+     "n_miss": 82880,
+     "n_vis": 220905,
+     "e2e": 20.603
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 82880,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 60260864,
+     "base_bits": 26557760,
+     "dec": 2.3675,
+     "enc": 2.2497,
+     "gath": 0.4188,
+     "conc": 8.7429,
+     "ren": 5.7702,
+     "wall": 19.5961,
+     "n_miss": 82880,
+     "n_vis": 220905,
+     "e2e": 20.5961
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 82880,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 60260864,
+     "base_bits": 26557760,
+     "dec": 2.3533,
+     "enc": 2.228,
+     "gath": 0.4478,
+     "conc": 8.6783,
+     "ren": 5.7649,
+     "wall": 19.5089,
+     "n_miss": 82880,
+     "n_vis": 220905,
+     "e2e": 20.5089
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0032,
+     "enc": 2.2435,
+     "gath": 0.2621,
+     "conc": 2.8119,
+     "ren": 5.5224,
+     "wall": 13.8663,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 14.8663
+    },
+    {
+     "mode": "session",
+     "scene": "kitchen",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 220905,
+     "n_lost_tx": 27584,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 84384752,
+     "base_bits": 26557760,
+     "dec": 3.0147,
+     "enc": 2.2508,
+     "gath": 0.2621,
+     "conc": 2.8273,
+     "ren": 5.4784,
+     "wall": 13.8563,
+     "n_miss": 27584,
+     "n_vis": 220905,
+     "e2e": 14.8563
+    }
+   ]
+  }
+ }
+}

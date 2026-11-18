@@ -1,0 +1,387 @@
+variant T6R11_integ_jit_rs1.8e-4 (T6R11): N=2000000 records=5161 sampled=2000
+variant T6R11_integ_jit_rs1e-3 (T6R11): N=2000000 records=3129 sampled=2000
+variant T6R11_integ_rin160_hd3.8e-3 (T6R11): N=10000000 records=40596 sampled=2000
+variant T6R11_integ_rin165_hd3.8e-3 (T6R11): N=10000000 records=16624 sampled=2000
+variant T6R11_paper435_hd3.8e-3 (T6R11): N=10000000 records=970 sampled=970
+variant T6R11_paper435_rs1.8e-4 (T6R11): N=10000000 records=2989 sampled=2000
+variant T6R11_paper435_rs1e-3 (T6R11): N=10000000 records=1733 sampled=1733
+variant T6R11_paper_rs1.8e-4 (T6R11): N=10000000 records=3344 sampled=2000
+variant T6R11_paper_rs1e-3 (T6R11): N=10000000 records=1927 sampled=1927
+variant T8R8_integ_jit_hd3.8e-3 (T8R8): N=1000000 records=747401 sampled=2000
+variant T8R8_integ_jit_rs1.8e-4 (T8R8): N=1000000 records=818491 sampled=2000
+variant T8R8_integ_jit_rs1e-3 (T8R8): N=1000000 records=786112 sampled=2000
+variant T8R8_integ_rin160_hd3.8e-3 (T8R8): N=1000000 records=787312 sampled=2000
+variant T8R8_integ_rin160_rs1.8e-4 (T8R8): N=1000000 records=844358 sampled=2000
+variant T8R8_integ_rin160_rs1e-3 (T8R8): N=1000000 records=818838 sampled=2000
+variant T8R8_integ_rin165_hd3.8e-3 (T8R8): N=1000000 records=743419 sampled=2000
+variant T8R8_integ_rin165_rs1.8e-4 (T8R8): N=1000000 records=811280 sampled=2000
+variant T8R8_integ_rin165_rs1e-3 (T8R8): N=1000000 records=780728 sampled=2000
+variant T8R8_integ_rs1.8e-4 (T8R8): N=1000000 records=786503 sampled=2000
+variant T8R8_integ_rs1e-3 (T8R8): N=1000000 records=752087 sampled=2000
+variant T8R8_paper435_hd3.8e-3 (T8R8): N=1000000 records=146090 sampled=2000
+variant T8R8_paper435_rs1.8e-4 (T8R8): N=1000000 records=196038 sampled=2000
+variant T8R8_paper435_rs1e-3 (T8R8): N=1000000 records=170196 sampled=2000
+variant T8R8_paper_rs1.8e-4 (T8R8): N=1000000 records=201303 sampled=2000
+variant T8R8_paper_rs1e-3 (T8R8): N=1000000 records=174981 sampled=2000
+bicycle: 1/3459 records, 103s
+bicycle: 201/3459 records, 111s
+bicycle: 401/3459 records, 116s
+bicycle: 601/3459 records, 122s
+bicycle: 801/3459 records, 129s
+bicycle: 1001/3459 records, 136s
+bicycle: 1201/3459 records, 142s
+bicycle: 1401/3459 records, 148s
+bicycle: 1601/3459 records, 154s
+bicycle: 1801/3459 records, 160s
+bicycle: 2001/3459 records, 165s
+bicycle: 2201/3459 records, 171s
+bicycle: 2401/3459 records, 177s
+bicycle: 2601/3459 records, 183s
+bicycle: 2801/3459 records, 189s
+bicycle: 3001/3459 records, 195s
+bicycle: 3201/3459 records, 200s
+bicycle: 3401/3459 records, 205s
+bicycle: 3459 records, 13836 rows, 207s -> results/bicycle/e2e_v2a_r1_p4.json
+bonsai: 1/5454 records, 0s
+bonsai: 201/5454 records, 9s
+bonsai: 401/5454 records, 21s
+bonsai: 601/5454 records, 29s
+bonsai: 801/5454 records, 39s
+bonsai: 1001/5454 records, 47s
+bonsai: 1201/5454 records, 59s
+bonsai: 1401/5454 records, 69s
+bonsai: 1601/5454 records, 78s
+bonsai: 1801/5454 records, 87s
+bonsai: 2001/5454 records, 95s
+bonsai: 2201/5454 records, 106s
+bonsai: 2401/5454 records, 114s
+bonsai: 2601/5454 records, 124s
+bonsai: 2801/5454 records, 133s
+bonsai: 3001/5454 records, 143s
+bonsai: 3201/5454 records, 151s
+bonsai: 3401/5454 records, 160s
+bonsai: 3601/5454 records, 167s
+bonsai: 3801/5454 records, 175s
+bonsai: 4001/5454 records, 182s
+bonsai: 4201/5454 records, 190s
+bonsai: 4401/5454 records, 200s
+bonsai: 4601/5454 records, 206s
+bonsai: 4801/5454 records, 215s
+bonsai: 5001/5454 records, 224s
+bonsai: 5201/5454 records, 234s
+bonsai: 5401/5454 records, 244s
+bonsai: 5454 records, 21816 rows, 246s -> results/bonsai/e2e_v2a_r1_p4.json
+counter: 1/4494 records, 0s
+counter: 201/4494 records, 11s
+counter: 401/4494 records, 22s
+counter: 601/4494 records, 34s
+counter: 801/4494 records, 43s
+counter: 1001/4494 records, 52s
+counter: 1201/4494 records, 62s
+counter: 1401/4494 records, 70s
+counter: 1601/4494 records, 80s
+counter: 1801/4494 records, 92s
+counter: 2001/4494 records, 104s
+counter: 2201/4494 records, 116s
+counter: 2401/4494 records, 128s
+counter: 2601/4494 records, 142s
+counter: 2801/4494 records, 156s
+counter: 3001/4494 records, 168s
+counter: 3201/4494 records, 179s
+counter: 3401/4494 records, 187s
+counter: 3601/4494 records, 198s
+counter: 3801/4494 records, 210s
+counter: 4001/4494 records, 221s
+counter: 4201/4494 records, 234s
+counter: 4401/4494 records, 244s
+counter: 4494 records, 17976 rows, 249s -> results/counter/e2e_v2a_r1_p4.json
+drjohnson: 1/4605 records, 0s
+drjohnson: 201/4605 records, 2s
+drjohnson: 401/4605 records, 10s
+drjohnson: 601/4605 records, 12s
+drjohnson: 801/4605 records, 18s
+drjohnson: 1001/4605 records, 21s
+drjohnson: 1201/4605 records, 23s
+drjohnson: 1401/4605 records, 27s
+drjohnson: 1601/4605 records, 30s
+drjohnson: 1801/4605 records, 32s
+drjohnson: 2001/4605 records, 34s
+drjohnson: 2201/4605 records, 36s
+drjohnson: 2401/4605 records, 38s
+drjohnson: 2601/4605 records, 43s
+drjohnson: 2801/4605 records, 46s
+drjohnson: 3001/4605 records, 48s
+drjohnson: 3201/4605 records, 49s
+drjohnson: 3401/4605 records, 51s
+drjohnson: 3601/4605 records, 54s
+drjohnson: 3801/4605 records, 55s
+drjohnson: 4001/4605 records, 63s
+drjohnson: 4201/4605 records, 68s
+drjohnson: 4401/4605 records, 72s
+drjohnson: 4601/4605 records, 76s
+drjohnson: 4605 records, 18420 rows, 76s -> results/drjohnson/e2e_v2a_r1_p4.json
+garden: 1/3131 records, 0s
+garden: 201/3131 records, 7s
+garden: 401/3131 records, 14s
+garden: 601/3131 records, 20s
+garden: 801/3131 records, 28s
+garden: 1001/3131 records, 35s
+garden: 1201/3131 records, 42s
+garden: 1401/3131 records, 48s
+garden: 1601/3131 records, 55s
+garden: 1801/3131 records, 62s
+garden: 2001/3131 records, 69s
+garden: 2201/3131 records, 76s
+garden: 2401/3131 records, 83s
+garden: 2601/3131 records, 92s
+garden: 2801/3131 records, 98s
+garden: 3001/3131 records, 104s
+garden: 3131 records, 12524 rows, 109s -> results/garden/e2e_v2a_r1_p4.json
+kitchen: 1/5024 records, 0s
+kitchen: 201/5024 records, 12s
+kitchen: 401/5024 records, 26s
+kitchen: 601/5024 records, 41s
+kitchen: 801/5024 records, 53s
+kitchen: 1001/5024 records, 66s
+kitchen: 1201/5024 records, 82s
+kitchen: 1401/5024 records, 95s
+kitchen: 1601/5024 records, 109s
+kitchen: 1801/5024 records, 120s
+kitchen: 2001/5024 records, 132s
+kitchen: 2201/5024 records, 145s
+kitchen: 2401/5024 records, 162s
+kitchen: 2601/5024 records, 175s
+kitchen: 2801/5024 records, 188s
+kitchen: 3001/5024 records, 198s
+kitchen: 3201/5024 records, 211s
+kitchen: 3401/5024 records, 223s
+kitchen: 3601/5024 records, 237s
+kitchen: 3801/5024 records, 249s
+kitchen: 4001/5024 records, 262s
+kitchen: 4201/5024 records, 274s
+kitchen: 4401/5024 records, 285s
+kitchen: 4601/5024 records, 299s
+kitchen: 4801/5024 records, 312s
+kitchen: 5001/5024 records, 324s
+kitchen: 5024 records, 20096 rows, 325s -> results/kitchen/e2e_v2a_r1_p4.json
+playroom: 1/4123 records, 0s
+playroom: 201/4123 records, 3s
+playroom: 401/4123 records, 7s
+playroom: 601/4123 records, 10s
+playroom: 801/4123 records, 12s
+playroom: 1001/4123 records, 14s
+playroom: 1201/4123 records, 17s
+playroom: 1401/4123 records, 20s
+playroom: 1601/4123 records, 24s
+playroom: 1801/4123 records, 26s
+playroom: 2001/4123 records, 28s
+playroom: 2201/4123 records, 31s
+playroom: 2401/4123 records, 32s
+playroom: 2601/4123 records, 35s
+playroom: 2801/4123 records, 37s
+playroom: 3001/4123 records, 39s
+playroom: 3201/4123 records, 40s
+playroom: 3401/4123 records, 44s
+playroom: 3601/4123 records, 48s
+playroom: 3801/4123 records, 51s
+playroom: 4001/4123 records, 54s
+playroom: 4123 records, 16492 rows, 55s -> results/playroom/e2e_v2a_r1_p4.json
+room: 1/5733 records, 0s
+room: 201/5733 records, 7s
+room: 401/5733 records, 13s
+room: 601/5733 records, 21s
+room: 801/5733 records, 27s
+room: 1001/5733 records, 35s
+room: 1201/5733 records, 41s
+room: 1401/5733 records, 48s
+room: 1601/5733 records, 55s
+room: 1801/5733 records, 60s
+room: 2001/5733 records, 69s
+room: 2201/5733 records, 75s
+room: 2401/5733 records, 82s
+room: 2601/5733 records, 89s
+room: 2801/5733 records, 94s
+room: 3001/5733 records, 100s
+room: 3201/5733 records, 107s
+room: 3401/5733 records, 114s
+room: 3601/5733 records, 121s
+room: 3801/5733 records, 127s
+room: 4001/5733 records, 131s
+room: 4201/5733 records, 135s
+room: 4401/5733 records, 138s
+room: 4601/5733 records, 141s
+room: 4801/5733 records, 145s
+room: 5001/5733 records, 149s
+room: 5201/5733 records, 151s
+room: 5401/5733 records, 153s
+room: 5601/5733 records, 156s
+room: 5733 records, 22932 rows, 159s -> results/room/e2e_v2a_r1_p4.json
+stump: 1/2260 records, 0s
+stump: 201/2260 records, 11s
+stump: 401/2260 records, 19s
+stump: 601/2260 records, 29s
+stump: 801/2260 records, 37s
+stump: 1001/2260 records, 46s
+stump: 1201/2260 records, 56s
+stump: 1401/2260 records, 63s
+stump: 1601/2260 records, 73s
+stump: 1801/2260 records, 81s
+stump: 2001/2260 records, 91s
+stump: 2201/2260 records, 100s
+stump: 2260 records, 9040 rows, 102s -> results/stump/e2e_v2a_r1_p4.json
+train: 1/5508 records, 0s
+train: 201/5508 records, 11s
+train: 401/5508 records, 22s
+train: 601/5508 records, 28s
+train: 801/5508 records, 36s
+train: 1001/5508 records, 47s
+train: 1201/5508 records, 61s
+train: 1401/5508 records, 75s
+train: 1601/5508 records, 84s
+train: 1801/5508 records, 93s
+train: 2001/5508 records, 102s
+train: 2201/5508 records, 116s
+train: 2401/5508 records, 125s
+train: 2601/5508 records, 136s
+train: 2801/5508 records, 149s
+train: 3001/5508 records, 163s
+train: 3201/5508 records, 176s
+train: 3401/5508 records, 183s
+train: 3601/5508 records, 190s
+train: 3801/5508 records, 202s
+train: 4001/5508 records, 211s
+train: 4201/5508 records, 222s
+train: 4401/5508 records, 230s
+train: 4601/5508 records, 237s
+train: 4801/5508 records, 248s
+train: 5001/5508 records, 257s
+train: 5201/5508 records, 269s
+train: 5401/5508 records, 279s
+train: 5508 records, 22032 rows, 286s -> results/train/e2e_v2a_r1_p4.json
+truck: 1/4839 records, 0s
+truck: 201/4839 records, 10s
+truck: 401/4839 records, 22s
+truck: 601/4839 records, 28s
+truck: 801/4839 records, 37s
+truck: 1001/4839 records, 45s
+truck: 1201/4839 records, 54s
+truck: 1401/4839 records, 65s
+truck: 1601/4839 records, 77s
+truck: 1801/4839 records, 85s
+truck: 2001/4839 records, 96s
+truck: 2201/4839 records, 108s
+truck: 2401/4839 records, 116s
+truck: 2601/4839 records, 126s
+truck: 2801/4839 records, 134s
+truck: 3001/4839 records, 142s
+truck: 3201/4839 records, 152s
+truck: 3401/4839 records, 161s
+truck: 3601/4839 records, 171s
+truck: 3801/4839 records, 181s
+truck: 4001/4839 records, 192s
+truck: 4201/4839 records, 202s
+truck: 4401/4839 records, 211s
+truck: 4601/4839 records, 221s
+truck: 4801/4839 records, 231s
+truck: 4839 records, 19356 rows, 232s -> results/truck/e2e_v2a_r1_p4.json
+T6R11_integ_jit_rs1.8e-4     stream           n= 2000 anchor=  32 psi<30=  93 psi<35= 586 meanPsi=36.90 abar30=0.000161 [0.000135,0.000191] abar35=0.000797
+T6R11_integ_jit_rs1.8e-4     token_fill       n= 2000 anchor=  14 psi<30=   4 psi<35=  36 meanPsi=57.31 abar30=2.32e-05 [1.38e-05,3.66e-05] abar35=6.45e-05
+T6R11_integ_jit_rs1.8e-4     token_fill_stag  n= 2000 anchor=   9 psi<30=   4 psi<35=  37 meanPsi=57.37 abar30=1.68e-05 [8.94e-06,2.86e-05] abar35=5.94e-05
+T6R11_integ_jit_rs1.8e-4     token_rate       n= 2000 anchor=  14 psi<30=   6 psi<35=  54 meanPsi=75.00 abar30=2.58e-05 [1.58e-05,3.97e-05] abar35=8.77e-05
+T6R11_integ_jit_rs1e-3       stream           n= 2000 anchor=  30 psi<30=  85 psi<35= 571 meanPsi=37.04 abar30=9e-05 [7.46e-05,0.000107] abar35=0.00047
+T6R11_integ_jit_rs1e-3       token_fill       n= 2000 anchor=  17 psi<30=   3 psi<35=  30 meanPsi=58.17 abar30=1.56e-05 [9.57e-06,2.41e-05] abar35=3.68e-05
+T6R11_integ_jit_rs1e-3       token_fill_stag  n= 2000 anchor=   4 psi<30=   3 psi<35=  32 meanPsi=58.29 abar30=5.48e-06 [2.2e-06,1.13e-05] abar35=2.82e-05
+T6R11_integ_jit_rs1e-3       token_rate       n= 2000 anchor=  17 psi<30=   6 psi<35=  42 meanPsi=75.96 abar30=1.8e-05 [1.14e-05,2.69e-05] abar35=4.62e-05
+T6R11_integ_rin160_hd3.8e-3  stream           n= 2000 anchor=  45 psi<30=  79 psi<35= 596 meanPsi=36.77 abar30=0.000252 [0.00021,0.000298] abar35=0.0013
+T6R11_integ_rin160_hd3.8e-3  token_fill       n= 2000 anchor=  23 psi<30=   8 psi<35=  41 meanPsi=55.99 abar30=6.29e-05 [4.28e-05,8.9e-05] abar35=0.00013
+T6R11_integ_rin160_hd3.8e-3  token_fill_stag  n= 2000 anchor=   9 psi<30=   8 psi<35=  44 meanPsi=56.24 abar30=3.45e-05 [2.01e-05,5.51e-05] abar35=0.000108
+T6R11_integ_rin160_hd3.8e-3  token_rate       n= 2000 anchor=  23 psi<30=  10 psi<35=  49 meanPsi=74.97 abar30=6.7e-05 [4.62e-05,9.38e-05] abar35=0.000146
+T6R11_integ_rin165_hd3.8e-3  stream           n= 2000 anchor=  39 psi<30=  81 psi<35= 583 meanPsi=36.72 abar30=9.97e-05 [8.31e-05,0.000119] abar35=0.000517
+T6R11_integ_rin165_hd3.8e-3  token_fill       n= 2000 anchor=  21 psi<30=   5 psi<35=  32 meanPsi=57.06 abar30=2.16e-05 [1.41e-05,3.16e-05] abar35=4.41e-05
+T6R11_integ_rin165_hd3.8e-3  token_fill_stag  n= 2000 anchor=   7 psi<30=   5 psi<35=  33 meanPsi=57.30 abar30=9.97e-06 [5.16e-06,1.74e-05] abar35=3.32e-05
+T6R11_integ_rin165_hd3.8e-3  token_rate       n= 2000 anchor=  21 psi<30=   7 psi<35=  42 meanPsi=75.78 abar30=2.33e-05 [1.55e-05,3.35e-05] abar35=5.24e-05
+T6R11_paper435_hd3.8e-3      stream           n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_hd3.8e-3      token_fill       n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_hd3.8e-3      token_fill_stag  n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_hd3.8e-3      token_rate       n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_rs1.8e-4      stream           n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1.8e-4      token_fill       n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1.8e-4      token_fill_stag  n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1.8e-4      token_rate       n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1e-3        stream           n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper435_rs1e-3        token_fill       n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper435_rs1e-3        token_fill_stag  n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper435_rs1e-3        token_rate       n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper_rs1.8e-4         stream           n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1.8e-4         token_fill       n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1.8e-4         token_fill_stag  n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1.8e-4         token_rate       n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1e-3           stream           n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T6R11_paper_rs1e-3           token_fill       n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T6R11_paper_rs1e-3           token_fill_stag  n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T6R11_paper_rs1e-3           token_rate       n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T8R8_integ_jit_hd3.8e-3      stream           n= 2000 anchor=  15 psi<30= 201 psi<35= 844 meanPsi=35.64 abar30=0.0807 [0.0708,0.0915] abar35=0.321
+T8R8_integ_jit_hd3.8e-3      token_fill       n= 2000 anchor=   3 psi<30=   2 psi<35=  37 meanPsi=51.92 abar30=0.00187 [0.000607,0.00435] abar35=0.0149
+T8R8_integ_jit_hd3.8e-3      token_fill_stag  n= 2000 anchor=   0 psi<30=   2 psi<35=  37 meanPsi=51.97 abar30=0.000747 [9.05e-05,0.0027] abar35=0.0138
+T8R8_integ_jit_hd3.8e-3      token_rate       n= 2000 anchor=   3 psi<30=   3 psi<35=  48 meanPsi=65.84 abar30=0.00224 [0.000823,0.00487] abar35=0.0191
+T8R8_integ_jit_rs1.8e-4      stream           n= 2000 anchor=  74 psi<30= 309 psi<35=1031 meanPsi=33.61 abar30=0.157 [0.143,0.171] abar35=0.452
+T8R8_integ_jit_rs1.8e-4      token_fill       n= 2000 anchor=  13 psi<30=   7 psi<35=  94 meanPsi=48.38 abar30=0.00818 [0.00501,0.0126] abar35=0.0438
+T8R8_integ_jit_rs1.8e-4      token_fill_stag  n= 2000 anchor=   1 psi<30=   7 psi<35=  98 meanPsi=48.51 abar30=0.00327 [0.00141,0.00644] abar35=0.0405
+T8R8_integ_jit_rs1.8e-4      token_rate       n= 2000 anchor=  12 psi<30=  11 psi<35= 105 meanPsi=59.62 abar30=0.00941 [0.00598,0.0141] abar35=0.0479
+T8R8_integ_jit_rs1e-3        stream           n= 2000 anchor=  32 psi<30= 251 psi<35= 943 meanPsi=34.80 abar30=0.111 [0.0995,0.124] abar35=0.383
+T8R8_integ_jit_rs1e-3        token_fill       n= 2000 anchor=   7 psi<30=   2 psi<35=  65 meanPsi=50.18 abar30=0.00354 [0.00162,0.0067] abar35=0.0283
+T8R8_integ_jit_rs1e-3        token_fill_stag  n= 2000 anchor=   1 psi<30=   2 psi<35=  66 meanPsi=50.24 abar30=0.00118 [0.000243,0.00344] abar35=0.0263
+T8R8_integ_jit_rs1e-3        token_rate       n= 2000 anchor=   7 psi<30=   7 psi<35=  78 meanPsi=62.91 abar30=0.0055 [0.00301,0.00921] abar35=0.0334
+T8R8_integ_rin160_hd3.8e-3   stream           n= 2000 anchor=  30 psi<30= 248 psi<35= 905 meanPsi=35.07 abar30=0.109 [0.0977,0.122] abar35=0.368
+T8R8_integ_rin160_hd3.8e-3   token_fill       n= 2000 anchor=   3 psi<30=   8 psi<35=  60 meanPsi=50.17 abar30=0.00433 [0.00216,0.00773] abar35=0.0248
+T8R8_integ_rin160_hd3.8e-3   token_fill_stag  n= 2000 anchor=   0 psi<30=   8 psi<35=  60 meanPsi=50.18 abar30=0.00315 [0.00136,0.00619] abar35=0.0236
+T8R8_integ_rin160_hd3.8e-3   token_rate       n= 2000 anchor=   3 psi<30=   9 psi<35=  68 meanPsi=62.96 abar30=0.00472 [0.00244,0.00823] abar35=0.0279
+T8R8_integ_rin160_rs1.8e-4   stream           n= 2000 anchor= 103 psi<30= 374 psi<35=1089 meanPsi=32.74 abar30=0.201 [0.186,0.218] abar35=0.503
+T8R8_integ_rin160_rs1.8e-4   token_fill       n= 2000 anchor=  18 psi<30=  13 psi<35= 139 meanPsi=46.72 abar30=0.0131 [0.00891,0.0185] abar35=0.0663
+T8R8_integ_rin160_rs1.8e-4   token_fill_stag  n= 2000 anchor=   3 psi<30=  14 psi<35= 143 meanPsi=46.80 abar30=0.00718 [0.00419,0.0115] abar35=0.0616
+T8R8_integ_rin160_rs1.8e-4   token_rate       n= 2000 anchor=  18 psi<30=  19 psi<35= 155 meanPsi=56.30 abar30=0.0156 [0.011,0.0215] abar35=0.073
+T8R8_integ_rin160_rs1e-3     stream           n= 2000 anchor=  60 psi<30= 309 psi<35=1023 meanPsi=33.93 abar30=0.151 [0.137,0.166] abar35=0.443
+T8R8_integ_rin160_rs1e-3     token_fill       n= 2000 anchor=   6 psi<30=  11 psi<35=  90 meanPsi=48.19 abar30=0.00696 [0.00406,0.0111] abar35=0.0393
+T8R8_integ_rin160_rs1e-3     token_fill_stag  n= 2000 anchor=   1 psi<30=  11 psi<35=  91 meanPsi=48.22 abar30=0.00491 [0.00254,0.00856] abar35=0.0377
+T8R8_integ_rin160_rs1e-3     token_rate       n= 2000 anchor=   6 psi<30=  12 psi<35= 109 meanPsi=59.20 abar30=0.00737 [0.00437,0.0116] abar35=0.0471
+T8R8_integ_rin165_hd3.8e-3   stream           n= 2000 anchor=  20 psi<30= 215 psi<35= 852 meanPsi=35.46 abar30=0.0874 [0.0771,0.0984] abar35=0.324
+T8R8_integ_rin165_hd3.8e-3   token_fill       n= 2000 anchor=   2 psi<30=   5 psi<35=  41 meanPsi=51.68 abar30=0.0026 [0.00105,0.00535] abar35=0.016
+T8R8_integ_rin165_hd3.8e-3   token_fill_stag  n= 2000 anchor=   0 psi<30=   5 psi<35=  41 meanPsi=51.68 abar30=0.00186 [0.000604,0.00433] abar35=0.0152
+T8R8_integ_rin165_hd3.8e-3   token_rate       n= 2000 anchor=   2 psi<30=   6 psi<35=  58 meanPsi=65.51 abar30=0.00297 [0.00128,0.00585] abar35=0.0223
+T8R8_integ_rin165_rs1.8e-4   stream           n= 2000 anchor=  81 psi<30= 333 psi<35=1055 meanPsi=33.44 abar30=0.168 [0.154,0.183] abar35=0.461
+T8R8_integ_rin165_rs1.8e-4   token_fill       n= 2000 anchor=  11 psi<30=  10 psi<35=  95 meanPsi=48.07 abar30=0.00852 [0.00528,0.013] abar35=0.043
+T8R8_integ_rin165_rs1.8e-4   token_fill_stag  n= 2000 anchor=   2 psi<30=  10 psi<35=  97 meanPsi=48.14 abar30=0.00487 [0.00252,0.00848] abar35=0.0402
+T8R8_integ_rin165_rs1.8e-4   token_rate       n= 2000 anchor=  11 psi<30=  11 psi<35= 109 meanPsi=58.83 abar30=0.00892 [0.0056,0.0135] abar35=0.0487
+T8R8_integ_rin165_rs1e-3     stream           n= 2000 anchor=  36 psi<30= 280 psi<35= 955 meanPsi=34.68 abar30=0.123 [0.111,0.136] abar35=0.387
+T8R8_integ_rin165_rs1e-3     token_fill       n= 2000 anchor=   3 psi<30=   8 psi<35=  67 meanPsi=49.97 abar30=0.00429 [0.00215,0.00767] abar35=0.0273
+T8R8_integ_rin165_rs1e-3     token_fill_stag  n= 2000 anchor=   0 psi<30=   8 psi<35=  67 meanPsi=49.98 abar30=0.00312 [0.00135,0.00614] abar35=0.0262
+T8R8_integ_rin165_rs1e-3     token_rate       n= 2000 anchor=   3 psi<30=   8 psi<35=  77 meanPsi=62.69 abar30=0.00429 [0.00215,0.00767] abar35=0.0312
+T8R8_integ_rs1.8e-4          stream           n= 2000 anchor=  61 psi<30= 302 psi<35=1002 meanPsi=34.01 abar30=0.143 [0.13,0.157] abar35=0.418
+T8R8_integ_rs1.8e-4          token_fill       n= 2000 anchor=  10 psi<30=   8 psi<35=  77 meanPsi=49.24 abar30=0.00708 [0.0042,0.0112] abar35=0.0342
+T8R8_integ_rs1.8e-4          token_fill_stag  n= 2000 anchor=   0 psi<30=   8 psi<35=  79 meanPsi=49.29 abar30=0.00315 [0.00136,0.00619] abar35=0.0311
+T8R8_integ_rs1.8e-4          token_rate       n= 2000 anchor=  10 psi<30=   9 psi<35=  86 meanPsi=61.24 abar30=0.00747 [0.00451,0.0116] abar35=0.0378
+T8R8_integ_rs1e-3            stream           n= 2000 anchor=  30 psi<30= 265 psi<35= 921 meanPsi=34.95 abar30=0.111 [0.0995,0.123] abar35=0.358
+T8R8_integ_rs1e-3            token_fill       n= 2000 anchor=   2 psi<30=   7 psi<35=  58 meanPsi=50.84 abar30=0.00338 [0.00155,0.00641] abar35=0.0226
+T8R8_integ_rs1e-3            token_fill_stag  n= 2000 anchor=   0 psi<30=   7 psi<35=  58 meanPsi=50.84 abar30=0.00263 [0.00106,0.00541] abar35=0.0218
+T8R8_integ_rs1e-3            token_rate       n= 2000 anchor=   2 psi<30=   8 psi<35=  65 meanPsi=64.19 abar30=0.00376 [0.00181,0.0069] abar35=0.0252
+T8R8_paper435_hd3.8e-3       stream           n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_hd3.8e-3       token_fill       n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_hd3.8e-3       token_fill_stag  n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_hd3.8e-3       token_rate       n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_rs1.8e-4       stream           n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1.8e-4       token_fill       n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1.8e-4       token_fill_stag  n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1.8e-4       token_rate       n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1e-3         stream           n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper435_rs1e-3         token_fill       n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper435_rs1e-3         token_fill_stag  n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper435_rs1e-3         token_rate       n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper_rs1.8e-4          stream           n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1.8e-4          token_fill       n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1.8e-4          token_fill_stag  n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1.8e-4          token_rate       n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1e-3            stream           n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+T8R8_paper_rs1e-3            token_fill       n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+T8R8_paper_rs1e-3            token_fill_stag  n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+T8R8_paper_rs1e-3            token_rate       n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+-> results/e2e_summary_p4.json

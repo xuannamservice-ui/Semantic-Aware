@@ -1,0 +1,286 @@
+{
+ "semantics": "k = 16 neighbours of lost anchors; cold start: among the anchors of the view (eval_cold3.py --view-nbr); session: among the anchors whose positions the edge holds",
+ "cold": {
+  "_v2a_r1|T8R8:2.5": {
+   "brute_ms": {
+    "n": 425,
+    "mean": 166.3485200922279,
+    "p50": 131.18318002671003,
+    "p99": 657.7629685774443,
+    "max": 990.4575115069747
+   },
+   "grid_ms": {
+    "n": 425,
+    "mean": 17.24976584972704,
+    "p50": 11.853555217385292,
+    "p99": 75.76047912240027,
+    "max": 110.62867753207684
+   },
+   "n_lost": {
+    "n": 425,
+    "mean": 16610.25176470588,
+    "p50": 12160.0,
+    "p99": 54746.23999999998,
+    "max": 69760.0
+   },
+   "grid_agree_min": 0.9240000247955322,
+   "grid_fallback_queries": {
+    "n": 425,
+    "mean": 5415.545882352942,
+    "p50": 3581.0,
+    "p99": 26839.279999999988,
+    "max": 34868.0
+   },
+   "worst_case": {
+    "n_lost": 69760,
+    "n_visible": 223250,
+    "brute_ms": 990.4575115069747,
+    "grid_ms": 22.137047722935677,
+    "scene": "kitchen",
+    "view": 64
+   },
+   "all_view_anchors_ms": {
+    "n": 338,
+    "mean": 1234.2683053024377,
+    "p50": 1067.2372188419104,
+    "p99": 3218.4886537399143,
+    "max": 3306.089320220053
+   },
+   "best_of_brute_grid_ms": {
+    "n": 425,
+    "mean": 17.02960117336582,
+    "p50": 11.853555217385292,
+    "p99": 75.76047912240027,
+    "max": 110.62867753207684
+   },
+   "grid_ms_worst_window_per_view": {
+    "n": 256,
+    "mean": 20.0512652809266,
+    "p50": 13.121285941451788,
+    "p99": 84.91553761996327,
+    "max": 110.62867753207684
+   }
+  },
+  "_v2a_r1|T8R8:10": {
+   "brute_ms": {
+    "n": 569,
+    "mean": 163.28317628639812,
+    "p50": 124.1766232997179,
+    "p99": 676.037978529933,
+    "max": 926.3517651706934
+   },
+   "grid_ms": {
+    "n": 569,
+    "mean": 17.105857573240105,
+    "p50": 12.107142247259617,
+    "p99": 69.5295348763469,
+    "max": 109.88802276551723
+   },
+   "n_lost": {
+    "n": 569,
+    "mean": 17051.87346221441,
+    "p50": 12352.0,
+    "p99": 51675.52000000025,
+    "max": 67456.0
+   },
+   "grid_agree_min": 0.9115000367164612,
+   "grid_fallback_queries": {
+    "n": 569,
+    "mean": 5940.237258347979,
+    "p50": 3522.0,
+    "p99": 34914.20000000009,
+    "max": 52105.0
+   },
+   "worst_case": {
+    "n_lost": 67456,
+    "n_visible": 215909,
+    "brute_ms": 926.3517651706934,
+    "grid_ms": 27.755106799304485,
+    "scene": "kitchen",
+    "view": 112
+   },
+   "all_view_anchors_ms": {
+    "n": 338,
+    "mean": 1234.2357855874318,
+    "p50": 1064.4584577530622,
+    "p99": 3224.195132860914,
+    "max": 3305.211778730154
+   },
+   "best_of_brute_grid_ms": {
+    "n": 569,
+    "mean": 16.822510349821226,
+    "p50": 12.107142247259617,
+    "p99": 69.5295348763469,
+    "max": 109.88802276551723
+   },
+   "grid_ms_worst_window_per_view": {
+    "n": 298,
+    "mean": 20.459098744537407,
+    "p50": 14.673274476081133,
+    "p99": 81.88649873249216,
+    "max": 109.88802276551723
+   }
+  },
+  "_v2a_r1|T6R11:2.5": {
+   "brute_ms": {},
+   "grid_ms": {},
+   "n_lost": {},
+   "grid_agree_min": null,
+   "grid_fallback_queries": {},
+   "worst_case": null,
+   "all_view_anchors_ms": {
+    "n": 338,
+    "mean": 1234.1485584358625,
+    "p50": 1064.4227229058743,
+    "p99": 3225.0084465835243,
+    "max": 3309.5710296183825
+   }
+  },
+  "_v2m_r1_mlpj|T8R8:2.5": {
+   "brute_ms": {},
+   "grid_ms": {},
+   "n_lost": {},
+   "grid_agree_min": null,
+   "grid_fallback_queries": {},
+   "worst_case": null,
+   "all_view_anchors_ms": {
+    "n": 92,
+    "mean": 458.0049431660091,
+    "p50": 517.7578283473849,
+    "p99": 1120.847544455901,
+    "max": 1204.0468901395798
+   }
+  }
+ },
+ "session": {
+  "all": {
+   "frames": 798,
+   "n_miss": {
+    "n": 798,
+    "mean": 1251.6365914786968,
+    "p50": 129.5,
+    "p99": 27584.0,
+    "max": 52608.0
+   },
+   "brute_ms": {
+    "n": 798,
+    "mean": 13.461502881622629,
+    "p50": 1.7628567293286324,
+    "p99": 343.2203749846665,
+    "max": 684.4842508435249
+   },
+   "grid_ms": {
+    "n": 798,
+    "mean": 7.404383762102378,
+    "p50": 6.868315394967794,
+    "p99": 22.998343016952234,
+    "max": 72.35459517687559
+   },
+   "table_lookup_ms": {
+    "n": 798,
+    "mean": 0.015014353065861198,
+    "p50": 0.013616401702165604,
+    "p99": 0.025840103626251214,
+    "max": 0.042280182242393494
+   },
+   "grid_agree_min": 0.9259259104728699,
+   "best_of_brute_grid_ms": {
+    "n": 798,
+    "mean": 3.4126463792004382,
+    "p50": 1.7628567293286324,
+    "p99": 22.998343016952234,
+    "max": 72.35459517687559
+   }
+  },
+  "steady_state": {
+   "frames": 777,
+   "n_miss": {
+    "n": 777,
+    "mean": 590.7400257400258,
+    "p50": 128.0,
+    "p99": 8558.080000000002,
+    "max": 26688.0
+   },
+   "brute_ms": {
+    "n": 777,
+    "mean": 6.555514497636905,
+    "p50": 1.5897983685135841,
+    "p99": 95.95901601016523,
+    "max": 364.3606761470437
+   },
+   "grid_ms": {
+    "n": 777,
+    "mean": 6.957532392102779,
+    "p50": 6.789039820432663,
+    "p99": 16.058377772569656,
+    "max": 19.3850202485919
+   },
+   "table_lookup_ms": {
+    "n": 777,
+    "mean": 0.014714660552094189,
+    "p50": 0.013561919331550598,
+    "p99": 0.022206306457519535,
+    "max": 0.02583395689725876
+   },
+   "grid_agree_min": 0.9259259104728699,
+   "best_of_brute_grid_ms": {
+    "n": 777,
+    "mean": 2.8588633512073653,
+    "p50": 1.5897983685135841,
+    "p99": 11.465299539268024,
+    "max": 17.219139263033867
+   }
+  },
+  "first_frame": {
+   "frames": 21,
+   "n_miss": {
+    "n": 21,
+    "mean": 25704.809523809523,
+    "p50": 26224.0,
+    "p99": 52566.4,
+    "max": 52608.0
+   },
+   "brute_ms": {
+    "n": 21,
+    "mean": 268.9830730890944,
+    "p50": 280.82065377384424,
+    "p99": 642.8810020908714,
+    "max": 684.4842508435249
+   },
+   "grid_ms": {
+    "n": 21,
+    "mean": 23.937884452087538,
+    "p50": 18.634804524481297,
+    "p99": 69.41868010908367,
+    "max": 72.35459517687559
+   },
+   "table_lookup_ms": {
+    "n": 21,
+    "mean": 0.026102976075240543,
+    "p50": 0.02492312341928482,
+    "p99": 0.041440874338150024,
+    "max": 0.042280182242393494
+   },
+   "grid_agree_min": 0.971500039100647,
+   "best_of_brute_grid_ms": {
+    "n": 21,
+    "mean": 23.902618414944126,
+    "p50": 18.634804524481297,
+    "p99": 69.41868010908367,
+    "max": 72.35459517687559
+   }
+  }
+ },
+ "exactness": {
+  "test": "kitchen view 64, 3,000 random queries among 216k view anchors, float64 exact distances",
+  "grid_exact_fraction": 1.0,
+  "brute_cdist_mm_exact_fraction": 0.708,
+  "brute_max_rel_error_kth_distance": 1.54e-05,
+  "note": "the grid search is exact; torch.cdist (matrix-product mode, as in conceal_net.knn and eval_cold3 --view-nbr) swaps near-tied neighbours, which is why grid and brute agree on only 91-99% of the queries"
+ },
+ "already_in_model": {
+  "eval_cold3_T_GATHER": "no: bench_latency.py gathers from a precomputed random 16-NN table (table lookup, relative positions, normalisation)",
+  "bench_e2e_frames_gath": "no: session and cold-start gathering index the precomputed whole-scene table (session) or a view table precomputed outside the timed region (cold)",
+  "eval_cold3_view_nbr": "computed with conceal_net.knn over all anchors of the view, outside any timed or modelled stage"
+ }
+}

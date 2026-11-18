@@ -1,0 +1,1297 @@
+{
+ "semantics": "Frame-level results (eval_frames.py, Table tab:frames) without frame 0 of every frame path.\n\nFrame 0 of a path is the full-view start-up frame (the edge cache is empty, the whole view is sent in one slot); it is a\ncold start and is evaluated as such (eval_cold4.py). This script recomputes the summary block of every\nresults/<scene>/frames_v2a_r1_<cfg>_tau<t>_eps0.166667[_a35r].json from its per-frame rows without the rows of path\nframe 0 (row field \"frame\" = position on the capture path, 0 = first frame of the chain) and writes\nresults/<scene>/frames_v2a_r1_<cfg>_tau<t>_eps0.166667[_a35r]_nof0.json (same structure: metadata, summary, rows; plus\n\"excluded\": \"frame 0\"). The summary has the semantics of eval_frames.py (psi capped at 99 dB, p_fail = share of frames\nbelow the threshold, all chains of the file).\nIt also writes results/rev6_frames_nof0.json with pooled counts over the scenes, with and without frame 0, and for\nframe 0 alone:\n  files : per (cfg, tau, variant) over all chains of every scene file (the semantics of the summary blocks);\n  table : the semantics of Table tab:frames (fill.py): T8R8, chains 0-9, none / conceal / MDS from the main runs and\n          ARQ / ARQ+conceal from the *_a35r runs (retransmission in slots 3 and 5, remapped), frames where all six\n          schemes exist.\n",
+ "files": {
+  "T6R11|tau10|main": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "with_frame0": {
+    "none": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   },
+   "without_frame0": {
+    "none": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   },
+   "frame0_only": {
+    "none": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   }
+  },
+  "T6R8|tau10|main": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "with_frame0": {
+    "none": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 3,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 45.42331314086914
+    },
+    "conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 3,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 57.14881134033203
+    },
+    "arq": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 1,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 57.8129768371582
+    },
+    "arq+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 1,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 66.34956359863281
+    },
+    "mds": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   },
+   "without_frame0": {
+    "none": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 3,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 45.42331314086914
+    },
+    "conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 3,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 57.14881134033203
+    },
+    "arq": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 1,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 57.8129768371582
+    },
+    "arq+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 1,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 66.34956359863281
+    },
+    "mds": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   },
+   "frame0_only": {
+    "none": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   }
+  },
+  "T8R11|tau10|main": {
+   "scenes": [
+    "garden",
+    "kitchen",
+    "room",
+    "truck"
+   ],
+   "with_frame0": {
+    "none": {
+     "frames": 1300,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "conceal": {
+     "frames": 1300,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq": {
+     "frames": 1300,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq+conceal": {
+     "frames": 1300,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds": {
+     "frames": 1300,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 1300,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   },
+   "without_frame0": {
+    "none": {
+     "frames": 1260,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "conceal": {
+     "frames": 1260,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq": {
+     "frames": 1260,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq+conceal": {
+     "frames": 1260,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds": {
+     "frames": 1260,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 1260,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   },
+   "frame0_only": {
+    "none": {
+     "frames": 40,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "conceal": {
+     "frames": 40,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq": {
+     "frames": 40,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "arq+conceal": {
+     "frames": 40,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds": {
+     "frames": 40,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    },
+    "mds+conceal": {
+     "frames": 40,
+     "paths": 40,
+     "with_missing": 0,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 99.0
+    }
+   }
+  },
+  "T8R8|tau10|a35r": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "with_frame0": {
+    "arq": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 68,
+     "below30": 10,
+     "below35": 14,
+     "psi_min": 18.748523712158203
+    },
+    "arq+conceal": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 68,
+     "below30": 0,
+     "below35": 5,
+     "psi_min": 32.04393005371094
+    }
+   },
+   "without_frame0": {
+    "arq": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 57,
+     "below30": 0,
+     "below35": 4,
+     "psi_min": 32.30994415283203
+    },
+    "arq+conceal": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 57,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 43.635154724121094
+    }
+   },
+   "frame0_only": {
+    "arq": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 11,
+     "below30": 10,
+     "below35": 10,
+     "psi_min": 18.748523712158203
+    },
+    "arq+conceal": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 11,
+     "below30": 0,
+     "below35": 5,
+     "psi_min": 32.04393005371094
+    }
+   }
+  },
+  "T8R8|tau10|main": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "with_frame0": {
+    "none": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 126,
+     "below30": 29,
+     "below35": 34,
+     "psi_min": 16.492477416992188
+    },
+    "conceal": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 126,
+     "below30": 1,
+     "below35": 13,
+     "psi_min": 29.760879516601562
+    },
+    "arq": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 68,
+     "below30": 10,
+     "below35": 14,
+     "psi_min": 18.748523712158203
+    },
+    "arq+conceal": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 68,
+     "below30": 0,
+     "below35": 5,
+     "psi_min": 32.04393005371094
+    },
+    "mds": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 65,
+     "below30": 12,
+     "below35": 16,
+     "psi_min": 16.492477416992188
+    },
+    "mds+conceal": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 65,
+     "below30": 1,
+     "below35": 8,
+     "psi_min": 29.760879516601562
+    }
+   },
+   "without_frame0": {
+    "none": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 98,
+     "below30": 2,
+     "below35": 6,
+     "psi_min": 25.92310333251953
+    },
+    "conceal": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 98,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 38.33318328857422
+    },
+    "arq": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 57,
+     "below30": 0,
+     "below35": 4,
+     "psi_min": 32.30994415283203
+    },
+    "arq+conceal": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 57,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 43.635154724121094
+    },
+    "mds": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 55,
+     "below30": 2,
+     "below35": 6,
+     "psi_min": 25.681779861450195
+    },
+    "mds+conceal": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 55,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 37.80157470703125
+    }
+   },
+   "frame0_only": {
+    "none": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 28,
+     "below30": 27,
+     "below35": 28,
+     "psi_min": 16.492477416992188
+    },
+    "conceal": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 28,
+     "below30": 1,
+     "below35": 13,
+     "psi_min": 29.760879516601562
+    },
+    "arq": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 11,
+     "below30": 10,
+     "below35": 10,
+     "psi_min": 18.748523712158203
+    },
+    "arq+conceal": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 11,
+     "below30": 0,
+     "below35": 5,
+     "psi_min": 32.04393005371094
+    },
+    "mds": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 10,
+     "below30": 10,
+     "below35": 10,
+     "psi_min": 16.492477416992188
+    },
+    "mds+conceal": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 10,
+     "below30": 1,
+     "below35": 8,
+     "psi_min": 29.760879516601562
+    }
+   }
+  },
+  "T8R8|tau2.5|a35r": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "with_frame0": {
+    "arq": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 49,
+     "below30": 6,
+     "below35": 9,
+     "psi_min": 20.443031311035156
+    },
+    "arq+conceal": {
+     "frames": 4340,
+     "paths": 150,
+     "with_missing": 49,
+     "below30": 0,
+     "below35": 2,
+     "psi_min": 31.933271408081055
+    }
+   },
+   "without_frame0": {
+    "arq": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 42,
+     "below30": 0,
+     "below35": 2,
+     "psi_min": 31.969940185546875
+    },
+    "arq+conceal": {
+     "frames": 4190,
+     "paths": 150,
+     "with_missing": 42,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 41.52145004272461
+    }
+   },
+   "frame0_only": {
+    "arq": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 7,
+     "below30": 6,
+     "below35": 7,
+     "psi_min": 20.443031311035156
+    },
+    "arq+conceal": {
+     "frames": 150,
+     "paths": 150,
+     "with_missing": 7,
+     "below30": 0,
+     "below35": 2,
+     "psi_min": 31.933271408081055
+    }
+   }
+  },
+  "T8R8|tau2.5|main": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "with_frame0": {
+    "none": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 91,
+     "below30": 16,
+     "below35": 21,
+     "psi_min": 18.012178421020508
+    },
+    "conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 91,
+     "below30": 0,
+     "below35": 4,
+     "psi_min": 31.54690933227539
+    },
+    "arq": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 44,
+     "below30": 5,
+     "below35": 8,
+     "psi_min": 21.525463104248047
+    },
+    "arq+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 44,
+     "below30": 0,
+     "below35": 1,
+     "psi_min": 34.79686737060547
+    },
+    "mds": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 39,
+     "below30": 8,
+     "below35": 11,
+     "psi_min": 18.012178421020508
+    },
+    "mds+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 39,
+     "below30": 0,
+     "below35": 2,
+     "psi_min": 31.54690933227539
+    }
+   },
+   "without_frame0": {
+    "none": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 78,
+     "below30": 3,
+     "below35": 8,
+     "psi_min": 27.18299102783203
+    },
+    "conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 78,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 40.861209869384766
+    },
+    "arq": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 38,
+     "below30": 1,
+     "below35": 2,
+     "psi_min": 29.264530181884766
+    },
+    "arq+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 38,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 41.52145004272461
+    },
+    "mds": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 34,
+     "below30": 3,
+     "below35": 6,
+     "psi_min": 27.18299102783203
+    },
+    "mds+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 34,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 40.861209869384766
+    }
+   },
+   "frame0_only": {
+    "none": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 13,
+     "below30": 13,
+     "below35": 13,
+     "psi_min": 18.012178421020508
+    },
+    "conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 13,
+     "below30": 0,
+     "below35": 4,
+     "psi_min": 31.54690933227539
+    },
+    "arq": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 6,
+     "below30": 4,
+     "below35": 6,
+     "psi_min": 21.525463104248047
+    },
+    "arq+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 6,
+     "below30": 0,
+     "below35": 1,
+     "psi_min": 34.79686737060547
+    },
+    "mds": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 5,
+     "below30": 5,
+     "below35": 5,
+     "psi_min": 18.012178421020508
+    },
+    "mds+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 5,
+     "below30": 0,
+     "below35": 2,
+     "psi_min": 31.54690933227539
+    }
+   }
+  }
+ },
+ "table": {
+  "T8R8|tau10": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "arq_from_a35r": true,
+   "chains": "0-9",
+   "with_frame0": {
+    "none": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 109,
+     "below30": 22,
+     "below35": 27,
+     "psi_min": 18.35866928100586
+    },
+    "conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 109,
+     "below30": 0,
+     "below35": 9,
+     "psi_min": 30.21979522705078
+    },
+    "arq": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 62,
+     "below30": 8,
+     "below35": 12,
+     "psi_min": 18.748523712158203
+    },
+    "arq+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 62,
+     "below30": 0,
+     "below35": 3,
+     "psi_min": 33.77129364013672
+    },
+    "mds": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 59,
+     "below30": 10,
+     "below35": 14,
+     "psi_min": 18.35866928100586
+    },
+    "mds+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 59,
+     "below30": 0,
+     "below35": 6,
+     "psi_min": 30.21979522705078
+    }
+   },
+   "without_frame0": {
+    "none": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 88,
+     "below30": 2,
+     "below35": 6,
+     "psi_min": 25.92310333251953
+    },
+    "conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 88,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 38.33318328857422
+    },
+    "arq": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 53,
+     "below30": 0,
+     "below35": 4,
+     "psi_min": 32.30994415283203
+    },
+    "arq+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 53,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 43.635154724121094
+    },
+    "mds": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 51,
+     "below30": 2,
+     "below35": 6,
+     "psi_min": 25.681779861450195
+    },
+    "mds+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 51,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 37.80157470703125
+    }
+   },
+   "frame0_only": {
+    "none": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 21,
+     "below30": 20,
+     "below35": 21,
+     "psi_min": 18.35866928100586
+    },
+    "conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 21,
+     "below30": 0,
+     "below35": 9,
+     "psi_min": 30.21979522705078
+    },
+    "arq": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 9,
+     "below30": 8,
+     "below35": 8,
+     "psi_min": 18.748523712158203
+    },
+    "arq+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 9,
+     "below30": 0,
+     "below35": 3,
+     "psi_min": 33.77129364013672
+    },
+    "mds": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 8,
+     "below30": 8,
+     "below35": 8,
+     "psi_min": 18.35866928100586
+    },
+    "mds+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 8,
+     "below30": 0,
+     "below35": 6,
+     "psi_min": 30.21979522705078
+    }
+   }
+  },
+  "T8R8|tau2.5": {
+   "scenes": [
+    "bicycle",
+    "bonsai",
+    "counter",
+    "drjohnson",
+    "garden",
+    "kitchen",
+    "playroom",
+    "room",
+    "stump",
+    "train",
+    "truck"
+   ],
+   "arq_from_a35r": true,
+   "chains": "0-9",
+   "with_frame0": {
+    "none": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 91,
+     "below30": 16,
+     "below35": 21,
+     "psi_min": 18.012178421020508
+    },
+    "conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 91,
+     "below30": 0,
+     "below35": 4,
+     "psi_min": 31.54690933227539
+    },
+    "arq": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 43,
+     "below30": 4,
+     "below35": 6,
+     "psi_min": 21.525463104248047
+    },
+    "arq+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 43,
+     "below30": 0,
+     "below35": 1,
+     "psi_min": 34.79686737060547
+    },
+    "mds": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 39,
+     "below30": 8,
+     "below35": 11,
+     "psi_min": 18.012178421020508
+    },
+    "mds+conceal": {
+     "frames": 3380,
+     "paths": 110,
+     "with_missing": 39,
+     "below30": 0,
+     "below35": 2,
+     "psi_min": 31.54690933227539
+    }
+   },
+   "without_frame0": {
+    "none": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 78,
+     "below30": 3,
+     "below35": 8,
+     "psi_min": 27.18299102783203
+    },
+    "conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 78,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 40.861209869384766
+    },
+    "arq": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 38,
+     "below30": 0,
+     "below35": 1,
+     "psi_min": 31.969940185546875
+    },
+    "arq+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 38,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 41.52145004272461
+    },
+    "mds": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 34,
+     "below30": 3,
+     "below35": 6,
+     "psi_min": 27.18299102783203
+    },
+    "mds+conceal": {
+     "frames": 3270,
+     "paths": 110,
+     "with_missing": 34,
+     "below30": 0,
+     "below35": 0,
+     "psi_min": 40.861209869384766
+    }
+   },
+   "frame0_only": {
+    "none": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 13,
+     "below30": 13,
+     "below35": 13,
+     "psi_min": 18.012178421020508
+    },
+    "conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 13,
+     "below30": 0,
+     "below35": 4,
+     "psi_min": 31.54690933227539
+    },
+    "arq": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 5,
+     "below30": 4,
+     "below35": 5,
+     "psi_min": 21.525463104248047
+    },
+    "arq+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 5,
+     "below30": 0,
+     "below35": 1,
+     "psi_min": 34.79686737060547
+    },
+    "mds": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 5,
+     "below30": 5,
+     "below35": 5,
+     "psi_min": 18.012178421020508
+    },
+    "mds+conceal": {
+     "frames": 110,
+     "paths": 110,
+     "with_missing": 5,
+     "below30": 0,
+     "below35": 2,
+     "psi_min": 31.54690933227539
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,145 @@
+T6R11_integ_hd3.8e-3         stream           n= 8378 anchor= 115 psi<30= 302 psi<35=2380 meanPsi=37.13 abar30=4.17e-05 [3.78e-05,4.59e-05] abar35=0.000249
+T6R11_integ_hd3.8e-3         token_fill       n= 8378 anchor=  61 psi<30=  11 psi<35=  98 meanPsi=58.14 abar30=7.2e-06 [5.63e-06,9.07e-06] abar35=1.59e-05
+T6R11_integ_hd3.8e-3         token_fill_stag  n= 8378 anchor=  27 psi<30=  11 psi<35= 101 meanPsi=58.25 abar30=3.8e-06 [2.69e-06,5.22e-06] abar35=1.28e-05
+T6R11_integ_hd3.8e-3         token_rate       n= 8378 anchor=  62 psi<30=  16 psi<35= 139 meanPsi=76.61 abar30=7.8e-06 [6.17e-06,9.73e-06] abar35=2.01e-05
+T6R11_paper_hd3.8e-3         stream           n= 1055 anchor=  11 psi<30=  26 psi<35= 297 meanPsi=37.27 abar30=3.7e-06 [2.61e-06,5.1e-06] abar35=3.08e-05
+T6R11_paper_hd3.8e-3         token_fill       n= 1055 anchor=  11 psi<30=  26 psi<35= 297 meanPsi=37.27 abar30=3.7e-06 [2.61e-06,5.1e-06] abar35=3.08e-05
+T6R11_paper_hd3.8e-3         token_fill_stag  n= 1055 anchor=  11 psi<30=  26 psi<35= 297 meanPsi=37.27 abar30=3.7e-06 [2.61e-06,5.1e-06] abar35=3.08e-05
+T6R11_paper_hd3.8e-3         token_rate       n= 1055 anchor=  11 psi<30=  26 psi<35= 297 meanPsi=37.27 abar30=3.7e-06 [2.61e-06,5.1e-06] abar35=3.08e-05
+T6R11_integ_jit_hd3.8e-3     stream           n= 1768 anchor=  24 psi<30=  55 psi<35= 503 meanPsi=37.18 abar30=3.95e-05 [3.13e-05,4.92e-05] abar35=0.000264
+T6R11_integ_jit_hd3.8e-3     token_fill       n= 1768 anchor=  12 psi<30=   4 psi<35=  22 meanPsi=58.77 abar30=8e-06 [4.57e-06,1.3e-05] abar35=1.7e-05
+T6R11_integ_jit_hd3.8e-3     token_fill_stag  n= 1768 anchor=   4 psi<30=   4 psi<35=  22 meanPsi=58.85 abar30=4e-06 [1.73e-06,7.88e-06] abar35=1.3e-05
+T6R11_integ_jit_hd3.8e-3     token_rate       n= 1768 anchor=  12 psi<30=   4 psi<35=  34 meanPsi=76.75 abar30=8e-06 [4.57e-06,1.3e-05] abar35=2.3e-05
+T6R11_integ_rin160_rs1.8e-4  stream           n= 4000 anchor= 118 psi<30= 206 psi<35=1231 meanPsi=36.28 abar30=0.00087 [0.000782,0.000966] abar35=0.00362
+T6R11_integ_rin160_rs1.8e-4  token_fill       n= 4000 anchor=  67 psi<30=  14 psi<35= 107 meanPsi=55.66 abar30=0.000218 [0.000173,0.00027] abar35=0.000467
+T6R11_integ_rin160_rs1.8e-4  token_fill_stag  n= 4000 anchor=  33 psi<30=  15 psi<35= 113 meanPsi=55.89 abar30=0.000129 [9.52e-05,0.000171] abar35=0.000392
+T6R11_integ_rin160_rs1.8e-4  token_rate       n= 4000 anchor=  67 psi<30=  20 psi<35= 117 meanPsi=73.27 abar30=0.000234 [0.000188,0.000288] abar35=0.000494
+T6R11_integ_rin160_rs1e-3    stream           n= 4000 anchor=  98 psi<30= 175 psi<35=1235 meanPsi=36.51 abar30=0.000458 [0.000407,0.000513] abar35=0.00224
+T6R11_integ_rin160_rs1e-3    token_fill       n= 4000 anchor=  52 psi<30=  10 psi<35=  84 meanPsi=56.15 abar30=0.000104 [7.98e-05,0.000133] abar35=0.000228
+T6R11_integ_rin160_rs1e-3    token_fill_stag  n= 4000 anchor=  25 psi<30=  12 psi<35=  90 meanPsi=56.32 abar30=6.2e-05 [4.37e-05,8.54e-05] abar35=0.000193
+T6R11_integ_rin160_rs1e-3    token_rate       n= 4000 anchor=  52 psi<30=  15 psi<35= 101 meanPsi=74.17 abar30=0.000112 [8.72e-05,0.000142] abar35=0.000257
+T6R11_integ_rin165_rs1.8e-4  stream           n= 4000 anchor=  99 psi<30= 170 psi<35=1218 meanPsi=36.56 abar30=0.000312 [0.000277,0.00035] abar35=0.00153
+T6R11_integ_rin165_rs1.8e-4  token_fill       n= 4000 anchor=  59 psi<30=   8 psi<35=  78 meanPsi=55.99 abar30=7.77e-05 [6.03e-05,9.84e-05] abar35=0.000159
+T6R11_integ_rin165_rs1.8e-4  token_fill_stag  n= 4000 anchor=  26 psi<30=  10 psi<35=  85 meanPsi=56.26 abar30=4.17e-05 [2.93e-05,5.77e-05] abar35=0.000129
+T6R11_integ_rin165_rs1.8e-4  token_rate       n= 4000 anchor=  59 psi<30=  16 psi<35=  97 meanPsi=74.21 abar30=8.7e-05 [6.85e-05,0.000109] abar35=0.000181
+T6R11_integ_rin165_rs1e-3    stream           n= 4000 anchor=  97 psi<30= 166 psi<35=1203 meanPsi=36.56 abar30=0.000185 [0.000164,0.000208] abar35=0.000914
+T6R11_integ_rin165_rs1e-3    token_fill       n= 4000 anchor=  59 psi<30=  10 psi<35=  72 meanPsi=56.19 abar30=4.85e-05 [3.78e-05,6.13e-05] abar35=9.21e-05
+T6R11_integ_rin165_rs1e-3    token_fill_stag  n= 4000 anchor=  19 psi<30=  11 psi<35=  75 meanPsi=56.50 abar30=2.11e-05 [1.42e-05,3.01e-05] abar35=6.61e-05
+T6R11_integ_rin165_rs1e-3    token_rate       n= 4000 anchor=  59 psi<30=  14 psi<35=  95 meanPsi=74.96 abar30=5.13e-05 [4.03e-05,6.44e-05] abar35=0.000108
+T6R11_integ_rs1.8e-4         stream           n= 4000 anchor=  96 psi<30= 162 psi<35=1200 meanPsi=36.57 abar30=0.000157 [0.000139,0.000177] abar35=0.000791
+T6R11_integ_rs1.8e-4         token_fill       n= 4000 anchor=  56 psi<30=   8 psi<35=  66 meanPsi=56.09 abar30=3.9e-05 [3.01e-05,4.98e-05] abar35=7.44e-05
+T6R11_integ_rs1.8e-4         token_fill_stag  n= 4000 anchor=  18 psi<30=   9 psi<35=  68 meanPsi=56.39 abar30=1.65e-05 [1.09e-05,2.39e-05] abar35=5.25e-05
+T6R11_integ_rs1.8e-4         token_rate       n= 4000 anchor=  56 psi<30=  12 psi<35=  83 meanPsi=74.68 abar30=4.15e-05 [3.23e-05,5.25e-05] abar35=8.48e-05
+T6R11_integ_rs1e-3           stream           n= 4000 anchor=  83 psi<30= 149 psi<35=1160 meanPsi=36.71 abar30=8.42e-05 [7.4e-05,9.54e-05] abar35=0.000451
+T6R11_integ_rs1e-3           token_fill       n= 4000 anchor=  47 psi<30=   7 psi<35=  53 meanPsi=57.11 abar30=1.96e-05 [1.48e-05,2.55e-05] abar35=3.63e-05
+T6R11_integ_rs1e-3           token_fill_stag  n= 4000 anchor=  15 psi<30=   8 psi<35=  59 meanPsi=57.29 abar30=8.35e-06 [5.3e-06,1.25e-05] abar35=2.69e-05
+T6R11_integ_rs1e-3           token_rate       n= 4000 anchor=  47 psi<30=  10 psi<35=  72 meanPsi=75.73 abar30=2.07e-05 [1.57e-05,2.68e-05] abar35=4.32e-05
+T8R8_integ_hd3.8e-3          stream           n= 4000 anchor=  28 psi<30= 433 psi<35=1635 meanPsi=35.74 abar30=0.082 [0.0751,0.0893] abar35=0.296
+T8R8_integ_hd3.8e-3          token_fill       n= 4000 anchor=   1 psi<30=   7 psi<35=  92 meanPsi=52.07 abar30=0.00142 [0.000615,0.0028] abar35=0.0165
+T8R8_integ_hd3.8e-3          token_fill_stag  n= 4000 anchor=   0 psi<30=   7 psi<35=  92 meanPsi=52.07 abar30=0.00124 [0.000501,0.00256] abar35=0.0164
+T8R8_integ_hd3.8e-3          token_rate       n= 4000 anchor=   1 psi<30=   5 psi<35= 111 meanPsi=66.34 abar30=0.00107 [0.000392,0.00232] abar35=0.0199
+T8R8_paper_hd3.8e-3          stream           n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+T8R8_paper_hd3.8e-3          token_fill       n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+T8R8_paper_hd3.8e-3          token_fill_stag  n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+T8R8_paper_hd3.8e-3          token_rate       n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+T6R11_integ_jit_rs1.8e-4     stream           n= 2000 anchor=  32 psi<30=  93 psi<35= 586 meanPsi=36.90 abar30=0.000161 [0.000135,0.000191] abar35=0.000797
+T6R11_integ_jit_rs1.8e-4     token_fill       n= 2000 anchor=  14 psi<30=   4 psi<35=  36 meanPsi=57.31 abar30=2.32e-05 [1.38e-05,3.66e-05] abar35=6.45e-05
+T6R11_integ_jit_rs1.8e-4     token_fill_stag  n= 2000 anchor=   9 psi<30=   4 psi<35=  37 meanPsi=57.37 abar30=1.68e-05 [8.94e-06,2.86e-05] abar35=5.94e-05
+T6R11_integ_jit_rs1.8e-4     token_rate       n= 2000 anchor=  14 psi<30=   6 psi<35=  54 meanPsi=75.00 abar30=2.58e-05 [1.58e-05,3.97e-05] abar35=8.77e-05
+T6R11_integ_jit_rs1e-3       stream           n= 2000 anchor=  30 psi<30=  85 psi<35= 571 meanPsi=37.04 abar30=9e-05 [7.46e-05,0.000107] abar35=0.00047
+T6R11_integ_jit_rs1e-3       token_fill       n= 2000 anchor=  17 psi<30=   3 psi<35=  30 meanPsi=58.17 abar30=1.56e-05 [9.57e-06,2.41e-05] abar35=3.68e-05
+T6R11_integ_jit_rs1e-3       token_fill_stag  n= 2000 anchor=   4 psi<30=   3 psi<35=  32 meanPsi=58.29 abar30=5.48e-06 [2.2e-06,1.13e-05] abar35=2.82e-05
+T6R11_integ_jit_rs1e-3       token_rate       n= 2000 anchor=  17 psi<30=   6 psi<35=  42 meanPsi=75.96 abar30=1.8e-05 [1.14e-05,2.69e-05] abar35=4.62e-05
+T6R11_integ_rin160_hd3.8e-3  stream           n= 2000 anchor=  45 psi<30=  79 psi<35= 596 meanPsi=36.77 abar30=0.000252 [0.00021,0.000298] abar35=0.0013
+T6R11_integ_rin160_hd3.8e-3  token_fill       n= 2000 anchor=  23 psi<30=   8 psi<35=  41 meanPsi=55.99 abar30=6.29e-05 [4.28e-05,8.9e-05] abar35=0.00013
+T6R11_integ_rin160_hd3.8e-3  token_fill_stag  n= 2000 anchor=   9 psi<30=   8 psi<35=  44 meanPsi=56.24 abar30=3.45e-05 [2.01e-05,5.51e-05] abar35=0.000108
+T6R11_integ_rin160_hd3.8e-3  token_rate       n= 2000 anchor=  23 psi<30=  10 psi<35=  49 meanPsi=74.97 abar30=6.7e-05 [4.62e-05,9.38e-05] abar35=0.000146
+T6R11_integ_rin165_hd3.8e-3  stream           n= 2000 anchor=  39 psi<30=  81 psi<35= 583 meanPsi=36.72 abar30=9.97e-05 [8.31e-05,0.000119] abar35=0.000517
+T6R11_integ_rin165_hd3.8e-3  token_fill       n= 2000 anchor=  21 psi<30=   5 psi<35=  32 meanPsi=57.06 abar30=2.16e-05 [1.41e-05,3.16e-05] abar35=4.41e-05
+T6R11_integ_rin165_hd3.8e-3  token_fill_stag  n= 2000 anchor=   7 psi<30=   5 psi<35=  33 meanPsi=57.30 abar30=9.97e-06 [5.16e-06,1.74e-05] abar35=3.32e-05
+T6R11_integ_rin165_hd3.8e-3  token_rate       n= 2000 anchor=  21 psi<30=   7 psi<35=  42 meanPsi=75.78 abar30=2.33e-05 [1.55e-05,3.35e-05] abar35=5.24e-05
+T6R11_paper435_hd3.8e-3      stream           n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_hd3.8e-3      token_fill       n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_hd3.8e-3      token_fill_stag  n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_hd3.8e-3      token_rate       n=  970 anchor=   7 psi<30=  28 psi<35= 263 meanPsi=37.45 abar30=3.5e-06 [2.44e-06,4.87e-06] abar35=2.7e-05
+T6R11_paper435_rs1.8e-4      stream           n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1.8e-4      token_fill       n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1.8e-4      token_fill_stag  n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1.8e-4      token_rate       n= 2000 anchor=  30 psi<30=  86 psi<35= 583 meanPsi=37.05 abar30=1.73e-05 [1.44e-05,2.07e-05] abar35=9.16e-05
+T6R11_paper435_rs1e-3        stream           n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper435_rs1e-3        token_fill       n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper435_rs1e-3        token_fill_stag  n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper435_rs1e-3        token_rate       n= 1733 anchor=  24 psi<30=  64 psi<35= 509 meanPsi=37.02 abar30=8.8e-06 [7.06e-06,1.08e-05] abar35=5.33e-05
+T6R11_paper_rs1.8e-4         stream           n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1.8e-4         token_fill       n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1.8e-4         token_fill_stag  n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1.8e-4         token_rate       n= 2000 anchor=  29 psi<30=  95 psi<35= 601 meanPsi=36.90 abar30=2.07e-05 [1.73e-05,2.46e-05] abar35=0.000105
+T6R11_paper_rs1e-3           stream           n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T6R11_paper_rs1e-3           token_fill       n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T6R11_paper_rs1e-3           token_fill_stag  n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T6R11_paper_rs1e-3           token_rate       n= 1927 anchor=  26 psi<30=  69 psi<35= 556 meanPsi=37.12 abar30=9.5e-06 [7.69e-06,1.16e-05] abar35=5.82e-05
+T8R8_integ_jit_hd3.8e-3      stream           n= 2000 anchor=  15 psi<30= 201 psi<35= 844 meanPsi=35.64 abar30=0.0807 [0.0708,0.0915] abar35=0.321
+T8R8_integ_jit_hd3.8e-3      token_fill       n= 2000 anchor=   3 psi<30=   2 psi<35=  37 meanPsi=51.92 abar30=0.00187 [0.000607,0.00435] abar35=0.0149
+T8R8_integ_jit_hd3.8e-3      token_fill_stag  n= 2000 anchor=   0 psi<30=   2 psi<35=  37 meanPsi=51.97 abar30=0.000747 [9.05e-05,0.0027] abar35=0.0138
+T8R8_integ_jit_hd3.8e-3      token_rate       n= 2000 anchor=   3 psi<30=   3 psi<35=  48 meanPsi=65.84 abar30=0.00224 [0.000823,0.00487] abar35=0.0191
+T8R8_integ_jit_rs1.8e-4      stream           n= 2000 anchor=  74 psi<30= 309 psi<35=1031 meanPsi=33.61 abar30=0.157 [0.143,0.171] abar35=0.452
+T8R8_integ_jit_rs1.8e-4      token_fill       n= 2000 anchor=  13 psi<30=   7 psi<35=  94 meanPsi=48.38 abar30=0.00818 [0.00501,0.0126] abar35=0.0438
+T8R8_integ_jit_rs1.8e-4      token_fill_stag  n= 2000 anchor=   1 psi<30=   7 psi<35=  98 meanPsi=48.51 abar30=0.00327 [0.00141,0.00644] abar35=0.0405
+T8R8_integ_jit_rs1.8e-4      token_rate       n= 2000 anchor=  12 psi<30=  11 psi<35= 105 meanPsi=59.62 abar30=0.00941 [0.00598,0.0141] abar35=0.0479
+T8R8_integ_jit_rs1e-3        stream           n= 2000 anchor=  32 psi<30= 251 psi<35= 943 meanPsi=34.80 abar30=0.111 [0.0995,0.124] abar35=0.383
+T8R8_integ_jit_rs1e-3        token_fill       n= 2000 anchor=   7 psi<30=   2 psi<35=  65 meanPsi=50.18 abar30=0.00354 [0.00162,0.0067] abar35=0.0283
+T8R8_integ_jit_rs1e-3        token_fill_stag  n= 2000 anchor=   1 psi<30=   2 psi<35=  66 meanPsi=50.24 abar30=0.00118 [0.000243,0.00344] abar35=0.0263
+T8R8_integ_jit_rs1e-3        token_rate       n= 2000 anchor=   7 psi<30=   7 psi<35=  78 meanPsi=62.91 abar30=0.0055 [0.00301,0.00921] abar35=0.0334
+T8R8_integ_rin160_hd3.8e-3   stream           n= 2000 anchor=  30 psi<30= 248 psi<35= 905 meanPsi=35.07 abar30=0.109 [0.0977,0.122] abar35=0.368
+T8R8_integ_rin160_hd3.8e-3   token_fill       n= 2000 anchor=   3 psi<30=   8 psi<35=  60 meanPsi=50.17 abar30=0.00433 [0.00216,0.00773] abar35=0.0248
+T8R8_integ_rin160_hd3.8e-3   token_fill_stag  n= 2000 anchor=   0 psi<30=   8 psi<35=  60 meanPsi=50.18 abar30=0.00315 [0.00136,0.00619] abar35=0.0236
+T8R8_integ_rin160_hd3.8e-3   token_rate       n= 2000 anchor=   3 psi<30=   9 psi<35=  68 meanPsi=62.96 abar30=0.00472 [0.00244,0.00823] abar35=0.0279
+T8R8_integ_rin160_rs1.8e-4   stream           n= 2000 anchor= 103 psi<30= 374 psi<35=1089 meanPsi=32.74 abar30=0.201 [0.186,0.218] abar35=0.503
+T8R8_integ_rin160_rs1.8e-4   token_fill       n= 2000 anchor=  18 psi<30=  13 psi<35= 139 meanPsi=46.72 abar30=0.0131 [0.00891,0.0185] abar35=0.0663
+T8R8_integ_rin160_rs1.8e-4   token_fill_stag  n= 2000 anchor=   3 psi<30=  14 psi<35= 143 meanPsi=46.80 abar30=0.00718 [0.00419,0.0115] abar35=0.0616
+T8R8_integ_rin160_rs1.8e-4   token_rate       n= 2000 anchor=  18 psi<30=  19 psi<35= 155 meanPsi=56.30 abar30=0.0156 [0.011,0.0215] abar35=0.073
+T8R8_integ_rin160_rs1e-3     stream           n= 2000 anchor=  60 psi<30= 309 psi<35=1023 meanPsi=33.93 abar30=0.151 [0.137,0.166] abar35=0.443
+T8R8_integ_rin160_rs1e-3     token_fill       n= 2000 anchor=   6 psi<30=  11 psi<35=  90 meanPsi=48.19 abar30=0.00696 [0.00406,0.0111] abar35=0.0393
+T8R8_integ_rin160_rs1e-3     token_fill_stag  n= 2000 anchor=   1 psi<30=  11 psi<35=  91 meanPsi=48.22 abar30=0.00491 [0.00254,0.00856] abar35=0.0377
+T8R8_integ_rin160_rs1e-3     token_rate       n= 2000 anchor=   6 psi<30=  12 psi<35= 109 meanPsi=59.20 abar30=0.00737 [0.00437,0.0116] abar35=0.0471
+T8R8_integ_rin165_hd3.8e-3   stream           n= 2000 anchor=  20 psi<30= 215 psi<35= 852 meanPsi=35.46 abar30=0.0874 [0.0771,0.0984] abar35=0.324
+T8R8_integ_rin165_hd3.8e-3   token_fill       n= 2000 anchor=   2 psi<30=   5 psi<35=  41 meanPsi=51.68 abar30=0.0026 [0.00105,0.00535] abar35=0.016
+T8R8_integ_rin165_hd3.8e-3   token_fill_stag  n= 2000 anchor=   0 psi<30=   5 psi<35=  41 meanPsi=51.68 abar30=0.00186 [0.000604,0.00433] abar35=0.0152
+T8R8_integ_rin165_hd3.8e-3   token_rate       n= 2000 anchor=   2 psi<30=   6 psi<35=  58 meanPsi=65.51 abar30=0.00297 [0.00128,0.00585] abar35=0.0223
+T8R8_integ_rin165_rs1.8e-4   stream           n= 2000 anchor=  81 psi<30= 333 psi<35=1055 meanPsi=33.44 abar30=0.168 [0.154,0.183] abar35=0.461
+T8R8_integ_rin165_rs1.8e-4   token_fill       n= 2000 anchor=  11 psi<30=  10 psi<35=  95 meanPsi=48.07 abar30=0.00852 [0.00528,0.013] abar35=0.043
+T8R8_integ_rin165_rs1.8e-4   token_fill_stag  n= 2000 anchor=   2 psi<30=  10 psi<35=  97 meanPsi=48.14 abar30=0.00487 [0.00252,0.00848] abar35=0.0402
+T8R8_integ_rin165_rs1.8e-4   token_rate       n= 2000 anchor=  11 psi<30=  11 psi<35= 109 meanPsi=58.83 abar30=0.00892 [0.0056,0.0135] abar35=0.0487
+T8R8_integ_rin165_rs1e-3     stream           n= 2000 anchor=  36 psi<30= 280 psi<35= 955 meanPsi=34.68 abar30=0.123 [0.111,0.136] abar35=0.387
+T8R8_integ_rin165_rs1e-3     token_fill       n= 2000 anchor=   3 psi<30=   8 psi<35=  67 meanPsi=49.97 abar30=0.00429 [0.00215,0.00767] abar35=0.0273
+T8R8_integ_rin165_rs1e-3     token_fill_stag  n= 2000 anchor=   0 psi<30=   8 psi<35=  67 meanPsi=49.98 abar30=0.00312 [0.00135,0.00614] abar35=0.0262
+T8R8_integ_rin165_rs1e-3     token_rate       n= 2000 anchor=   3 psi<30=   8 psi<35=  77 meanPsi=62.69 abar30=0.00429 [0.00215,0.00767] abar35=0.0312
+T8R8_integ_rs1.8e-4          stream           n= 2000 anchor=  61 psi<30= 302 psi<35=1002 meanPsi=34.01 abar30=0.143 [0.13,0.157] abar35=0.418
+T8R8_integ_rs1.8e-4          token_fill       n= 2000 anchor=  10 psi<30=   8 psi<35=  77 meanPsi=49.24 abar30=0.00708 [0.0042,0.0112] abar35=0.0342
+T8R8_integ_rs1.8e-4          token_fill_stag  n= 2000 anchor=   0 psi<30=   8 psi<35=  79 meanPsi=49.29 abar30=0.00315 [0.00136,0.00619] abar35=0.0311
+T8R8_integ_rs1.8e-4          token_rate       n= 2000 anchor=  10 psi<30=   9 psi<35=  86 meanPsi=61.24 abar30=0.00747 [0.00451,0.0116] abar35=0.0378
+T8R8_integ_rs1e-3            stream           n= 2000 anchor=  30 psi<30= 265 psi<35= 921 meanPsi=34.95 abar30=0.111 [0.0995,0.123] abar35=0.358
+T8R8_integ_rs1e-3            token_fill       n= 2000 anchor=   2 psi<30=   7 psi<35=  58 meanPsi=50.84 abar30=0.00338 [0.00155,0.00641] abar35=0.0226
+T8R8_integ_rs1e-3            token_fill_stag  n= 2000 anchor=   0 psi<30=   7 psi<35=  58 meanPsi=50.84 abar30=0.00263 [0.00106,0.00541] abar35=0.0218
+T8R8_integ_rs1e-3            token_rate       n= 2000 anchor=   2 psi<30=   8 psi<35=  65 meanPsi=64.19 abar30=0.00376 [0.00181,0.0069] abar35=0.0252
+T8R8_paper435_hd3.8e-3       stream           n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_hd3.8e-3       token_fill       n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_hd3.8e-3       token_fill_stag  n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_hd3.8e-3       token_rate       n= 2000 anchor=   1 psi<30=  80 psi<35= 516 meanPsi=37.80 abar30=0.00592 [0.00472,0.00732] abar35=0.0378
+T8R8_paper435_rs1.8e-4       stream           n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1.8e-4       token_fill       n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1.8e-4       token_fill_stag  n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1.8e-4       token_rate       n= 2000 anchor=   7 psi<30= 128 psi<35= 633 meanPsi=37.08 abar30=0.0132 [0.0112,0.0156] abar35=0.0627
+T8R8_paper435_rs1e-3         stream           n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper435_rs1e-3         token_fill       n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper435_rs1e-3         token_fill_stag  n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper435_rs1e-3         token_rate       n= 2000 anchor=   3 psi<30= 107 psi<35= 584 meanPsi=37.39 abar30=0.00936 [0.00773,0.0112] abar35=0.05
+T8R8_paper_rs1.8e-4          stream           n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1.8e-4          token_fill       n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1.8e-4          token_fill_stag  n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1.8e-4          token_rate       n= 2000 anchor=   7 psi<30= 134 psi<35= 619 meanPsi=37.06 abar30=0.0142 [0.012,0.0166] abar35=0.063
+T8R8_paper_rs1e-3            stream           n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+T8R8_paper_rs1e-3            token_fill       n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+T8R8_paper_rs1e-3            token_fill_stag  n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+T8R8_paper_rs1e-3            token_rate       n= 2000 anchor=   3 psi<30= 109 psi<35= 584 meanPsi=37.37 abar30=0.0098 [0.00811,0.0117] abar35=0.0514
+-> results/e2e_summary.json

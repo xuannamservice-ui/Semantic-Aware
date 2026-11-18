@@ -1,0 +1,66 @@
+variant T8R8_integ_hd3.8e-3 (T8R8): N=1000000 records=711417 sampled=4000
+variant T8R8_paper_hd3.8e-3 (T8R8): N=1000000 records=150214 sampled=4000
+bicycle: 1/589 records, 93s
+bicycle: 201/589 records, 100s
+bicycle: 401/589 records, 106s
+bicycle: 589 records, 2356 rows, 111s -> results/bicycle/e2e_v2a_r1_p3.json
+bonsai: 1/893 records, 0s
+bonsai: 201/893 records, 10s
+bonsai: 401/893 records, 19s
+bonsai: 601/893 records, 28s
+bonsai: 801/893 records, 35s
+bonsai: 893 records, 3572 rows, 39s -> results/bonsai/e2e_v2a_r1_p3.json
+counter: 1/713 records, 0s
+counter: 201/713 records, 10s
+counter: 401/713 records, 22s
+counter: 601/713 records, 34s
+counter: 713 records, 2852 rows, 40s -> results/counter/e2e_v2a_r1_p3.json
+drjohnson: 1/783 records, 0s
+drjohnson: 201/783 records, 3s
+drjohnson: 401/783 records, 6s
+drjohnson: 601/783 records, 8s
+drjohnson: 783 records, 3132 rows, 12s -> results/drjohnson/e2e_v2a_r1_p3.json
+garden: 1/542 records, 0s
+garden: 201/542 records, 7s
+garden: 401/542 records, 14s
+garden: 542 records, 2168 rows, 18s -> results/garden/e2e_v2a_r1_p3.json
+kitchen: 1/832 records, 0s
+kitchen: 201/832 records, 13s
+kitchen: 401/832 records, 26s
+kitchen: 601/832 records, 38s
+kitchen: 801/832 records, 50s
+kitchen: 832 records, 3328 rows, 52s -> results/kitchen/e2e_v2a_r1_p3.json
+playroom: 1/665 records, 0s
+playroom: 201/665 records, 3s
+playroom: 401/665 records, 5s
+playroom: 601/665 records, 8s
+playroom: 665 records, 2660 rows, 8s -> results/playroom/e2e_v2a_r1_p3.json
+room: 1/927 records, 0s
+room: 201/927 records, 7s
+room: 401/927 records, 14s
+room: 601/927 records, 21s
+room: 801/927 records, 24s
+room: 927 records, 3708 rows, 26s -> results/room/e2e_v2a_r1_p3.json
+stump: 1/370 records, 0s
+stump: 201/370 records, 9s
+stump: 370 records, 1480 rows, 16s -> results/stump/e2e_v2a_r1_p3.json
+train: 1/923 records, 0s
+train: 201/923 records, 10s
+train: 401/923 records, 21s
+train: 601/923 records, 32s
+train: 801/923 records, 41s
+train: 923 records, 3692 rows, 48s -> results/train/e2e_v2a_r1_p3.json
+truck: 1/763 records, 0s
+truck: 201/763 records, 10s
+truck: 401/763 records, 19s
+truck: 601/763 records, 28s
+truck: 763 records, 3052 rows, 36s -> results/truck/e2e_v2a_r1_p3.json
+T8R8_integ_hd3.8e-3          stream           n= 4000 anchor=  28 psi<30= 433 psi<35=1635 meanPsi=35.74 abar30=0.082 [0.0751,0.0893] abar35=0.296
+T8R8_integ_hd3.8e-3          token_fill       n= 4000 anchor=   1 psi<30=   7 psi<35=  92 meanPsi=52.07 abar30=0.00142 [0.000615,0.0028] abar35=0.0165
+T8R8_integ_hd3.8e-3          token_fill_stag  n= 4000 anchor=   0 psi<30=   7 psi<35=  92 meanPsi=52.07 abar30=0.00124 [0.000501,0.00256] abar35=0.0164
+T8R8_integ_hd3.8e-3          token_rate       n= 4000 anchor=   1 psi<30=   5 psi<35= 111 meanPsi=66.34 abar30=0.00107 [0.000392,0.00232] abar35=0.0199
+T8R8_paper_hd3.8e-3          stream           n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+T8R8_paper_hd3.8e-3          token_fill       n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+T8R8_paper_hd3.8e-3          token_fill_stag  n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+T8R8_paper_hd3.8e-3          token_rate       n= 4000 anchor=   2 psi<30= 168 psi<35=1103 meanPsi=37.63 abar30=0.00638 [0.00548,0.00739] abar35=0.0415
+-> results/e2e_summary_p3.json

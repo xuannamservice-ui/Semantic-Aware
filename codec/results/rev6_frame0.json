@@ -1,0 +1,176 @@
+{
+ "T8R8 tau10 conceal attn": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 8.750596363636364,
+   "p50": 8.1877,
+   "max": 25.0228
+  },
+  "frame0_over_11.1": 17,
+  "of_which_psi_ge_30": 17,
+  "of_which_psi_ge_35": 8,
+  "lost_set_agrees_with_tab_frames": 110,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 9,
+  "misses_by_scene": {
+   "garden": 3,
+   "bicycle": 2,
+   "stump": 2,
+   "kitchen": 3,
+   "bonsai": 2,
+   "truck": 1,
+   "train": 4
+  }
+ },
+ "T8R8 tau10 conceal deploy": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 8.815967272727272,
+   "p50": 8.7936,
+   "max": 17.3745
+  },
+  "frame0_over_11.1": 24,
+  "of_which_psi_ge_30": 24,
+  "of_which_psi_ge_35": 19,
+  "lost_set_agrees_with_tab_frames": 106,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 9,
+  "misses_by_scene": {
+   "stump": 2,
+   "kitchen": 10,
+   "bonsai": 1,
+   "truck": 1,
+   "train": 10
+  }
+ },
+ "T8R8 tau10 arq+conceal attn": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 8.226842727272727,
+   "p50": 8.19095,
+   "max": 17.6373
+  },
+  "frame0_over_11.1": 17,
+  "of_which_psi_ge_30": 17,
+  "of_which_psi_ge_35": 14,
+  "lost_set_agrees_with_tab_frames": 110,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 3,
+  "misses_by_scene": {
+   "garden": 2,
+   "bicycle": 1,
+   "stump": 1,
+   "kitchen": 8,
+   "bonsai": 1,
+   "train": 4
+  }
+ },
+ "T8R8 tau10 arq+conceal deploy": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 8.975853636363635,
+   "p50": 9.52675,
+   "max": 17.6607
+  },
+  "frame0_over_11.1": 25,
+  "of_which_psi_ge_30": 25,
+  "of_which_psi_ge_35": 23,
+  "lost_set_agrees_with_tab_frames": 110,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 3,
+  "misses_by_scene": {
+   "bicycle": 1,
+   "stump": 2,
+   "kitchen": 10,
+   "bonsai": 1,
+   "truck": 1,
+   "train": 10
+  }
+ },
+ "T8R8 tau2.5 conceal attn": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 8.403389090909089,
+   "p50": 7.795,
+   "max": 34.7931
+  },
+  "frame0_over_11.1": 17,
+  "of_which_psi_ge_30": 17,
+  "of_which_psi_ge_35": 13,
+  "lost_set_agrees_with_tab_frames": 110,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 4,
+  "misses_by_scene": {
+   "garden": 2,
+   "bicycle": 1,
+   "stump": 1,
+   "room": 2,
+   "counter": 2,
+   "kitchen": 6,
+   "truck": 3
+  }
+ },
+ "T8R8 tau2.5 conceal deploy": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 8.719618181818182,
+   "p50": 8.572199999999999,
+   "max": 20.5961
+  },
+  "frame0_over_11.1": 26,
+  "of_which_psi_ge_30": 26,
+  "of_which_psi_ge_35": 24,
+  "lost_set_agrees_with_tab_frames": 106,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 4,
+  "misses_by_scene": {
+   "stump": 1,
+   "counter": 2,
+   "kitchen": 10,
+   "truck": 3,
+   "train": 10
+  }
+ },
+ "T8R8 tau2.5 arq+conceal attn": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 7.889621818181819,
+   "p50": 7.813000000000001,
+   "max": 24.7832
+  },
+  "frame0_over_11.1": 6,
+  "of_which_psi_ge_30": 6,
+  "of_which_psi_ge_35": 5,
+  "lost_set_agrees_with_tab_frames": 110,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 1,
+  "misses_by_scene": {
+   "garden": 1,
+   "room": 1,
+   "counter": 1,
+   "kitchen": 2,
+   "truck": 1
+  }
+ },
+ "T8R8 tau2.5 arq+conceal deploy": {
+  "paths": 110,
+  "E2E_median_over_reps": {
+   "mean": 8.767734545454546,
+   "p50": 8.7209,
+   "max": 19.1088
+  },
+  "frame0_over_11.1": 26,
+  "of_which_psi_ge_30": 26,
+  "of_which_psi_ge_35": 26,
+  "lost_set_agrees_with_tab_frames": 110,
+  "frame0_psi_lt30_in_tab_frames": 0,
+  "frame0_psi_lt35_in_tab_frames": 1,
+  "misses_by_scene": {
+   "stump": 1,
+   "counter": 2,
+   "kitchen": 10,
+   "truck": 3,
+   "train": 10
+  }
+ }
+}

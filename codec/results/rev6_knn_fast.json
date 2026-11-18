@@ -1,0 +1,569 @@
+{
+ "script": "knn_gpu_eval.py",
+ "kernel": "knn_gpu.py",
+ "gpu": "NVIDIA L40S",
+ "semantics": "k = 16 neighbours of every lost anchor among the anchors of its view (self excluded), exact under float64 d2 = (dx*dx + dy*dy) + dz*dz of the FP32 positions, ties to the lower index; timing = wall clock from positions on the GPU to indices ready (synchronized), median of the repetitions, idle GPU",
+ "exactness": {
+  "scenes": [
+   "bicycle",
+   "bonsai",
+   "counter",
+   "drjohnson",
+   "garden",
+   "kitchen",
+   "playroom",
+   "room",
+   "stump",
+   "train",
+   "truck"
+  ],
+  "windows": 1401,
+  "queries": 21324984,
+  "rows_identical_fraction": 1.0,
+  "rows_identical_fraction_h_radius": 1.0,
+  "sets_identical_fraction": 1.0,
+  "windows_all_rows_identical": 1401,
+  "boundary_tie_fraction": 0.13025463465763915,
+  "brute64_queries": 938506,
+  "brute64_rows_identical_min": 1.0,
+  "exact_pass_queries": 45,
+  "brute_force_queries": 1,
+  "table": {
+   "bicycle": {
+    "n": 249965,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     1,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.1486168063528894,
+    "fallback": [
+     1,
+     0
+    ]
+   },
+   "bonsai": {
+    "n": 220856,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 2.2639185713768248e-05,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "counter": {
+    "n": 249739,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.1093421532079491,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "drjohnson": {
+    "n": 238330,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.0,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "garden": {
+    "n": 249992,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.15419293417389357,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "kitchen": {
+    "n": 249958,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.12653725825938758,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "playroom": {
+    "n": 180156,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.0,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "room": {
+    "n": 198709,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.0,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "stump": {
+    "n": 249958,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.15119340049128255,
+    "fallback": [
+     0,
+     0
+    ]
+   },
+   "train": {
+    "n": 249844,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     1,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.2646131185859977,
+    "fallback": [
+     1,
+     0
+    ]
+   },
+   "truck": {
+    "n": 249768,
+    "rows_identical": 1.0,
+    "rows_identical_h_radius": 1.0,
+    "fallback_h_radius": [
+     0,
+     0
+    ],
+    "sets_identical": 1.0,
+    "boundary_ties": 0.012948015758624002,
+    "fallback": [
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "timing_h_radius": {
+  "h": "1.0 x radius",
+  "reps": 7,
+  "scenes": [
+   "bicycle",
+   "bonsai",
+   "counter",
+   "drjohnson",
+   "garden",
+   "kitchen",
+   "playroom",
+   "room",
+   "stump",
+   "train",
+   "truck"
+  ],
+  "T8R8:2.5": {
+   "knn_ms": {
+    "n": 425,
+    "mean": 0.6254706948119051,
+    "p50": 0.5999049171805382,
+    "p99": 1.0291403904557224,
+    "max": 1.8851449713110924
+   },
+   "n_lost": {
+    "n": 425,
+    "mean": 16610.25176470588,
+    "p50": 12160.0,
+    "p99": 54746.23999999998,
+    "max": 69760.0
+   },
+   "worst_case": {
+    "scene": "kitchen",
+    "view": 64,
+    "n_lost": 69760,
+    "n_visible": 223250,
+    "ms": 1.0798973962664604,
+    "ms_all_reps": [
+     1.0818224400281906,
+     1.074172556400299,
+     1.039864495396614,
+     1.0798973962664604,
+     1.1261031031608582,
+     1.1157207190990448,
+     1.0469965636730194
+    ]
+   },
+   "slowest_window_ms": 1.8851449713110924
+  },
+  "T8R8:10": {
+   "knn_ms": {
+    "n": 569,
+    "mean": 0.6245690232604375,
+    "p50": 0.5933772772550583,
+    "p99": 1.0426266491413119,
+    "max": 1.1410200968384743
+   },
+   "n_lost": {
+    "n": 569,
+    "mean": 17051.87346221441,
+    "p50": 12352.0,
+    "p99": 51675.52000000025,
+    "max": 67456.0
+   },
+   "worst_case": {
+    "scene": "kitchen",
+    "view": 112,
+    "n_lost": 67456,
+    "n_visible": 215909,
+    "ms": 1.0714875534176826,
+    "ms_all_reps": [
+     1.0714875534176826,
+     1.1036451905965805,
+     1.0238299146294594,
+     1.1175516992807388,
+     1.1273110285401344,
+     1.0457560420036316,
+     1.0518291965126991
+    ]
+   },
+   "slowest_window_ms": 1.1410200968384743
+  },
+  "T6R11:2.5": {
+   "knn_ms": {
+    "n": 407,
+    "mean": 0.5596664548835532,
+    "p50": 0.5531245842576027,
+    "p99": 0.7570869475603104,
+    "max": 0.8239634335041046
+   },
+   "n_lost": {
+    "n": 407,
+    "mean": 11211.574938574939,
+    "p50": 10688.0,
+    "p99": 25267.059999999998,
+    "max": 28224.0
+   },
+   "worst_case": {
+    "scene": "kitchen",
+    "view": 40,
+    "n_lost": 28224,
+    "n_visible": 225810,
+    "ms": 0.7059918716549873,
+    "ms_all_reps": [
+     0.8064210414886475,
+     0.8419742807745934,
+     0.7494296878576279,
+     0.7059918716549873,
+     0.6992761045694351,
+     0.6808983162045479,
+     0.6776889786124229
+    ]
+   },
+   "slowest_window_ms": 0.8239634335041046
+  },
+  "all_windows": {
+   "knn_ms": {
+    "n": 1401,
+    "mean": 0.605987913396042,
+    "p50": 0.5793552845716476,
+    "p99": 1.0313969105482101,
+    "max": 1.8851449713110924
+   },
+   "n_lost": {
+    "n": 1401,
+    "mean": 15221.259100642399,
+    "p50": 11584.0,
+    "p99": 50048.0,
+    "max": 69760.0
+   }
+  },
+  "all_view_anchors_ms": {
+   "n": 338,
+   "mean": 1.6418982699469349,
+   "p50": 1.7673149704933167,
+   "p99": 2.618449227884412,
+   "max": 2.865612506866455
+  },
+  "whole_scene_table_ms": {
+   "bicycle": {
+    "n_anchors": 249965,
+    "ms": 3.27879935503006
+   },
+   "bonsai": {
+    "n_anchors": 220856,
+    "ms": 2.5774147361516953
+   },
+   "counter": {
+    "n_anchors": 249739,
+    "ms": 2.4816924706101418
+   },
+   "drjohnson": {
+    "n_anchors": 238330,
+    "ms": 2.4179471656680107
+   },
+   "garden": {
+    "n_anchors": 249992,
+    "ms": 2.7667609974741936
+   },
+   "kitchen": {
+    "n_anchors": 249958,
+    "ms": 2.510824240744114
+   },
+   "playroom": {
+    "n_anchors": 180156,
+    "ms": 1.99226476252079
+   },
+   "room": {
+    "n_anchors": 198709,
+    "ms": 2.1682744845747948
+   },
+   "stump": {
+    "n_anchors": 249958,
+    "ms": 2.716626040637493
+   },
+   "train": {
+    "n_anchors": 249844,
+    "ms": 2.6953499764204025
+   },
+   "truck": {
+    "n_anchors": 249768,
+    "ms": 3.187035210430622
+   }
+  }
+ },
+ "timing_auto_h": {
+  "h": "auto",
+  "reps": 7,
+  "scenes": [
+   "bicycle",
+   "bonsai",
+   "counter",
+   "drjohnson",
+   "garden",
+   "kitchen",
+   "playroom",
+   "room",
+   "stump",
+   "train",
+   "truck"
+  ],
+  "T8R8:2.5": {
+   "knn_ms": {
+    "n": 425,
+    "mean": 0.8341658159213907,
+    "p50": 0.8187703788280487,
+    "p99": 1.2248742580413818,
+    "max": 2.1522920578718185
+   },
+   "n_lost": {
+    "n": 425,
+    "mean": 16610.25176470588,
+    "p50": 12160.0,
+    "p99": 54746.23999999998,
+    "max": 69760.0
+   },
+   "worst_case": {
+    "scene": "kitchen",
+    "view": 64,
+    "n_lost": 69760,
+    "n_visible": 223250,
+    "ms": 1.3839472085237503,
+    "ms_all_reps": [
+     1.4544380828738213,
+     1.365114003419876,
+     1.3366909697651863,
+     1.442011445760727,
+     1.3151904568076134,
+     1.3839472085237503,
+     1.397630199790001
+    ]
+   },
+   "slowest_window_ms": 2.1522920578718185
+  },
+  "T8R8:10": {
+   "knn_ms": {
+    "n": 569,
+    "mean": 0.822494595404878,
+    "p50": 0.8040545508265495,
+    "p99": 1.1800847947597515,
+    "max": 1.368856057524681
+   },
+   "n_lost": {
+    "n": 569,
+    "mean": 17051.87346221441,
+    "p50": 12352.0,
+    "p99": 51675.52000000025,
+    "max": 67456.0
+   },
+   "worst_case": {
+    "scene": "kitchen",
+    "view": 112,
+    "n_lost": 67456,
+    "n_visible": 215909,
+    "ms": 1.368856057524681,
+    "ms_all_reps": [
+     1.3988958671689034,
+     1.3798736035823822,
+     1.3134796172380447,
+     1.368856057524681,
+     1.3626711443066597,
+     1.3747960329055786,
+     1.3685422018170357
+    ]
+   },
+   "slowest_window_ms": 1.368856057524681
+  },
+  "T6R11:2.5": {
+   "knn_ms": {
+    "n": 407,
+    "mean": 0.761773553962936,
+    "p50": 0.7601846009492874,
+    "p99": 0.9830828197300434,
+    "max": 1.0794373229146004
+   },
+   "n_lost": {
+    "n": 407,
+    "mean": 11211.574938574939,
+    "p50": 10688.0,
+    "p99": 25267.059999999998,
+    "max": 28224.0
+   },
+   "worst_case": {
+    "scene": "kitchen",
+    "view": 40,
+    "n_lost": 28224,
+    "n_visible": 225810,
+    "ms": 1.0794373229146004,
+    "ms_all_reps": [
+     1.0989103466272354,
+     1.065026968717575,
+     1.056050881743431,
+     1.0804152116179466,
+     1.0873405262827873,
+     1.0689850896596909,
+     1.0794373229146004
+    ]
+   },
+   "slowest_window_ms": 1.0794373229146004
+  },
+  "all_windows": {
+   "knn_ms": {
+    "n": 1401,
+    "mean": 0.8083952412668677,
+    "p50": 0.7886765524744987,
+    "p99": 1.1732839047908783,
+    "max": 2.1522920578718185
+   },
+   "n_lost": {
+    "n": 1401,
+    "mean": 15221.259100642399,
+    "p50": 11584.0,
+    "p99": 50048.0,
+    "max": 69760.0
+   }
+  },
+  "all_view_anchors_ms": {
+   "n": 338,
+   "mean": 1.7805924782386193,
+   "p50": 1.7923503182828426,
+   "p99": 2.9492264147847886,
+   "max": 3.2055536285042763
+  },
+  "whole_scene_table_ms": {
+   "bicycle": {
+    "n_anchors": 249965,
+    "ms": 3.2071107998490334
+   },
+   "bonsai": {
+    "n_anchors": 220856,
+    "ms": 2.605064772069454
+   },
+   "counter": {
+    "n_anchors": 249739,
+    "ms": 2.7483953163027763
+   },
+   "drjohnson": {
+    "n_anchors": 238330,
+    "ms": 2.5689126923680305
+   },
+   "garden": {
+    "n_anchors": 249992,
+    "ms": 2.9467884451150894
+   },
+   "kitchen": {
+    "n_anchors": 249958,
+    "ms": 2.7364613488316536
+   },
+   "playroom": {
+    "n_anchors": 180156,
+    "ms": 2.230859361588955
+   },
+   "room": {
+    "n_anchors": 198709,
+    "ms": 2.3645013570785522
+   },
+   "stump": {
+    "n_anchors": 249958,
+    "ms": 2.9157977551221848
+   },
+   "train": {
+    "n_anchors": 249844,
+    "ms": 2.881154417991638
+   },
+   "truck": {
+    "n_anchors": 249768,
+    "ms": 3.2154573127627373
+   }
+  }
+ }
+}

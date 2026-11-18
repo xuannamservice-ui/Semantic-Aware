@@ -1,0 +1,2941 @@
+{
+ "info": {
+  "gpu": "NVIDIA L40S",
+  "torch": "2.10.0+cu128",
+  "args": {
+   "mode": "session",
+   "scenes": "truck",
+   "nets": "deploy,attn",
+   "runs": "T8R8:10:conceal,T8R8:10:arq+conceal,T8R8:2.5:conceal,T8R8:2.5:arq+conceal",
+   "cold_runs": "T8R8:2.5,T8R8:10,T6R11:2.5",
+   "chains": 10,
+   "reps": 3,
+   "chains_t6": 0,
+   "chains_attn": 0,
+   "probe_every": 8,
+   "n_ev": 3,
+   "eps": 0.16666666666666666,
+   "arq_last_slot": 5,
+   "s2": "2.5",
+   "threads": 16,
+   "seed": 0,
+   "data": "data/360_v2",
+   "out": "results",
+   "phy": "phy",
+   "out_json": "results/rev6_raw/frame0_truck.json",
+   "barrier": null,
+   "n_procs": 1,
+   "duration": 60.0,
+   "max_retry": 5,
+   "max_frames": 1,
+   "attn_all_runs": true,
+   "no_probe": true,
+   "aggregate": ""
+  },
+  "gpu_apps_before": [],
+  "gpu_before": "0 %, 4 MiB, 2520 MHz, 46",
+  "waited_s": 0.02014446258544922,
+  "checks": {
+   "truck/edge": {
+    "tag": "_v2a_r1",
+    "net": "edge_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 130.32324397040455
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 464.1632875308286
+     }
+    },
+    "A": 249768
+   },
+   "truck/attn": {
+    "tag": "_v2a_r1",
+    "net": "gen_fp",
+    "rans": {
+     "base": {
+      "bit_exact": true,
+      "bits_per_anchor": 130.32324397040455
+     },
+     "enh": {
+      "bit_exact": true,
+      "bits_per_anchor": 464.1632875308286
+     }
+    },
+    "A": 249768
+   }
+  },
+  "fp16_check": {
+   "edge": null,
+   "attn": null
+  },
+  "probes": [
+   {
+    "tag": "truck/edge/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/edge/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/10/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/0/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/0/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/1/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/1/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/2/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/2/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/3/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/3/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/4/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/4/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/5/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/5/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/6/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/6/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/7/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/7/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/8/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/8/0/post",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/9/0",
+    "ok": true,
+    "skipped": true
+   },
+   {
+    "tag": "truck/attn/T8R8/2.5/arq+conceal/9/0/post",
+    "ok": true,
+    "skipped": true
+   }
+  ],
+  "busy_log": [],
+  "gpu_apps_after": [
+   "3359604, 542"
+  ],
+  "gpu_after": "22 %, 551 MiB, 2520 MHz, 48",
+  "wait_log": []
+ },
+ "summary": {
+  "attn | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 7.756466666666667,
+    "p50": 7.7776,
+    "p99": 7.927683,
+    "p999": 7.9348083,
+    "max": 7.9356
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 8.956466666666667,
+    "p50": 8.783000000000001,
+    "p99": 10.862897,
+    "p999": 10.928329700000003,
+    "max": 10.9356
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.2,
+    "p50": 1.0,
+    "p99": 3.0,
+    "p999": 3.0,
+    "max": 3.0
+   },
+   "frac_E2E_gt_11.1": 0.0,
+   "n_E2E_gt_11.1": 0,
+   "cp95_E2E": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_E2E": 0.09503385285530411,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.80328,
+     "p50": 2.7955,
+     "p99": 2.880656,
+     "p999": 2.8842056,
+     "max": 2.8846
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.009076666666666667,
+     "p50": 0.0092,
+     "p99": 0.010981000000000001,
+     "p999": 0.011268100000000003,
+     "max": 0.0113
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.32946000000000003,
+     "p50": 0.3246,
+     "p99": 0.37199,
+     "p999": 0.37433900000000003,
+     "max": 0.3746
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008773333333333333,
+     "p50": 0.00825,
+     "p99": 0.011649000000000003,
+     "p999": 0.012144900000000007,
+     "max": 0.0122
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.586600000000001,
+     "p50": 4.58805,
+     "p99": 4.764862,
+     "p999": 4.778486200000001,
+     "max": 4.78
+    }
+   },
+   "sum_stage_means": 7.737190000000002,
+   "sum_stage_p99": 8.040137999999999,
+   "p99_of_event_total": 7.906934000000001,
+   "host_overhead_mean": 0.01927666666666668,
+   "stage_corr": {
+    "dec~enc": -0.017123660476531393,
+    "dec~gath": 0.6656900450147122,
+    "dec~conc": 0.11256731807680789,
+    "dec~ren": -0.2203095393466224,
+    "enc~gath": 0.19309167289510237,
+    "enc~conc": 0.3741839461769261,
+    "enc~ren": -0.11370447043156016,
+    "gath~conc": 0.1317909767379417,
+    "gath~ren": 0.08632269813326578,
+    "conc~ren": 0.09603950984017039
+   },
+   "stage_corr_with_total": {
+    "dec": 0.31674700799189265,
+    "enc": -0.04518814670594825,
+    "gath": 0.5581931340747628,
+    "conc": 0.1748784642274666,
+    "ren": 0.838976674404644
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7913,
+     "enc": 0.0084,
+     "gath": 0.3256,
+     "conc": 0.009,
+     "ren": 4.78,
+     "wall": 7.9356,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.9356
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7883,
+     "enc": 0.0082,
+     "gath": 0.3228,
+     "conc": 0.01,
+     "ren": 4.5363,
+     "wall": 7.6849,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.6849
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.8304,
+     "enc": 0.0101,
+     "gath": 0.337,
+     "conc": 0.0122,
+     "ren": 4.4565,
+     "wall": 7.6657,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.6657
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.8047,
+     "enc": 0.0082,
+     "gath": 0.34,
+     "conc": 0.0082,
+     "ren": 4.7278,
+     "wall": 7.9083,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 8.9083
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.8568,
+     "enc": 0.0092,
+     "gath": 0.3576,
+     "conc": 0.0091,
+     "ren": 4.6263,
+     "wall": 7.8791,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 8.8791
+    }
+   ]
+  },
+  "attn | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 8.356100000000001,
+    "p50": 7.74845,
+    "p99": 13.817268,
+    "p999": 13.8357468,
+    "max": 13.8378
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 9.3561,
+    "p50": 8.74845,
+    "p99": 14.817268,
+    "p999": 14.8357468,
+    "max": 14.8378
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.1,
+   "n_E2E_gt_11.1": 3,
+   "cp95_E2E": [
+    0.021117137029722576,
+    0.2652884504742081
+   ],
+   "cp95_one_sided_upper_E2E": 0.23859785729325092,
+   "frac_Tedge_gt_11.1": 0.1,
+   "n_Tedge_gt_11.1": 3,
+   "cp95_Tedge": [
+    0.021117137029722576,
+    0.2652884504742081
+   ],
+   "cp95_one_sided_upper_Tedge": 0.23859785729325092,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.77699,
+     "p50": 2.7984999999999998,
+     "p99": 2.887606,
+     "p999": 2.8976806,
+     "max": 2.8988
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.009049999999999999,
+     "p50": 0.0092,
+     "p99": 0.0102,
+     "p999": 0.0102,
+     "max": 0.0102
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.44400666666666666,
+     "p50": 0.3256,
+     "p99": 1.532487,
+     "p999": 1.5402387,
+     "max": 1.5411
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.5180666666666667,
+     "p50": 0.0082,
+     "p99": 5.100772,
+     "p999": 5.1016072,
+     "max": 5.1017
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.588826666666666,
+     "p50": 4.5875,
+     "p99": 4.767419,
+     "p999": 4.788011900000001,
+     "max": 4.7903
+    }
+   },
+   "sum_stage_means": 8.336940000000002,
+   "sum_stage_p99": 14.298484,
+   "p99_of_event_total": 13.798006,
+   "host_overhead_mean": 0.019159999999999754,
+   "stage_corr": {
+    "dec~enc": -0.4543431109560742,
+    "dec~gath": -0.9581140223035279,
+    "dec~conc": -0.9641371778990869,
+    "dec~ren": -0.17035824837928085,
+    "enc~gath": 0.5012822891065926,
+    "enc~conc": 0.4977586304848384,
+    "enc~ren": 0.13433728307516385,
+    "gath~conc": 0.9992583175352543,
+    "gath~ren": 0.13600572919707615,
+    "conc~ren": 0.13646184894344737
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9601352141034013,
+    "enc": 0.5020414104135491,
+    "gath": 0.9990082470733196,
+    "conc": 0.9991943998263592,
+    "ren": 0.1714965251029855
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 2227.2,
+    "p50": 0.0,
+    "p99": 22272.0,
+    "p999": 22272.0,
+    "max": 22272.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22272,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71091232,
+     "base_bits": 22887888,
+     "dec": 2.5241,
+     "enc": 0.0102,
+     "gath": 1.5411,
+     "conc": 5.0964,
+     "ren": 4.649,
+     "wall": 13.8378,
+     "n_miss": 22272,
+     "n_vis": 178118,
+     "e2e": 14.8378
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22272,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71091232,
+     "base_bits": 22887888,
+     "dec": 2.5068,
+     "enc": 0.0095,
+     "gath": 1.4979,
+     "conc": 5.1017,
+     "ren": 4.6263,
+     "wall": 13.767,
+     "n_miss": 22272,
+     "n_vis": 178118,
+     "e2e": 14.767
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22272,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71091232,
+     "base_bits": 22887888,
+     "dec": 2.4893,
+     "enc": 0.0102,
+     "gath": 1.5114,
+     "conc": 5.0985,
+     "ren": 4.5755,
+     "wall": 13.7036,
+     "n_miss": 22272,
+     "n_vis": 178118,
+     "e2e": 14.7036
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 8,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7853,
+     "enc": 0.0094,
+     "gath": 0.307,
+     "conc": 0.0082,
+     "ren": 4.7903,
+     "wall": 7.9198,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 8.9198
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 9,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.8602,
+     "enc": 0.0091,
+     "gath": 0.3482,
+     "conc": 0.0092,
+     "ren": 4.6275,
+     "wall": 7.8727,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 8.8727
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 7.7389100000000015,
+    "p50": 7.7326999999999995,
+    "p99": 7.905526,
+    "p999": 7.9135126,
+    "max": 7.9144
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 9.53891,
+    "p50": 8.79005,
+    "p99": 12.696143,
+    "p999": 12.7178843,
+    "max": 12.7203
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.8,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 0.1,
+   "n_E2E_gt_11.1": 3,
+   "cp95_E2E": [
+    0.021117137029722576,
+    0.2652884504742081
+   ],
+   "cp95_one_sided_upper_E2E": 0.23859785729325092,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.80144,
+     "p50": 2.79605,
+     "p99": 2.8498,
+     "p999": 2.8498,
+     "max": 2.8498
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.009116666666666665,
+     "p50": 0.0092,
+     "p99": 0.012330000000000002,
+     "p999": 0.01311300000000001,
+     "max": 0.0132
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.32186,
+     "p50": 0.3174,
+     "p99": 0.365524,
+     "p999": 0.3692824,
+     "max": 0.3697
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008906666666666667,
+     "p50": 0.0084,
+     "p99": 0.014460000000000004,
+     "p999": 0.01602600000000002,
+     "max": 0.0162
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.579109999999999,
+     "p50": 4.5819,
+     "p99": 4.726865999999999,
+     "p999": 4.7306766,
+     "max": 4.7311
+    }
+   },
+   "sum_stage_means": 7.720433333333332,
+   "sum_stage_p99": 7.96898,
+   "p99_of_event_total": 7.885819,
+   "host_overhead_mean": 0.018476666666666624,
+   "stage_corr": {
+    "dec~enc": 0.03667436937333363,
+    "dec~gath": 0.2046386484946739,
+    "dec~conc": -0.150762914704277,
+    "dec~ren": 0.24086110545302808,
+    "enc~gath": 0.6189325207696983,
+    "enc~conc": 0.16804508688384676,
+    "enc~ren": -0.11915792976832833,
+    "gath~conc": 0.11702115610189172,
+    "gath~ren": -0.17435176679115888,
+    "conc~ren": -0.07193610742760163
+   },
+   "stage_corr_with_total": {
+    "dec": 0.5063999398016702,
+    "enc": 0.048286013896387564,
+    "gath": 0.11552649400689381,
+    "conc": -0.05505211287244947,
+    "ren": 0.9321524357304231
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7922,
+     "enc": 0.0092,
+     "gath": 0.3115,
+     "conc": 0.009,
+     "ren": 4.5804,
+     "wall": 7.7203,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.7203
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7945,
+     "enc": 0.0094,
+     "gath": 0.3306,
+     "conc": 0.0082,
+     "ren": 4.4761,
+     "wall": 7.637,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.637
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7894,
+     "enc": 0.0093,
+     "gath": 0.3061,
+     "conc": 0.0092,
+     "ren": 4.4861,
+     "wall": 7.6183,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.6183
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.8091,
+     "enc": 0.01,
+     "gath": 0.3215,
+     "conc": 0.0082,
+     "ren": 4.7165,
+     "wall": 7.8838,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.8838
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 3,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7945,
+     "enc": 0.0092,
+     "gath": 0.3185,
+     "conc": 0.0092,
+     "ren": 4.6684,
+     "wall": 7.8186,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.8186
+    }
+   ]
+  },
+  "attn | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 9.528739999999999,
+    "p50": 7.8055,
+    "p99": 13.718986000000001,
+    "p999": 13.7207086,
+    "max": 13.7209
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 10.52874,
+    "p50": 8.805499999999999,
+    "p99": 14.718986000000001,
+    "p999": 14.7207086,
+    "max": 14.7209
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.3,
+   "n_E2E_gt_11.1": 9,
+   "cp95_E2E": [
+    0.1473451847547011,
+    0.4939590414625536
+   ],
+   "cp95_one_sided_upper_E2E": 0.4650727065703091,
+   "frac_Tedge_gt_11.1": 0.3,
+   "n_Tedge_gt_11.1": 9,
+   "cp95_Tedge": [
+    0.1473451847547011,
+    0.4939590414625536
+   ],
+   "cp95_one_sided_upper_Tedge": 0.4650727065703091,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.7084700000000006,
+     "p50": 2.79755,
+     "p99": 2.935453,
+     "p999": 2.9496253,
+     "max": 2.9512
+    },
+    "enc": {
+     "n": 30,
+     "mean": 0.009476666666666664,
+     "p50": 0.0092,
+     "p99": 0.017619000000000006,
+     "p999": 0.019941900000000033,
+     "max": 0.0202
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.6770599999999999,
+     "p50": 0.34095,
+     "p99": 1.532251,
+     "p999": 1.5448051000000003,
+     "max": 1.5462
+    },
+    "conc": {
+     "n": 30,
+     "mean": 1.5358333333333332,
+     "p50": 0.0083,
+     "p99": 5.1141309999999995,
+     "p999": 5.1157231,
+     "max": 5.1159
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.579166666666666,
+     "p50": 4.587400000000001,
+     "p99": 4.696639,
+     "p999": 4.709923900000001,
+     "max": 4.7114
+    }
+   },
+   "sum_stage_means": 9.510006666666666,
+   "sum_stage_p99": 14.296092999999999,
+   "p99_of_event_total": 13.699879999999999,
+   "host_overhead_mean": 0.01873333333333343,
+   "stage_corr": {
+    "dec~enc": 0.061690464246552446,
+    "dec~gath": -0.9748168855897849,
+    "dec~conc": -0.9780389451507175,
+    "dec~ren": -0.23639650330166417,
+    "enc~gath": -0.008680180128916562,
+    "enc~conc": -0.020313571452544456,
+    "enc~ren": -0.14936379450008447,
+    "gath~conc": 0.9994444880191387,
+    "gath~ren": 0.28624368738648626,
+    "conc~ren": 0.286305932003022
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9732053912536529,
+    "enc": -0.017865088818089146,
+    "gath": 0.9993851538645765,
+    "conc": 0.9995358267015261,
+    "ren": 0.3103185874499348
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 6664.2,
+    "p50": 0.0,
+    "p99": 22214.0,
+    "p999": 22214.0,
+    "max": 22214.0
+   },
+   "frames_with_miss": 9,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4576,
+     "enc": 0.0113,
+     "gath": 1.5462,
+     "conc": 5.0988,
+     "ren": 4.5883,
+     "wall": 13.7209,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 14.7209
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4453,
+     "enc": 0.0093,
+     "gath": 1.4778,
+     "conc": 5.1013,
+     "ren": 4.6605,
+     "wall": 13.7143,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 14.7143
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4412,
+     "enc": 0.0092,
+     "gath": 1.4981,
+     "conc": 5.0893,
+     "ren": 4.6369,
+     "wall": 13.6983,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 14.6983
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4494,
+     "enc": 0.0092,
+     "gath": 1.4889,
+     "conc": 5.0985,
+     "ren": 4.6336,
+     "wall": 13.6976,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 14.6976
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "attn",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4474,
+     "enc": 0.009,
+     "gath": 1.4766,
+     "conc": 5.1159,
+     "ren": 4.6152,
+     "wall": 13.6812,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 14.6812
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 9.200893333333333,
+    "p50": 9.193200000000001,
+    "p99": 9.362003,
+    "p999": 9.387920300000001,
+    "max": 9.3908
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 10.400893333333334,
+    "p50": 10.20435,
+    "p99": 12.189399,
+    "p999": 12.191199899999999,
+    "max": 12.1914
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.2,
+    "p50": 1.0,
+    "p99": 3.0,
+    "p999": 3.0,
+    "max": 3.0
+   },
+   "frac_E2E_gt_11.1": 0.1,
+   "n_E2E_gt_11.1": 3,
+   "cp95_E2E": [
+    0.021117137029722576,
+    0.2652884504742081
+   ],
+   "cp95_one_sided_upper_E2E": 0.23859785729325092,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.7475233333333335,
+     "p50": 2.7474999999999996,
+     "p99": 2.773864,
+     "p999": 2.7760564,
+     "max": 2.7763
+    },
+    "enc": {
+     "n": 30,
+     "mean": 1.6814,
+     "p50": 1.6835499999999999,
+     "p99": 1.697901,
+     "p999": 1.6987101,
+     "max": 1.6988
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.17756333333333332,
+     "p50": 0.17775000000000002,
+     "p99": 0.21258700000000003,
+     "p999": 0.2203387000000001,
+     "max": 0.2212
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008979999999999998,
+     "p50": 0.00915,
+     "p99": 0.010981000000000001,
+     "p999": 0.011268100000000003,
+     "max": 0.0113
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.561123333333332,
+     "p50": 4.56285,
+     "p99": 4.705528,
+     "p999": 4.7255728,
+     "max": 4.7278
+    }
+   },
+   "sum_stage_means": 9.17659,
+   "sum_stage_p99": 9.400861,
+   "p99_of_event_total": 9.337195,
+   "host_overhead_mean": 0.024303333333333416,
+   "stage_corr": {
+    "dec~enc": -0.1843443275759296,
+    "dec~gath": 0.146802309921689,
+    "dec~conc": -0.013942333791424425,
+    "dec~ren": 0.34486071639805327,
+    "enc~gath": 0.2916059808218843,
+    "enc~conc": 0.08598231612597672,
+    "enc~ren": -0.10974512718929899,
+    "gath~conc": 0.42295610288170665,
+    "gath~ren": -0.04954911156102469,
+    "conc~ren": 0.08305030409240824
+   },
+   "stage_corr_with_total": {
+    "dec": 0.5073786327662285,
+    "enc": 0.06946702940317868,
+    "gath": 0.21252053604922988,
+    "conc": 0.17140689247645904,
+    "ren": 0.9429003238782646
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7575,
+     "enc": 1.6753,
+     "gath": 0.17,
+     "conc": 0.0092,
+     "ren": 4.5558,
+     "wall": 9.1914,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.1914
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7474,
+     "enc": 1.6906,
+     "gath": 0.172,
+     "conc": 0.0092,
+     "ren": 4.5415,
+     "wall": 9.1845,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.1845
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7333,
+     "enc": 1.6853,
+     "gath": 0.1761,
+     "conc": 0.0082,
+     "ren": 4.5046,
+     "wall": 9.1301,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.1301
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 6,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7763,
+     "enc": 1.6753,
+     "gath": 0.1789,
+     "conc": 0.0092,
+     "ren": 4.7278,
+     "wall": 9.3908,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.3908
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "arq+conceal",
+     "chain": 0,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7443,
+     "enc": 1.6906,
+     "gath": 0.1825,
+     "conc": 0.009,
+     "ren": 4.6366,
+     "wall": 9.2915,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.2915
+    }
+   ]
+  },
+  "edge | T8R8 | 10.0 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 9.428176666666667,
+    "p50": 9.201049999999999,
+    "p99": 11.495892,
+    "p999": 11.4998592,
+    "max": 11.5003
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 10.428176666666667,
+    "p50": 10.201049999999999,
+    "p99": 12.495892,
+    "p999": 12.4998592,
+    "max": 12.5003
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.1,
+   "n_E2E_gt_11.1": 3,
+   "cp95_E2E": [
+    0.021117137029722576,
+    0.2652884504742081
+   ],
+   "cp95_one_sided_upper_E2E": 0.23859785729325092,
+   "frac_Tedge_gt_11.1": 0.1,
+   "n_Tedge_gt_11.1": 3,
+   "cp95_Tedge": [
+    0.021117137029722576,
+    0.2652884504742081
+   ],
+   "cp95_one_sided_upper_Tedge": 0.23859785729325092,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.7165066666666666,
+     "p50": 2.7376,
+     "p99": 2.770042,
+     "p999": 2.7727042,
+     "max": 2.773
+    },
+    "enc": {
+     "n": 30,
+     "mean": 1.6815200000000001,
+     "p50": 1.6834500000000001,
+     "p99": 1.704101,
+     "p999": 1.7049101,
+     "max": 1.705
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.18848666666666664,
+     "p50": 0.1792,
+     "p99": 0.295735,
+     "p999": 0.30056350000000004,
+     "max": 0.3011
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.23860666666666672,
+     "p50": 0.0092,
+     "p99": 2.307331,
+     "p999": 2.3089231,
+     "max": 2.3091
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.578096666666667,
+     "p50": 4.566549999999999,
+     "p99": 4.695842,
+     "p999": 4.7089442,
+     "max": 4.7104
+    }
+   },
+   "sum_stage_means": 9.403216666666667,
+   "sum_stage_p99": 11.773050999999999,
+   "p99_of_event_total": 11.469043,
+   "host_overhead_mean": 0.024960000000000034,
+   "stage_corr": {
+    "dec~enc": -0.5715598736235072,
+    "dec~gath": -0.9382775995663764,
+    "dec~conc": -0.9888027374820092,
+    "dec~ren": -0.46711391979759764,
+    "enc~gath": 0.5134272966679938,
+    "enc~conc": 0.5444973804055668,
+    "enc~ren": 0.24851278410913707,
+    "gath~conc": 0.9577767591382786,
+    "gath~ren": 0.5162755103895879,
+    "conc~ren": 0.49222032075183364
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9817526752788673,
+    "enc": 0.5486589372841042,
+    "gath": 0.9630230092668994,
+    "conc": 0.996935122303968,
+    "ren": 0.5554047753150193
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 2227.2,
+    "p50": 0.0,
+    "p99": 22272.0,
+    "p999": 22272.0,
+    "max": 22272.0
+   },
+   "frames_with_miss": 3,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22272,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71091232,
+     "base_bits": 22887888,
+     "dec": 2.4917,
+     "enc": 1.6883,
+     "gath": 0.2826,
+     "conc": 2.2999,
+     "ren": 4.7104,
+     "wall": 11.5003,
+     "n_miss": 22272,
+     "n_vis": 178118,
+     "e2e": 12.5003
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22272,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71091232,
+     "base_bits": 22887888,
+     "dec": 2.4934,
+     "enc": 1.7019,
+     "gath": 0.3011,
+     "conc": 2.303,
+     "ren": 4.6602,
+     "wall": 11.4851,
+     "n_miss": 22272,
+     "n_vis": 178118,
+     "e2e": 12.4851
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 1,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22272,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71091232,
+     "base_bits": 22887888,
+     "dec": 2.4699,
+     "enc": 1.705,
+     "gath": 0.2539,
+     "conc": 2.3091,
+     "ren": 4.5988,
+     "wall": 11.3597,
+     "n_miss": 22272,
+     "n_vis": 178118,
+     "e2e": 12.3597
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 2,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.773,
+     "enc": 1.6886,
+     "gath": 0.1764,
+     "conc": 0.009,
+     "ren": 4.6234,
+     "wall": 9.2979,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.2979
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 10.0,
+     "scheme": "conceal",
+     "chain": 4,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7412,
+     "enc": 1.6855,
+     "gath": 0.1751,
+     "conc": 0.0092,
+     "ren": 4.6551,
+     "wall": 9.2949,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 10.2949
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | arq+conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 9.232760000000003,
+    "p50": 9.228449999999999,
+    "p99": 9.3659,
+    "p999": 9.376339999999999,
+    "max": 9.3775
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 11.03276,
+    "p50": 10.28725,
+    "p99": 14.274869,
+    "p999": 14.3202569,
+    "max": 14.3253
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.8,
+    "p50": 1.0,
+    "p99": 5.0,
+    "p999": 5.0,
+    "max": 5.0
+   },
+   "frac_E2E_gt_11.1": 0.3,
+   "n_E2E_gt_11.1": 9,
+   "cp95_E2E": [
+    0.1473451847547011,
+    0.4939590414625536
+   ],
+   "cp95_one_sided_upper_E2E": 0.4650727065703091,
+   "frac_Tedge_gt_11.1": 0.0,
+   "n_Tedge_gt_11.1": 0,
+   "cp95_Tedge": [
+    0.0,
+    0.11570330822202779
+   ],
+   "cp95_one_sided_upper_Tedge": 0.09503385285530411,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.75979,
+     "p50": 2.7588,
+     "p99": 2.790353,
+     "p999": 2.7940853000000003,
+     "max": 2.7945
+    },
+    "enc": {
+     "n": 30,
+     "mean": 1.67866,
+     "p50": 1.6773,
+     "p99": 1.69131,
+     "p999": 1.691571,
+     "max": 1.6916
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.17845666666666665,
+     "p50": 0.1761,
+     "p99": 0.213472,
+     "p999": 0.21691720000000003,
+     "max": 0.2173
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.008973333333333331,
+     "p50": 0.00875,
+     "p99": 0.013430000000000003,
+     "p999": 0.01421300000000001,
+     "max": 0.0143
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.581813333333334,
+     "p50": 4.58125,
+     "p99": 4.724264,
+     "p999": 4.739506400000001,
+     "max": 4.7412
+    }
+   },
+   "sum_stage_means": 9.207693333333333,
+   "sum_stage_p99": 9.432829,
+   "p99_of_event_total": 9.34128,
+   "host_overhead_mean": 0.02506666666666663,
+   "stage_corr": {
+    "dec~enc": -0.11772554394918772,
+    "dec~gath": 0.5090004746896626,
+    "dec~conc": -0.04062177648637097,
+    "dec~ren": 0.15425194294360048,
+    "enc~gath": -0.07462631529601683,
+    "enc~conc": -0.2648024945640658,
+    "enc~ren": -0.2629710485524275,
+    "gath~conc": 0.04858287479200422,
+    "gath~ren": -0.11482927185974307,
+    "conc~ren": -0.06172839356876516
+   },
+   "stage_corr_with_total": {
+    "dec": 0.4052013666556024,
+    "enc": -0.22774882452904774,
+    "gath": 0.15263695108638833,
+    "conc": -0.0675042329365624,
+    "ren": 0.9518580433293138
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p99": 0.0,
+    "p999": 0.0,
+    "max": 0.0
+   },
+   "frames_with_miss": 0,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7679,
+     "enc": 1.6794,
+     "gath": 0.1764,
+     "conc": 0.009,
+     "ren": 4.6686,
+     "wall": 9.3253,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 14.3253
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7525,
+     "enc": 1.6835,
+     "gath": 0.1649,
+     "conc": 0.0084,
+     "ren": 4.5198,
+     "wall": 9.1514,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 14.1514
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 7,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 5.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7536,
+     "enc": 1.6772,
+     "gath": 0.1812,
+     "conc": 0.0092,
+     "ren": 4.4956,
+     "wall": 9.1395,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 14.1395
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.7649,
+     "enc": 1.6826,
+     "gath": 0.1707,
+     "conc": 0.0082,
+     "ren": 4.6828,
+     "wall": 9.3327,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.3327
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "arq+conceal",
+     "chain": 5,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 0,
+     "t_rx": 3.0,
+     "first": true,
+     "enh_bits": 81230768,
+     "base_bits": 22887888,
+     "dec": 2.743,
+     "enc": 1.6742,
+     "gath": 0.172,
+     "conc": 0.0092,
+     "ren": 4.6316,
+     "wall": 9.2548,
+     "n_miss": 0,
+     "n_vis": 178118,
+     "e2e": 12.2548
+    }
+   ]
+  },
+  "edge | T8R8 | 2.5 | conceal": {
+   "frames": 30,
+   "T_edge_wall": {
+    "n": 30,
+    "mean": 9.83801,
+    "p50": 9.245550000000001,
+    "p99": 11.351360999999999,
+    "p999": 11.3563461,
+    "max": 11.3569
+   },
+   "E2E": {
+    "n": 30,
+    "mean": 10.83801,
+    "p50": 10.245550000000001,
+    "p99": 12.351360999999999,
+    "p999": 12.3563461,
+    "max": 12.3569
+   },
+   "t_rx": {
+    "n": 30,
+    "mean": 1.0,
+    "p50": 1.0,
+    "p99": 1.0,
+    "p999": 1.0,
+    "max": 1.0
+   },
+   "frac_E2E_gt_11.1": 0.3,
+   "n_E2E_gt_11.1": 9,
+   "cp95_E2E": [
+    0.1473451847547011,
+    0.4939590414625536
+   ],
+   "cp95_one_sided_upper_E2E": 0.4650727065703091,
+   "frac_Tedge_gt_11.1": 0.3,
+   "n_Tedge_gt_11.1": 9,
+   "cp95_Tedge": [
+    0.1473451847547011,
+    0.4939590414625536
+   ],
+   "cp95_one_sided_upper_Tedge": 0.4650727065703091,
+   "stages": {
+    "dec": {
+     "n": 30,
+     "mean": 2.646723333333333,
+     "p50": 2.7428999999999997,
+     "p99": 2.7792600000000003,
+     "p999": 2.7808260000000002,
+     "max": 2.781
+    },
+    "enc": {
+     "n": 30,
+     "mean": 1.6817566666666663,
+     "p50": 1.6799,
+     "p99": 1.70361,
+     "p999": 1.703871,
+     "max": 1.7039
+    },
+    "gath": {
+     "n": 30,
+     "mean": 0.20815666666666663,
+     "p50": 0.18395,
+     "p99": 0.289895,
+     "p999": 0.29367950000000004,
+     "max": 0.2941
+    },
+    "conc": {
+     "n": 30,
+     "mean": 0.69707,
+     "p50": 0.0097,
+     "p99": 2.31407,
+     "p999": 2.315897,
+     "max": 2.3161
+    },
+    "ren": {
+     "n": 30,
+     "mean": 4.579473333333334,
+     "p50": 4.5761,
+     "p99": 4.684842,
+     "p999": 4.6875042,
+     "max": 4.6878
+    }
+   },
+   "sum_stage_means": 9.81318,
+   "sum_stage_p99": 11.771677,
+   "p99_of_event_total": 11.323116,
+   "host_overhead_mean": 0.02483000000000004,
+   "stage_corr": {
+    "dec~enc": -0.47410530627153796,
+    "dec~gath": -0.9346593734399938,
+    "dec~conc": -0.997313593997681,
+    "dec~ren": -0.22724408267533613,
+    "enc~gath": 0.3804217661971237,
+    "enc~conc": 0.46249972002859446,
+    "enc~ren": 0.49719204287655955,
+    "gath~conc": 0.9468189188456665,
+    "gath~ren": 0.15429610200085309,
+    "conc~ren": 0.20838999127301153
+   },
+   "stage_corr_with_total": {
+    "dec": -0.9955076736624894,
+    "enc": 0.4868430912192035,
+    "gath": 0.9492401578545371,
+    "conc": 0.9984178520386149,
+    "ren": 0.2577712769883712
+   },
+   "n_miss": {
+    "n": 30,
+    "mean": 6664.2,
+    "p50": 0.0,
+    "p99": 22214.0,
+    "p999": 22214.0,
+    "max": 22214.0
+   },
+   "frames_with_miss": 9,
+   "worst": [
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 1,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.3849,
+     "enc": 1.6835,
+     "gath": 0.2796,
+     "conc": 2.2959,
+     "ren": 4.6878,
+     "wall": 11.3569,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 12.3569
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4044,
+     "enc": 1.6906,
+     "gath": 0.2941,
+     "conc": 2.3161,
+     "ren": 4.594,
+     "wall": 11.3378,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 12.3378
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 3,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.3962,
+     "enc": 1.7039,
+     "gath": 0.2734,
+     "conc": 2.305,
+     "ren": 4.6236,
+     "wall": 11.3278,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 12.3278
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 7,
+     "rep": 2,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4022,
+     "enc": 1.7029,
+     "gath": 0.2458,
+     "conc": 2.303,
+     "ren": 4.6482,
+     "wall": 11.3254,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 12.3254
+    },
+    {
+     "mode": "session",
+     "scene": "truck",
+     "net": "edge",
+     "cfg": "T8R8",
+     "tau": 2.5,
+     "scheme": "conceal",
+     "chain": 5,
+     "rep": 0,
+     "frame": 0,
+     "view": 0,
+     "test": true,
+     "n_new": 178118,
+     "n_lost_tx": 22214,
+     "t_rx": 1.0,
+     "first": true,
+     "enh_bits": 71097296,
+     "base_bits": 22887888,
+     "dec": 2.4013,
+     "enc": 1.6794,
+     "gath": 0.2662,
+     "conc": 2.299,
+     "ren": 4.6438,
+     "wall": 11.314,
+     "n_miss": 22214,
+     "n_vis": 178118,
+     "e2e": 12.314
+    }
+   ]
+  }
+ }
+}

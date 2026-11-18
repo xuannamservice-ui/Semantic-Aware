@@ -1,0 +1,110 @@
+{
+ "T8R8 2.5 f1 none": {
+  "views": 329,
+  "windows": 987,
+  "model_p30": 0.19665532405432834,
+  "measured_p30": 0.19810217815767187,
+  "model_p35": 0.23841609290884333,
+  "measured_p35": 0.23913951996051505,
+  "windows_passing_quality_but_missing_deadline": 2
+ },
+ "T8R8 2.5 f1 conceal": {
+  "views": 329,
+  "windows": 987,
+  "model_p30": 0.0755814860467427,
+  "measured_p30": 0.19436801444483637,
+  "model_p35": 0.13077062536717202,
+  "measured_p35": 0.2099337173740267,
+  "windows_passing_quality_but_missing_deadline": 180
+ },
+ "T8R8 2.5 f2 none": {
+  "views": 338,
+  "windows": 1014,
+  "model_p30": 0.2026855669049528,
+  "measured_p30": 0.2026855669049528,
+  "model_p35": 0.24474269102665522,
+  "measured_p35": 0.24474269102665522,
+  "windows_passing_quality_but_missing_deadline": 0
+ },
+ "T8R8 2.5 f2 conceal": {
+  "views": 338,
+  "windows": 1014,
+  "model_p30": 0.005335611158046124,
+  "measured_p30": 0.016030053382222628,
+  "model_p35": 0.051037560005621485,
+  "measured_p35": 0.055726462967884235,
+  "windows_passing_quality_but_missing_deadline": 16
+ },
+ "T8R8 10 f1 none": {
+  "views": 329,
+  "windows": 987,
+  "model_p30": 0.22697754069555698,
+  "measured_p30": 0.22880204352346786,
+  "model_p35": 0.2750887601840521,
+  "measured_p35": 0.2763278576173516,
+  "windows_passing_quality_but_missing_deadline": 3
+ },
+ "T8R8 10 f1 conceal": {
+  "views": 329,
+  "windows": 987,
+  "model_p30": 0.08826210397367126,
+  "measured_p30": 0.20432102487033502,
+  "model_p35": 0.1444302514801461,
+  "measured_p35": 0.22633463104579155,
+  "windows_passing_quality_but_missing_deadline": 206
+ },
+ "T8R8 10 f2 none": {
+  "views": 338,
+  "windows": 1014,
+  "model_p30": 0.2287734341714478,
+  "measured_p30": 0.2287734341714478,
+  "model_p35": 0.27801579311472,
+  "measured_p35": 0.27801579311472,
+  "windows_passing_quality_but_missing_deadline": 0
+ },
+ "T8R8 10 f2 conceal": {
+  "views": 338,
+  "windows": 1014,
+  "model_p30": 0.01082505147210038,
+  "measured_p30": 0.0211441124051645,
+  "model_p35": 0.05294431996758633,
+  "measured_p35": 0.05977800647797591,
+  "windows_passing_quality_but_missing_deadline": 18
+ },
+ "T6R11 2.5 f1 none": {
+  "views": 329,
+  "windows": 987,
+  "model_p30": 0.0001747214691993442,
+  "measured_p30": 0.0001790158376559467,
+  "model_p35": 0.00024243967857488498,
+  "measured_p35": 0.0002467340470314874,
+  "windows_passing_quality_but_missing_deadline": 5
+ },
+ "T6R11 2.5 f1 conceal": {
+  "views": 329,
+  "windows": 987,
+  "model_p30": 4.835145294044303e-05,
+  "measured_p30": 0.00019539808512861371,
+  "model_p35": 9.271572080229944e-05,
+  "measured_p35": 0.00021472282468541377,
+  "windows_passing_quality_but_missing_deadline": 201
+ },
+ "T6R11 2.5 f2 none": {
+  "views": 338,
+  "windows": 1014,
+  "model_p30": 0.00017675715657437813,
+  "measured_p30": 0.00017675715657437813,
+  "model_p35": 0.00024267221836299615,
+  "measured_p35": 0.00024267221836299615,
+  "windows_passing_quality_but_missing_deadline": 0
+ },
+ "T6R11 2.5 f2 conceal": {
+  "views": 338,
+  "windows": 1014,
+  "model_p30": 2.231967475913345e-06,
+  "measured_p30": 2.231967475913345e-06,
+  "model_p35": 2.22540746359292e-05,
+  "measured_p35": 2.22540746359292e-05,
+  "windows_passing_quality_but_missing_deadline": 0
+ }
+}
