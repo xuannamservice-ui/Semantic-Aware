@@ -32,7 +32,7 @@ box(35.5, 25.2, 13.8, 10.5, "OAM multiplexing", ["$M$ LG modes", "$\\ell \\in \\
 box(50.7, 25.2, 13.8, 10.5, "Sorter + MMSE", ["$N_r$ ports", "linear equalization", "HD-FEC threshold"], "#fdf1e3")
 box(35.5, 11.2, 29, 10.8, "Per-slot failure pattern $\\mathcal{F}(t)$", ["random, correlated subset of failed streams", "outage $P_{out}$, decay order $\\frac{1}{2}\\min\\{\\hat{k},\\alpha,\\beta\\}$", "(Proposition 1, $10^7$-slot traces)"], "#fbe3c8")
 box(69.5, 25.2, 14, 10.5, "Edge cache", ["received enhancement", "layers kept", "new anchors only"], "#e5f4e5")
-box(85, 25.2, 14, 10.5, "Concealment", ["cross-attention to", "16 neighbours, joint", "training, FP / 1.58-bit"], "#d3edd3")
+box(85, 25.2, 14, 10.5, "Concealment", ["network trained", "jointly with the scene,", "16 exact neighbours"], "#d3edd3")
 box(69.5, 11.2, 29.5, 10.8, "Decode + render", ["anchors → neural Gaussians (MLPs) → gsplat rasterizer", "frame period 11.1 ms at 90 frames/s", "quality $\\Psi$ against the loss-free rendering"], "#e5f4e5")
 
 arrow(15.5, 30.5, 17, 30.5)
@@ -49,8 +49,8 @@ arrow(80.0, 25.2, 80.0, 22.0)
 
 # scheduler
 ax.add_patch(FancyBboxPatch((20, 0.6), 60, 6.4, boxstyle="round,pad=0.25,rounding_size=0.8", fc="#f2e8f7", ec="0.25", lw=0.6))
-ax.text(50, 6.2, "Cross-layer scheduler (Algorithm 1)", ha="center", va="top", fontsize=6.2, weight="bold")
-ax.text(50, 3.6, "configuration $(M, N_r)$, replication $n_\\mathcal{A}$, power allocation, precision $q$; virtual queue of failed slots, "
+ax.text(50, 6.2, "Configuration and power (Algorithm S1)", ha="center", va="top", fontsize=6.2, weight="bold")
+ax.text(50, 3.6, "configuration $(M, N_r)$, replication $n_\\mathcal{A}$, power allocation with a per-mode floor; virtual queue of failed slots, "
         "target $\\bar{a} \\leq 10^{-4}$", ha="center", va="top", fontsize=5.1)
 arrow(30, 7.2, 16, 11.0, style="-|>", ls="--")
 arrow(50, 7.2, 50, 11.0, style="-|>", ls="--")

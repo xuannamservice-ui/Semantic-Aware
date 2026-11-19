@@ -1,5 +1,5 @@
 """Tail-quality figure.
-(a) Cold-start outage slots of the T8R8 trace (interleaved mapping), scenes with a HAC evaluation: share of outage slots
+(a) Outage slots of the T8R8 trace with full-view exposure (interleaved mapping), scenes with a HAC evaluation: share of outage slots
     with Psi below the threshold, for the layered codec (drop, IDW, concealment network) and HAC (drop, IDW), each also
     with the (8, 7) MDS code of the frame-level evaluation (r = round(eps M) = 1 for eps = 1/6), which
     recovers the slots with one failed stream.
@@ -55,13 +55,14 @@ for rows, lab, meth, mds, st in (
     series.append((lab, float((x < 30).mean()), float((x < 35).mean()), len(x)))
 ax[0].set_xlabel(r"Threshold $\Psi_{th}$ (dB)", fontsize=7)
 ax[0].set_ylabel(r"$\Pr(\Psi < \Psi_{th} \mid$ outage slot$)$", fontsize=7)
-ax[0].set_title(f"(a) Cold-start outage slots, T8R8 ({', '.join(scenes)})", fontsize=7)
+ax[0].set_title("(a) Full-view outage slots, T8R8", fontsize=7, loc="center", pad=4)
 ax[0].legend(fontsize=5.5, loc="lower right", frameon=False)
 ax[0].tick_params(labelsize=6); ax[0].set_ylim(-0.02, 1.02); ax[0].grid(alpha=0.3, lw=0.4)
 
 D = {}
 for f in glob.glob(f"{R}/*/frames_v2a_r1_T8R8_tau10_eps0.166667.json"):
-    fr = json.load(open(f))
+    f0 = f.replace(".json", "_nof0.json")   # frame 0 of a path is the start-up frame, evaluated as a cold start
+    fr = json.load(open(f0 if os.path.exists(f0) else f))
     for r in fr["rows"]:
         if r["chain"] < 10:
             D.setdefault(r["scheme"], []).append(min(r["psi"], 99.0))
@@ -78,8 +79,8 @@ ax[1].set_xlabel(r"Threshold $\Psi_{th}$ (dB)", fontsize=7)
 ax[1].set_ylabel("Share of failed test frames", fontsize=7)
 ax[1].set_title(f"(b) Frame level with edge cache, T8R8, {n} test frames", fontsize=7)
 ax[1].legend(fontsize=5.5, loc="lower right", frameon=False, ncol=2); ax[1].tick_params(labelsize=6); ax[1].grid(alpha=0.3, lw=0.4, which="both")
-plt.tight_layout(pad=0.4)
-plt.savefig(OUT, dpi=300)
+plt.tight_layout(pad=0.8)
+plt.savefig(OUT, dpi=300, bbox_inches="tight", pad_inches=0.06)
 res = {"scenes_hac": scenes, "cold_start": [dict(zip(("label", "p30", "p35", "n"), s)) for s in series]}
 if FACTS:
     json.dump(res, open(FACTS, "w"), indent=1)
